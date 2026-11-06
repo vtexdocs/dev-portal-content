@@ -27,8 +27,6 @@ Components and the delivery pipeline are shared because duplicating them creates
 
 > ℹ️ This division is a common starting point, not a fixed rule. Adjust it to your markets, teams, and governance needs. For example, a market with a different release schedule can use a different production branch in [FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/webops-dashboard) while still sharing the repository and pipeline with the other stores. Learn more in [Configuring production and preview branches in WebOps](https://developers.vtex.com/docs/guides/faststore/webops-configuring-production-and-preview-branches).
 
-To learn how to organize shared components, sections, and design tokens in a FastStore monorepo, see [Sharing code across stores](https://developers.vtex.com/docs/guides/monorepo-sharing-code-across-stores).
-
 ## Planning a multistore project
 
 A multistore project involves the areas described in the following table. A different guide covers each one:
@@ -37,8 +35,9 @@ A multistore project involves the areas described in the following table. A diff
 | --- | --- | --- |
 | Account structure | Defines whether markets operate under separate VTEX accounts or share one account through bindings, and what each option means for the CMS, WebOps, and app versions. | [Planning your account structure](https://developers.vtex.com/docs/guides/faststore/multistore-planning-your-account-structure) |
 | Environments and deployment | Recommends a test and a production environment for each store, and maps repository branches to the accounts they deploy to. | [Managing environments](https://developers.vtex.com/docs/guides/faststore/multistore-managing-environments) |
-| Content governance | Keeps content managed per market, so each team edits only its own pages, campaigns, and media. | [CMS for FastStore storefronts](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts) |
+| Repository structure | Organizes shared components, sections, and design tokens in a single monorepo, and defines which layers each market can customize. | [Sharing code across stores](https://developers.vtex.com/docs/guides/monorepo-sharing-code-across-stores) |
+| Content governance | Keeps content isolated per market, with each team editing only its own pages, campaigns, and media. Defines how shared section schemas reach every account through an explicit, manual sync. | [CMS for FastStore storefronts](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts) and [Continuous integration](https://developers.vtex.com/docs/guides/faststore/developer-tools-continuous-integration) |
 
-The account structure comes first because the other two areas follow from it. Each VTEX account has its own [CMS](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts) instance and WebOps integration, so the number of accounts determines how many CMS instances and deployment targets the project uses.
+The account structure comes first because the other two areas follow from it. Each VTEX account has its own CMS instance and WebOps integration, so the number of accounts determines how many CMS instances and deployment targets the project uses.
 
 > ⚠️ Changing the account structure after markets are live results in significantly more effort and costs than setting it up correctly from the start. Moving a market later means rebuilding its content and deployment target.
