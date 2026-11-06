@@ -2,27 +2,27 @@
 title: "FastStore Release Notes — Version 4.10.0"
 slug: "2026-10-21-faststore-release-notes-4-10-0"
 type: improved
-excerpt: "FastStore 4.10.0 shows images in CMS rich text, lists pickup points that can fulfill the shopper location, and keeps catalog and preview carts on the correct sales channel"
+excerpt: "FastStore 4.10.0 shows images in CMS rich text, lists pickup points that can fulfill orders for the shopper's location, and keeps catalog and preview carts on the correct sales channel
 createdAt: "2026-10-21T00:00:00.000Z"
-updatedAt: "2026-10-21T00:00:00.000Z"
+updatedAt: "2026-11-06T00:00:00.000Z"
 hidden: true
 tags:
   - FastStore
 ---
 
-> ⚠️ **Fixes included from FastStore 4.9.1 and 4.9.2:** Version `4.10.0` includes the `4.9.1` fix that [restores the original product release date format](https://developers.vtex.com/updates/release-notes/2026-10-02-faststore-restored-original-product-release-date-format) and the `4.9.2` fix for [session and cart validation after region changes](https://developers.vtex.com/updates/release-notes/2026-10-05-faststore-session-and-cart-validation-fix).
+> ⚠️ **Fixes included from FastStore 4.9.1 and 4.9.2:** Version 4.10.0 includes the 4.9.1 fix that [restores the original product release date format](https://developers.vtex.com/updates/release-notes/2026-10-02-faststore-restored-original-product-release-date-format) and the 4.9.2 fix for [session and cart validation after region changes](https://developers.vtex.com/updates/release-notes/2026-10-05-faststore-session-and-cart-validation-fix).
 
-FastStore `v4.10.0` lets merchants show images inside CMS rich text, and shoppers see pickup points that can fulfill orders for their location and sales channel. Anonymous visitors on stores that do not use sales channel `1` keep their catalog, and preview environments stop looping cart validation. See the fixes and features below.
+FastStore `v4.10.0` allows merchants to show images inside CMS rich text, and shoppers see pickup points that can fulfill orders for their location and sales channel. Anonymous visitors on stores that don't use sales channel `1` keep their catalog, and preview environments stop looping cart validation. See the fixes and features below.
 
-> ⚠️ Follow the instructions in [Updating the CLI package version](https://developers.vtex.com/docs/guides/faststore/developer-tools-updating-the-cli-package-version) to upgrade to `v4.10.0` and keep your store up-to-date with the following improvements.
+> ⚠️ Follow the instructions in [Updating the CLI package version](https://developers.vtex.com/docs/guides/faststore/developer-tools-updating-the-cli-package-version) to upgrade to `v4.10.0` and keep your store up to date with the following improvements.
 
 ## Bug fixes
 
 ### Anonymous shoppers no longer lose the catalog after a cart check (PR: [#3509](https://github.com/vtex/faststore/pull/3509))
 
-`validateCart` no longer treats the sales channel on an empty `orderForm` as authoritative. Checkout can answer with sales channel `1` when an `orderForm` that never had items is fetched without `sc`, and FastStore now refetches that cart with the session sales channel instead of adopting `1`. An `orderForm` sales channel is adopted only when the cart has items. A sales channel that comes from the URL (localization) is always sent and is never overwritten. If Session Manager rejects an adopted sales channel for the shopper, the session retries once without that channel and does not adopt it again.
+`validateCart` no longer treats the sales channel on an empty `orderForm` as authoritative. Checkout can answer with sales channel `1` when an `orderForm` that never had items is fetched without `sc`, and FastStore now refetches that cart with the session sales channel instead of adopting `1`. An `orderForm` sales channel is adopted only when the cart has items. A sales channel that comes from the URL (localization) is always sent and is never overwritten. If Session Manager rejects an adopted sales channel for the shopper, the session retries once without that channel and doesn't adopt it again.
 
-Anonymous shoppers on stores whose sales channel is not `1` keep seeing products on shelves, product listing pages, and product pages, instead of an empty catalog after a cart check. Merchants avoid a storefront that looks out of stock for visitors who have not added items. Quick Order still keeps the cart's sales channel while the cart has items. No configuration change is required beyond upgrading.
+Anonymous shoppers on stores whose sales channel is not `1` keep seeing products on shelves, product listing pages, and product pages, instead of an empty catalog after a cart check. Merchants avoid a storefront that looks out of stock for visitors who haven't added items. Quick Order still keeps the cart's sales channel while the cart has items. No configuration change is required beyond upgrading.
 
 ### Cart testing works again in preview environments (PR: [#3513](https://github.com/vtex/faststore/pull/3513))
 
@@ -44,4 +44,4 @@ Merchants can insert, align, and resize images in CMS rich text, including newsl
 
 The `pickupPoints` query lists points from Intelligent Search `pickup-point-availability` instead of the logistics shipping search. New optional arguments are `postalCode`, `country`, and `channel` (the same channel JSON string used by search facets). When `channel` is set, Intelligent Search uses that sales channel instead of the store default. Delivery hashes are sent only when the requested postal code matches the segment; coordinates can locate points when there is no postal code. `pickupPointsHash` is deprecated and always `null`, and the query cache scope is private. The pickup slider refetches when the shopper channel or country changes, ignores a late response for a previous location, and retries after a failed request.
 
-Shoppers using [Delivery Promise](https://developers.vtex.com/docs/guides/delivery-promise) see pickup points that have products for their postal code and sales channel, including localized and B2B channels, instead of points from another channel or a previous location. Merchants get a slider that matches what the shopper can collect. Developers calling `pickupPoints` can pass `postalCode`, `country`, and `channel`, and should not rely on `pickupPointsHash`.
+Shoppers using [Delivery Promise](https://developers.vtex.com/docs/guides/delivery-promise) see pickup points that have products for their postal code and sales channel, including localized and B2B channels, instead of points from another channel or a previous location. Merchants get a slider that matches what the shopper can collect. Developers calling `pickupPoints` can pass `postalCode`, `country`, and `channel`, and shouldn't rely on `pickupPointsHash`.
