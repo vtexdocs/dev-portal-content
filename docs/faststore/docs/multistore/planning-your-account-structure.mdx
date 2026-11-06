@@ -25,6 +25,8 @@ The following table compares the two models:
 
 Each VTEX account has its own [CMS](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts), [FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/webops-dashboard) integration, and installed app versions, so the number of accounts sets how many of each the project runs.
 
+> ℹ️ This track assumes that every account in the project uses the [CMS](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts). New FastStore projects start with it by default. If an account still uses [Headless CMS (legacy)](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview), we recommend upgrading it before you set up the multistore project, since features such as Localization are available only in the CMS. Learn more in [Upgrading from Headless CMS (legacy) to CMS](https://developers.vtex.com/docs/guides/upgrading-from-headless-cms-legacy-to-cms-overview).
+
 ### Single account with bindings
 
 The single-account model depends on the [Localization feature](https://developers.vtex.com/docs/guides/faststore/storefront-features-handling-internationalization-with-the-localization-feature). A binding connects one domain to one sales channel and one locale. The catalog is shared across the account. FastStore reads only the binding's default locale, so each language needs its own binding.
