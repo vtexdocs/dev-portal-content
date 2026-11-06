@@ -103,7 +103,14 @@ To go further, you can automate this system with a token pipeline. Instead of ed
 
 ## Developing multiple stores locally
 
-To run several stores from the same monorepo at the same time, start each one with the `fsp dev` command in a separate terminal, using a different proxy port for each store. For more information, see [Running projects locally](https://developers.vtex.com/docs/guides/monorepo-running-projects-locally).
+To run several stores from the same monorepo at the same time, start each one with the `fsp dev` command in a separate terminal, using the `--proxy-port` flag to set a different proxy port for each store. For example:
+
+```bash
+yarn fsp dev store1 --proxy-port 3000
+yarn fsp dev store2 --proxy-port 4000
+```
+
+For more information, see [Running projects locally](https://developers.vtex.com/docs/guides/monorepo-running-projects-locally).
 
 You can also add scripts to the root `package.json` that run operations across all store projects at once. These batch scripts can include:
 
