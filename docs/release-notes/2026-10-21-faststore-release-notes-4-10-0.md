@@ -10,7 +10,7 @@ tags:
   - FastStore
 ---
 
-> ⚠️ **Fixes included from FastStore 4.9.1 and 4.9.2:** Version 4.10.0 includes the 4.9.1 fix that [restores the original product release date format](https://developers.vtex.com/updates/release-notes/2026-10-02-faststore-restored-original-product-release-date-format) and the 4.9.2 fix for [session and cart validation after region changes](https://developers.vtex.com/updates/release-notes/2026-10-05-faststore-session-and-cart-validation-fix).
+> ⚠️ **Fixes included from FastStore 4.9.1 and 4.9.2:** Version `4.10.0` includes the `4.9.1` fix that [restores the original product release date format](https://developers.vtex.com/updates/release-notes/2026-10-02-faststore-restored-original-product-release-date-format) and the `4.9.2` fix for [session and cart validation after region changes](https://developers.vtex.com/updates/release-notes/2026-10-05-faststore-session-and-cart-validation-fix).
 
 FastStore `v4.10.0` lets merchants show images inside CMS rich text, and shoppers see pickup points that can fulfill orders for their location and sales channel. Anonymous visitors on stores that do not use sales channel `1` keep their catalog, and preview environments stop looping cart validation. See the fixes and features below.
 
