@@ -6,7 +6,7 @@ createdAt: "2026-10-02T14:32:00.000Z"
 updatedAt: "2026-10-02T14:32:00.000Z"
 ---
 
-After [creating a project](https://developers.vtex.com/docs/guides/monorepo-creating-new-projects) in your [FastStore monorepo](https://developers.vtex.com/docs/guides/faststore-monorepo-overview), you can run it locally with the `fsp dev` command to develop and test your storefront before deploying it.
+After you [create a project](https://developers.vtex.com/docs/guides/monorepo-creating-new-projects) in your [FastStore monorepo](https://developers.vtex.com/docs/guides/faststore-monorepo-overview), you can run it locally with the `fsp dev` command to develop and test your storefront before deploying it.
 
 The command starts the modules declared for a store in `faststore.json`, such as Product Discovery Experience, [Buyer Portal Checkout](https://developers.vtex.com/docs/guides/buyer-portal-checkout-extensibility), and [VTEX Sales App](https://developers.vtex.com/docs/guides/vtex-sales-app-extensibility), and serves them through a single local address.
 
@@ -43,7 +43,7 @@ The `fsp dev` command starts each module on its own port and puts a proxy in fro
 }
 ```
 
-- **Module port**: The `port` in `faststore.json` is the address of that module. In the example above, `brand-store-1` discovery runs on port `3002`. If the account also has Buyer Portal Checkout or Sales App, each module gets its own port so they can run at the same time. You can open a module directly, such as discovery at `http://localhost:3002`.
+- **Module port**: The `port` in `faststore.json` is the address of that module. In the example above, `brand-store-1` discovery runs on port `3002`. If the account also has Buyer Portal Checkout or VTEX Sales App, each module gets its own port so they can run at the same time. You can open a module directly, such as discovery at `http://localhost:3002`.
 - **Proxy port**: The proxy is the address you open in the browser. It listens on port `3000` by default and forwards each request to the module that serves that page, so the modules appear as one store. `yarn fsp dev brand-store-1` serves the store at `http://localhost:3000`, and discovery keeps running on port `3002`.
 
 > ⚠️ Module ports and the proxy port must be different, since they run as separate processes on the same machine. For this reason, [creating a project](https://developers.vtex.com/docs/guides/monorepo-creating-new-projects) with `fsp create` assigns module ports starting at `3001` and leaves `3000` for the proxy. If you edit `faststore.json` manually, don't assign port `3000` to a module.
