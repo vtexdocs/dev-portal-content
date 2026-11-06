@@ -118,6 +118,6 @@ You can also add scripts to the root `package.json` that run operations across a
 - Propagating generated design tokens
 - Replicating CMS settings between accounts
 
-> ⚠️ Replicating CMS settings between accounts is a high-impact operation. Run it only when you intend to, and don't tie it to the code deployment flow, so that a code push never triggers it by accident.
+> ⚠️ Replicating CMS settings between accounts is a high-impact operation. Run it only when you intend to, and don't tie it to the code deployment flow, so that a code push never triggers it by accident. For more information, see [Keeping CMS schema sync manual](https://developers.vtex.com/docs/guides/faststore/multistore-managing-environments#keeping-cms-schema-sync-manual).
 
 These batch operations are useful when a change in the shared package needs to be validated in every store before the merge, without having to navigate manually through each project directory.
