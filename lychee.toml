@@ -1,1 +1,1 @@
-exclude_path = ["readme-api-md", "docs-utils"]
+exclude_path = ["docs-utils"]

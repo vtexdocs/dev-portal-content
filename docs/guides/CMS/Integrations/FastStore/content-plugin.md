@@ -187,7 +187,14 @@ vtex content split-content-types --input ./cms/content-types.json --output ./cms
 
 ### `upload-schema`
 
-Uploads a local schema file to the Schema Registry. This command publishes your consolidated CMS schema to the CMS, making it available for use in your store.
+Uploads a local schema file to the Schema Registry. This command publishes your consolidated CMS schema as a version, making it available for use in your store.
+
+During the upload, the CLI:
+
+1. Prompts you to select the store ID to associate with the schema.
+2. Shows the current published version and suggests the next version.
+3. Prompts you to enter a version following [semantic versioning](https://semver.org/) (`major.minor.patch`), optionally with a prerelease suffix.
+4. Asks you to confirm the upload.
 
 #### Usage
 
@@ -206,6 +213,21 @@ vtex content upload-schema [SCHEMA_PATH]
 | Option | Alias | Description |
 | --- | --- | --- |
 | `--help` | `-h` | Displays help information for the command. |
+| `-y` | - | Skips the upload confirmation prompt. |
+
+#### Schema versioning
+
+Choose the version according to the changes in your schema:
+
+| Change | Version increment | Example |
+| --- | --- | --- |
+| Breaking change, such as removing or renaming a field | Major | `1.5.0` → `2.0.0` |
+| Backward-compatible change, such as adding an optional field or component | Minor | `1.5.0` → `1.6.0` |
+| Backward-compatible fix | Patch | `1.5.0` → `1.5.1` |
+
+The Schema Registry uses the highest stable version as the latest schema. If no stable version exists, it uses the highest prerelease version. A prerelease never replaces an existing stable version as the latest. To test schema changes without replacing the stable version, publish a prerelease, such as `1.7.0-beta.0`, and associate it with a [development branch](https://developers.vtex.com/docs/guides/working-with-development-branches).
+
+> ⚠️ Each version is immutable. If you change the schema after publishing it, publish the changes under a new version. Uploading different schema content under an existing version returns a conflict.
 
 #### Examples
 

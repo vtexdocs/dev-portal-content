@@ -104,4 +104,4 @@ To configure Multilevel Omnichannel Inventory via REST API:
 
    - **sellerAccount**: [Account name](https://help.vtex.com/pt/tutorial/o-que-e-account-name--i0mIGLcg3QyEy8OCicEoC) of the seller in VTEX.
    - **affiliateId**: 3-digit [afiliate](https://help.vtex.com/pt/tutorial/o-que-e-afiliado--4bN3e1YarSEammk2yOeMc0) identification code created by the seller. The seller must inform this ID to the marketplace so that the marketplace can complete the configuration process.
-   - **salesChannel**: Sales channel (or [trade policy](https://help.vtex.com/en/tutorial/como-funciona-uma-politica-comercial--6Xef8PZiFm40kg2STrMkMV#master-data) associated to the seller account created. The seller must inform this ID to the marketplace so that the marketplace can complete the configuration process.
+   - **salesChannel**: [Sales channel](https://help.vtex.com/en/tutorial/como-funciona-uma-politica-comercial--6Xef8PZiFm40kg2STrMkMV#master-data) associated to the seller account created. The seller must inform this ID to the marketplace so that the marketplace can complete the configuration process.
