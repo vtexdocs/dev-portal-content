@@ -43,7 +43,7 @@ In this scenario, one VTEX account uses multiple storefront modules, each with i
   "stores": {
     "account1": {
       "discovery": {
-        "path": "packages/store1",
+        "path": "packages/discovery",
         "port": 3001
       },
       "checkout": {
@@ -128,12 +128,12 @@ With separate repositories, sharing code between brands or stores usually depend
         "path": "packages/store1",
         "port": 3001
       }
-    }
+    },
     "account2": {
       "discovery": {
         "path": "packages/store2",
         "port": 3002
-      },
+      }
     }
   }
 }
@@ -149,12 +149,12 @@ In this scenario, a merchant has multiple brands or stores, and each of them can
 📂 Account monorepo
 │
 ├── 📂 packages
-│   └── 📂 store1
-│      ├── 📂 discovery
-│      └── 📂 checkout
+│   ├── 📂 store1
+│   │   ├── 📂 discovery
+│   │   └── 📂 checkout
 │   └── 📂 store2
-│      ├── 📂 discovery
-│      └── 📂 checkout
+│       ├── 📂 discovery
+│       └── 📂 checkout
 ├── 📄 faststore.json
 ├── 📄 package.json
 │  
@@ -168,22 +168,22 @@ In this scenario, a merchant has multiple brands or stores, and each of them can
   "stores": {
     "account1": {
       "discovery": {
-        "path": "packages/store1",
+        "path": "packages/store1/discovery",
         "port": 3001
       },
       "checkout": {
-        "path": "packages/checkout",
+        "path": "packages/store1/checkout",
         "port": 3002
       }
     },
     "account2": {
       "discovery": {
-        "path": "packages/store2",
-        "port": 3001
+        "path": "packages/store2/discovery",
+        "port": 3003
       },
       "checkout": {
-        "path": "packages/checkout",
-        "port": 3002
+        "path": "packages/store2/checkout",
+        "port": 3004
       }
     }
   }
