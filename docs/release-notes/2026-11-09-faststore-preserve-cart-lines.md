@@ -1,6 +1,6 @@
 ---
 title: "FastStore: Keep split cart lines with `preserveCartLines`"
-slug: "2026-11-13-faststore-preserve-cart-lines"
+slug: "2026-11-09-faststore-preserve-cart-lines"
 type: added
 createdAt: "2026-11-09T00:00:00.000Z"
 updatedAt: "2026-11-09T00:00:00.000Z"
