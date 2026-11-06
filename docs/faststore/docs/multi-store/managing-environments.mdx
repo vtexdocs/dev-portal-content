@@ -8,8 +8,6 @@ A multi-store project needs somewhere to validate changes before shoppers see th
 
 A [workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-workspace) isolates app versions, which makes it suitable for validating frontend changes and app upgrades. It doesn't isolate commerce backend data. Workspaces in the same account share the catalog, prices, promotion rules, logistics configuration, and order data, so a change made through the VTEX Admin in one workspace is visible in all of them, including the live store.
 
-{/* TODO (EDU-19765): fonte (Google Doc, seção 4.1) lista "catálogo, preços, regras de promoção, configuração de logística e dados de pedido da conta principal". Texto reescrito para seguir essa lista em vez de "VTEX Core Services". Obs.: a doc oficial de boas práticas de workspaces (vtex-io-documentation-workspaces-best-practices, seção "Deployment and workspace promotion") usa o termo "VTEX Core Services" (Catalog, Pricing, Promotions, Checkout). Confirmar com o time responsável se o termo oficial pode ser mantido. */}
-
 This has concrete consequences:
 
 - Editing the category tree in a workspace changes the production catalog immediately.
@@ -38,13 +36,6 @@ When using a testing account, consider the following:
 - **Apps and integrations:** Backend apps and integrations are installed per account, so they must also be installed in the testing account before development starts.
 - **Edition App:** FastStore requires `vtex.edition-store@5.x` in every account, testing accounts included. For more information, see [Before you begin](https://developers.vtex.com/docs/guides/faststore/go-live-before-you-begin) in the Going live track.
 
-{/* TODO (EDU-19765): os itens abaixo não constam na fonte (Google Doc, seção 4.2 não detalha o que replicar na conta de QA), mas foram validados na doc oficial publicada, seção "Developing in an isolated QA subaccount" de "Migrating from Store Framework to FastStore" (docs/guides/vtex-io/Storefront-Guides/migrating-store-framework-to-faststore.md):
-- Content: "Content you register in the subaccount CMS is for testing only. It must be recreated... subaccount CMS content isn't copied over automatically". Também coerente com o PR #3098 (CMS por conta; páginas, componentes e mídia mantidos em cada conta) e com a fonte (seções 4.5 e 5.3: instância de CMS por conta).
-- Search: "Requires reconfiguring merchandising rules, synonyms, and relevance settings, since a subaccount is a separate environment".
-- Apps and integrations: "Backend apps and integrations must be reinstalled in the subaccount before you start development".
-- Edition App: `vtex.edition-store@5.x` em todas as contas (go-live/before-you-begin, migration guide e PR #3098).
-Atenção: a doc de migração descreve um subaccount de QA usado na migração do Store Framework. Confirmar com o time responsável se as mesmas afirmações valem para contas de testing de um projeto multi-store que não esteja migrando. */}
-
 ## Mapping branches to accounts
 
 [FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/webops-dashboard) connects a repository to a VTEX account and deploys on merge. Each account has its own integration, so one repository can serve every account in the project while each deploys independently.
@@ -67,8 +58,6 @@ For detailed instructions, see [Configuring production and preview branches in W
 
 > ℹ️ To keep the testing account mirroring production, synchronize catalog, shipping, and promotions through the VTEX APIs, for example with scripts. Plan for that synchronization as part of your regular maintenance routine.
 
-{/* TODO (EDU-19765): fonte (Google Doc, seção 4.2, linha "Conta de QA") diz "catálogo, frete e promoções mantidos em sincronia via scripts de API". Não encontrei na documentação publicada uma página sobre esses scripts de sincronização. Confirmar com o time responsável se existe forma oficial de copiar/espelhar um ambiente e qual documentação de API recomendar. */}
-
 ## Validating changes before merge
 
 Because WebOps deploys when a branch is merged, the checks that run before the merge decide what reaches your accounts. How you structure your pipeline is up to your team, and you can implement it with GitHub Actions or any other continuous integration (CI) service.
@@ -80,11 +69,6 @@ Group the pipeline by responsibility rather than creating one workflow per store
 | Quality gate | Automatically on every pull request and on pushes to your integration branches. | Code and token linting, TypeScript type-checking, build of the shared package, unit tests, end-to-end tests (ideally only on pull requests), and visual regression tests of components. |
 | Release and changelog | Automatically on merge to the production branch, and manually when needed. | Semantic changelog generation and version bump of the shared package. For more information, see [Exports and versioning](https://developers.vtex.com/docs/guides/monorepo-sharing-code-across-stores#exports-and-versioning). |
 | CMS schema sync | Manually only. | Propagation of section schemas between accounts, when needed. |
-
-{/* TODO (EDU-19765): seção baseada na fonte (Google Doc, seção 4.4, "Estrutura de Workflows de CI/CD"). Pontos para confirmar com o time responsável:
-- A fonte cita Chromatic "ou similar" para regressão visual e GitHub Actions como plataforma. Mantive só "GitHub Actions or any other CI service" e não citei ferramenta de regressão visual, porque a fonte trata a escolha como decisão do time de engenharia.
-- A fonte descreve a sincronização de CMS como "ação destrutiva irreversível no curto prazo". Na seção 4.5, a própria fonte diz que o conteúdo publicado é versionado e pode ser restaurado. Usei "alto impacto" (termo da seção 4.4) em vez de "destrutiva irreversível". Confirmar qual operação exatamente é irreversível (schemas ou conteúdo).
-- "Bump de versão do pacote hub" depende de como as lojas consomem o pacote `core` (workspaces ou versão fixada). O PR #3103 tem um TODO aberto sobre isso (EDU-19766). Ajustar esta linha conforme a resposta. */}
 
 ### Keeping CMS schema sync manual
 
