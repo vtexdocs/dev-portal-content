@@ -4,10 +4,10 @@ slug: "using-graphql-api-for-querying-cms-content"
 hidden: false
 excerpt: "GraphQL API reference for querying published CMS content through generic and typed schemas."
 createdAt: "2026-09-14T18:00:00.000Z"
-updatedAt: "2026-09-17T18:00:00.000Z"
+updatedAt: "2026-10-16T18:00:00.000Z"
 ---
 
-The GraphQL API lets storefronts and other integrations retrieve content published with the [CMS](https://developers.vtex.com/docs/guides/getting-started-with-cms). It provides a single GraphQL endpoint with two ways to query content:
+The GraphQL API allows storefronts and other integrations to retrieve content published with the [CMS](https://developers.vtex.com/docs/guides/getting-started-with-cms). It provides a single GraphQL endpoint with two ways to query content:
 
 - **Generic queries** return the complete content document as JSON and work with any Content Type.
 - **Typed queries** expose fields generated from a JSON Schema published to the Schema Registry, enabling field selection and type generation.
@@ -184,7 +184,7 @@ Schema versions are resolved as follows:
 | `vtex.faststore@latest` | Latest published version, cached for approximately 60 seconds. |
 | `vtex.faststore@4.0.1` | Exact published version. Recommended for CI and code generation. |
 
-The schema account prefix must match `{account}` in the URL. Shared schemas can use the `vtex` prefix, such as `vtex.faststore`. Otherwise, the API returns `400 Schema "..." does not belong to tenant "..."`.
+The schema account prefix must match `{account}` in the URL. Shared schemas can use the `vtex` prefix, such as `vtex.faststore`. Otherwise, the API returns `400 Schema "..." doesn't belong to tenant "..."`.
 
 If the header is missing, malformed, or can't be resolved to a valid schema, the request uses the generic surface instead of returning a schema-resolution error. If a query unexpectedly exposes only `entry` and `entries`, check the header value.
 
@@ -290,7 +290,7 @@ GET https://api.vtexcommercestable.com.br/api/content-platform/graphql/{account}
 Authorization: Bearer {token}
 ```
 
-You can also select the typed schema with the `X-Content-Schema` header. The header takes precedence if both the header and query parameter are present.
+You can also select the typed schema with the `X-Content-Schema` header. The header takes precedence if both the header and the query parameter are present.
 
 The endpoint returns the schema definition language (SDL) as `text/plain`. Responses are cached for 60 seconds and can be served stale while the schema is revalidated for 300 seconds. The typed SDL also includes the generic `entry` and `entries` fields.
 
@@ -306,11 +306,11 @@ curl -s "https://api.vtexcommercestable.com.br/api/content-platform/graphql/{acc
 graphql-codegen --schema schema.graphql
 ```
 
-Update the pinned version deliberately when the store schema changes.
+Deliberately update the pinned version when the store schema changes.
 
 ## Query limits
 
-The maximum query depth is 12. Deeper queries are rejected before execution with the `QUERY_TOO_DEEP` code and the `extensions.maxDepth` and `extensions.actualDepth` fields. Fragments contribute to the query depth wherever they are spread.
+The maximum query depth is 12. Deeper queries are rejected before execution with the `QUERY_TOO_DEEP` code and the `extensions.maxDepth` and `extensions.actualDepth` fields. Fragments contribute to query depth wherever they appear.
 
 ## Errors
 
@@ -318,7 +318,7 @@ GraphQL errors follow the standard `errors[].extensions.code` format:
 
 | Code | Cause |
 | :--- | :--- |
-| `BAD_USER_INPUT` | Neither or both of `id` and `slug` were provided, or `locale` is unknown or inactive. |
+| `BAD_USER_INPUT` | Neither `id` nor `slug` was provided, or `locale` is unknown or inactive. |
 | `INVALID_SCROLL` | Pagination cursor is malformed or stale. |
 | `QUERY_TOO_DEEP` | Query exceeds the maximum depth. |
 
