@@ -1,50 +1,53 @@
 ---
 title: "Managing environments"
 excerpt: "Give each store a testing environment that supports end-to-end validation, and map repository branches to the accounts they deploy to."
-createdAt: "2026-10-06T14:25:00.000Z"
+createdAt: "2026-11-06T00:00:00.000Z"
 ---
 
 A multi-store project needs somewhere to validate changes before shoppers see them.
 
-A VTEX workspace alone doesn't provide that for tests involving backend data
+A [workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-workspace) isolates app versions, which makes it suitable for validating frontend changes and app upgrades. It doesn't isolate commerce backend data. Workspaces in the same account share the catalog, prices, promotion rules, logistics configuration, and order data, so a change made through the VTEX Admin in one workspace is visible in all of them, including the live store.
 
-A [workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-workspace) isolates app versions, which makes it suitable for validating frontend changes and app upgrades, but alone it doesn't isolate commerce backend data. Workspaces in the same account share the [VTEX Core Services](https://developers.vtex.com/docs/guides/getting-started), so a change made through the Admin in one workspace is visible in all of them, including the live store.
+{/* TODO (EDU-19765): fonte (Google Doc, seção 4.1) lista "catálogo, preços, regras de promoção, configuração de logística e dados de pedido da conta principal". Texto reescrito para seguir essa lista em vez de "VTEX Core Services". Obs.: a doc oficial de boas práticas de workspaces (vtex-io-documentation-workspaces-best-practices, seção "Deployment and workspace promotion") usa o termo "VTEX Core Services" (Catalog, Pricing, Promotions, Checkout). Confirmar com o time responsável se o termo oficial pode ser mantido. */}
 
 This has concrete consequences:
 
 - Editing the category tree in a workspace changes the production catalog immediately.
 - A promotion rule configured in a workspace is the same rule that runs in production.
-- Shipping configuration cannot be tested in isolation from the live operation.
+- Shipping configuration can't be tested in isolation from the live operation.
 
 > ⚠️ Any test that depends on backend data, such as catalog, promotions, logistics, payments, or integrations, requires a separate VTEX account. Workspaces only cover frontend changes and app versions. For more details, see [Best practices on workspaces management](https://developers.vtex.com/docs/guides/vtex-io-documentation-workspaces-best-practices).
 
-The recommended approach is to give each store a dedicated testing account, with its own backend data, alongside the production account.
+We recommend giving each store a dedicated testing account, with its own backend data, alongside the production account.
 
 This guide explains how to structure testing and production environments per store, and how repository branches map to the accounts they deploy to.
 
 ## Defining environments per store
 
-The recommended setup gives each store two VTEX accounts:
+The following table describes the purpose of each account:
 
 | Environment | Purpose |
 | --- | --- |
 | Production account | Serves shopper traffic. |
-| Testing account | Mirrors production for full validation, covering both the storefront and backend data. Because it has its own Master Data, it is safe for destructive tests and test orders. |
+| Testing account | Mirrors production for full validation, covering both the storefront and backend data. |
 
-> ℹ️ This structure is a recommendation, not a requirement. A market in an early phase, or one with a simpler operation, can start with the production account alone and add a testing account later as the program matures.
+When using a testing account, consider the following:
 
-When using a testing account, keep the following in mind:
-
-- **Content:** CMS content created in the testing account is for validation only. It's not copied to production automatically and has to be recreated there.
+- **Content:** Each account has its own CMS instance, so content created in the testing account is for validation only. It's not copied to production automatically and has to be recreated there. For how section schemas are synced between accounts, see [Planning your account structure](https://developers.vtex.com/docs/guides/faststore/multi-store-planning-your-account-structure#multiple-accounts).
 - **Search:** Merchandising rules, synonyms, and relevance settings are configured per account, so they need to be set up again in the testing account.
-- **Apps and integrations:** Backend apps and integrations must be installed in the testing account before development starts.
-- **Edition App:** FastStore requires `vtex.edition-store@5.x` in every account, testing accounts included.
+- **Apps and integrations:** Backend apps and integrations are installed per account, so they must also be installed in the testing account before development starts.
+- **Edition App:** FastStore requires `vtex.edition-store@5.x` in every account, testing accounts included. For more information, see [Before you begin](https://developers.vtex.com/docs/guides/faststore/go-live-before-you-begin) in the Going live track.
+
+{/* TODO (EDU-19765): confirmar com o time responsável os itens abaixo, que não constam na fonte (Google Doc, seção 4.2 não detalha o que replicar na conta de QA):
+- Apps and integrations: "before development starts". A doc de Planning your account structure (PR #3098) confirma só que as versões de apps são instaladas por conta; o momento da instalação não está documentado.
+- Content: a fonte (seção 4.5/5.3) confirma instância de CMS por conta e propagação explícita de schemas, mas não diz que o conteúdo "has to be recreated". O PR #3098 diz que páginas, componentes e mídia são mantidos em cada conta.
+Validados na doc oficial: `vtex.edition-store@5.x` em todas as contas (go-live/before-you-begin e PR #3098). */}
 
 ## Mapping branches to accounts
 
 [FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/webops-dashboard) connects a repository to a VTEX account and deploys on merge. Each account has its own integration, so one repository can serve every account in the project while each deploys independently.
 
-The names in this table are examples of a branch model that fits this structure. WebOps doesn't require them. You choose the production branch, and you can filter which branches generate previews, in the **Integrations** tab.
+The following table shows an example branch model that fits this structure. WebOps doesn't require these names. You choose the production branch, and you can filter which branches generate previews, in the **Integrations** tab:
 
 | Example branch | Deploys to | Behavior |
 | --- | --- | --- |
@@ -56,8 +59,10 @@ How these examples map to WebOps:
 
 - **Previews:** With no filter, every branch except the production branch gets a preview URL. A branch doesn't need the `feature/` prefix. That pattern matters only if you enable preview filters and include it, so previews are limited to branches that match `feature/*`.
 - **Testing:** Point each store's testing-account integration at the branch you use for validation. `develop` is the name used in this example.
-- **Production:** Choose any branch. If you leave it unset, WebOps uses the repository's default branch, usually `main`. Protect that branch and require pull requests.
+- **Production:** Choose any branch. If you leave it unset, WebOps uses the default branch of the repository, usually `main`. Protect that branch and require pull requests.
 
 For detailed instructions, see [Configuring production and preview branches in WebOps](https://developers.vtex.com/docs/guides/faststore/webops-configuring-production-and-preview-branches).
 
-> ℹ️ Keeping the testing and production accounts in sync, for catalog, shipping, and promotions, is done through the VTEX APIs rather than by copying an environment. Plan for that synchronization as part of the program's routine.
+> ℹ️ To keep the testing account mirroring production, synchronize catalog, shipping, and promotions through the VTEX APIs, for example with scripts. Plan for that synchronization as part of your regular maintenance routine.
+
+{/* TODO (EDU-19765): fonte (Google Doc, seção 4.2, linha "Conta de QA") diz "catálogo, frete e promoções mantidos em sincronia via scripts de API". Confirmar com o time responsável se existe alguma forma oficial de copiar/espelhar um ambiente e se há documentação de API recomendada para esses scripts. */}
