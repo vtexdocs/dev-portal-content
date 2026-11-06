@@ -29,13 +29,13 @@ Each VTEX account has its own [CMS](https://developers.vtex.com/docs/guides/cms-
 
 The single-account model depends on the [Localization feature](https://developers.vtex.com/docs/guides/faststore/storefront-features-handling-internationalization-with-the-localization-feature). A binding connects one domain to one sales channel and one locale. The catalog is shared across the account. FastStore reads only the binding's default locale, so each language needs its own binding.
 
-{/* TODO (EDU-19764): Localization está em Closed Beta e exige FastStore v4, e o acesso é pedido via ticket ao VTEX Support. O Blueprint não menciona isso. Confirmar com o time se o artigo deve citar o status Closed Beta e o requisito de FastStore v4 (ex.: "The single-account model depends on the Localization feature (Closed Beta), which requires FastStore v4."), e se o status ainda é válido na data da publicação. */}
+> ⚠️ The Localization feature is in Closed Beta and requires FastStore v4. To request access, open a ticket with [VTEX Support](https://help.vtex.com/docs/tutorials/opening-tickets-to-vtex-support).
 
 The three account-level parts of the implementation work as follows:
 
 - **CMS:** The account has one [CMS](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts) instance. With Localization enabled, editors manage storefront content per locale in that CMS.
 
-  > ⚠️ The Localization feature is unavailable for [Headless CMS (legacy)](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview).
+  > ⚠️ The Localization feature isn't available for [Headless CMS (legacy)](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview).
 
 - **WebOps:** One WebOps integration deploys the account's single project, and every binding of the account is served by the same deployment. Bindings are configured on the account through [VTEX Support](https://help.vtex.com/docs/tutorials/opening-tickets-to-vtex-support) and enabled in the project's `discovery.config.js`.
 - **App versions:** VTEX IO apps, such as Intelligent Search, backend apps, and Admin apps, are installed once in that account.
