@@ -68,3 +68,26 @@ For detailed instructions, see [Configuring production and preview branches in W
 > ℹ️ To keep the testing account mirroring production, synchronize catalog, shipping, and promotions through the VTEX APIs, for example with scripts. Plan for that synchronization as part of your regular maintenance routine.
 
 {/* TODO (EDU-19765): fonte (Google Doc, seção 4.2, linha "Conta de QA") diz "catálogo, frete e promoções mantidos em sincronia via scripts de API". Não encontrei na documentação publicada uma página sobre esses scripts de sincronização. Confirmar com o time responsável se existe forma oficial de copiar/espelhar um ambiente e qual documentação de API recomendar. */}
+
+## Validating changes before merge
+
+Because WebOps deploys when a branch is merged, the checks that run before the merge decide what reaches your accounts. How you structure your pipeline is up to your team, and you can implement it with GitHub Actions or any other continuous integration (CI) service.
+
+Group the pipeline by responsibility rather than creating one workflow per store or per check, which quickly leads to redundant files that are hard to maintain. The following table shows a suggested structure:
+
+| Responsibility | When it runs | What it includes |
+| --- | --- | --- |
+| Quality gate | Automatically on every pull request and on pushes to your integration branches. | Code and token linting, TypeScript type-checking, build of the shared package, unit tests, end-to-end tests (ideally only on pull requests), and visual regression tests of components. |
+| Release and changelog | Automatically on merge to the production branch, and manually when needed. | Semantic changelog generation and version bump of the shared package. For more information, see [Exports and versioning](https://developers.vtex.com/docs/guides/monorepo-sharing-code-across-stores#exports-and-versioning). |
+| CMS schema sync | Manually only. | Propagation of section schemas between accounts, when needed. |
+
+{/* TODO (EDU-19765): seção baseada na fonte (Google Doc, seção 4.4, "Estrutura de Workflows de CI/CD"). Pontos para confirmar com o time responsável:
+- A fonte cita Chromatic "ou similar" para regressão visual e GitHub Actions como plataforma. Mantive só "GitHub Actions or any other CI service" e não citei ferramenta de regressão visual, porque a fonte trata a escolha como decisão do time de engenharia.
+- A fonte descreve a sincronização de CMS como "ação destrutiva irreversível no curto prazo". Na seção 4.5, a própria fonte diz que o conteúdo publicado é versionado e pode ser restaurado. Usei "alto impacto" (termo da seção 4.4) em vez de "destrutiva irreversível". Confirmar qual operação exatamente é irreversível (schemas ou conteúdo).
+- "Bump de versão do pacote hub" depende de como as lojas consomem o pacote `core` (workspaces ou versão fixada). O PR #3103 tem um TODO aberto sobre isso (EDU-19766). Ajustar esta linha conforme a resposta. */}
+
+### Keeping CMS schema sync manual
+
+Section schemas stay in your repository, and the CMS doesn't copy them from one account to another. Syncing them to an account is a high-impact operation, so trigger it deliberately for each account instead of tying it to a code push. This way, a deploy never changes the content structure of a production account as a side effect.
+
+For the commands and the steps to sync schemas to each account, see the CMS section in [Planning your account structure](https://developers.vtex.com/docs/guides/faststore/multi-store-planning-your-account-structure#multiple-accounts).
