@@ -14,7 +14,7 @@ FastStore now supports the opt-in `api.preserveCartLines` flag, which keeps sepa
 
 ## What has changed?
 
-By default, FastStore merges cart lines of the same SKU into one line. When a store splits a line in Checkout using the [split item endpoint](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/orderForm/-orderFormId-/items/-itemUniqueId-/split), for example, `[refrigerator x1, refrigerator x1]`, FastStore merged them into `[refrigerator x2]` on the next cart validation, undoing the split in Checkout.
+By default, FastStore merges cart lines of the same SKU into one line. When a store splits a line in Checkout using the [split item endpoint](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/orderForm/-orderFormId-/items/-itemUniqueId-/split), for example, `[refrigerator x1, refrigerator x1]`, FastStore merges them into `[refrigerator x2]` on the next cart validation, undoing the split in Checkout.
 
 With `preserveCartLines: true`, FastStore respects the lines created in Checkout. Each line is shown separately in the minicart, and editing or removing a line affects only that line. FastStore doesn't split lines on its own, and stores that don't enable the flag keep the current behavior.
 
@@ -24,4 +24,4 @@ Some stores need each unit to be a separate line so shoppers can choose differen
 
 ## What needs to be done?
 
-Update your store to FastStore `v4.10.3` or later, and set `preserveCartLines` to `true` in the `api` object of your `discovery.config.js` file. For step-by-step instructions, see [Keeping split cart lines](https://developers.vtex.com/docs/guides/faststore/developer-tools-keeping-cart-lines). For the full list of options, see [Configuration options for discovery.config.js](https://developers.vtex.com/docs/guides/faststore/developer-tools-config-options).
+Update your store to FastStore `v4.10.3` or later, and set `preserveCartLines` to `true` in the `api` object of your `discovery.config.js` file. For step-by-step instructions, see [Keeping split cart lines](https://developers.vtex.com/docs/guides/faststore/developer-tools-keeping-split-cart-lines). For the full list of options, see [Configuration options for discovery.config.js](https://developers.vtex.com/docs/guides/faststore/developer-tools-config-options).
