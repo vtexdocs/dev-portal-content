@@ -59,7 +59,7 @@ const RemoveItemExample = () => {
 }
 ```
 
-`useCartPunchout` does not expose every operation supported by the [Checkout API](https://developers.vtex.com/docs/guides/checkout-api-overview). If you update Checkout data through the Checkout API directly, call `sync()` afterward to refresh the UI and ensure it reflects the latest cart state.
+`useCartPunchout` does not expose every operation supported by the [Checkout API](https://developers.vtex.com/docs/api-reference/checkout-api). If you update Checkout data through the Checkout API directly, call `sync()` afterward to refresh the UI and ensure it reflects the latest cart state.
 
 This is useful for actions not covered by the hook, such as updating shipping information through [`POST` Add shipping address and select delivery option](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pub/orderForm/-orderFormId-/attachments/shippingData) endpoint.
 

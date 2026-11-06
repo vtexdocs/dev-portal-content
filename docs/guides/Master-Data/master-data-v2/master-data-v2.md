@@ -14,3 +14,4 @@ This section contains tutorials about Master Data v2. Here you will find the fol
 - [Using dynamic expressions in Master Data v2](https://developers.vtex.com/docs/guides/using-dynamic-expressions-on-master-data-v2)
 - [Search by geocoordinates](https://developers.vtex.com/docs/guides/search-by-geo-coordinates)
 - [Master Data v2 document saving flow](https://developers.vtex.com/docs/guides/master-data-v2-document-saving-flow)
+- [Managing personal data in Master Data v2](https://developers.vtex.com/docs/guides/managing-personal-data-in-master-data-v2)

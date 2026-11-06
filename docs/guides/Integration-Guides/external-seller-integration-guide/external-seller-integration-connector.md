@@ -3,7 +3,7 @@ title: "External seller connector"
 slug: "external-seller-integration-connector"
 hidden: false
 createdAt: "2020-09-01T13:47:40.310Z"
-updatedAt: "2025-12-18T14:25:08.972Z"
+updatedAt: "2026-11-04T12:00:00.000Z"
 ---
 The seller integration flow comprises 12 different API requests. Four of these are calls that the seller should make to the marketplace. Seven are requests that the marketplace will need to make to the seller. Only one endpoint is a request made both from the seller and from the marketplace. So, for these, you will need to implement endpoints that are prepared to receive specific request bodies and respond with specific objects.
 
@@ -96,6 +96,15 @@ To notify the marketplace of price and inventory changes, the seller must call t
 - [Notify marketplace of inventory update](https://developers.vtex.com/docs/api-reference/marketplace-apis#post-/notificator/-sellerId-/changenotification/-skuId-/inventory)
 
 After these notifications, the marketplace will reach out to the seller to retrieve the latest SKU information.
+
+### Delivery Promise notifications
+
+If the marketplace uses [Delivery Promise](https://developers.vtex.com/docs/guides/delivery-promise), the seller must also notify the marketplace about product availability and delivery promises (the delivery zones, times, and methods in which each product is available). To do this, use the following endpoints of the [Delivery Promise Notification API](https://developers.vtex.com/docs/api-reference/delivery-promise-notification-api):
+
+- [Update external product availability](https://developers.vtex.com/docs/api-reference/delivery-promise-notification-api#put-/delivery-promises/external-sellers/-sellerId-/products): Creates or fully updates the delivery promises of one or more items.
+- [Update delivery promises for an external seller's item](https://developers.vtex.com/docs/api-reference/delivery-promise-notification-api#patch-/delivery-promises/external-sellers/-sellerId-/items/-itemId-): Updates one or more delivery promises of a single item.
+
+> ℹ️ Complying with this notification protocol is one of the [requirements](https://developers.vtex.com/docs/guides/delivery-promise#requirements) for using Delivery Promise with external sellers.
 
 ### Endpoint implementation
 
