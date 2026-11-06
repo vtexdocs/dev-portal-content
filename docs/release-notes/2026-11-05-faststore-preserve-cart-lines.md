@@ -1,9 +1,9 @@
 ---
 title: "FastStore: Keep split cart lines with preserveCartLines"
-slug: "2026-11-05-faststore-preserve-cart-lines"
+slug: "2026-11-13-faststore-preserve-cart-lines"
 type: added
-createdAt: "2026-11-05T00:00:00.000Z"
-updatedAt: "2026-11-05T00:00:00.000Z"
+createdAt: "2026-11-13T00:00:00.000Z"
+updatedAt: "2026-11-13T00:00:00.000Z"
 hidden: false
 excerpt: "FastStore now supports the opt-in `preserveCartLines` flag, which keeps cart lines of the same SKU separate after they are split in Checkout."
 tags:
@@ -24,4 +24,4 @@ Some stores need each unit to be a separate line so shoppers can choose differen
 
 ## What needs to be done?
 
-Update your store to FastStore `v4.10.3` or later, and set `preserveCartLines` to `true` in the `api` object of your `discovery.config.js` file. For step-by-step instructions, see [Keeping split cart lines](https://developers.vtex.com/docs/guides/faststore/developer-tools-preserve-cart-lines). For the full list of options, see [Configuration options for discovery.config.js](https://developers.vtex.com/docs/guides/faststore/developer-tools-config-options).
+Update your store to FastStore `v4.10.3` or later, and set `preserveCartLines` to `true` in the `api` object of your `discovery.config.js` file. For step-by-step instructions, see [Keeping split cart lines](https://developers.vtex.com/docs/guides/faststore/developer-tools-keeping-cart-lines). For the full list of options, see [Configuration options for discovery.config.js](https://developers.vtex.com/docs/guides/faststore/developer-tools-config-options).
