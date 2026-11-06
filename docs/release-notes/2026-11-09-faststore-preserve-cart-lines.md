@@ -2,8 +2,8 @@
 title: "FastStore: Keep split cart lines with `preserveCartLines`"
 slug: "2026-11-13-faststore-preserve-cart-lines"
 type: added
-createdAt: "2026-11-13T00:00:00.000Z"
-updatedAt: "2026-11-13T00:00:00.000Z"
+createdAt: "2026-11-09T00:00:00.000Z"
+updatedAt: "2026-11-09T00:00:00.000Z"
 hidden: false
 excerpt: "FastStore now supports the opt-in `preserveCartLines` flag, which keeps cart lines of the same SKU separate after they are split in Checkout."
 tags:
