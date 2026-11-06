@@ -1,5 +1,5 @@
 ---
-title: "Admin (SAML 2.0)"
+title: "Admin login with an external SAML 2.0 provider"
 slug: "login-integration-guide-admin-saml2"
 hidden: false
 createdAt: "2020-06-30T20:24:49.386Z"

@@ -1,5 +1,5 @@
 ---
-title: "Webstore (OAuth 2.0)"
+title: "Webstore login with an external OAuth 2.0 provider"
 slug: "login-integration-guide-webstore-oauth2"
 hidden: false
 createdAt: "2020-06-30T20:23:48.041Z"
@@ -9,6 +9,8 @@ updatedAt: "2022-09-23t14:35:03.422z"
 VTEX stores can identify returning customers by requesting that they provide login information. That way, logged-in customers can access their previous purchases, and the store can display customized content based on customer profile information.
 
 By default, our platform stores user information in our secure servers, but sometimes it is helpful to integrate external identity providers with the authentication process. The framework described in this guide will allow the VTEX platform to connect pre-existing user bases in private servers. The same protocol enables clients to use their Google accounts to log in to a third-party application.
+
+>ℹ️ This guide covers VTEX using an external identity provider to log in your store customers. If you want your app or AI agent to access VTEX on behalf of a VTEX user, see [VTEX OAuth provider](https://developers.vtex.com/docs/guides/vtex-oauth-provider).
 
 In this guide, you will learn about:
 
