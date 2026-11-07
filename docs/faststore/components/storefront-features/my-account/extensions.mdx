@@ -1,8 +1,8 @@
 ---
 title: "Extending My Account for B2B stores"
 hidden: true
-excerpt: "Learn how to extend the My Account page in your B2B FastStore project."
-updatedAt: "2026-08-11T00:00:00.000Z"
+excerpt: "Learn how to extend and localize the My Account page in your B2B FastStore project."
+updatedAt: "2026-11-04T00:00:00.000Z"
 ---
 
 In this guide, you'll learn how to extend the [My Account](https://developers.vtex.com/docs/guides/faststore/my-account-overview) page in your B2B store by creating custom CMS components and adding them to existing pages or to new CMS-managed pages.
@@ -154,6 +154,29 @@ For more details about the sync flow, see [Local setup and development](https://
 Log in to your store and access the new route, for example, `/pvt/account/wishlist`. The page appears in the My Account menu with the sections published in the CMS.
 
 > ⚠️ If the content type was never published or its identifier doesn't match the `contentType` value, the page still loads with the menu, layout, and authentication, but with an empty body. See [Common issues during extensions](#common-issues-during-extensions) section.
+
+## Localizing CMS-managed pages
+
+Localization only applies to CMS-managed pages. My Account content is localized the same way as any other CMS content in your store: locale validation is only applied to pages whose content is managed through the CMS, as described above. Pages rendered from native `.tsx` files aren't covered by Localization.
+
+> ⚠️ This requires the [Localization feature](https://developers.vtex.com/docs/guides/faststore/localization-feature-handling-internationalization-with-the-localization-feature) enabled and configured for your project, including locales and bindings.
+
+Once a page and its components exist in the CMS, as described in the steps above, follow this workflow to localize it:
+
+```mermaid
+flowchart TD
+  Start["Pick a CMS-managed My Account page to localize"] --> Locales["Configure locales and fallback rules"]
+  Locales --> Localize["Localize the CMS content for each locale"]
+  Localize --> Verify["Verify the page in each locale"]
+```
+
+1. **Configure locales and fallback rules** by following [Configuring locales](https://help.vtex.com/docs/tutorials/configuring-locales) to create the locales your store supports and choose the default locale, and [Understanding locale fallback rules](https://help.vtex.com/docs/tutorials/understanding-locale-fallback-rules) to choose a fallback strategy for content that isn't translated for every locale.
+
+2. **Localize the CMS content** of the page for each locale by following [Localizing content](https://help.vtex.com/docs/tutorials/localizing-content).
+
+3. **Verify the page** by accessing it through each locale's binding and confirming the published content displays correctly.
+
+> ⚠️ Review the [default My Account pages](https://developers.vtex.com/docs/guides/faststore/my-account-overview#default-my-account-pages) and the pages you've created. Any page that isn't CMS-managed won't have localized content, regardless of the locales configured for your store.
 
 ## Rendering order
 
