@@ -1,0 +1,235 @@
+---
+title: "Migrating from FastStore v1 to v4 with CMS"
+excerpt: "Learn how to gradually migrate a FastStore v1 store to v4 adopting the CMS for FastStore storefronts."
+hidden: true
+createdAt: "2026-10-14T00:00:00.000Z"
+---
+
+This guide explains how to gradually replace a FastStore v1 store with FastStore v4 in the same account, adopting the [CMS for FastStore storefronts](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts) on v4. Traffic is split between both versions by percentage until v4 takes over completely. This guide also applies to migrations from v1 to v3, since both versions run on WebOps and follow the same process.
+
+> ⚠️ Traffic split is only available between FastStore v1 and v4 in the **same account and the same domain**. You can't split traffic between different accounts or subaccounts, or between two versions that already run on WebOps.
+
+If you need to keep using [Headless CMS (Legacy)](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview) on v4, follow [Migrating from FastStore v1 to v4 keeping Headless CMS (Legacy)](https://developers.vtex.com/docs/guides/faststore/getting-started-faststore-v1-to-v4-with-hcms-legacy) instead.
+
+For an overview of the full migration process, how to confirm your project runs on FastStore v1, and the GitHub account you need, see [Migrating from FastStore v1 to v4](https://developers.vtex.com/docs/guides/faststore/getting-started-faststore-v1-to-v4).
+
+{/* Preciso confirmar com a engenharia se o slug do guia de visão geral (getting-started-faststore-v1-to-v4) está correto, pois o arquivo atual é faststore-v1-to-v4-2.mdx. */}
+
+## Migration overview
+
+The migration happens in four phases. The key idea is that v1 and v4 run side by side in the same account while traffic moves gradually from one to the other. Each version has its own content management system: v1 stays on Headless CMS (Legacy) and v4 uses the CMS.
+
+- **[Preparation](#preparation):** Create the v4 repository, prepare the content in the CMS, and review the domains and checkout on v4.
+- **[Configuration](#configuration):** Ask VTEX to activate traffic split with 0% on v4 and complete the WebOps onboarding.
+- **[Gradual rollout](#gradual-rollout):** Validate v4 and increase its share of the traffic until it reaches 100%.
+- **[Post-migration](#post-migration):** VTEX ends the traffic split and you retire the v1 repository.
+
+The steps are numbered sequentially across the four phases, from step 1 to step 11.
+
+## Preparation
+
+Complete these steps in the weeks before the migration. This phase is the responsibility of you or your agency.
+
+The following table shows what happens in each version during this phase:
+
+| **Step** | **FastStore v1 (current repository)** | **FastStore v4 (new project, same account)** |
+| --- | --- | --- |
+| [1. Create the repository](#step-1---create-the-v4-repository) | No changes. The live store stays on v1 with no new development. | Create the v4 repository in your GitHub organization and make sure the main branch builds. |
+| [2. Prepare the CMS content](#step-2---prepare-the-content-in-the-cms) | Headless CMS (Legacy) content remains as is. | Create the content in the CMS from scratch or migrate it from Headless CMS (Legacy). |
+| [3. Domains](#step-3---configure-the-correct-domains-in-discoveryconfigjs) | No changes. | Review `discovery.config.js` so it has the correct account and domains. |
+| [4. Checkout](#step-4---validate-the-checkout) | No changes. | Validate the checkout end-to-end on v4. |
+
+### Step 1 - Create the v4 repository
+
+Create the v4 repository in your GitHub organization and make sure its main branch builds without errors. Don't start the WebOps onboarding yet. You connect this repository to WebOps in [step 6](#step-6---complete-the-webops-onboarding), after VTEX activates the traffic split. From that point on, every commit to the main branch creates a production deploy.
+
+{/* PERGUNTA PARA A ENGENHARIA (step 1): O que o lojista deve fazer exatamente neste passo para ter o "repo v4 criado, com a branch principal buildando sem erro" (texto do documento fonte), antes do onboarding do WebOps (step 6)?
+(1) O repositório deve conter o código completo do projeto v4? Se sim, de onde vem esse código: de um template, do repositório v1 atualizado ou de outra origem?
+(2) Ou basta um repositório vazio, que o onboarding do WebOps (opção "Existing repository", step 6) preenche?
+(3) Como a branch principal "builda" antes do onboarding: build local, CI ou outro meio?
+(4) Qual guia deve ser referenciado aqui? O guia "Starting a new FastStore project" (getting-started-2-starting-the-project) é o próprio onboarding do WebOps (cria o repositório e gera o primeiro deploy), então não deve ser linkado neste passo, a menos que exista uma forma de seguir só a parte de criação do repositório. */}
+
+### Step 2 - Prepare the content in the CMS
+
+FastStore v1 gets its content from Headless CMS (Legacy), while v4 gets it from the [CMS](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts). They are separate systems, so the content published in Headless CMS (Legacy) isn't available in v4 automatically. To understand how they differ, see [Upgrading from Headless CMS (Legacy) to CMS](https://developers.vtex.com/docs/guides/upgrading-from-headless-cms-legacy-to-cms-overview). Before the migration, make sure all the content v4 needs is published in the CMS. You can do this in one of two ways:
+
+* **Create the content from scratch** in the CMS, which is useful if you're also redesigning the store.
+* **Migrate the existing content** from Headless CMS (Legacy). Align this migration with VTEX through a [ticket with VTEX Support](https://help.vtex.com/en/docs/tutorials/opening-tickets-to-vtex-support).
+
+> ⚠️ The two CMSs aren't synchronized, and publishing in one doesn't generate a build in the other. During the traffic split, content changes that must apply to both versions need to be published in Headless CMS (Legacy) and in the CMS. Plan a content freeze or a routine of double publishing.
+
+{/* Preciso confirmar com a engenharia se as duas opções (criar do zero e migrar via ticket) são as únicas disponíveis e se o conteúdo migrado precisa ser publicado no CMS antes do onboarding do WebOps. */}
+
+### Step 3 - Configure the correct domains in `discovery.config.js`
+
+The `discovery.config.js` file in the root of the v4 project defines the account and domains v4 uses. Wrong values can cause v4 to load the wrong data or break the checkout.
+
+1. Open `discovery.config.js` in the v4 project.
+2. Confirm that the following properties match your account and production domain:
+
+    | Property | What to check |
+    | --- | --- |
+    | `api.storeId` | Your VTEX account name. |
+    | `api.workspace` | `master`, for production. |
+    | `storeUrl` | Your primary store domain, for example, `https://www.mystore.com`. |
+    | `secureSubdomain` | Remove this property. FastStore v4 on WebOps doesn't use a secure subdomain, as described in [Configuring external DNS](https://developers.vtex.com/docs/guides/faststore/go-live-1-configuring-external-dns). |
+    | `checkoutUrl` | The checkout URL on your domain, for example, `https://www.mystore.com/checkout`. |
+    | `loginUrl` | The login URL on your domain, for example, `https://www.mystore.com/api/io/login`. |
+    | `accountUrl` | The account URL on your domain, for example, `https://www.mystore.com/api/io/account`. |
+
+    {/* Nota: os valores de loginUrl e accountUrl (/api/io/login e /api/io/account) seguem o guia de DNS (go-live/1-configuring-external-dns.mdx, step 4). O config-options.mdx usa exemplos diferentes (/login e /account). Essa divergência nos docs existentes não foi alterada aqui e precisa ser avaliada separadamente. */}
+
+    For more details, see [Configuration options for discovery.config.js](https://developers.vtex.com/docs/guides/faststore/developer-tools-config-options) and [Associating your custom domain with your FastStore project](https://developers.vtex.com/docs/guides/faststore/go-live-1-configuring-external-dns#step-4-associating-your-custom-domain-with-your-faststore-project).
+
+{/* Preciso confirmar com a engenharia: (1) se as alterações no discovery.config.js podem ser commitadas na main antes do onboarding do WebOps (step 6) sem gerar deploy de produção, ou se devem ficar em outra branch até lá (o guia do Headless CMS (Legacy) usa uma branch separada, mas lá o WebOps já está configurado); (2) se o domínio em WebOps Settings (step 6) deve ser o mesmo do storeUrl. */}
+
+### Step 4 - Validate the checkout
+
+Before the migration, validate the checkout end-to-end on v4. This includes checking that the checkout pages and the Order Placed page work with the domains you configured in [step 3](#step-3---configure-the-correct-domains-in-discoveryconfigjs). For details on how the checkout integrates with a FastStore project, see [Integrating the VTEX Checkout](https://developers.vtex.com/docs/guides/faststore/go-live-3-integrating-the-vtex-checkout).
+
+You validate it again in production in [step 7](#step-7---validate-v4-in-production), using `?ab_test=v2`.
+
+{/* Preciso confirmar com a engenharia: (1) como o lojista deve validar o checkout nesta fase, já que a v4 ainda não tem deploy de produção antes do onboarding do WebOps (step 6) — localmente, com `yarn dev`, ou de outra forma; (2) se a validação deve incluir carrinho, frete e pagamento (o documento fonte só diz "checkout validado de ponta a ponta na v4"); (3) se as configurações do guia de integração do checkout (script da Order Placed, header e footer) já estão aplicadas na conta pela v1, ou se o lojista precisa configurá-las, considerando que alterações no Admin valem para todos os clientes, inclusive os da v1. */}
+
+## Configuration
+
+{/* NOTA DE ESTRUTURA: Neste guia, a validação da v4 em produção (step 7) fica na fase Configuration, e não em Gradual rollout como no guia do Headless CMS (Legacy). Isso segue o documento fonte (Google Docs, "Migração FastStore v1 → v4 na mesma conta com traffic split"): na seção do novo CMS, a ação 4 (validar a v4 com ?ab_test=v2) pertence à Fase 2 (configuração), logo após o onboarding do WebOps (ação 3), e a Fase 3 (virada gradual) começa em subir a porcentagem. Na seção do Headless CMS (Legacy), o commit na main e a validação (ações 6 e 7) pertencem à Fase 3. Possível motivo (dedução, não está na fonte): aqui o primeiro deploy sai do onboarding feito pelo cliente na fase de configuração, enquanto no Headless CMS (Legacy) o deploy depende de um commit do cliente depois da confirmação da VTEX. Não alinhar os dois guias sem confirmar com a engenharia. */}
+
+The following table shows what happens in each version during this phase:
+
+| **Step** | **FastStore v1 (current repository)** | **FastStore v4 (new project, same account)** |
+| --- | --- | --- |
+| [5. Traffic split ticket](#step-5---open-a-ticket-to-activate-traffic-split) | Receives 100% of the traffic after VTEX activates the split. | At least one day before the migration, open a ticket requesting traffic split. VTEX activates it with 0% on v4. |
+| [6. WebOps onboarding](#step-6---complete-the-webops-onboarding) | No changes. | Complete the WebOps onboarding in the Admin, choosing the new CMS and connecting the v4 repository. |
+| [7. Validation](#step-7---validate-v4-in-production) | Still receives all the traffic. | Validate v4 using `?ab_test=v2`, including the checkout. |
+
+### Step 5 - Open a ticket to activate traffic split
+
+At least one day before the migration, [open a ticket with VTEX Support](https://help.vtex.com/en/docs/tutorials/opening-tickets-to-vtex-support) requesting the activation of traffic split with 100% on v1 and 0% on v4.
+
+Wait for VTEX to activate traffic split and confirm in the ticket.
+
+> ℹ️ Traffic split is activated before the onboarding because the onboarding creates the first v4 deploy, and the traffic must be on v1 when that happens.
+
+### Step 6 - Complete the WebOps onboarding
+
+After VTEX confirms the traffic split, complete the WebOps onboarding:
+
+1. In the VTEX Admin, go to **Storefront > FastStore WebOps** and click `Start Project`.
+2. In **Setup & Create Project**, fill in the project, SEO, Google Tag Manager, and catalog information.
+3. In **CMS Integration**, choose the CMS store that v4 will use.
+4. In **Git provider**, click `Connect with GitHub`, choose the organization that hosts the v4 repository, and install the app.
+
+    > ⚠️ After you define the GitHub organization, you can't change it.
+
+5. Select **Existing repository**, choose the v4 repository you created in [step 1](#step-1---create-the-v4-repository), and click `Create`. The first v4 deploy starts.
+6. Add your store domain in the WebOps dashboard: Go to the **Settings** tab, and in **Production domain**, select your domain in the **Host** field and click `Add`.
+
+For detailed instructions, see [Starting a new FastStore project](https://developers.vtex.com/docs/guides/faststore/getting-started-2-starting-the-project) and [Settings](https://developers.vtex.com/docs/guides/faststore/1-onboarding-dashboard#settings).
+
+You can track the deploy status in the [Deploys](https://developers.vtex.com/docs/guides/faststore/1-onboarding-dashboard#deploys) tab of the WebOps dashboard. The deploy is complete when its status changes to **Success**. If the status is **Failed**, select the deploy and check the logs in the **Deploy Steps** section.
+
+{/* Preciso confirmar com a engenharia: (1) se o domínio em WebOps Settings deve ser cadastrado antes ou depois do primeiro deploy; (3) se o domínio, que já serve a v1, aparece no dropdown do campo Host sem ajustes de DNS adicionais. */}
+
+### Step 7 - Validate v4 in production
+
+Validate v4 in the production domain by adding `?ab_test=v2` to the URL, for example `https://www.store.com/?ab_test=v2`. This parameter forces v4 even though it still receives 0% of the traffic, so customers keep seeing v1 while you test.
+
+Check at least the following:
+
+* Home, category, product, and search pages.
+* Content published in the CMS.
+* Cart and checkout, up to the payment step.
+* Login and account pages.
+
+{/* Preciso confirmar com a engenharia se esta lista de verificações, adaptada do guia do Headless CMS (Legacy), se aplica a este cenário (não está no documento fonte, que só menciona "incluindo o checkout"). */}
+
+If you find issues, fix them in the v4 repository and repeat the validation. Don't move to [step 8](#step-8---increase-the-v4-traffic-gradually) until v4 works as expected. Since v4 receives 0% of the traffic, customers aren't affected.
+
+## Gradual rollout
+
+The following table shows what happens in each version during this phase:
+
+| **Step** | **FastStore v1 (current repository)** | **FastStore v4 (new project, same account)** |
+| --- | --- | --- |
+| [8. Increase v4 traffic](#step-8---increase-the-v4-traffic-gradually) | Share of traffic decreases at each step. | Increase v4 in steps (for example, 15%, 50%, and 100%) through the ticket, monitoring errors and conversion. |
+| [9. Final validation](#step-9---validate-the-cutover) | No longer receives traffic at 100%. | At 100%, validate the store and the checkout once more and confirm the cutover in the ticket. |
+
+### Step 8 - Increase the v4 traffic gradually
+
+Increase the percentage of v4 in steps, for example 15%, 50%, and 100%. Request each change by replying to the ticket you opened in [step 5](#step-5---open-a-ticket-to-activate-traffic-split) (or a new ticket that references it, if that one was closed), and monitor errors and conversion after each change.
+
+Traffic split works as follows:
+
+* A cookie keeps each visitor on the same version for 24 hours.
+* The parameters `?ab_test=v1` and `?ab_test=v2` force v1 and v4, respectively, which is useful to validate each version.
+* Percentage changes are requested through [VTEX Support](https://help.vtex.com/en/docs/tutorials/opening-tickets-to-vtex-support).
+
+> ⚠️ During the split, the store has no CDN cache, which impacts performance and cost. Plan the duration of the split with this in mind. VTEX reactivates the CDN cache when it ends the traffic split in [step 10](#step-10---ask-vtex-to-end-the-traffic-split).
+
+### Step 9 - Validate the cutover
+
+With 100% of the traffic on v4, validate the store and the checkout once more, using the same checks as in [step 7](#step-7---validate-v4-in-production).
+
+If everything works as expected, reply to the ticket confirming the cutover. This confirmation allows VTEX to end the traffic split in [step 10](#step-10---ask-vtex-to-end-the-traffic-split).
+
+If you find issues, ask VTEX in the same ticket to return v4 to 0%, as described in [Rollback](#rollback).
+
+## Post-migration
+
+The following table shows what happens in each version during this phase:
+
+| **Step** | **FastStore v1 (current repository)** | **FastStore v4 (new project, same account)** |
+| --- | --- | --- |
+| [10. End traffic split](#step-10---ask-vtex-to-end-the-traffic-split) | No changes. | VTEX ends the traffic split and reactivates the CDN cache. v4 is the live store. |
+| [11. Retire v1](#step-11---retire-v1) | Remove the build URL from Headless CMS (Legacy) and archive the repository or restrict commits to it. | No changes. |
+
+### Step 10 - Ask VTEX to end the traffic split
+
+After you confirm the cutover in [step 9](#step-9---validate-the-cutover), VTEX ends the traffic split and reactivates the CDN cache. v4 becomes the live store. If the ticket was closed, open a new one and reference the previous ticket.
+
+### Step 11 - Retire v1
+
+After VTEX ends the traffic split, retire v1:
+
+1. Remove the build URL from Headless CMS (Legacy) so publications no longer trigger v1 builds:
+
+    a. In the VTEX Admin, go to **Storefront > Headless CMS**.
+
+    b. In the FastStore project, click `Settings` (⚙️).
+
+    c. In **Settings**, click the `Build` tab.
+    
+    d. Remove the value in **Build Webhook URL** and click `Save`.
+
+2. Prevent new commits to the v1 repository by doing one of the following:
+
+    * Archive the repository in GitHub: Go to **Settings > General > Danger Zone** and click **Archive this repository**.
+    * Restrict commits: Protect the main branch or remove write permissions from the team.
+
+{/* Preciso confirmar com a engenharia: (1) se o lojista consegue remover o Build Webhook URL no Admin (os passos foram adaptados do guia do Headless CMS (Legacy)) ou se deve pedir isso à VTEX; (2) como o repositório v1 fica na organização vtex-sites, se o lojista tem permissão para arquivá-lo ou restringir commits, ou se deve pedir isso à VTEX pelo ticket; (3) se há risco em arquivar logo após o fim do split, considerando o rollback; (4) preciso confirmar as informações do item 2 (arquivar o repositório pela Danger Zone do GitHub ou restringir commits protegendo a main ou removendo permissões de escrita do time), pois o documento fonte só diz "arquiva o repo v1 ou restringe commits nele" e esses passos foram adaptados do guia do Headless CMS (Legacy). */}
+
+## Rollback
+
+If you find issues in v4 after increasing its traffic, you can return the traffic to v1. What you need to do depends on how far the migration has progressed.
+
+| When | What to do |
+| --- | --- |
+| [**During the split**](#rollback-during-the-split) (steps 7 to 9) | Ask VTEX to return v4 to 0% by replying to the ticket. Traffic goes back to v1 without a new deploy. |
+| [**After the split ends**](#rollback-after-the-split-ends) (steps 10 and 11) | Don't take any action on your own. Contact VTEX through a ticket before taking any action. |
+
+{/* Preciso confirmar com a engenharia: os intervalos de passos da tabela (7 a 9 e 10 e 11) e a frase introdutória acima (não estão no documento fonte, que só diferencia "durante o split" e "depois do encerramento do split"). */}
+
+### Rollback during the split
+
+1. Reply to the ticket you opened in [step 5](#step-5---open-a-ticket-to-activate-traffic-split), asking VTEX to return v4 to 0%. If that ticket was closed, open a new one and reference the previous ticket.
+2. Wait for VTEX to confirm in the ticket. Traffic goes back to v1 without a new deploy. Each version has its own CMS, so you don't need to revert any CMS configuration, and Headless CMS (Legacy) keeps publishing to v1 normally.
+3. Fix the issues in the v4 repository and validate again using `?ab_test=v2`, as described in [step 7](#step-7---validate-v4-in-production), before requesting a new increase.
+
+{/* Preciso confirmar com a engenharia: (1) se abrir um novo ticket referenciando o anterior, caso o original tenha sido fechado, é o fluxo correto (não está no documento fonte); (2) se, após o rollback, a recomendação de corrigir a v4 e revalidar com ?ab_test=v2 antes de pedir novo aumento está correta (não está no documento fonte); (3) se aguardar a confirmação da VTEX no ticket antes de seguir é o fluxo esperado (não está no documento fonte); (4) o prazo estimado para a VTEX concluir a mudança de porcentagem. */}
+
+### Rollback after the split ends
+
+After [step 10](#step-10---ask-vtex-to-end-the-traffic-split), v1 no longer receives traffic, and you may have already retired it in [step 11](#step-11---retire-v1). Don't take any action on your own. Contact VTEX through a ticket before taking any action.
+
+{/* Preciso confirmar com a engenharia se o repositório v1 pode já ter sido arquivado após o fim do split e se isso afeta o rollback. */}
