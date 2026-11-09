@@ -4,7 +4,7 @@ slug: "vtex-oauth-provider"
 excerpt: "Learn how to use the VTEX OAuth provider so AI agents, MCP clients, and partner apps can act on behalf of a VTEX user with the standard OAuth authorization code flow."
 hidden: false
 createdAt: "2026-11-04T12:00:00.000Z"
-updatedAt: "2026-11-04T12:00:00.000Z"
+updatedAt: "2026-11-09T17:34:37.000Z"
 seeAlso:
  - "/docs/guides/authentication"
  - "/docs/api-reference/vtex-id-api"
