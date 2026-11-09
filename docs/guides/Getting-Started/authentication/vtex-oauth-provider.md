@@ -110,7 +110,7 @@ The following steps describe the flow from the client's perspective:
 4. [Exchange the authorization code for an access token](#step-3-exchange-the-code-for-an-access-token).
 5. [Use the access token](#step-4-use-and-validate-the-access-token) and, when it expires, [refresh it](#refreshing-the-access-token).
 
-### Step 1 - Register the client
+### Step 1: Register the client
 
 Each client registers once, using the [Register client](https://developers.vtex.com/docs/api-reference/vtex-id-api#post-/api/vtexid/v1/oauth/register) endpoint, which implements [dynamic client registration (RFC 7591)](https://datatracker.ietf.org/doc/html/rfc7591).
 
@@ -137,7 +137,7 @@ curl --request POST \
 
 The response contains the `client_id` and, for confidential clients, the `client_secret`. Store the secret securely: never expose it in frontend code or public repositories.
 
-### Step 2 - Request authorization
+### Step 2: Request authorization
 
 Generate a PKCE `code_verifier` and derive the `code_challenge` from it with the `S256` method. Then redirect the user's browser to the [Request authorization code](https://developers.vtex.com/docs/api-reference/vtex-id-api#get-/api/vtexid/v1/oauth/authorize) endpoint:
 
@@ -156,7 +156,7 @@ If the user isn't signed in, VTEX asks them to log in. Then VTEX shows a consent
 
 After the user grants access, VTEX redirects the user agent to your `redirect_uri` with the `code` and the `state` you sent. Check that the `state` matches the one you generated. If the authorization fails, VTEX redirects with the `error` and `state` in the URL fragment.
 
-### Step 3 - Exchange the code for an access token
+### Step 3: Exchange the code for an access token
 
 Call the [Get access token](https://developers.vtex.com/docs/api-reference/vtex-id-api#post-/api/vtexid/v1/oauth/token) endpoint with the `code` and the `code_verifier` you generated in the previous step. Confidential clients authenticate with their `client_id` and `client_secret`, either in the body or through HTTP Basic authentication.
 
@@ -185,7 +185,7 @@ The response contains the access token:
 
 The `refresh_token` is only returned if the client registered for the `refresh_token` grant.
 
-### Step 4 - Use and validate the access token
+### Step 4: Use and validate the access token
 
 The access token is a VTEX ID token. Resource servers and clients can verify it with the [Introspect access token](https://developers.vtex.com/docs/api-reference/vtex-id-api#post-/api/vtexid/v1/oauth/introspect) endpoint, which returns `{"active": true}` along with the token claims, or `{"active": false}` if the token isn't valid. Public clients (`token_endpoint_auth_method` set to `none`) can't use this endpoint.
 
