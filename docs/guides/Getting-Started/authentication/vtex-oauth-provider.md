@@ -205,6 +205,8 @@ curl --request POST \
 
 Each refresh token can be used only once. Every successful refresh returns a new `refresh_token`, and the one you just used stops working. Presenting a refresh token a second time fails with `invalid_grant`, so always store the latest one.
 
+The refresh token expires when your client's session ends, and refreshing doesn't extend it. The session duration comes from the account's session settings, and the default is 7 days. When the session ends, the token endpoint returns `invalid_grant` and your client must restart the [authorization flow](#authorization-flow).
+
 >ℹ️ The OAuth `refresh_token` is not the same as the `vid_rt` refresh token used in [headless storefronts](https://developers.vtex.com/docs/guides/refresh-token-flow-for-headless-implementations). When you request an access token, VTEX creates a session for your client that is independent from the user's browser session. VTEX keeps the underlying VTEX ID refresh token on its servers and gives your client only an opaque `refresh_token` to use at the token endpoint. Because the sessions are independent, the user signing out of their browser doesn't end your client's session. To end it, [revoke the token](#revoking-tokens).
 
 ## Revoking tokens
