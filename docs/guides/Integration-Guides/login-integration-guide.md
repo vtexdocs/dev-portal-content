@@ -21,14 +21,9 @@ An **audience** is the context in which VTEX ID is used. It defines the business
 
 Upon receiving an authentication token, applications can use it to verify if the user has a specific set of permissions by interacting with the service responsible for access management: **License Manager**.
 
-We will not cover access management in this guide, but you can read more about roles in our [Help Center article](https://help.vtex.com/tutorial/access-profiles--7HKK5Uau2H6wxE1rH5oRbc).
-[block:callout]
-{
-  "type": "info",
-  "title": "Audiences in VTEX ID are similar to OAuth 2.0 scopes",
-  "body": "If you are already familiar with the [OAuth 2.0 specification](https://oauth.net/2/scope/), feel free to make this association if you find it helpful."
-}
-[/block]
+We will not cover access management in this guide, but you can read more about roles in our [Help Center article](https://help.vtex.com/en/docs/tutorials/roles).
+
+>ℹ️ Audiences in VTEX ID are similar to OAuth 2.0 scopes. If you are already familiar with the [OAuth 2.0 specification](https://oauth.net/2/scope/), feel free to make this association if you find it helpful.
 
 ### Admin
 
@@ -41,10 +36,10 @@ This is the audience used for ecommerce stores to identify customers throughout 
 ## Comparison chart
 
 |   | Admin  | Webstore  |
-|--------------------- |--------------------------------------------------------------------------------------- |--------------------------------------------------------------------------- |
-| Integration protocol  |  <div style="text-align: center">SAML 2.0</div>  |  <div style="text-align: center">OAuth 2.0</div>  |
-| Cookie name  | `VtexIdclientAutCookie`  | `VtexIdclientAutCookie_{accountName}` `VtexIdclientAutCookie_{accountId}`  |
-| Multi-factor authentication  | <img alt="Supported" src="https://images.ctfassets.net/alneenqid6w5/7LUDORO5lzJLTAOnP6pHi9/162b4e9a129442d9d5df7713ee549725/image10.png"  style="margin-left: auto; margin-right: auto; display: block;"/> |  <img alt="Not available" src="https://images.ctfassets.net/alneenqid6w5/5CFfntd5BUumDCmdeGxwMo/0c838aa06775580b4e1ed0acf892ff52/image2.png" style="margin-left: auto; margin-right: auto; display: block;" />   |
-| Idle timeout  | <img alt="Supported" src="https://images.ctfassets.net/alneenqid6w5/7LUDORO5lzJLTAOnP6pHi9/162b4e9a129442d9d5df7713ee549725/image10.png" style="margin-left: auto; margin-right: auto; display: block;" />  | <img alt="Not available" src="https://images.ctfassets.net/alneenqid6w5/5CFfntd5BUumDCmdeGxwMo/0c838aa06775580b4e1ed0acf892ff52/image2.png" style="margin-left: auto; margin-right: auto; display: block;" />  |
-| Google Login  | <img alt="Supported" src="https://images.ctfassets.net/alneenqid6w5/7LUDORO5lzJLTAOnP6pHi9/162b4e9a129442d9d5df7713ee549725/image10.png" style="margin-left: auto; margin-right: auto; display: block;" /> | <img alt="Supported" src="https://images.ctfassets.net/alneenqid6w5/7LUDORO5lzJLTAOnP6pHi9/162b4e9a129442d9d5df7713ee549725/image10.png" style="margin-left: auto; margin-right: auto; display: block;" /> |
-| Facebook Login  | <img alt="Not available" src="https://images.ctfassets.net/alneenqid6w5/5CFfntd5BUumDCmdeGxwMo/0c838aa06775580b4e1ed0acf892ff52/image2.png" style="margin-left: auto; margin-right: auto; display: block;" />  | <img alt="Supported" src="https://images.ctfassets.net/alneenqid6w5/7LUDORO5lzJLTAOnP6pHi9/162b4e9a129442d9d5df7713ee549725/image10.png" style="margin-left: auto; margin-right: auto; display: block;" />  |
+| - | - | - |
+| Integration protocol |  <div style="text-align: center">SAML 2.0</div> |  <div style="text-align: center">OAuth 2.0</div> |
+| Cookie name | `VtexIdclientAutCookie`  | `VtexIdclientAutCookie_{accountName}` `VtexIdclientAutCookie_{accountId}` |
+| Multi-factor authentication | <img alt="Supported" src="https://images.ctfassets.net/alneenqid6w5/7LUDORO5lzJLTAOnP6pHi9/162b4e9a129442d9d5df7713ee549725/image10.png"  style="margin-left: auto; margin-right: auto; display: block;"/> | <img alt="Not available" src="https://images.ctfassets.net/alneenqid6w5/5CFfntd5BUumDCmdeGxwMo/0c838aa06775580b4e1ed0acf892ff52/image2.png" style="margin-left: auto; margin-right: auto; display: block;" /> |
+| Idle timeout | <img alt="Supported" src="https://images.ctfassets.net/alneenqid6w5/7LUDORO5lzJLTAOnP6pHi9/162b4e9a129442d9d5df7713ee549725/image10.png" style="margin-left: auto; margin-right: auto; display: block;" /> | <img alt="Not available" src="https://images.ctfassets.net/alneenqid6w5/5CFfntd5BUumDCmdeGxwMo/0c838aa06775580b4e1ed0acf892ff52/image2.png" style="margin-left: auto; margin-right: auto; display: block;" /> |
+| Google Login | <img alt="Supported" src="https://images.ctfassets.net/alneenqid6w5/7LUDORO5lzJLTAOnP6pHi9/162b4e9a129442d9d5df7713ee549725/image10.png" style="margin-left: auto; margin-right: auto; display: block;" /> | <img alt="Supported" src="https://images.ctfassets.net/alneenqid6w5/7LUDORO5lzJLTAOnP6pHi9/162b4e9a129442d9d5df7713ee549725/image10.png" style="margin-left: auto; margin-right: auto; display: block;" /> |
+| Facebook Login | <img alt="Not available" src="https://images.ctfassets.net/alneenqid6w5/5CFfntd5BUumDCmdeGxwMo/0c838aa06775580b4e1ed0acf892ff52/image2.png" style="margin-left: auto; margin-right: auto; display: block;" /> | <img alt="Supported" src="https://images.ctfassets.net/alneenqid6w5/7LUDORO5lzJLTAOnP6pHi9/162b4e9a129442d9d5df7713ee549725/image10.png" style="margin-left: auto; margin-right: auto; display: block;" /> |
