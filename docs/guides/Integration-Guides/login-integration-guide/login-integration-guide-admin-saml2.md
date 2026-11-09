@@ -4,7 +4,7 @@ slug: "login-integration-guide-admin-saml2"
 excerpt: "Learn how to set up an external identity provider with SAML 2.0 so users can log in to the VTEX Admin."
 hidden: false
 createdAt: "2020-06-30T20:24:49.386Z"
-updatedAt: "2022-09-01T15:21:02.265Z"
+updatedAt: "2026-11-09T17:34:37.000Z"
 ---
 
 User management is a native feature of the VTEX platform. Store administrators can not only manage the users that can log in to the admin panel, but also specify which pages they can see and the operations they are allowed to perform using [roles](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc). This granular control allows stores to adopt [best practices](https://developers.onelogin.com/saml/best-practices-and-faqs) in terms of security and compliance.

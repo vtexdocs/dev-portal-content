@@ -4,7 +4,7 @@ slug: "login-integration-guide"
 excerpt: "Learn how VTEX ID identifies users in the Admin and Webstore audiences, and what you need to know before integrating an external identity provider."
 hidden: false
 createdAt: "2020-06-30T19:17:19.889Z"
-updatedAt: "2021-11-22T17:29:54.047Z"
+updatedAt: "2026-11-09T17:34:37.000Z"
 ---
 To integrate an external identity provider in VTEX, you should first understand the basics of how our identity and access management services work. This article provides the main concepts and restrictions to get you started. After reading through it, you should move on to the [Webstore login with an external OAuth 2.0 provider](https://developers.vtex.com/docs/guides/login-integration-guide-webstore-oauth2) or [Admin login with an external SAML 2.0 provider](https://developers.vtex.com/docs/guides/login-integration-guide-admin-saml2) articles for their implementation details.
 
