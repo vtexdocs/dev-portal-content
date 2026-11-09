@@ -36,7 +36,6 @@ Clients can find the provider's endpoints automatically instead of hardcoding th
 | ----- | ----- | ----- |
 | Authorization server metadata | [`GET /.well-known/oauth-authorization-server/{tenant}`](https://developers.vtex.com/docs/api-reference/vtex-id-api#get-/.well-known/oauth-authorization-server/-tenant-) | [RFC 8414](https://datatracker.ietf.org/doc/html/rfc8414) |
 | OpenID Connect discovery | [`GET /.well-known/openid-configuration`](https://developers.vtex.com/docs/api-reference/vtex-id-api#get-/.well-known/openid-configuration) | OpenID Connect Discovery |
-| Public keys to verify tokens | [`GET /.well-known/jwks.json`](https://developers.vtex.com/docs/api-reference/vtex-id-api#get-/.well-known/jwks.json) | [RFC 7517](https://datatracker.ietf.org/doc/html/rfc7517) |
 
 In the `{tenant}` path parameter, use the account name.
 
@@ -71,7 +70,7 @@ O-->>B: 302 to the VTEX consent page
 B->>L: GET consent page
 L-->>User: Consent page
 User->>B: Allow
-B->>O: GET /oauth/consent/allow
+B->>O: Allow access
 Note over O: Consent is recorded and the pending request is resumed.
 O-->>B: 302 to GET /oauth/authorize
 B->>O: GET /oauth/authorize with the session cookie
@@ -84,7 +83,7 @@ C->>O: POST /oauth/token with refresh_token
 O-->>C: New access_token and refresh_token
 ```
 
-If the user selects to deny access, the browser calls `GET /oauth/consent/deny` instead, and VTEX redirects to the `redirect_uri` with the `access_denied` error.
+If the user denies access, VTEX redirects to the `redirect_uri` with the `access_denied` error.
 
 ### What the user sees
 
@@ -153,7 +152,7 @@ https://{accountName}.myvtex.com/api/vtexid/v1/oauth/authorize
   &code_challenge_method=S256
 ```
 
-If the user isn't signed in, VTEX asks them to log in. Then VTEX shows a consent page, where the user grants or denies access to your client. The consent page calls the [Allow consent](https://developers.vtex.com/docs/api-reference/vtex-id-api#get-/api/vtexid/v1/oauth/consent/allow) or [Deny consent](https://developers.vtex.com/docs/api-reference/vtex-id-api#get-/api/vtexid/v1/oauth/consent/deny) endpoint, so your client doesn't need to call them.
+If the user isn't signed in, VTEX asks them to log in. Then VTEX shows a consent page, where the user grants or denies access to your client. Your client doesn't interact with the consent page: VTEX handles the user's decision and redirects the user back to your client.
 
 After the user grants access, VTEX redirects the user agent to your `redirect_uri` with the `code` and the `state` you sent. Check that the `state` matches the one you generated. If the authorization fails, VTEX redirects with the `error` and `state` in the URL fragment.
 
@@ -188,10 +187,7 @@ The `refresh_token` is only returned if the client registered for the `refresh_t
 
 ### Step 4 - Use and validate the access token
 
-The access token is a VTEX ID token. Resource servers and clients can verify it in two ways:
-
-- **Locally**, checking the signature with the public keys from the [JWKS endpoint](https://developers.vtex.com/docs/api-reference/vtex-id-api#get-/.well-known/jwks.json).
-- **Through introspection**, with the [Introspect access token](https://developers.vtex.com/docs/api-reference/vtex-id-api#post-/api/vtexid/v1/oauth/introspect) endpoint, which returns `{"active": true}` along with the token claims, or `{"active": false}` if the token isn't valid. Public clients (`token_endpoint_auth_method` set to `none`) can't use this endpoint.
+The access token is a VTEX ID token. Resource servers and clients can verify it with the [Introspect access token](https://developers.vtex.com/docs/api-reference/vtex-id-api#post-/api/vtexid/v1/oauth/introspect) endpoint, which returns `{"active": true}` along with the token claims, or `{"active": false}` if the token isn't valid. Public clients (`token_endpoint_auth_method` set to `none`) can't use this endpoint.
 
 ## Refreshing the access token
 
