@@ -86,7 +86,7 @@ https://identity-broker.vtex.com/{accountName}/idps/{accountName}-saml
 
 > ⚠️ The `entityID` of the **EntityDescriptor** is not a URL and must not be configured as one. It is an ID.\n- The `{accountName}` is your business identification on the VTEX platform. It is the one you use inside the URL that gives access to your admin: `{accountName}.myvtex.com/admin`.
 
-The identity provider must send the authenticated user's email in the **Name Identifier** (`saml:NameID`) variable. The response will be cryptographically signed with the certificate described in the Identity Provider's [Metadata](#metadata) file.
+The identity provider must send the authenticated user's email in the **Name Identifier** (`saml:NameID`) variable. The response will be cryptographically signed with the certificate described in the Identity Provider's [Metadata](#example-metadata-file) file.
 
 ### Required information
 
