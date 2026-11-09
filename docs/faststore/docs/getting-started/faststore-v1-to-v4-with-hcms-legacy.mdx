@@ -62,21 +62,9 @@ While traffic is split, both versions serve visitors using the same Headless CMS
 
 During the split, the Headless CMS (Legacy) keeps building only v1 through the current build URL. For more details, see [Integrating your storefront with Headless CMS (legacy)](https://developers.vtex.com/docs/guides/faststore/integration-overview).
 
-The v4 project doesn't receive content updates automatically, so you need to trigger a new v4 build every time content is published. Follow these steps to set up an automation that rebuilds v4 whenever content is published:
+Before you start the migration, implement your own mechanism to keep v4 updated with the Headless CMS (Legacy) content. For example, trigger a new build in WebOps every time content is published.
 
-1. Choose how to detect a publication. For example, receive a notification from your own service or run a scheduled job that checks for new content.
-2. When a publication is detected, trigger a new build of the v4 project. For example, push an empty commit to the main branch, which creates a new WebOps deploy:
-
-    ```bash
-    git commit --allow-empty -m "chore: rebuild v4 with updated CMS content"
-    git push origin main
-    ```
-
-3. Automate this step in your CI or in a script, and test it by publishing a change in the Headless CMS (Legacy) and confirming it appears in v4.
-
-{/* Preciso confirmar com a engenharia como esse rebuild é feito. */}
-
-> ℹ️ You deactivate this automation in [step 8](#step-8---switch-the-build-url-to-v4), after the build URL points to v4.
+> ℹ️ You deactivate this mechanism in [step 8](#step-8---switch-the-build-url-to-v4), after the build URL points to v4.
 
 ### Step 4 - Configure the correct domains in `discovery.config.js`
 
