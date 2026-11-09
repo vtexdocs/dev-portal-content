@@ -35,7 +35,7 @@ This is the audience used for ecommerce stores to identify customers throughout 
 
 ## Comparison chart
 
-|   | Admin  | Webstore  |
+|   | Admin | Webstore |
 | - | - | - |
 | Integration protocol |  <div style="text-align: center">SAML 2.0</div> |  <div style="text-align: center">OAuth 2.0</div> |
 | Cookie name | `VtexIdclientAutCookie`  | `VtexIdclientAutCookie_{accountName}` `VtexIdclientAutCookie_{accountId}` |
