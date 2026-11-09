@@ -37,7 +37,7 @@ This is the audience used for ecommerce stores to identify customers throughout 
 
 | | Admin | Webstore |
 | - | - | - |
-| Integration protocol |  <div style="text-align: center">SAML 2.0</div> |  <div style="text-align: center">OAuth 2.0</div> |
+| Integration protocol | <div style="text-align: center">SAML 2.0</div> | <div style="text-align: center">OAuth 2.0</div> |
 | Cookie name | `VtexIdclientAutCookie` | `VtexIdclientAutCookie_{accountName}` `VtexIdclientAutCookie_{accountId}` |
 | Multi-factor authentication | <img alt="Supported" src="https://images.ctfassets.net/alneenqid6w5/7LUDORO5lzJLTAOnP6pHi9/162b4e9a129442d9d5df7713ee549725/image10.png"  style="margin-left: auto; margin-right: auto; display: block;"/> | <img alt="Not available" src="https://images.ctfassets.net/alneenqid6w5/5CFfntd5BUumDCmdeGxwMo/0c838aa06775580b4e1ed0acf892ff52/image2.png" style="margin-left: auto; margin-right: auto; display: block;" /> |
 | Idle timeout | <img alt="Supported" src="https://images.ctfassets.net/alneenqid6w5/7LUDORO5lzJLTAOnP6pHi9/162b4e9a129442d9d5df7713ee549725/image10.png" style="margin-left: auto; margin-right: auto; display: block;" /> | <img alt="Not available" src="https://images.ctfassets.net/alneenqid6w5/5CFfntd5BUumDCmdeGxwMo/0c838aa06775580b4e1ed0acf892ff52/image2.png" style="margin-left: auto; margin-right: auto; display: block;" /> |
