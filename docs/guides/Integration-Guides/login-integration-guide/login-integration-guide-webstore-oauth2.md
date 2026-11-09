@@ -1,9 +1,10 @@
 ---
 title: "Webstore login with an external OAuth 2.0 provider"
 slug: "login-integration-guide-webstore-oauth2"
+excerpt: "Learn how VTEX uses OAuth 2.0 to log in store customers with an external identity provider, and how to set up a custom OAuth login option."
 hidden: false
 createdAt: "2020-06-30T20:23:48.041Z"
-updatedAt: "2022-09-23t14:35:03.422z"
+updatedAt: "2022-09-23T14:35:03.422Z"
 ---
 
 VTEX stores can identify returning customers by requesting that they provide login information. That way, logged-in customers can access their previous purchases, and the store can display customized content based on customer profile information.
@@ -190,7 +191,7 @@ When you start the custom OAuth setup, you must complete the following informati
 
 > ❗ These keys are the names under which VTEX should send or expect to receive the information value when communicating with the identity provider. They must be `client_id` and `client_secret`, respectively.
 
-![Provider details section in the custom OAuth setup, an interface with the options described in the tutorial.](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/login-integration-guide-webstore-oauth2-1.PNG) 
+![Provider details section in the custom OAuth setup, an interface with the options described in the tutorial.](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/login-integration-guide-webstore-oauth2-1.PNG)
 
 Click `NEXT`.
 

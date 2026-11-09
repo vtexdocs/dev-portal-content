@@ -1,6 +1,7 @@
 ---
 title: "Admin login with an external SAML 2.0 provider"
 slug: "login-integration-guide-admin-saml2"
+excerpt: "Learn how to set up an external identity provider with SAML 2.0 so users can log in to the VTEX Admin."
 hidden: false
 createdAt: "2020-06-30T20:24:49.386Z"
 updatedAt: "2022-09-01T15:21:02.265Z"
