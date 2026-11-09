@@ -171,7 +171,6 @@ To set up this process, follow the steps below:
 2. In the __Webstore__ tab, click `SET UP` in the __My Custom OAuth__ section.
 
   ![Authentication settings screen with options: Access Key, Password, Facebook, Google, and My Custom OAuth.](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/login-integration-guide-webstore-oauth2-0.PNG)
-
 3. [Set the provider details.](#3-setting-the-provider-details)
 4. [Configure the authorization code requests.](#4-configuring-the-authorization-code-requests)
 5. [Configure the access token exchange request.](#5-configuring-the-access-token-exchange)
