@@ -41,12 +41,6 @@ The following table shows what happens in each version during this phase:
 
 Create the v4 repository in your GitHub organization and make sure its main branch builds without errors. Don't start the WebOps onboarding in the VTEX Admin. In this scenario, VTEX configures WebOps from the ticket you open in [step 5](#step-5---install-the-webops-github-app-and-open-a-ticket). After that, every commit to the main branch creates a production deploy.
 
-{/* PERGUNTA PARA A ENGENHARIA (step 1): O que o lojista deve fazer exatamente neste passo para ter o "repo v4 criado, com a branch principal buildando sem erro" (texto do documento fonte), antes de a VTEX configurar o WebOps pelo ticket (step 5)?
-(1) O repositório deve conter o código completo do projeto v4? Se sim, de onde vem esse código: de um template, do repositório v1 atualizado ou de outra origem?
-(2) Ou basta um repositório vazio, que a VTEX conecta ao projeto do Headless CMS (Legacy) ao configurar o WebOps?
-(3) Como a branch principal "builda" antes de o WebOps estar configurado: build local, CI ou outro meio?
-(4) Qual guia deve ser referenciado aqui? O guia "Starting a new FastStore project" (getting-started-2-starting-the-project) descreve o onboarding do WebOps pelo Admin, que neste cenário não deve ser usado (o onboarding só oferece o novo CMS, sem opção para o Headless CMS (Legacy)). Por isso o link foi removido. Confirmar se existe uma forma de seguir só a parte de criação do repositório. */}
-
 ### Step 2 - Sync the Headless CMS (Legacy) content
 
 While traffic is split, both versions serve visitors using the same Headless CMS (Legacy) project, so the content must render correctly on both. The content you already published stays in the Headless CMS (Legacy), and v4 reads it once WebOps points to that project in [step 5](#step-5---install-the-webops-github-app-and-open-a-ticket). Follow the steps below to confirm the content works on v1 and v4:
