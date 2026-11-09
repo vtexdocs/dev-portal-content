@@ -15,7 +15,7 @@ Previously, every external client that needed to act on behalf of a VTEX user re
 
 - **Register clients automatically**, with [dynamic client registration](https://developers.vtex.com/docs/api-reference/vtex-id-api#post-/api/vtexid/v1/oauth/register) and no manual setup per client.
 - **Keep access without asking the user to sign in again**, using [refresh tokens](https://developers.vtex.com/docs/guides/vtex-oauth-provider#refreshing-the-access-token).
-- **Discover how the provider works** through the standard [authorization server metadata](https://developers.vtex.com/docs/api-reference/vtex-id-api#get-/.well-known/oauth-authorization-server/-tenant-) and [OpenID Connect discovery](https://developers.vtex.com/docs/api-reference/vtex-id-api#get-/.well-known/openid-configuration) documents, and verify tokens on your own with the [JWKS endpoint](https://developers.vtex.com/docs/api-reference/vtex-id-api#get-/.well-known/jwks.json) or [token introspection](https://developers.vtex.com/docs/api-reference/vtex-id-api#post-/api/vtexid/v1/oauth/introspect).
+- **Discover how the provider works** through the standard [authorization server metadata](https://developers.vtex.com/docs/api-reference/vtex-id-api#get-/.well-known/oauth-authorization-server/-tenant-) and [OpenID Connect discovery](https://developers.vtex.com/docs/api-reference/vtex-id-api#get-/.well-known/openid-configuration) documents, and verify tokens on your own with [token introspection](https://developers.vtex.com/docs/api-reference/vtex-id-api#post-/api/vtexid/v1/oauth/introspect).
 
 The endpoints are available in the [VTEX ID API](https://developers.vtex.com/docs/api-reference/vtex-id-api), under the **OAuth provider** tag.
 
