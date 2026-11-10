@@ -10,7 +10,7 @@ seeAlso:
  - "/docs/api-reference/vtex-id-api"
 ---
 
-The VTEX OAuth provider lets external clients, such as AI agents, MCP clients, and partner apps, ask a VTEX user for permission and act on their behalf. It follows the [OAuth 2.1](https://oauth.net/2.1/) authorization code flow with [PKCE](https://oauth.net/2/pkce/), so you can use the OAuth libraries you already know instead of building a custom integration.
+The VTEX OAuth provider allows external clients, such as AI agents, MCP clients, and partner apps, to request a VTEX user's permission and act on their behalf. It follows the [OAuth 2.1](https://oauth.net/2.1/) authorization code flow with Proof Key for Code Exchange ([PKCE](https://oauth.net/2/pkce/)), so you can use the OAuth libraries you already know instead of building a custom integration.
 
 OAuth is an open standard that lets an app access a user's data on another service without receiving the user's password. In this guide, the **client** is the app that wants to access a VTEX user's data, and the VTEX OAuth provider verifies the user, asks for their permission, and issues the tokens.
 
@@ -24,7 +24,7 @@ With the VTEX OAuth provider, clients can:
 
 All endpoints belong to the [VTEX ID API](https://developers.vtex.com/docs/api-reference/vtex-id-api), under the **OAuth provider** tag.
 
-## Before you start
+## Before you begin
 
 The VTEX OAuth provider issues VTEX ID access tokens on behalf of a user. It doesn't replace [application keys](https://developers.vtex.com/docs/guides/api-authentication-using-api-keys) for server-to-server integrations. To choose the credential that fits your use case, see the [Authentication](https://developers.vtex.com/docs/guides/authentication) guide.
 
@@ -89,14 +89,24 @@ If the user denies access, VTEX redirects to the `redirect_uri` with the `access
 
 During the flow, the user leaves your client, interacts with VTEX pages, and returns to your client:
 
-1. **Login:** if the user doesn't have an active VTEX session, VTEX shows the VTEX Admin login screen, where the user enters their email and selects **Continue**, or signs in with Google. The user signs in on VTEX and never enters their password in your client.
-2. **Consent:** VTEX shows a consent screen titled **Authorize Access**, which says that an application is requesting access and lists what it needs to do: identify the user by reading their profile and email, know which resources the user can access by reading their roles and assigned resources, and act on the user's behalf using those resources. The screen doesn't show your client's name. If the user has the Super Admin role, the screen also warns that the application will act across all resources and requires the user to confirm before allowing access. The user then selects **Allow** or **Cancel**. These screens are provided by VTEX and are the same for every client, so you can't customize them. If the user already allowed your client, they don't need to consent again.
+1. **Login:** If the user doesn't have an active VTEX session, they will see the VTEX Admin login screen, where the user enters their email and selects `Continue`, or signs in with Google. The user signs in on VTEX and never enters their password in your client.
+2. **Consent:** After logging in, VTEX shows a consent screen titled **Authorize Access**, which informs the user that an application is requesting access and lists the necessary actions:
+
+   - Identify the user by reading their profile and email.
+   - Determine which resources the user can access by reading their roles and assigned resources.
+   - Act on the user's behalf using those resources.
+   
+   The user then selects `Allow` or `Cancel`. If the user has already granted your client permission, they don't need to consent again.
+   
+   > ℹ️ The screen doesn't show your client's name.
 
    ![VTEX consent screen titled Authorize Access, listing the permissions the application requests, with Cancel and Allow buttons](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-oauth-provider-consent.png)
 
-   For users with the Super Admin role, the screen includes a warning and a checkbox that the user must select to enable the **Allow** button.
+   For users with the Super Admin role, the screen also warns that the application will act across all resources and includes a checkbox that the user must select to enable the `Allow` button.
 
    ![VTEX consent screen for a Super Admin user, with a warning, an agreement checkbox, and the Allow button disabled](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-oauth-provider-consent-super-admin.png)
+
+   > ℹ️ These screens are provided by VTEX and are the same for every client, so you can't customize them.
 
 3. **Return to your client:** VTEX redirects the user to your `redirect_uri`. If the user allowed access, the URL includes the `code` and the `state`. If the user denied access, it includes `error=access_denied` and the `state`.
 
@@ -110,7 +120,7 @@ The following steps describe the flow from the client's perspective:
 4. [Exchange the authorization code for an access token](#step-3-exchange-the-code-for-an-access-token).
 5. [Use the access token](#step-4-use-and-validate-the-access-token) and, when it expires, [refresh it](#refreshing-the-access-token).
 
-### Step 1: Register the client
+### Step 1 - Register the client
 
 Each client registers once, using the [Register client](https://developers.vtex.com/docs/api-reference/vtex-id-api#post-/api/vtexid/v1/oauth/register) endpoint, which implements [dynamic client registration (RFC 7591)](https://datatracker.ietf.org/doc/html/rfc7591).
 
@@ -137,7 +147,7 @@ curl --request POST \
 
 The response contains the `client_id` and, for confidential clients, the `client_secret`. Store the secret securely: never expose it in frontend code or public repositories.
 
-### Step 2: Request authorization
+### Step 2 - Request authorization
 
 Generate a PKCE `code_verifier` and derive the `code_challenge` from it with the `S256` method. Then redirect the user's browser to the [Request authorization code](https://developers.vtex.com/docs/api-reference/vtex-id-api#get-/api/vtexid/v1/oauth/authorize) endpoint:
 
@@ -152,11 +162,11 @@ https://{accountName}.myvtex.com/api/vtexid/v1/oauth/authorize
   &code_challenge_method=S256
 ```
 
-If the user isn't signed in, VTEX asks them to log in. Then VTEX shows a consent page, where the user grants or denies access to your client. Your client doesn't interact with the consent page: VTEX handles the user's decision and redirects the user back to your client.
+If the user isn't signed in, VTEX asks them to log in. Then VTEX shows a consent page where the user grants or denies access to your client. Your client doesn't interact with the consent page; VTEX handles the user's decision and redirects the user back to your client.
 
 After the user grants access, VTEX redirects the user agent to your `redirect_uri` with the `code` and the `state` you sent. Check that the `state` matches the one you generated. If the authorization fails, VTEX redirects with the `error` and `state` in the URL fragment.
 
-### Step 3: Exchange the code for an access token
+### Step 3 - Exchange the code for an access token
 
 Call the [Get access token](https://developers.vtex.com/docs/api-reference/vtex-id-api#post-/api/vtexid/v1/oauth/token) endpoint with the `code` and the `code_verifier` you generated in the previous step. Confidential clients authenticate with their `client_id` and `client_secret`, either in the body or through HTTP Basic authentication.
 
@@ -185,7 +195,7 @@ The response contains the access token:
 
 The `refresh_token` is only returned if the client registered for the `refresh_token` grant.
 
-### Step 4: Use and validate the access token
+### Step 4 - Use and validate the access token
 
 The access token is a VTEX ID token. Resource servers and clients can verify it with the [Introspect access token](https://developers.vtex.com/docs/api-reference/vtex-id-api#post-/api/vtexid/v1/oauth/introspect) endpoint, which returns `{"active": true}` along with the token claims, or `{"active": false}` if the token isn't valid. Public clients (`token_endpoint_auth_method` set to `none`) can't use this endpoint.
 
@@ -203,7 +213,7 @@ curl --request POST \
   --data-urlencode 'client_secret={client_secret}'
 ```
 
-Each refresh token can be used only once. Every successful refresh returns a new `refresh_token`, and the one you just used stops working. Presenting a refresh token a second time fails with `invalid_grant`, so always store the latest one.
+You can use each refresh token only once. Every successful refresh returns a new `refresh_token`, and the one you just used stops working. Presenting a refresh token a second time results in an `invalid_grant` error, so always store the latest one.
 
 The refresh token expires when your client's session ends, and refreshing doesn't extend it. The session duration comes from the account's session settings, and the default is 7 days. When the session ends, the token endpoint returns `invalid_grant` and your client must restart the [authorization flow](#authorization-flow).
 
