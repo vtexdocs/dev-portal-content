@@ -69,7 +69,7 @@ Group the pipeline by responsibility rather than creating one workflow per store
 | Responsibility | When it runs | What it includes |
 | --- | --- | --- |
 | Quality gate | Automatically on every pull request and on pushes to your integration branches. | Code and token linting, TypeScript type-checking, build of the shared package, unit tests, end-to-end tests (ideally only on pull requests), and visual regression tests of components. |
-| Release and changelog | Automatically on merge to the production branch, and manually when needed. | Semantic changelog generation and version bump of the shared package. For more information, see [Exports and versioning](https://developers.vtex.com/docs/guides/monorepo-sharing-code-across-stores#exports-and-versioning). |
+| Release and changelog | Automatically on merge to the production branch, and manually when needed. | Semantic changelog generation and version bump of the shared package. For more information, see [Exports and versioning](https://developers.vtex.com/docs/guides/faststore/multistore-sharing-code-across-stores#exports-and-versioning). |
 | CMS schema sync | Manually only. | Propagation of section schemas between accounts, when needed. |
 
 ### Keeping CMS schema sync manual
