@@ -11,7 +11,7 @@ VTEX stores can identify returning customers by requesting that they provide log
 
 By default, our platform stores user information in our secure servers, but sometimes it is helpful to integrate external identity providers with the authentication process. The framework described in this guide will allow the VTEX platform to connect pre-existing user bases in private servers. The same protocol enables clients to use their Google accounts to log in to a third-party application.
 
->ℹ️ This guide covers VTEX using an external identity provider to log in your store customers. If you want your app or AI agent to access VTEX on behalf of a VTEX user, see [VTEX OAuth provider](https://developers.vtex.com/docs/guides/vtex-oauth-provider).
+>ℹ️ This guide covers how your store customers log in to VTEX through an external identity provider. If you want your app or AI agent to access VTEX on behalf of a VTEX user, see [VTEX OAuth provider](https://developers.vtex.com/docs/guides/vtex-oauth-provider).
 
 In this guide, you will learn about:
 

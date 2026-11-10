@@ -155,7 +155,7 @@ Once you created your SAML configuration, you may edit it by going through the s
 
 ## Certificate renewals
 
-When the certificate used by your **Identity Provider** to sign the assertions is about to expire, it's important to update the `metadata.xml` file in VTEX to allow for a seamless transition between the old and the new certificate.
+When the certificate used by your **Identity Provider** to sign the assertions is about to expire, update the `metadata.xml` file in VTEX to allow for a seamless transition between the old and the new certificate.
 
 This is done by including two `<md:KeyDescriptor use="signing">` entries in your exported file, as seen in the example below, where the `{OLD CERTIFICATE}` and `{NEW CERTIFICATE}` placeholders should be replaced by valid **X.509** certificates.
 

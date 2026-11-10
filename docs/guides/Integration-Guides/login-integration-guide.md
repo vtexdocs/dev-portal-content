@@ -21,7 +21,7 @@ An **audience** is the context in which VTEX ID is used. It defines the business
 
 Upon receiving an authentication token, applications can use it to verify if the user has a specific set of permissions by interacting with the service responsible for access management: **License Manager**.
 
-We will not cover access management in this guide, but you can read more about roles in our [Help Center article](https://help.vtex.com/en/docs/tutorials/roles).
+We won't cover access management in this guide, but you can read more in the [Roles](https://help.vtex.com/en/docs/tutorials/roles) article.
 
 >ℹ️ Audiences in VTEX ID are similar to OAuth 2.0 scopes. If you are already familiar with the [OAuth 2.0 specification](https://oauth.net/2/scope/), feel free to make this association if you find it helpful.
 
