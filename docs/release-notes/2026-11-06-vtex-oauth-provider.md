@@ -19,10 +19,6 @@ Previously, every external client that needed to act on behalf of a VTEX user re
 
 The endpoints are available in the [VTEX ID API](https://developers.vtex.com/docs/api-reference/vtex-id-api), under the **OAuth provider** tag.
 
-## Why did we make this change?
-
-VTEX didn't have a standard OAuth provider, so each client that needed to act on behalf of a VTEX user had to build a custom integration. This release is the first step toward fixing that.
-
 ## What needs to be done?
 
 No action is required. Existing authentication methods keep working.
