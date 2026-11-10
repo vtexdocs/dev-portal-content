@@ -39,6 +39,8 @@ The account-level parts of the implementation work as follows:
 - **WebOps:** One WebOps integration deploys the account's single project, and every binding of the account is served by the same deployment. Bindings are configured on the account through [VTEX Support](https://help.vtex.com/docs/tutorials/opening-tickets-to-vtex-support) and enabled in the project's `discovery.config.js`.
 - **App versions:** VTEX IO apps, such as Intelligent Search, backend apps, and Admin apps, are installed once in that account.
 
+> ℹ️ With a single account, the project has one store project and one WebOps integration, so you don't need to create a project per market or share code across stores. To see which steps of the implementation path apply to this model, see [Multistore architecture overview](https://developers.vtex.com/docs/guides/faststore/multistore-overview#implementation-path).
+
 ### Multiple accounts
 
 In the multiple accounts model, each market or brand is a separate VTEX account with its own domain, catalog, pricing, language, and currency.
