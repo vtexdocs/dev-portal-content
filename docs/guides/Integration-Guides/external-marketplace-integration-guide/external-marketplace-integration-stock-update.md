@@ -40,7 +40,7 @@ Whenever the seller updates a  product or SKU in VTEX, a notification will be se
 | StockModified                           | Identifies that the inventory level has been altered. Connectors should send an Fulfillment Simulation  request to collect updated information.                                                                                                                                                                                                                                                                      |
 | PriceModified                           | Identifies that the price  has been altered. Connectors should send an Fulfillment Simulation  request to collect updated information.                                                                                                                                                                                                                                                                               |
 | HasStockKeepingUnitModified             | Identifies that the product/SKU registration data has changed, like name, description, weight, etc                                                                                                                                                                                                                                                                                                                   |
-| HasStockKeepingUnitRemovedFromAffiliate | Identifies that the product is no longer associated with the trade policy. In case the marketplace doesn’t allow it to be deactivated, the product should be excluded, along with any existing correspondences in the connector.                                                                                                                                                                                     |
+| HasStockKeepingUnitRemovedFromAffiliate | Identifies that the product is no longer associated with the sales channel. In case the marketplace doesn’t allow it to be deactivated, the product should be excluded, along with any existing correspondences in the connector.                                                                                                                                                                                     |
 
 The inventory update flow begins when the connector receives a VTEX Catalog notification, indicating that changes have been made to the SKU or product. Besides this notification mechanism, we recommend using an independant  inventory update mechanism, so stocks are always updated. The diagram below illustrates the information flow used to keep prices of seller’s SKUs updated in the marketplace integration.
 ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/external-marketplace-integration-stock-update-0.jpg)
@@ -52,13 +52,13 @@ Follow the steps below to maintain inventory levels updated in the marketplace i
    b. If the `HasStockKeepingUnitModified` is defined as true, the product should be registered or updated in the marketplace.
    c. Collect details from every SKU using the [Get details of an SKU](https://developers.vtex.com/vtex-rest-api/reference/catalog-api-get-sku) endpoint.
    d. Validate if the product is active through the [Get Product by ID](https://developers.vtex.com/vtex-rest-api/reference/catalog-api-get-product) endpoint, through the `isActive` property.
-   e. Validate if the product is associated with the trade policy used in the marketplace integration through the `salesChannel` property.
+   e. Validate if the product is associated with the sales channel used in the marketplace integration through the `salesChannel` property.
    f. Identify whether the SKU conforms to the marketplace’s product registration rules.
    g. Validate if the product’s category is mapped in the marketplace.\
    In case it is not mapped, the marketplace should put the SKU in the approvement’s queue, until the [mapping](https://developers.vtex.com/docs/api-reference/marketplace-protocol-external-marketplace-mapper#post-/api/mkp-category-mapper/categories/marketplace/-id-) is complete.
-   h. Use [Fulfillment Simulation](https://developers.vtex.com/vtex-rest-api/reference/fulfillment-simulation) (without postalCode) to check if price is configured in the selected trade policy.
+   h. Use [Fulfillment Simulation](https://developers.vtex.com/vtex-rest-api/reference/fulfillment-simulation) (without postalCode) to check if price is configured in the selected sales channel.
    - To collect the product’s price, use the `price` attribute.
-   - To collect the sales price configured for that trade policy, use the attribute `salesprice`.
+   - To collect the sales price configured for that sales channel, use the attribute `salesprice`.
 3. Register operation’s [Logs](https://developers.vtex.com/vtex-rest-api/docs/external-marketplace-integration-logs). Check out [Content of the messages](https://developers.vtex.com/vtex-rest-api/docs/external-marketplace-integration-logs#content-of-the-messages) for this step.
 
 If all validations pass, the product or SKU is sent to the marketplace and the operation is logged according to information described in the [Logs made available for users](https://developers.vtex.com/vtex-rest-api/docs/external-marketplace-integration-logs) section.
@@ -107,7 +107,7 @@ Use the endpoints described below to get SKU, price and inventory details. It is
 1. Validate if the `isActive` property is “true”. If otherwise, skip to Scenario 3.
 2. Check if the VTEX `idSKU` and `idSkuMarketplace` are mapped, and if the SKU is already published on the marketplace.
 3. Evaluate if the notification message has the `HasStockKeepingUnitModified` property set as “true”. If otherwise, validate the other JSON properties and execute the following scenarios, if needed.
-4. Use [Fulfillment Simulation](https://developers.vtex.com/vtex-rest-api/reference/fulfillment-simulation) (without postalCode) to check if price and inventory are configured in the selected trade policy.
+4. Use [Fulfillment Simulation](https://developers.vtex.com/vtex-rest-api/reference/fulfillment-simulation) (without postalCode) to check if price and inventory are configured in the selected sales channel.
 5. Offer a contingency mechanism that allows steps to be repeated in case they fail.
 6. Make the necessary data transformations and [Log](https://developers.vtex.com/vtex-rest-api/docs/external-marketplace-integration-logs) errors if needed.
 7. Send data to the marketplace.

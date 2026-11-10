@@ -12,7 +12,7 @@ To make sure all items in an order are available for delivery on the VTEX platfo
 3. Connector notifies VTEX about stock in Marketplace through the `StockBalance` property, so that the stock availability is constantly updated.
 4. After receiving the VTEX notification, connectors should validate the following:
 - If the SKU is active, through the `isActive` property, .
-- If the SKU is associated with the trade policy used in the marketplace integration through the `salesChannel` property.
+- If the SKU is associated with the sales channel used in the marketplace integration through the `salesChannel` property.
 - If there is a freight option configured to deliver the order in the Shipping strategy, through the object `logistics`.
 - If there SKU available in stock through the `StockBalance` property.
 

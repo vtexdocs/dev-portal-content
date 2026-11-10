@@ -3,7 +3,7 @@ title: "CMS for FastStore storefronts"
 hidden: false
 slug: "cms-for-faststore-storefronts"
 createdAt: "2026-01-26T12:50:00.813Z"
-updatedAt: "2026-01-26T12:50:00.813Z"
+updatedAt: "2026-10-30T00:00:00.000Z"
 ---
 
 > ⚠️ For documentation about Headless CMS (legacy) used with FastStore versions earlier than `3`, see the [Headless CMS (legacy)](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview) track.
@@ -61,6 +61,15 @@ Build and manage schemas with:
 - [**Content plugin**](https://developers.vtex.com/docs/guides/content-plugin): Commands for schema generation, splitting, and uploading (`@vtex/cli-plugin-content`).
 - **Modular schemas**: Individual `.jsonc` files for components and Content Types.
 - **Role-based permissions**: Granular access control for editors, reviewers, and administrators.
+
+### Branch synchronization
+
+Content branches stay synchronized with the main branch through:
+
+- **Automatic updates**: While an editor works in a branch, new content published to the main branch is merged into that branch automatically, so they continue from the current state of the store instead of an outdated copy.
+- **Conflict resolution**: When the same content is changed in both the branch and the main branch, the version in the branch is preserved.
+
+For details on this behavior, see [Versions and branches](https://help.vtex.com/docs/tutorials/managing-versions-and-branches).
 
 ## The CMS development and content journey
 
