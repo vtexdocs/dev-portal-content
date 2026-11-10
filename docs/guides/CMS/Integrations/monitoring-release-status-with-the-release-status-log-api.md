@@ -90,7 +90,37 @@ flowchart LR
 
 This is an example of a successful sequence. A step can happen more than once for the same release, and the steps that appear depend on what happened to it.
 
-The log doesn't include release names. To find the name of a release, use the List Releases endpoint. The `id` it returns is the `releaseId` used in the log.
+The log doesn't include release names. To find the name of a release, use the [List releases](https://developers.vtex.com/docs/api-reference/release-status-log-api#get-/releases) endpoint. The `id` it returns is the `releaseId` used in the log.
+
+The following example lists the 20 most recently modified releases that are unscheduled or being published:
+
+```sh
+curl --request GET \
+  --header "Accept: application/json" \
+  --header "VtexIdclientAutCookie: $TOKEN" \
+  "https://releases.vtex.io/releases?an=myaccount&first=20&status=UNSCHEDULED,PUBLISHING&orderBy=LAST_MODIFIED,DESC"
+```
+
+The response returns the releases in the `releases` array. Find the entry whose `id` matches the `releaseId` of the log and read its `name`:
+
+```json
+{
+  "releases": [
+    {
+      "id": "a1b2c3d4",
+      "name": "Black Friday banners",
+      "status": "PUBLISHING"
+    }
+  ],
+  "pagination": {
+    "endCursor": "WyIxNzI5MjY0MDAwMDAwIiwiYTFiMmMzZDQiXQ==",
+    "hasNextPage": false,
+    "totalCount": 1
+  }
+}
+```
+
+You can also filter by `name`. The endpoint returns up to 30 releases per page. When `hasNextPage` is `true`, send the request again with `after` set to the `endCursor` value. For the complete list of parameters and response fields, see the [List releases](https://developers.vtex.com/docs/api-reference/release-status-log-api#get-/releases) endpoint reference.
 
 ## Read more than 1000 entries
 
