@@ -16,7 +16,7 @@ This has concrete consequences:
 
 > ⚠️ Any test that depends on backend data, such as catalog, promotions, logistics, payments, or integrations, requires a separate VTEX account. Workspaces only cover frontend changes and app versions. For more details, see [Best practices on workspaces management](https://developers.vtex.com/docs/guides/vtex-io-documentation-workspaces-best-practices).
 
-We recommend giving each store a dedicated testing account, with its own backend data, alongside the production account.
+We recommend giving each store a dedicated testing account, with its own backend data, alongside the production account. The testing account is a separate VTEX account, not a store created within the production account, which would share its catalog, prices, and promotions. To get one, open a ticket with [VTEX Support](https://help.vtex.com/docs/tutorials/opening-tickets-to-vtex-support) to request a new QA environment. VTEX provisions the account without copying configurations or content from production, and it may incur additional costs according to your contract. For more information, see [Requesting a new environment](https://help.vtex.com/docs/tutorials/requesting-a-new-environment).
 
 > ℹ️ A testing account isn't mandatory. Stores with lower operational complexity, or in an early implementation phase, can start with only the production account and add a testing account later.
 
@@ -36,6 +36,7 @@ When using a testing account, consider the following:
 - **Content:** Each account has its own CMS instance, so content created in the testing account is for validation only. It's not copied to production automatically and has to be recreated there. For how section schemas are synced between accounts, see [Keeping CMS schema sync manual](#keeping-cms-schema-sync-manual).
 - **Search:** Merchandising rules, synonyms, and relevance settings are configured per account, so they need to be set up again in the testing account.
 - **Apps and integrations:** Backend apps and integrations are installed per account, so they must also be installed in the testing account before development starts.
+- **WebOps:** Install the FastStore WebOps app in the master workspace of the testing account. Connecting the account to the repository requires a user with the Owner role. For more information, see [Installing the FastStore WebOps app](https://developers.vtex.com/docs/guides/faststore/getting-started-1-setting-up-your-environment#step-4-installing-the-faststore-webops-app).
 - **Edition App:** FastStore requires `vtex.edition-store@5.x` in every account, testing accounts included. For more information, see [Before you begin](https://developers.vtex.com/docs/guides/faststore/go-live-before-you-begin) in the Going live track.
 
 ## Mapping branches to accounts
