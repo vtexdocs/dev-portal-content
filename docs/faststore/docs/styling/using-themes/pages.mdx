@@ -7,7 +7,7 @@ seeAlso:
   - "/docs/guides/faststore/data-attributes"
 ---
 
-[FastStore sections](https://developers.vtex.com/docs/guides/faststore/building-sections-creating-a-new-section) support [Sass mixins](https://sass-lang.com/documentation/at-rules/mixin/), which let you reuse groups of styles. This guide shows how to style a custom section with FastStore utility mixins and how to share a custom mixin across sections.
+[FastStore sections](https://developers.vtex.com/docs/guides/faststore/building-sections-creating-a-new-section) support [Sass mixins](https://sass-lang.com/documentation/at-rules/mixin/), which let you reuse style groups. This guide shows how to style a custom section with FastStore utility mixins and how to share a custom mixin across sections.
 
 ## Before you begin
 
@@ -16,7 +16,7 @@ seeAlso:
 
 ## Using FastStore mixins in a section
 
-FastStore's utility stylesheet provides mixins for layout, spacing, responsive breakpoints, text truncation, and focus states. Import this stylesheet with Sass's `@use` rule in every SCSS file that uses its mixins.
+The FastStore utility stylesheet provides mixins for layout, spacing, responsive breakpoints, text truncation, and focus states. Import this stylesheet with the Sass `@use` rule in every SCSS file that uses its mixins.
 
 The following example styles a `PromoBanner` section.
 
@@ -24,51 +24,51 @@ The following example styles a `PromoBanner` section.
 
     ```scss src/components/PromoBanner/section.module.scss
     @use "@faststore/ui/src/styles/base/utilities" as u;
-
+    
     @layer components {
       .section {
         @include u.layout-content;
-
+    
         display: grid;
         gap: var(--fs-spacing-3);
         padding-block: var(--fs-spacing-5);
         padding-inline: var(--fs-spacing-3);
         background-color: var(--fs-color-neutral-bkg);
-
+    
         @include u.media(">=tablet") {
           grid-template-columns: 2fr 1fr;
           align-items: center;
           padding-inline: var(--fs-spacing-5);
         }
       }
-
+    
       .title {
         @include u.truncate-title(2);
-
+    
         margin: 0;
         font-size: var(--fs-text-size-title-section);
       }
     }
     ```
 
-    In this example:
+   In this example:
 
-    - `layout-content` limits the section to the store's content width and centers it.
-    - `media(">=tablet")` applies styles at the `tablet` breakpoint and above.
-    - `truncate-title(2)` limits the title to two lines.
-    - FastStore [global tokens](https://developers.vtex.com/docs/guides/faststore/global-tokens-overview) provide consistent spacing, color, and typography values.
-    - `@layer components` places the styles in FastStore's component layer so they follow the expected cascade order.
+   - `layout-content` limits the section to the store content width and centers it.
+   - `media(">=tablet")` applies styles at the `tablet` breakpoint and above.
+   - `truncate-title(2)` limits the title to two lines.
+   - FastStore [global tokens](https://developers.vtex.com/docs/guides/faststore/global-tokens-overview) provide consistent spacing, color, and typography values.
+   - `@layer components` places the styles in the FastStore component layer so they follow the expected cascade order.
 
 2. Import the stylesheet in the section component and apply its classes to the corresponding elements.
 
     ```tsx src/components/PromoBanner/PromoBanner.tsx
     import styles from "./section.module.scss";
-
+    
     interface PromoBannerProps {
       title: string;
       description: string;
     }
-
+    
     export default function PromoBanner({ title, description }: PromoBannerProps) {
       return (
         <section className={styles.section}>
@@ -123,13 +123,13 @@ The leading underscore in `_section-mixins.scss` marks the file as a [Sass parti
 
 The utility stylesheet includes:
 
-| Category | Utilities |
-| --- | --- |
-| Layout and spacing | `layout-content`, `layout-content-full`, `layout-colored`, and `section-divisor` |
-| Responsive styles | `media`, with the `phone`, `phonemid`, `tablet`, `notebook`, and `desktop` breakpoints |
-| Text | `truncate-title` |
-| Focus states | `input-focus-ring`, `focus-ring`, and `focus-ring-visible` |
-| Unit conversion | `rem` function |
+| Category           | Utilities                                                                              |
+| ------------------ | -------------------------------------------------------------------------------------- |
+| Layout and spacing | `layout-content`, `layout-content-full`, `layout-colored`, and `section-divisor`       |
+| Responsive styles  | `media`, with the `phone`, `phonemid`, `tablet`, `notebook`, and `desktop` breakpoints |
+| Text               | `truncate-title`                                                                       |
+| Focus states       | `input-focus-ring`, `focus-ring`, and `focus-ring-visible`                             |
+| Unit conversion    | `rem` function                                                                         |
 
 All FastStore utilities use a namespace. For example:
 
@@ -149,5 +149,5 @@ All FastStore utilities use a namespace. For example:
 
 - Utility mixins are not global in [FastStore v4](https://developers.vtex.com/docs/guides/faststore/getting-started-upgrading-faststore-to-v4). Each SCSS file that uses them must load the utility stylesheet with `@use`.
 - A `src/styles/custom-mixins.scss` file isn't automatically loaded into section styles. Import project mixins explicitly in every file where you use them.
-- Sass mixins run when the storefront CSS is built. They cannot be selected or configured by content editors in the Headless CMS. To make a style configurable in the CMS, expose a section property and map its value to a class or data attribute in the component.
+- Sass mixins run when the storefront CSS is built. They can't be selected or configured by content editors in Headless CMS. To make a style configurable in the CMS, expose a section property and map its value to a class or data attribute in the component.
 - Use design tokens when you only need to change a component's colors, spacing, typography, or other theme values. Use mixins for reusable groups of style declarations.
