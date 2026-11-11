@@ -90,7 +90,6 @@ In this step, publish the matcher at a publicly accessible HTTPS URL. VTEX must 
 3. Configure a domain pointing to the service and enable a valid TLS certificate so that the final URL uses HTTPS.
 4. Confirm public access with an external call, for example:
 curl -i https://{your-domain}/health
-```
 
 The expected response is `200`. If the endpoint only responds on your local network, VTEX will not be able to notify the matcher.
 
@@ -131,10 +130,12 @@ In this step, configure the credentials the matcher will use to call the Marketp
 5. Test authentication with a simple call:
 
 ```
+
 curl -i \
   -H "X-VTEX-API-AppKey: {appKey}" \
   -H "X-VTEX-API-AppToken: {appToken}" \
-  "https://api.vtex.com/{{accountName}}/suggestions/configuration"
+  "<https://api.vtex.com/{{accountName}}/suggestions/configuration>"
+
 ```
 
 The expected response is `200`. Learn more in [Authentication](https://developers.vtex.com/docs/guides/getting-started-authentication).
