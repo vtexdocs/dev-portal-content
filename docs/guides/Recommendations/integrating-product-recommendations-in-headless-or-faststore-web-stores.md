@@ -13,7 +13,7 @@ This guide explains how to integrate [product recommendations](https://help.vtex
 
 ![shelf-recommendation](https://vtexhelp.vtexassets.com/assets/docs/src/shelf-recommendation___403f15739cf14318a5b9ad8f16582d71.gif)
 
-> ℹ️ For mobile apps, see [Integrating product recommendations in mobile stores](https://developers.vtex.com/docs/guides/integrating-product-recommendations-in-mobile-stores).
+> ℹ️ This guide is for custom headless storefronts and for FastStore stores that build a fully custom recommendation experience by calling the [Recommendations API](https://developers.vtex.com/docs/api-reference/recommendations-bff-api) directly. If your store is built with FastStore and you just want to display a recommendation shelf, use the native [Recommendation Shelf section](https://developers.vtex.com/docs/guides/faststore/storefront-features-displaying-product-recommendations-with-recommendation-shelf) instead, which handles session start, fetching, rendering, and Activity Flow tracking via CMS configuration, with no code required. For mobile apps, see [Integrating product recommendations in mobile stores](https://developers.vtex.com/docs/guides/integrating-product-recommendations-in-mobile-stores).
 
 ## Before you begin
 

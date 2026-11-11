@@ -31,7 +31,7 @@ To check the authenticated user, send a request to the `POST` [Check authenticat
 
 ```curl Request
 curl --request post \
-	--url 'https://apiexamples.vtexcommercestable.com.br/api/vtexid/credential/validate?an=exampleAccount' \
+	--url 'https://apiexamples.vtexcommercestable.com.br/api/vtexid/credential/validate?an=apiexamples' \
 	--header 'Accept: application/json' \
 	--header 'Content-Type: application/json' \
 	--header 'X-VTEX-API-AppKey: 123' \

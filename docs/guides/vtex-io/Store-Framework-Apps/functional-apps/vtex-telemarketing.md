@@ -51,13 +51,13 @@ The Telemarketing app is a store component that enables a [call center operator]
 
 Once you have added the block to the header, the Telemarketing component is ready to be rendered, since it does not require props.
 
-> ⚠️ The telemarketing bar is accessed via browser by the following URL, where `{accountName}` should be replaced by the name of your account: `{accountName}.myvtex.com`
+> ⚠️ The telemarketing bar is accessed in the browser at the following URL, where `{accountName}` should be replaced by the name of your account: `{accountName}.myvtex.com`
 
-## Modus Operandi
+## Behavior
 
-This component will only be displayed and properly work for users whose role is `2 - Televendas (Call center operator)` in their access profile.
+This component will only be displayed and work properly for users whose role is `2 - Televendas (Call center operator)` in their access profile.
 
-To understand how the permissions work for your account, including the call center operator permission, access the learning track on [Accounts & Permissions](https://help.vtex.com/tracks/contas-e-permissoes--5PxyAgZrtiYlaYZBTlhJ2A/4T2vusW9RRUmVjGSuKNO2H) on VTEX Help Center.
+To understand how the permissions work for your account, including the call center operator permission, access the [Accounts & Permissions](https://help.vtex.com/tracks/contas-e-permissoes--5PxyAgZrtiYlaYZBTlhJ2A/4T2vusW9RRUmVjGSuKNO2H) learning track in the VTEX Help Center.
 
 ## Customization
 

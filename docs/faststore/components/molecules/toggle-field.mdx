@@ -15,6 +15,7 @@ The `ToggleField` component wraps a [Toggle](https://developers.vtex.com/docs/gu
   <Tab>
     <OverviewSection>
       <ToggleField id="toggle-field-default" label="Label" />
+      <ToggleField id="toggle-field-vertical" label="Vertical" variant="vertical" />
       <ToggleField
         id="toggle-field-labeless"
         label="Toggle"
@@ -27,6 +28,7 @@ The `ToggleField` component wraps a [Toggle](https://developers.vtex.com/docs/gu
   <Tab>
     ```tsx
     <ToggleField id="toggle-field-default" label="Label" />
+    <ToggleField id="toggle-field-vertical" label="Vertical" variant="vertical" />
     <ToggleField
       id="toggle-field-labeless"
       label="Toggle"
@@ -56,6 +58,17 @@ To apply styles, include the following in your stylesheet:
 ```
 
 For details, see [Importing FastStore UI component styles](https://developers.vtex.com/docs/guides/faststore/using-themes-importing-ui-components-styles).
+
+---
+
+## Variants
+
+Use `variant` to control the orientation of the nested `Toggle`. The default is `horizontal`; `vertical` changes the switch orientation without changing the horizontal label layout of `ToggleField`.
+
+```tsx
+<ToggleField id="notifications" label="Notifications" variant="horizontal" />
+<ToggleField id="newsletter" label="Newsletter" variant="vertical" />
+```
 
 ---
 

@@ -6,11 +6,11 @@ createdAt: "2022-04-25T13:13:25.281Z"
 updatedAt: "2022-04-25T13:13:25.281Z"
 ---
 
-The **Quantity on Cart** app allows you to display a message to your customers informing how many units of a product they have added to the cart. This message can be displayed in a [Shelf](https://developers.vtex.com/docs/guides/vtex-io-documentation-building-a-shelf) or in a product page.
+The **Quantity on Cart** app allows you to display a message to your customers informing them how many units of a product they have added to the cart. This message can be displayed on a [Shelf](https://developers.vtex.com/docs/guides/vtex-io-documentation-building-a-shelf) or on a product page.
 
 ![app-example](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtexarg-quantity-on-cart-0.gif)
 
-> ⚠️ The Quantity On Cart app does not work with promotions scenarios such as [Buy Together](https://help.vtex.com/en/tutorial/buy-together--tutorials_323) and [Buy One Get One](https://help.vtex.com/en/tutorial/buy-one-get-one--tutorials_322).
+> ⚠️ The Quantity On Cart app does not work with promotion scenarios such as [Buy Together](https://help.vtex.com/en/tutorial/buy-together--tutorials_323) and [Buy One Get One](https://help.vtex.com/en/tutorial/buy-one-get-one--tutorials_322).
 
 ## Configuration
 
@@ -30,7 +30,7 @@ vtex install vtexarg.quantity-on-cart
 }
 ```
 
-5. Add the `quantity-on-cart` block to other theme block using a product context since the `quantity-on-cart` block handles product data, such as the `store.product`or the [`product-summary.shelf`](https://developers.vtex.com/docs/guides/vtex-product-summary-productsummaryshelf#configuration). For the example below, we have added to the `product-summary.shelf`:
+5. Add the `quantity-on-cart` block to another theme block that uses a product context, since the `quantity-on-cart` block handles product data, such as `store.product` or the [`product-summary.shelf`](https://developers.vtex.com/docs/guides/vtex-product-summary-productsummaryshelf#configuration). In the example below, we have added it to the `product-summary.shelf`:
 
 ```json
   {
@@ -44,7 +44,7 @@ vtex install vtexarg.quantity-on-cart
 
 After step 5, no further configuration is needed, and the app is ready to use in your store.
 
-> ℹ️ The displayed message in the Quantity On Cart app is available in three languages: English (EN), Spanish (ES), and Portuguese (PT), and follows the pattern below, which cannot be changed: EN - `You have x units in your shopping cart.` | ES - `Tienes x unidades en el carrito.` | PT - `Você tem x unidades no carrinho.`
+> ℹ️ The message displayed by the Quantity On Cart app is available in three languages: English (EN), Spanish (ES), and Portuguese (PT), and follows the pattern below, which cannot be changed: EN - `You have x units in your shopping cart.` | ES - `Tienes x unidades en el carrito.` | PT - `Você tem x unidades no carrinho.`
 
 ---
 

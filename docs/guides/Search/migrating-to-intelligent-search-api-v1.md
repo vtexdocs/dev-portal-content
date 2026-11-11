@@ -375,7 +375,7 @@ The fundamental parameters are the buyer's address: `country`, `zip-code`, and o
 ?country=BRA&zip-code=22271020&coordinates=-43.19532775878906,-22.955032348632812
 ```
 
-As an alternative, `deliveryZonesHash` and `pickupPointsHash` can be passed for faster lookup. They are pre-computed in `POST` [Search delivery zones](https://developers.vtex.com/docs/api-reference/delivery-promise-suggestions-api#post-/api/logistics-shipping/delivery-zones/_search/v2) and `POST` [Search pickup points](https://developers.vtex.com/docs/api-reference/delivery-promise-suggestions-api#post-/api/logistics-shipping/pickuppoints/_search), respectively. Since hashes expire and require a specific renewal flow, always have the buyer's address available as a fallback.
+As an alternative, `deliveryZonesHash` and `pickupPointsHash` can be passed for faster lookup. Both are pre-computed by the `POST` [Get delivery zones and pickup points hashes](https://developers.vtex.com/docs/api-reference/delivery-promise-suggestions-api#post-/api/logistics-shipping/zones/_search) endpoint. Since hashes expire and require a specific renewal flow, always have the buyer's address available as a fallback.
 
 If your integration reads a VTEX segment cookie, all of these values may already be present in the segment `facets` string (`country`, `zip-code`, `coordinates`, `pickupPoint`, `deliveryZonesHash`, `pickupPointsHash`). Extract and forward them as explicit query parameters.
 

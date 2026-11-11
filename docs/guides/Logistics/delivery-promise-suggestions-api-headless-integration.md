@@ -14,8 +14,6 @@ seeAlso:
  - "https://help.vtex.com/docs/tutorials/delivery-promise-faq"
 ---
 
->ℹ️ This feature is in beta, and we are actively working to improve it. If you have any questions, please contact [our Support](https://help.vtex.com/en/support).
-
 [**Delivery Promise**](https://developers.vtex.com/docs/guides/delivery-promise) is VTEX's new solution that allows customers to view only the products they can buy in their shopping experience, considering both the product availability and valid shipping methods for their delivery address. To further enhance this experience, the [Delivery Promise Suggestions API](https://developers.vtex.com/docs/api-reference/delivery-promise-suggestions-api) allows you to highlight the most relevant delivery options directly in the storefront.
 
 In this guide, you will learn how to integrate the [Delivery Promise Suggestions API](https://developers.vtex.com/docs/api-reference/delivery-promise-suggestions-api) to display delivery promises and pickup options to shoppers in your [headless](https://developers.vtex.com/docs/guides/headless-commerce) storefront.
@@ -83,10 +81,8 @@ sequenceDiagram
 
     
     Shopper->>Storefront: Provide ZIP code or geo-location
-    Storefront->>Delivery Promise Suggestions API: POST Search delivery zones
-    Delivery Promise Suggestions API-->>Storefront: deliveryZonesHash
-    Storefront->>Delivery Promise Suggestions API: POST Search pickup points
-    Delivery Promise Suggestions API-->>Storefront: pickupPointsHash
+    Storefront->>Delivery Promise Suggestions API: POST Get delivery zones and pickup points hashes
+    Delivery Promise Suggestions API-->>Storefront: deliveryZonesHash + pickupPointsHash
     Note over Storefront: Identify product IDs<br/>from search results
     Storefront->>Delivery Promise Suggestions API: POST Search delivery suggestions<br/>(product IDs + hashes)
     Delivery Promise Suggestions API-->>Storefront: Delivery & pickup suggestions<br/>(slaTimeTarget + name)

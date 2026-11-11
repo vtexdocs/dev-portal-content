@@ -19,6 +19,9 @@ The `Radio` component allows users to select a single option from a set of mutua
   <Tab>
     <OverviewSection>
       <Radio />
+      <Radio checked readOnly />
+      <Radio disabled />
+      <Radio checked disabled readOnly />
     </OverviewSection>
   </Tab>
   <Tab>
@@ -31,9 +34,9 @@ The `Radio` component allows users to select a single option from a set of mutua
       return (
         <div>
           <Radio />
-          <Radio checked />
+          <Radio checked readOnly />
           <Radio disabled />
-          <Radio checked disabled />
+          <Radio checked disabled readOnly />
         </div>
       )
     }
@@ -65,14 +68,14 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
 
 ## Examples
 
-### Variants
+### States
 
 #### Checked
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
     <OverviewSection>
-      <Radio checked />
+      <Radio checked readOnly />
     </OverviewSection>
   </Tab>
   <Tab>
@@ -81,7 +84,7 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
     import { Radio } from '@faststore/ui'
 
     export default function RadioChecked() {
-      return <Radio checked />
+      return <Radio checked readOnly />
     }
     ```
   </Tab>
@@ -112,7 +115,7 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
     <OverviewSection>
-      <Radio checked disabled />
+      <Radio checked disabled readOnly />
     </OverviewSection>
   </Tab>
   <Tab>
@@ -121,7 +124,7 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
     import { Radio } from '@faststore/ui'
 
     export default function RadioCheckedDisabled() {
-      return <Radio checked disabled />
+      return <Radio checked disabled readOnly />
     }
     ```
   </Tab>

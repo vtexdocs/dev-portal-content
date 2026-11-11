@@ -8,18 +8,18 @@ updatedAt: "2022-12-15T14:22:59.351Z"
 
 An app integrating PayPal Checkout with Smart Payment Buttons with a VTEX IO store. This allows a store to place PayPal's Smart Buttons in the VTEX cart, offering a quick checkout via the familiar PayPal experience. The app also makes PayPal available within VTEX's native checkout. This app utilizes VTEX's Payment Provider Framework SDK.
 
-> ⚠️ _Because they allow a user to skip the normal VTEX checkout, the Smart Buttons cannot be used in combination with gift cards or other split payment methods._
+> ⚠️ Because they allow a user to skip the normal VTEX checkout, the Smart Buttons cannot be used in combination with gift cards or other split payment methods.
 
-> ⚠️ _Currently the Smart Buttons do not support Pickup In Store. To place a Pickup In Store order, shoppers must use PayPal within the native VTEX checkout._
+> ⚠️ Currently the Smart Buttons do not support Pickup In Store. To place a Pickup In Store order, shoppers must use PayPal within the native VTEX checkout.
 
-> ⚠️ _Please reference [PayPal's documentation in regard to supported currencies](https://developer.paypal.com/reference/currency-codes/)._
+> ⚠️ Please reference [PayPal's documentation in regard to supported currencies](https://developer.paypal.com/reference/currency-codes/).
 
-> ⚠️ _For best results, we recommend [configuring your PayPal account to obtain the buyer's phone number during checkout](https://developer.paypal.com/api/nvp-soap/paypal-payments-standard/admin/checkout-settings/#get-contact-telephone-numbers)._
+> ⚠️ For best results, we recommend [configuring your PayPal account to obtain the buyer's phone number during checkout](https://developer.paypal.com/api/nvp-soap/paypal-payments-standard/admin/checkout-settings/#get-contact-telephone-numbers).
 
 ## Features
 
 - Adds PayPal's [Smart Payment Buttons](https://developer.paypal.com/docs/checkout/) to your store's Checkout Cart page (or other locations such as the minicart), allowing users to place orders using PayPal's checkout experience instead of the standard VTEX checkout
-- Also allows the user to use PayPal within the native VTEX checkout
+- Also allows the user to use PayPal within the native VTEX checkout.
 - Allows the VTEX Payment Gateway's auto-settle behavior to be configured or disabled
 - Allows PayPal Credit ("Pay Later") messaging to be displayed on the PDP and in product shelves
 
@@ -27,7 +27,7 @@ An app integrating PayPal Checkout with Smart Payment Buttons with a VTEX IO sto
 
 ### Installation & Onboarding
 
-> ⚠️ _Only users with access to the **Payments** section in the VTEX admin (or assigned the **PCI Gateway** role in License Manager) will be able to configure the app._
+> ⚠️ Only users with access to the **Payments** section in the VTEX admin (or assigned the **PCI Gateway** role in License Manager) will be able to configure the app.
 
 1. Install this app from the [VTEX App Store](https://apps.vtex.com/vtex-connector-paypal-commerce-platform/p) by clicking `Get App`.
 2. If you wish to use the **Smart Payment Buttons**, install the Checkout Cart app by following its [documentation](https://developers.vtex.com/docs/apps/vtex.checkout-cart), **OR** modify your store-theme following the [Customization](#customization) section below. If using Checkout Cart, no store-theme modification is necessary.

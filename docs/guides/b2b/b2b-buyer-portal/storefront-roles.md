@@ -4,7 +4,7 @@ slug: "storefront-roles"
 hidden: false
 excerpt: "Learn how to manage user access and roles within the storefront using the Storefront Permissions API for B2B scenarios."
 createdAt: "2025-10-09T00:00:00.000Z"
-updatedAt: "2026-06-09T00:00:00.000Z"
+updatedAt: "2026-09-21T00:00:00.000Z"
 seeAlso:
  - "/docs/guides/custom-storefront-roles-and-resources"
 ---
@@ -89,7 +89,6 @@ The system comes with these predefined storefront roles, each with specific perm
 | Personal Cards User | 5 | Can use a new credit card at checkout. | UseAdHocCard | UI and API |
 | Contract Manager | 6 | Can view orders placed under their assigned contract. | ViewMyContractOrders | UI and API |
 | Buyer Organization Manager | 7 | Can view all orders within their organizational unit. | ViewMyOrgUnitOrders | UI and API |
-| Address Manager | 9 | Can add and manage addresses during checkout. | ManageAddresses, ViewAddresses | UI and API |
 | User Manager | 10 | Can manage users and view user details within the organization. | ManageUsers, ViewUsers | UI and API |
 | Buying Policy Manager | 11 | Can create, edit, and delete buying policies and approval workflows, and view buying policies. | ManageBuyingPolicies, ViewBuyingPolicies | API only |
 | Budget Manager | 12 | Can create, edit, allocate, and delete budgets, and view budget details, allocations, limits, and spending history. | ManageBudgets, ViewBudget | API only |
@@ -98,6 +97,8 @@ The system comes with these predefined storefront roles, each with specific perm
 | Credit Card Manager | 41 | Can manage and view saved credit cards. | ManageCreditCards, ViewCreditCards | UI and API |
 
 > ℹ️ Roles marked as "API only" can only be assigned to users via the `POST` [Assign storefront roles](https://developers.vtex.com/docs/api-reference/storefront-roles-api#post-/api/license-manager/storefront/user/roles) or `POST` [Assign one storefront role](https://developers.vtex.com/docs/api-reference/storefront-roles-api#post-/api/license-manager/storefront/roles/assign) endpoints.
+
+> ℹ️ As of September 21, 2026, the native **Address Manager** role (storefront role ID `9`) has been removed. Permissions for managing B2B customer addresses (`ManageAddresses` and `ViewAddresses`) are now available only through a [custom storefront role](https://developers.vtex.com/docs/guides/custom-storefront-roles-and-resources) with these resources. Accounts that already had this role were migrated to an equivalent custom role and keep their access; accounts that need this permission going forward must create their own custom role.
 
 ## Extending the permission model
 

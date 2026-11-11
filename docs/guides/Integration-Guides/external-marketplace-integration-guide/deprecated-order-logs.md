@@ -86,7 +86,7 @@ Each step of the catalog integration requires a specific set of Log messages. Th
     <tr>
         <td>D</td>
         <td>When using the <a href="https://developers.vtex.com/vtex-rest-api/reference/fulfillment-simulation">Fulfillment simulation</a> API, the SKU is not retrieved in the `items` object.</td>
-        <td>Oops, we couldn’t obtain the information of SKU {{skuId}}. Please check if the items below are configured correctly in the VTEX platform.<ol> <li>In product registration, check if it is associated with the trade policy.</li> <li>In <a href="https://developers.vtex.com/vtex-rest-api/reference/fulfillment-simulation">fulfillment simulation</a>, check if the carrier attending the SKU exists.</li> <li>In price configuration, check if there’s a price associated with the trade policy.</li></ol></td>
+        <td>Oops, we couldn’t obtain the information of SKU {{skuId}}. Please check if the items below are configured correctly in the VTEX platform.<ol> <li>In product registration, check if it is associated with the sales channel.</li> <li>In <a href="https://developers.vtex.com/vtex-rest-api/reference/fulfillment-simulation">fulfillment simulation</a>, check if the carrier attending the SKU exists.</li> <li>In price configuration, check if there’s a price associated with the sales channel.</li></ol></td>
         <td>Warning</td>
         <td>400</td>
     </tr>
@@ -100,7 +100,7 @@ Each step of the catalog integration requires a specific set of Log messages. Th
     <tr>
         <td>F</td>
         <td>When checking if the SKU is inactive \\</td>
-        <td>Oops, the SKU is inactive in VTEX. We recommend that you check:<ol><li>In Catalog, identify the SKU and check if the field “Activate SKU” is checked.</li> <li>In Catalog, check if the image is uploaded.</li> <li>In <a href="https://developers.vtex.com/vtex-rest-api/reference/fulfillment-simulation">fulfillment simulation</a>, check if the carrier attending the SKU exists.</li> <li>On price configuration, check if there’s a price associated with the trade policy.</li></ol></td>
+        <td>Oops, the SKU is inactive in VTEX. We recommend that you check:<ol><li>In Catalog, identify the SKU and check if the field “Activate SKU” is checked.</li> <li>In Catalog, check if the image is uploaded.</li> <li>In <a href="https://developers.vtex.com/vtex-rest-api/reference/fulfillment-simulation">fulfillment simulation</a>, check if the carrier attending the SKU exists.</li> <li>On price configuration, check if there’s a price associated with the sales channel.</li></ol></td>
         <td>Warning</td>
         <td>400</td>
     </tr>

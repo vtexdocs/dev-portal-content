@@ -10,6 +10,13 @@ updatedAt: "2022-08-09T22:11:19.696Z"
 <Flex>
 
 <WhatsNextCard
+title="Deleting documents in Master Data v1"
+description="Learn how to delete Master Data v1 documents in bulk through the API."
+linkTo="https://developers.vtex.com/docs/guides/deleting-documents-in-master-data-v1"
+linkTitle="See more"
+/>
+
+<WhatsNextCard
 title="Querying documents in Master Data v1"
 description="Learn how queries in VTEX Master Data v1 work"
 linkTo="https://developers.vtex.com/docs/guides/querying-documents-in-master-data-v1"

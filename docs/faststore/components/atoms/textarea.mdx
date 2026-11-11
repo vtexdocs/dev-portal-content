@@ -53,6 +53,26 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
 
 ### Resize
 
+#### None
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Textarea placeholder="Resize disabled" id="textareafield-no-resize" resize="none" />
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    import React from 'react'
+    import { Textarea } from '@faststore/ui'
+
+    export default function TextareaUsage() {
+      return <Textarea placeholder="Resize disabled" id="textareafield-no-resize" resize="none" />
+    }
+    ```
+  </Tab>
+</Tabs>
+
 #### Vertical
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">

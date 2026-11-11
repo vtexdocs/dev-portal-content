@@ -1,11 +1,11 @@
 ---
 title: "Slider"
-excerpt: Sliders allow users to select a single value from a range.
+excerpt: Sliders allow users to select minimum and maximum values from a range.
 ---
 
 [<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/atoms/Slider)
 
-The `Slider` component provides an interactive way for users to select a single value from a defined range. Common use cases include adjusting prices, setting volume, or selecting values where precision within boundaries matters.
+The `Slider` component provides two controls for selecting minimum and maximum values within a defined range. Common use cases include filtering products by price, weight, or another bounded interval.
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
@@ -91,40 +91,6 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
   </Tab>
 </Tabs>
 
-### Accessible Slider with `aria-value-text`
-
-<Tabs items={['Example', 'Code']} defaultIndex="0">
-  <Tab>
-    <OverviewSection>
-      <Slider
-        min={{ absolute: 0, selected: 5 }}
-        max={{ absolute: 50, selected: 45 }}
-        absoluteValuesLabel={{ min: "0", max: "50" }}
-        getAriaValueText={(value) => `${value} units`}
-      />
-    </OverviewSection>
-  </Tab>
-  <Tab>
-    ```tsx
-    import React from "react";
-    import { Slider } from "@faststore/ui";
-
-    export default function AccessibleSlider() {
-      const getAriaValueText = (value: number) => `${value} units`;
-
-      return (
-        <Slider
-          min={{ absolute: 0, selected: 5 }}
-          max={{ absolute: 50, selected: 45 }}
-          absoluteValuesLabel={{ min: "0", max: "50" }}
-          getAriaValueText={getAriaValueText}
-        />
-      );
-    }
-    ```
-  </Tab>
-</Tabs>
-
 ### Slider with custom value labels
 
 <Tabs items={['Example', 'Code']} defaultIndex="0">
@@ -162,6 +128,8 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
     ```
   </Tab>
 </Tabs>
+
+Each thumb is rendered as a native `input` with `type="range"` and exposes its current numeric value as its accessible label. The custom value label components add visible content; they do not set `aria-valuetext`.
 
 ---
 

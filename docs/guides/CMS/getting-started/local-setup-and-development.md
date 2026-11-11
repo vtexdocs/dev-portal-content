@@ -9,23 +9,35 @@ excerpt: "Learn the daily development workflow for adding and updating CMS compo
 
 After completing the [Getting started with CMS](https://developers.vtex.com/docs/guides/getting-started-with-cms) guide, you can start adding and updating the component schemas that define what content editors can manage in the CMS Admin.
 
-This guide covers the daily workflow for adding or changing a component, along with best practices for schema management.
+```mermaid
+flowchart LR
+  subgraph Developer["Developer track"]
+    Setup["Setup (done)"] --> S1["You are here:\n1. Model content"] --> S2["2. Test locally"] --> S3["3. Generate &\nupload the schema"]
+  end
+  subgraph ContentOp["Content operator track"]
+    S4["4. Create & edit\ncontent in branches"] --> S5["5. Review &\npublish"]
+  end
+  S3 --> S4
+```
+
+This guide covers the daily workflow for adding or changing a component, mapped to steps 1-3 of the journey above, along with best practices for schema management.
 
 ## Before you begin
 
-Make sure you have completed all steps in the [Getting started with CMS](https://developers.vtex.com/docs/guides/getting-started-with-cms) guide, including:
+Make sure you have completed all steps in the [Setting up your CMS environment](https://developers.vtex.com/docs/guides/setting-up-your-cms-environment) guide, including:
 
-* VTEX IO CLI and Content plugin installed.  
-* CMS Admin app (`vtex.admin-content-platform-ui`) is installed in your account.  
+* VTEX IO CLI and Content plugin installed.
+* CMS Admin app (`vtex.admin-content-platform-ui`) is installed in your account.
 * CMS folder structure scaffolded in your storefront project (`cms/{storeId}/components/` and `cms/{storeId}/pages/`).
 
 ## Workflow overview
 
 The cycle you will repeat every time you add or change a component is:
 
-1. Edit a `.jsonc` schema file in the `cms/{storeId}/components/` directory.  
-2. Sync the schema to CMS using the CLI.  
-3. Verify the component appears correctly in the CMS Admin.
+1. Edit a `.jsonc` schema file in the `cms/{storeId}/components/` directory.
+2. Test it locally with `yarn dev`, and open a PR to validate it end-to-end with the [WebOps Preview](#validating-with-the-faststore-webops-preview).
+3. Sync the schema to CMS using the CLI.
+4. Verify the component appears correctly in the CMS Admin.
 
 The following sections walk through each step in detail.
 
@@ -72,16 +84,16 @@ For example, to create a **Hero Banner** component in a FastStore project, creat
 
 Each schema must include:
 
-* `$extends`:  References the base component definition.  
-* `$componentKey`: A unique identifier for the component.  
-* `$componentTitle`: The display name editors will see in the CMS Admin.  
-* `properties`: The fields editors can fill in, each with a `type` and `title`.
+* `$extends`:  References the base component definition.
+* `$componentKey`: A unique identifier for the component.
+* `$componentTitle`: The display name editors will see in the CMS Admin.
+* `properties`: The fields editors can complete, each with a `type` and `title`.
 
-> ℹ️ For the full schema reference, including all field types, available widgets, and how sections differ from components, refer to [Understanding components and sections](https://developers.vtex.com/docs/guides/understanding-components-and-sections).
+> ℹ️ For the full schema reference, including all field types, available widgets, and how sections differ from components, see [Understanding components and sections](https://developers.vtex.com/docs/guides/understanding-components-and-sections). For details on the `media-gallery` widget used above, see [Media gallery](https://developers.vtex.com/docs/guides/media-gallery).
 
 ## Step 2 - Syncing the schema
 
-After saving your schema file, sync it to CMS. The command depends on your storefront technology.
+After saving your schema file, sync it to the CMS. The command depends on your storefront technology.
 
 ### FastStore projects
 
@@ -106,9 +118,9 @@ vtex content upload-schema
 
 Regardless of the command used, the CLI will:
 
-1. Detect the content source and generate the schema.  
-2. Prompt you for the **store ID** to associate the schema with.  
-3. Show the current published version and suggest the next version number.  
+1. Detect the content source and generate the schema.
+2. Prompt you for the **store ID** to associate the schema with.
+3. Show the current published version and suggest the next version number.
 4. Ask you to confirm before uploading.
 
 ### Choosing a version number
@@ -121,20 +133,20 @@ The CLI follows [semantic versioning](https://semver.org/) (major.minor.patch). 
 | Bug fix or small correction | **Patch** | `1.5.0` → `1.5.1` |
 | Breaking change (removed or renamed field) | **Major** | `1.5.0` → `2.0.0` |
 
-> ⚠️ Always review your schema before confirming the upload. If you release a new schema version that is not a pre-release (for example, `1.6.0` instead of `1.6.0-beta`), it will replace the current production schema. To test changes without affecting production, append a pre-release tag such as `-beta` to the version (e.g., `1.6.0-beta.1`).
+> ⚠️ Always review your schema before confirming the upload. If you release a new schema version that isn't a pre-release (for example, `1.6.0` instead of `1.6.0-beta`), it will replace the current production schema. To test changes without affecting production, append a pre-release tag such as `-beta` to the version (e.g., `1.6.0-beta.1`). For more information at how version numbers and pre-release tags work, see [Schema versioning](https://developers.vtex.com/docs/guides/schema-versioning).
 
-After confirmation, the CLI uploads the schema and prompts you to delete the local `schema.json` file. This file is a generated artifact and does not need to be committed to your repository, so you can safely delete it or keep it for debugging purposes.
+After confirmation, the CLI uploads the schema and prompts you to delete the local `schema.json` file. This file is a generated artifact and doesn't need to be committed to your repository, so you can safely delete it or keep it for debugging purposes.
 
 ## Step 3 - Verifying in the Admin
 
 After syncing, do the following to check the new component:
 
-1. Open the Admin and go to **Storefront > Content > All Content**.  
+1. Open the Admin and go to **Storefront > Content > All Content**.
 2. Navigate to any page (for example, the **Home** page), and check the section picker. Your new component, in this case, **Hero Banner**, should appear as an available option with the fields you defined.
 
 ![hero-banner](https://vtexhelp.vtexassets.com/assets/docs/src/hero-banner___0225bfeea78fd5d56c3e7268d0b43910.gif)
 
-If the component does not appear, refer to the [Troubleshooting CMS schema sync errors](https://developers.vtex.com/docs/guides/cms-troubleshooting) guide.
+If the component doesn't appear, see the [Troubleshooting CMS schema sync errors](https://developers.vtex.com/docs/guides/cms-troubleshooting) guide.
 
 ## Development workflow best practices
 
@@ -154,9 +166,15 @@ vtex content generate-schema cms/{storeId}/components cms/{storeId}/pages --full
 
 This output includes all inherited definitions resolved inline, making it easier to spot issues.
 
+### Validating with the FastStore WebOps Preview
+
+Running `yarn dev` locally only proves that your schema and component code compile in isolation, on your machine. To test the complete code end-to-end, for example, how your change interacts with other recent changes, open a pull request with your schema and component files. FastStore WebOps automatically deploys a live Preview for that PR, which you should check before merging to `main`.
+
+> ℹ️ If your local setup needs to run multiple stores at the same time, select a distinct proxy port per store instead of relying on the default `3000`.
+
 ### Keeping schemas and components in sync
 
-Since schema files define what data your frontend components receive, keep the `cms/` folder in the same repository as your component source code (e.g., `src/components/`). A pull request that adds a new frontend component should include the corresponding schema file so both stay in sync through code review.
+Since schema files define what data your frontend components receive, keep the `cms/` folder in the same repository as your component source code (for example, `src/components/`). A pull request that adds a new frontend component should include the corresponding schema file so both stay in sync through code review.
 
 ### Automating uploads in CI/CD
 
@@ -167,3 +185,16 @@ vtex content upload-schema -y
 ```
 
 This is useful for automating schema deployments as part of your build and release process.
+
+## Next steps
+
+<Flex>
+
+<WhatsNextCard
+  linkTo="https://developers.vtex.com/docs/guides/getting-started-with-cms#creating-and-publishing-content"
+  title="Creating and publishing content"
+  description="Learn how content operators create a CMS branch, edit content, and publish it to the storefront."
+  linkTitle="See more"
+/>
+
+</Flex>

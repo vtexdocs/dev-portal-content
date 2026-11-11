@@ -68,16 +68,23 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
     <OverviewSection>
-      <Checkbox checked />
+      <Checkbox checked readOnly />
     </OverviewSection>
   </Tab>
   <Tab>
     ```tsx
-    import React from 'react'
+    import React, { useState } from 'react'
     import { Checkbox } from '@faststore/ui'
     
     export default function CheckboxChecked() {
-      return <Checkbox checked />
+      const [checked, setChecked] = useState(true)
+
+      return (
+        <Checkbox
+          checked={checked}
+          onChange={(event) => setChecked(event.currentTarget.checked)}
+        />
+      )
     }
     ```
   </Tab>
@@ -108,16 +115,24 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
 <Tabs items={['Example', 'Code']} defaultIndex="0">
   <Tab>
     <OverviewSection>
-      <Checkbox checked partial />
+      <Checkbox checked partial readOnly />
     </OverviewSection>
   </Tab>
   <Tab>
     ```tsx
-    import React from 'react'
+    import React, { useState } from 'react'
     import { Checkbox } from '@faststore/ui'
     
     export default function CheckboxPartial() {
-      return <Checkbox checked partial />
+      const [checked, setChecked] = useState(true)
+
+      return (
+        <Checkbox
+          checked={checked}
+          partial
+          onChange={(event) => setChecked(event.currentTarget.checked)}
+        />
+      )
     }
     ```
   </Tab>
@@ -249,6 +264,8 @@ Partial checkboxes present a neutral surface with a primary accent to convey a m
 You can target and override `Checkbox` styles using the following data attributes:
 
 `data-fs-checkbox`
+
+`data-fs-checkbox-partial="true" | "false"`
 
 ---
 

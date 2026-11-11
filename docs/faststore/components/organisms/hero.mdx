@@ -18,10 +18,12 @@ The `Hero` component is a full-width banner presented on the above-the-fold sect
 
 Use the `Hero` component as the first element of your Home, brand, or collections pages.
 
+The default combination is `variant="primary"` with `colorVariant="main"`, shown explicitly below.
+
 <Tabs items={["Example", "Code"]} defaultIndex="0">
   <Tab>
     <OverviewSection>
-      <Hero>
+      <Hero variant="primary" colorVariant="main">
         <HeroImage>
           <img
             alt="Controller on a table"
@@ -39,7 +41,7 @@ Use the `Hero` component as the first element of your Home, brand, or collection
   </Tab>
   <Tab>
     ```tsx
-    <Hero>
+    <Hero variant="primary" colorVariant="main">
       <HeroImage>
         <img
           alt="Controller on a table"
@@ -88,7 +90,7 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
 <Tabs items={["Example", "Code"]} defaultIndex="0">
   <Tab>
     <OverviewSection>
-      <Hero>
+      <Hero variant="primary" colorVariant="main">
         <HeroImage>
           <img
             alt="Controller on a table"
@@ -106,7 +108,7 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
   </Tab>
   <Tab>
     ```tsx
-    <Hero>
+    <Hero variant="primary" colorVariant="main">
       <HeroImage>
         <img
           alt="Controller on a table"
