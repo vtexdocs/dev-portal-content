@@ -18,19 +18,19 @@ FastStore `v4.11.3` covers the changes from `v4.11.0` through `v4.11.3`. It fixe
 
 ### Store API extension fields honor `@auth` and `@cacheControl` (PR: [#3524](https://github.com/vtex/faststore/pull/3524))
 
-Store fields declared in your GraphQL extensions now run the `@auth` and `@cacheControl` directives. Before this fix, the directives were added to the schema but were not applied to store fields: `@auth` did not validate the shopper's session, and `@cacheControl` did not contribute to the response `cache-control` header. FastStore's own fields were not affected.
+Store fields declared in your GraphQL extensions now run the `@auth` and `@cacheControl` directives. Before this fix, the directives were added to the schema but were not applied to store fields: `@auth` didn't validate the shopper's session, and `@cacheControl` didn't contribute to the response `cache-control` header. FastStore's own fields were not affected.
 
 Stores that already annotate fields with these directives see the annotations take effect after upgrading, as described in [Authentication in API extensions](https://developers.vtex.com/docs/guides/faststore/api-extensions-authentication-in-api-extensions). Review your annotated store fields and test them after upgrading.
 
 ### Cart keeps its lines when an assembly child SKU is missing from Search (PR: [#3536](https://github.com/vtex/faststore/pull/3536))
 
-Stores that sell services as assembly options often hide the service SKUs from the storefront. Before this fix, when Intelligent Search did not return one of these SKUs, cart validation failed with `Search API did not found the following skus`, and the next validation could remove the product and its service from Checkout.
+Stores that sell services as assembly options often hide the service SKUs from the storefront. Before this fix, when Intelligent Search didn't return one of these SKUs, cart validation failed with `Search API didn't find the following SKUs`, and the next validation could remove the product and its service from Checkout.
 
-Cart validation now builds an assembly option child that Search does not return from its line in the Checkout order form. Other missing SKUs still fail the mutation, so a Search outage is not hidden. Stores with hidden assembly option SKUs get this behavior after upgrading, and no configuration change is needed. See [Keeping split cart lines](https://developers.vtex.com/docs/guides/faststore/developer-tools-keeping-split-cart-lines#step-2---test-the-cart-behavior-locally) for how to test assembly option carts.
+Cart validation now builds an assembly option child that Search doesn't return from its line in the Checkout order form. Other missing SKUs still fail the mutation, so a Search outage is not hidden. Stores with hidden assembly option SKUs get this behavior after upgrading, and no configuration change is needed. See [Keeping split cart lines](https://developers.vtex.com/docs/guides/faststore/developer-tools-keeping-split-cart-lines#step-2---test-the-cart-behavior-locally) for how to test assembly option carts.
 
 ### Shipping data stops updating on every cart validation (PR: [#3554](https://github.com/vtex/faststore/pull/3554))
 
-When the address in the order form had no `geoCoordinates`, cart validation resent `shippingData` on every call. Each call made the `CheckoutOrderFormOwnership` cookie larger, which could cause HTTP `431` errors. Address changes are still detected by postal code, so an update is sent only when the postal code changes.
+When the address in the order form had no `geoCoordinates`, cart validation resent `shippingData` on every call. Each call increased the `CheckoutOrderFormOwnership` cookie, which could cause HTTP `431` errors. Address changes are still detected by postal code, so an update is sent only when the postal code changes.
 
 Stores that save addresses without coordinates, for example through a headless checkout, no longer see the cookie grow during cart updates. No action is required beyond upgrading.
 
@@ -42,7 +42,7 @@ Stores with many PLP templates make far fewer CMS requests while resolving PDP a
 
 ### Setting `subDomainPrefix` to an empty array replaces the default `www` prefix (PR: [#3577](https://github.com/vtex/faststore/pull/3577))
 
-In `discovery.config.js`, an empty `api.subDomainPrefix` array now replaces the default `www` prefix instead of being merged with it. Before this fix, `www` was always kept, so Checkout received the root domain and set its cookies on it. Those cookies were then sent duplicated, which could make the `Cookie` header exceed the server limit.
+In `discovery.config.js`, an empty `api.subDomainPrefix` array now replaces the default `www` prefix instead of being merged with it. Before this fix, `www` was always kept, so Checkout received the root domain and set its cookies on it. Those cookies were then sent in duplicate, which could cause the `Cookie` header to exceed the server limit.
 
 Stores that set `subDomainPrefix` to an empty array see Checkout cookies set on `www.<domain>` instead of `<domain>`. Cookies already set on the root domain stay in the browser until they expire. If `secureSubdomain` uses a different host, FastStore prints a warning during build and development. Stores that set a non-empty prefix or don't set the option keep the current behavior.
 
@@ -52,9 +52,9 @@ Stores that set `subDomainPrefix` to an empty array see Checkout cookies set on 
 
 ### Keep split cart lines with the `preserveCartLines` flag (PR: [#3535](https://github.com/vtex/faststore/pull/3535))
 
-FastStore now supports the opt-in `api.preserveCartLines` flag in `discovery.config.js`. FastStore merges cart lines that share the same SKU into one line by default. When a store splits a line in Checkout, for example so that each unit can have its own assembly options, the flag keeps each unit as a separate cart line, and editing or removing one line affects only that line. FastStore doesn't split lines on its own.
+FastStore now supports the opt-in `api.preserveCartLines` flag in `discovery.config.js`. By default, FastStore merges cart lines that share the same SKU into a single line. When a store splits a line in Checkout, for example, so that each unit can have its own assembly options, the flag keeps each unit as a separate cart line, and editing or removing one line affects only that line. FastStore doesn't split lines on its own.
 
-The flag is off by default, so stores that don't set it keep the current behavior. Checkout can also return several lines of the same SKU because of promotions, so enable the flag only when your store needs to keep split lines. For setup steps, see [Keeping split cart lines](https://developers.vtex.com/docs/guides/faststore/developer-tools-keeping-split-cart-lines).
+The flag is off by default, so stores that don't set it keep the current behavior. Checkout can also return multiple lines of the same SKU due to promotions, so enable the flag only when your store needs to keep split lines. For setup steps, see [Keeping split cart lines](https://developers.vtex.com/docs/guides/faststore/developer-tools-keeping-split-cart-lines).
 
 ---
 
