@@ -63,7 +63,7 @@ flowchart LR
 ```
 
 | Event | Endpoint notified by VTEX | What the matcher must do |
-|---|---|---|
+| --- | --- | --- |
 | New suggestion | `hook-base-address` | Retrieve the suggestion, calculate the match, and return the result |
 | Updated suggestion | `UpdatesNotificationEndpoint` | Retrieve the updated suggestion, recalculate the match, and return the result |
 
@@ -89,12 +89,12 @@ In this step, publish the matcher at a publicly accessible HTTPS URL. VTEX must 
 2. Deploy a minimal HTTP application with a health check, for example `GET /health`, responding `200 OK`. You can add the notification routes in the next step.
 3. Configure a domain pointing to the service and enable a valid TLS certificate so that the final URL uses HTTPS.
 4. Confirm public access with an external call, for example:
-```
 curl -i https://{your-domain}/health
 ```
+
 The expected response is `200`. If the endpoint only responds on your local network, VTEX will not be able to notify the matcher.
 
-5. Keep the final URLs that will be used in the VTEX configuration, for example:
+1. Keep the final URLs that will be used in the VTEX configuration, for example:
 
    - https://{your-domain}/suggestions/new → `hook-base-address`
    - https://{your-domain}/suggestions/update → `UpdatesNotificationEndpoint`
@@ -170,7 +170,7 @@ With the service published and the stub flow working, register the matcher in th
 
 `GET https://api.vtex.com/{{accountName}}/suggestions/configuration`
 
-2. Save the full JSON response before editing. The later PUT must resend the updated body, not only the new matcher.
+1. Save the full JSON response before editing. The later PUT must resend the updated body, not only the new matcher.
 
 #### Add the matcher to the `Matchers` array
 
@@ -204,15 +204,15 @@ Example:
 ```
 
 | Field | Description |
-|---|---|
+| --- | --- |
 | `MatcherId` | Unique identifier of the matcher. Use the same identity when returning match results. |
 | `hook-base-address` | URL notified when a new suggestion arrives. |
 | `UpdatesNotificationEndpoint` | URL notified when an existing suggestion is updated. |
 | `IsActive` | Set to `true` to start receiving notifications. |
 | `Description` | Optional description of the matcher. |
 
-6. Call [Save Account's Approval Settings](https://developers.vtex.com/docs/api-reference/marketplace-apis-suggestions#put-/suggestions/configuration) with the full updated body.
-7. Run another `GET` on `/suggestions/configuration` and confirm that the matcher appears as active in the response.
+1. Call [Save Account's Approval Settings](https://developers.vtex.com/docs/api-reference/marketplace-apis-suggestions#put-/suggestions/configuration) with the full updated body.
+2. Run another `GET` on `/suggestions/configuration` and confirm that the matcher appears as active in the response.
 
 > ⚠️ Don't remove or deactivate VTEX Matcher unless the integration is prepared to take over all processing. External matchers complement the default matcher.
 
@@ -243,6 +243,7 @@ flowchart LR
   click D "https://developers.vtex.com/docs/api-reference/marketplace-apis-suggestions#put-/suggestions/-sellerId-/-sellerskuid-/versions/-version-/matches/-matchid-"
   click G "https://help.vtex.com/en/tutorial/manual-sku-cataloging--tutorials_396"
 ```
+
 If any step fails, fix the corresponding stage before moving on to rule configuration.
 
 ## Matching rules
