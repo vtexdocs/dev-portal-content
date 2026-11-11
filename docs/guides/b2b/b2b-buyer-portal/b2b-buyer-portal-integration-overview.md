@@ -3,7 +3,7 @@ title: "B2B Buyer Portal integration overview"
 slug: "b2b-buyer-portal-integration-overview"
 hidden: false
 createdAt: "2026-03-13T00:00:00.000Z"
-updatedAt: "2026-03-13T00:00:00.000Z"
+updatedAt: "2026-09-23T00:00:00.000Z"
 excerpt: "Explore the integration capabilities of B2B Buyer Portal, including contracts, organization management, payment cards, addresses, Budgets, Buying policies, Accounting fields, and Punchout."
 ---
 
@@ -17,6 +17,7 @@ This guide provides an overview of the integration capabilities available in B2B
 
 - [Architecture overview](#architecture-overview)
 - [Contracts](#contracts)
+  - [Prospect review](#prospect-review)
 - [Organization management](#organization-management)
   - [Organizational Units and scopes](#organizational-units-and-scopes)
   - [User provisioning](#user-provisioning)
@@ -29,15 +30,18 @@ This guide provides an overview of the integration capabilities available in B2B
 - [Accounting fields](#accounting-fields)
   - [Default values](#default-values)
 - [Punchout](#punchout)
+- [Checkout extensibility](#checkout-extensibility)
 
 ## Architecture overview
 
 B2B Buyer Portal integrations are built around the following core concepts:
 
 - **Contracts** sit at the **root** of the buyer organization. They define the commercial conditions that apply to the whole organization, such as product assortment, prices, and payment methods.
-- [Organizational Units](https://help.vtex.com/en/docs/tutorials/organization-units) represent the hierarchical structure under that root, such as departments, divisions, or subsidiaries. They are the central entity for scoping many buyer portal features.
+- [Organizational Units](https://help.vtex.com/docs/tutorials/organizational-units) represent the hierarchical structure under that root, such as departments, divisions, or subsidiaries. They are the central entity for scoping many buyer portal features.
 - **Storefront users** are members of the buyer organization who interact with the store, each assigned specific roles and permissions.
 - **Storefront roles** control what actions each user can perform, from placing orders to managing budgets.
+
+> ℹ️ For how buyer organization data maps to Master Data entities and their relationships, see [B2B Buyer Portal Master Data architecture](https://developers.vtex.com/docs/guides/b2b-buyer-portal-master-data-architecture).
 
 ## Contracts
 
@@ -47,15 +51,32 @@ B2B Buyer Portal integrations are built around the following core concepts:
 | :--- | :--- |
 | Agreement alignment | Define organization-wide conditions: assortment, pricing, and payment rules—that organizational units inherit. |
 | Contract lifecycle | Create, update, and manage buyer contracts and keep commercial conditions aligned with negotiated agreements. |
+| Prospect review | Review buyer organizations registered as prospects and approve or reject them before they start buying. |
 
 Use the [B2B Contracts API](https://developers.vtex.com/docs/api-reference/b2b-contracts-api) to
 create, update, and manage contracts and their corresponding commercial conditions.
+
+### Prospect review
+
+A **prospect** is a buyer organization that has registered but is not yet cleared to buy. Registration is integrator-driven: VTEX exposes no prospect-registration endpoint, so you assemble the prospect by calling core platform APIs directly. A prospect is a contract whose `prospectWorkflow` field is set to `PENDING`, held inactive until it is reviewed.
+
+Once the prospect exists, you move it between `PENDING`, `APPROVED`, and `REJECTED` by updating that field on the contract. Approval is a state change, not provisioning: the organizational unit, the address, and the user must already exist before a prospect can be approved. A direct write does not refuse an ineligible approval, so confirm those entities first. The VTEX Admin review interface will not approve while those entities are missing.
+
+| Capability | Description |
+| :--- | :--- |
+| Prospect state | Track whether a contract is `PENDING`, `APPROVED`, or `REJECTED` review. |
+| Eligibility | Confirm before approval that the prospect has an associated organizational unit and an active address. |
+| Review lifecycle | Approve and reject prospects as the onboarding review progresses. |
+
+Use the [B2B Contracts API](https://developers.vtex.com/docs/api-reference/b2b-contracts-api) to create a prospect and to move it through review.
+
+> ℹ️ For the full integration flow, see [Managing B2B prospects](https://developers.vtex.com/docs/guides/b2b-prospect-management).
 
 ## Organization management
 
 Organization management covers the structure, identity, and access control of a buyer organization. It includes creating and managing organizational units, provisioning users, assigning roles, and storing enriched buyer data.
 
-These capabilities form the foundation of every B2B Buyer Portal integration since most other features (Budgets, Buying policies, accounting fields) operate within the context of organizational units and depend on users having the right storefront roles.
+These capabilities form the foundation of every B2B Buyer Portal integration since most other features (Budgets, Buying policies, Accounting fields) operate within the context of organizational units and depend on users having the right storefront roles.
 
 ### Organizational units and scopes
 
@@ -78,21 +99,22 @@ Use the [Organization Units API](https://developers.vtex.com/docs/api-reference/
 
 User provisioning covers the process of creating B2B users in VTEX and linking them to organizational units. This integration is essential when onboarding buyer organizations from external platforms or ERPs and when automating user lifecycle management.
 
-The provisioning flow includes registering storefront credentials in VTEX ID, assigning users to organizational units, granting storefront roles, and saving enriched buyer data in the Shopper entity.
+The provisioning flow includes registering storefront credentials in Authenticator, assigning users to organizational units, granting storefront roles, and saving enriched buyer data in the Shopper entity.
 
 | Capability | Description |
 | :--- | :--- |
-| Create storefront users | Register users in VTEX ID with unique usernames and optional login emails. |
+| Create storefront users | Register users in Authenticator with unique usernames and optional login emails. |
 | Assign users to units | Link storefront users to their respective organizational units. |
 | Assign storefront roles | Grant role-based permissions that control what each user can do. |
 
+> ℹ️ For the full step-by-step integration, see [B2B user provisioning](https://developers.vtex.com/docs/guides/b2b-user-provisioning). For migrating users' legacy passwords from an external platform, see [B2B password migration](https://developers.vtex.com/docs/guides/b2b-password-migration).
 
-The key APIs related to user provisioning are:
+The key endpoints for user provisioning are:
 
-- [VTEX ID API](https://developers.vtex.com/docs/api-reference/vtex-id-api) — Create storefront users and manage authentication identifiers.
-- [Organization Units API](https://developers.vtex.com/docs/api-reference/organization-units-api) — Allocate users to organizational units.
-
-> ℹ️ For the full step-by-step integration, see [B2B user provisioning](https://developers.vtex.com/docs/guides/b2b-user-provisioning).
+- `POST` [Create storefront user with username](https://developers.vtex.com/docs/api-reference/authenticator-api#post-/api/authenticator/v1/storefront/users) — Register a new storefront user with authentication identifiers.
+- `POST` [Create organizational unit](https://developers.vtex.com/docs/api-reference/organization-units-api#post-/api/organization-units/v1) — Create the organizational unit users will belong to.
+- `POST` [Assign user to organizational unit](https://developers.vtex.com/docs/api-reference/organization-units-api#post-/api/vtexid/organization-units/-organizationUnitId-/users) — Link a storefront user to their organizational unit.
+- `POST` [Assign storefront roles to user](https://developers.vtex.com/docs/api-reference/storefront-permissions-api#post-/api/license-manager/storefront/users) — Grant role-based storefront permissions to the user.
 
 ### Storefront roles and permissions
 
@@ -147,7 +169,7 @@ Shipping destinations, internal delivery points, and recipients support checkout
 
 A **location** is a specific delivery point within a site, such as a dock, department, or internal area. For example, freight may be consigned to the company's street address while the actual delivery is to **Dock 3456**. Locations are managed through the [Custom Fields API](https://developers.vtex.com/docs/api-reference/custom-fields-api). See [Custom Fields integration](https://developers.vtex.com/docs/guides/custom-fields-integration) to learn more.
 
-**Recipients** are the people who can be chosen as **order recipients**, who will receive the shipment. At checkout, the buyer selects the recipient for the order. That person may be different from the user placing the order. Recipient records are maintained at the **organization** level and can be **associated with addresses**, so choosing a shipping address can narrow which recipients are offered. Use the [B2B Recipients API](https://developers.vtex.com/docs/api-reference/b2b-recipients-api) to manage recipients in B2B scenarios.
+**Recipients** are the people who can be chosen as **order recipients**, who will receive the shipment. At checkout, the buyer selects the recipient for the order. That person may be different from the user placing the order. Recipient records are maintained at the **organization** level and can be **associated with addresses**, so choosing a shipping address can narrow which recipients are offered. Use the [B2B Addresses API](https://developers.vtex.com/docs/api-reference/b2b-addresses) to manage recipients in B2B scenarios.
 
 ## Budgets and allocations
 
@@ -222,3 +244,15 @@ Punchout enables integration between external eprocurement systems and the VTEX 
 Use the [Punchout API](https://developers.vtex.com/docs/api-reference/punchout-api) to start and finish punchout login flows using one-time tokens.
 
 > ℹ️ For the full login integration, see [Punchout login integration](https://developers.vtex.com/docs/guides/punchout-login-integration). For cart transfer customization, see [Punchout cart integration](https://developers.vtex.com/docs/guides/punchout-cart-integration). For a conceptual overview, see [Punchout](https://developers.vtex.com/docs/guides/punchout).
+
+## Checkout extensibility
+
+Beyond the data and API integrations above, B2B Buyer Portal also lets you customize the Checkout UI itself. Using extension points across all Checkout stages (Cart, Delivery, Review, Payment, and Order Placed), you can render your own components without changing Checkout's core behavior.
+
+| Capability | Description |
+| :--- | :--- |
+| Extension points | Render custom components at defined points across the Checkout journey. |
+| Data layer access | Read and mutate cart, settings, and extension data through dedicated hooks. |
+| Custom styling | Style extensions with CSS Modules, global imports, or CSS variables. |
+
+> ℹ️ For the full technical reference, see [Buyer Portal Checkout Extensibility](https://developers.vtex.com/docs/guides/buyer-portal-checkout-extensibility).

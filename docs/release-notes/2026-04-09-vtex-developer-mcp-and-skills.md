@@ -1,29 +1,20 @@
 ---
-title: "Introducing VTEX Developer MCP and Skills for AI-assisted development"
+title: "Introducing the VTEX AI Developer Toolkit"
 slug: "2026-04-09-vtex-developer-mcp-and-skills"
 type: "added"
 createdAt: "2026-04-09T19:00:00.000Z"
 updatedAt: "2026-04-09T19:00:00.000Z"
 hidden: false
-excerpt: "VTEX now offers two AI-assisted development tools: the VTEX Developer MCP for real-time documentation access and VTEX Skills for encoding platform-specific patterns into AI coding assistants."
+excerpt: "VTEX has launched the VTEX AI Developer Toolkit, which includes VTEX Developer MCP and VTEX Skills for AI-assisted development."
 ---
 
-## What has changed?
+VTEX has launched the [VTEX AI Developer Toolkit](https://developers.vtex.com/docs/guides/vtex-ai-developer-toolkit-overview), a set of resources that AI development tools can use when working with the VTEX platform. 
 
-VTEX now offers two AI-assisted development tools for developers building on the platform:
+The VTEX AI Developer Toolkit includes:
 
-- **[VTEX Developer MCP](https://developers.vtex.com/docs/guides/vtex-developer-mcp)**: A Model Context Protocol (MCP) server that gives AI coding assistants direct access to VTEX documentation and API references. Run it with `npx -y @vtex/developer-mcp` — no API key or authentication required. Works with Cursor, VS Code (GitHub Copilot), Claude Code, and Claude Desktop.
-
-- **[VTEX Skills](https://developers.vtex.com/docs/guides/vtex-skills)**: A catalog of 42 AI agent skills for VTEX platform development, covering six tracks (Architecture, FastStore, Payment, VTEX IO, Marketplace, and Headless). Install with `npx skills add vtex/skills`. Available for Cursor, GitHub Copilot, Claude, AGENTS.md, OpenCode, and Kiro.
-
-## Why did we make this change?
-
-AI coding assistants are increasingly central to developer workflows, but they lack VTEX-specific knowledge. The Developer MCP gives assistants real-time access to the latest documentation and API specs. Skills encode platform constraints, patterns, and best practices that prevent common mistakes. Together, they help developers build on VTEX faster and more correctly.
+- **[VTEX Developer MCP](https://developers.vtex.com/docs/guides/vtex-developer-mcp)**: A Model Context Protocol (MCP) server that gives AI coding assistants direct access to VTEX documentation and API references. The server exposes tools for documentation search, document retrieval, endpoint search, and endpoint specification retrieval. Works with Cursor, VS Code (GitHub Copilot), Claude Code, and Claude Desktop.
+- **[VTEX Skills](https://developers.vtex.com/docs/guides/vtex-skills)**: A catalog of AI skills that provide persistent context about VTEX-specific architecture patterns, platform constraints, APIs, and implementation scenarios. Available for Cursor, GitHub Copilot, Claude, AGENTS.md, OpenCode, and Kiro.
 
 ## What needs to be done?
 
-No migration is required. These are new, additive tools. To get started:
-
-- Set up the [VTEX Developer MCP](https://developers.vtex.com/docs/guides/vtex-developer-mcp) in your editor.
-- Install [VTEX Skills](https://developers.vtex.com/docs/guides/vtex-skills) in your project.
-- Read the [AI-Assisted Development overview](https://developers.vtex.com/docs/guides/ai-assisted-development-overview) to learn how the tools complement each other.
+No action is required. To learn more, see the [VTEX AI Developer Toolkit overview](https://developers.vtex.com/docs/guides/vtex-ai-developer-toolkit-overview).

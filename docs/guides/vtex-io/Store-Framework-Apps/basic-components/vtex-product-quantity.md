@@ -6,7 +6,7 @@ createdAt: "2020-06-03T15:19:10.308Z"
 updatedAt: "2022-06-22T14:56:14.269Z"
 ---
 
-The Product Quantity allows users to a add a chosen amount of the displayed product in their cart.
+The Product Quantity allows users to add a chosen amount of the displayed product to their cart.
 
 ![product-quantity](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-product-quantity-0.png)
 

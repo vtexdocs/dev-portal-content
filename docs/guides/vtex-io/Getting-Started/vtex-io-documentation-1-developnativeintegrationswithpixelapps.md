@@ -21,6 +21,6 @@ Pixel apps are responsible for running scripts on all pages of a store website. 
 
 ## Before you begin
 
-Before taking this tutorial, check our [list of Pixel apps](https://developers.vtex.com/docs/guides/pixel-apps/) and make sure the integration you're looking for is not already available.
+Before starting this tutorial, check our [list of Pixel apps](https://developers.vtex.com/docs/guides/pixel-apps/) and make sure the integration you're looking for is not already available.
 
-Also, if you're wondering whether to **create a Pixel app** or **customize an HTML tag with Google Tag Manager**, keep in mind that the first option is always the most recommended. Creating a new app allows for more freedom during development and may also help other users interested in the same solution.
+Also, if you're wondering whether to **create a Pixel app** or **customize an HTML tag with Google Tag Manager**, keep in mind that creating a Pixel app is the recommended option. Creating a new app allows for more freedom during development and may also help other users interested in the same solution.

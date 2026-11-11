@@ -20,6 +20,8 @@ The `IconButton` is an icon that trigger some sort of action, such as adding an 
         aria-label="Buy"
         variant="primary"
       />
+      <IconButton icon={<Icon name="ShoppingCart" />} aria-label="Buy" variant="secondary" inverse />
+      <IconButton icon={<Icon name="ShoppingCart" />} aria-label="Buy" variant="tertiary" disabled />
       <IconButton
         icon={<Icon name="ShoppingCart" />}
         aria-label="Buy"
@@ -41,6 +43,8 @@ The `IconButton` is an icon that trigger some sort of action, such as adding an 
       aria-label="Buy"
       variant="primary"
     />
+    <IconButton icon={<Icon name="ShoppingCart" />} aria-label="Buy" variant="secondary" inverse />
+    <IconButton icon={<Icon name="ShoppingCart" />} aria-label="Buy" variant="tertiary" disabled />
     <IconButton
       icon={<Icon name="ShoppingCart" />}
       aria-label="Buy"
@@ -85,6 +89,8 @@ You can target and override `IconButton` styles using the following data attribu
 `data-fs-icon-button`
 
 This component inherits [Button](https://developers.vtex.com/docs/guides/faststore/atoms-button) CSS selectors and styles.
+
+It also inherits the Button variants (`primary`, `secondary`, and `tertiary`), sizes (`small` and `regular`), and states such as `inverse`, `disabled`, and `loading`.
 
 ---
 

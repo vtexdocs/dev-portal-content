@@ -15,11 +15,13 @@ The `Tag` component is an interactive `Badge`. By default, its have a close butt
   <Tab>
     <OverviewSection>
       <Tag variant="neutral" label="Tag" onClose={() => {}} />
+      <Tag variant="info" label="Info Tag" onClose={() => {}} />
+      <Tag variant="highlighted" label="Highlighted Tag" onClose={() => {}} />
+      <Tag variant="success" label="Success Tag" onClose={() => {}} />
       <Tag variant="warning" label="Warning Tag" onClose={() => {}} />
       <Tag variant="danger" label="Danger Tag" onClose={() => {}} />
       <Tag
         variant="neutral"
-        size="big"
         label="Neutral & Big"
         onClose={() => {}}
       />
@@ -28,11 +30,13 @@ The `Tag` component is an interactive `Badge`. By default, its have a close butt
   <Tab>
     ```tsx
     <Tag variant="neutral" label="Tag" onClose={() => {}} />
+    <Tag variant="info" label="Info Tag" onClose={() => {}} />
+    <Tag variant="highlighted" label="Highlighted Tag" onClose={() => {}} />
+    <Tag variant="success" label="Success Tag" onClose={() => {}} />
     <Tag variant="warning" label="Warning Tag" onClose={() => {}} />
     <Tag variant="danger" label="Danger Tag" onClose={() => {}} />
     <Tag
       variant="neutral"
-      size="big"
       label="Neutral & Big"
       onClose={() => {}}
     />
@@ -62,6 +66,7 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
 
 ---
 
+`Tag` inherits Badge variants (`info`, `highlighted`, `success`, `neutral`, `warning`, and `danger`). Its default size is `big`, but you can override it explicitly with the inherited `size` prop.
 
 ## Design tokens
 

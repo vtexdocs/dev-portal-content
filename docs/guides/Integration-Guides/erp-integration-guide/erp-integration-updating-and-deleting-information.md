@@ -19,7 +19,7 @@ In case you have new products or SKUs, you may follow the [product import flow](
 
 >⚠️ Before importing new items, make sure your [catalog is set up](https://developers.vtex.com/docs/guides/erp-integration-set-up-catalog) to receive the new item when it comes to [category](https://developers.vtex.com/docs/guides/erp-integration-set-up-catalog#create-departments-categories-and-subcategories), [brand](https://developers.vtex.com/docs/guides/erp-integration-set-up-catalog#create-departments-categories-and-subcategories) and [specifications](https://developers.vtex.com/docs/guides/erp-integration-set-up-catalog#create-departments-categories-and-subcategories).
 
-To learn more, see our [Catalog API reference](https://developers.vtex.com/docs/guides/catalog-api-overview) and these detailed integration guides:
+To learn more, see our [Catalog API reference](https://developers.vtex.com/docs/api-reference/catalog-api) and these detailed integration guides:
 - [Categories](https://developers.vtex.com/docs/guides/categories)
 - [Brands](https://developers.vtex.com/docs/guides/brands)
 - [Specifications](https://developers.vtex.com/docs/guides/specifications)

@@ -2,6 +2,7 @@
 title: "New Order Integration"
 slug: "external-marketplace-integration-collect-orders"
 hidden: false
+excerpt: "Learn how to integrate a new order from an external marketplace into VTEX."
 createdAt: "2021-09-02T20:44:52.943Z"
 updatedAt: "2022-06-10T16:10:11.654Z"
 ---
@@ -9,14 +10,14 @@ updatedAt: "2022-06-10T16:10:11.654Z"
 >⚠️ If you used our previous method for integrating orders, you can still find their documentation in [Order Logs](https://developers.vtex.com/docs/guides/deprecated-order-logs) and [How to collect orders from sales channels](https://developers.vtex.com/docs/guides/deprecated-how-to-collect-orders-from-sales-channels). The previous method, however, will not be maintained. If you are integrating orders for the first time, we recommend you use the instructions in this article.
 
 ## Authentication/authorization
-When sending a request to our APIs, you must inform in the headers a X-VTEX-API-AppKey + X-VTEX-API-AppToken pair or a VtexIdclientAutCookie (the connector’s app token, if using our [App Template](https://developers.vtex.com/docs/guides/external-marketplace-integration-app-template)) that has access to the specified account.
 
+When sending a request to our APIs, you must inform in the headers a `X-VTEX-API-AppKey` + `X-VTEX-API-AppToken` pair, or a `VtexIdclientAutCookie` that has access to the specified account.
 
 ## API Reference: New order Integration
 
 Use the request example below to Place an order. The description and requirement of each of the fields present in the request body are found in our [API Reference](https://developers.vtex.com/docs/api-reference/marketplace-protocol-external-marketplace-orders#post-/api/order-integration/orders).
 
-It’s important to note that although some fields are optional in our API, depending on the order's country of origin or trade policy, they may be mandatory for Checkout/Fulfillment. In such cases, when trying to process the order, we will return the validation error in question to the connector, as well as other possible errors and success notifications.
+It’s important to note that although some fields are optional in our API, depending on the order's country of origin or sales channel, they may be mandatory for Checkout/Fulfillment. In such cases, when trying to process the order, we will return the validation error in question to the connector, as well as other possible errors and success notifications.
 
 
 ```json
@@ -121,7 +122,8 @@ It’s important to note that although some fields are optional in our API, depe
 ```
 
 ### Response Notifications
-To receive notifications from our service, the connector must implement some API routes in the base endpoint informed in connectorEndpoint (be in the request or the App Template).
+
+To receive notifications from our service, the connector must implement some API routes in the base endpoint informed in connectorEndpoint.
 Order Processing Result
 
  Notifications with the orders processing result are sent through the following request: POST {connectorEndpoint}/order-integration/notification/processing-result?an={accountName}. The body is the same as described here.
@@ -165,7 +167,7 @@ Some fields can return as null in some cases, such as accountName, marketplaceOr
 | SOI003 | The order was successfully enqueued in our service for processing                                                                                                                                                                                                                                                                                 |
 | EOI000 | An unknown error occurred when processing the order, and in this case, the solution would be contacting VTEX for support                                                                                                                                                                                                                          |
 | EOI001 | An unmapped error occurred when processing the order, and more details about the error can be found in the response error list                                                                                                                                                                                                                    |
-| EOI002 | There are no SLAs or items available to fulfill this order. That is: the item(s) can be without stock, inactive in the catalog or not included in connector’s trade policy; the SLA/pickup point chosen in the order is not available or doesn’t have stock for the order’s items; or there aren’t any SLAs available at all to fulfill the order |
+| EOI002 | There are no SLAs or items available to fulfill this order. That is: the item(s) can be without stock, inactive in the catalog or not included in connector’s sales channel; the SLA/pickup point chosen in the order is not available or doesn’t have stock for the order’s items; or there aren’t any SLAs available at all to fulfill the order |
 | EOI003 | The order total payment value differs from what is expected by the seller, and they do not have Order Authorization rules set up to deal with price divergence                                                                                                                                                                                    |
 | EOI004 | This order's cart is invalid. That can mean that either the item(s) in it don’t exist in VTEX catalog or the order's data doesn’t comply with the store configuration (for example, the minimum total value or quantity of items set by the seller was not reached in the order)                                                                  |
 | EOI005 | A validation error occurred while trying to process the order. That is, some field/value sent in the order’s contract is invalid and not filled according to our’s or Checkout/Fulfillment’s documentation                                                                                                                                        |

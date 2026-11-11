@@ -164,8 +164,8 @@ To add and configure a registered seller account and update accounts that are no
 
 After configuring the account, the marketplace will be able to verify the settings made.
 
-- GET - [List Sellers](https://developers.vtex.com/docs/api-reference/marketplace-apis#get-/seller-register/pvt/sellers): Retrieve a list of sellers registered in the marketplace, and this list can be filtered by the configured [trade policy](https://help.vtex.com/en/tutorial/como-funciona-uma-politica-comercial--6Xef8PZiFm40kg2STrMkMV).
-- GET - [Get Seller data by ID](https://developers.vtex.com/docs/api-reference/marketplace-apis#get-/seller-register/pvt/sellers/-sellerId-): Retrieve information on a specific seller, it is also possible to filter by trade policy.
+- GET - [List Sellers](https://developers.vtex.com/docs/api-reference/marketplace-apis#get-/seller-register/pvt/sellers): Retrieve a list of sellers registered in the marketplace, and this list can be filtered by the configured [sales channel](https://help.vtex.com/en/tutorial/como-funciona-uma-politica-comercial--6Xef8PZiFm40kg2STrMkMV).
+- GET - [Get Seller data by ID](https://developers.vtex.com/docs/api-reference/marketplace-apis#get-/seller-register/pvt/sellers/-sellerId-): Retrieve information on a specific seller, it is also possible to filter by sales channel.
 - GET - [Get Sales Channel Mapping Data](https://developers.vtex.com/docs/api-reference/marketplace-apis/#get-/seller-register/pvt/sellers/-sellerId-/sales-channel/mapping): Retrieve information about mapping between your sales channels and a specific seller.
 
 ### Configuring seller's commission

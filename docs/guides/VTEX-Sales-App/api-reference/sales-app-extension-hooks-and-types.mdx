@@ -4,6 +4,7 @@ slug: "sales-app-extension-hooks-and-types"
 hidden: false
 excerpt: "Explore the APIs and core types available for building Sales App extensions."
 createdAt: "2026-05-28T00:00:00.000Z"
+updatedAt: "2026-06-02T00:00:00.000Z"
 ---
 
 This guide introduces the Sales App APIs and core types used to build extensions.
@@ -17,22 +18,22 @@ The following APIs are available:
 | [`useCartItem`](#usecartitem)           | Hook     | Read data or perform mutations for a single cart item, such as changing quantity, attachments, or price. |
 | [`useCurrentUser`](#usecurrentuser)     | Hook     | Access authenticated user data.                                                                          |
 | [`useExtension`](#useextension)         | Hook     | Access runtime context, such as the current account or the current extension point.                      |
-| [`usePDP`](#usepdp)                     | Hook     | Access Product Detail Page data, specifically the current `productSku`.                                   |
+| [`usePDP`](#usepdp)                     | Hook     | Access product detail page data, specifically the current `productSku`.                                  |
 
 Available types and their corresponding hooks include:
 
 | Types                                     | Used by                  | Description                                                                         |
 | ----------------------------------------- | ------------------------ | ----------------------------------------------------------------------------------- |
 | [`CartItem`](#cartitem)                   | `useCart`, `useCartItem` | An item in the cart, including product, quantity, seller, pricing, and attachments. |
-| [`ClientProfileData`](#clientprofiledata) | `useCart`                | Client data returned from the cart context.                                         |
-| [`ProductSku`](#productsku)               | `usePDP`                 | A product SKU, including identifying information, quantity, and pricing fields.                 |
-| [`Totalizers`](#totalizers)               | `useCart`                | Summary totals from an orderForm or cart, such as shipping, taxes, or discounts.     |
+| [`ClientProfileData`](#clientprofiledata) | `useCart`                | Customer data returned from the cart context.                                       |
+| [`ProductSku`](#productsku)               | `usePDP`                 | A product SKU, including identifying information, quantity, and pricing fields.     |
+| [`Totalizers`](#totalizers)               | `useCart`                | Summary totals from an orderForm or cart, such as shipping, taxes, or discounts.    |
 
 ## API reference
 
 ### `defineExtensions`
 
-The `defineExtensions` function registers one or more React components by associating them with extension points. More information in [Exploring Sales App extensions](https://developers.vtex.com/docs/guides/exploring-sales-app-extensions).
+The `defineExtensions` function registers one or more React components by associating them with extension points. Learn more in [Exploring Sales App extensions](https://developers.vtex.com/docs/guides/exploring-sales-app-extensions).
 
 Use this function in your extension entry point file, such as `src/index.tsx`.
 
@@ -83,7 +84,7 @@ const cart = useCart()
 }
 ```
 
-You can also use `useCart` to interact with the Sales App data layer by mutating the cart items list:
+You can also use `useCart` to interact with the Sales App data layer by mutating the cart item list:
 
 ```tsx src/index.tsx
 import { useCart } from '@vtex/sales-app'
@@ -112,8 +113,8 @@ The `useCart` hook returns an object with the following properties:
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `orderFormId` | `string \| undefined` | Order Form identifier for the current cart. |
-| `value` | `number` | Total cart value. |
+| `orderFormId` | `string \| undefined` | orderForm identifier for the current cart. |
+| `value` | `number` | Cart total. |
 | `items` | `CartItem[]` | Items currently in the cart. |
 | `totalizers` | `Totalizers[]` | Aggregated cart totals. |
 | `clientProfileData` | `ClientProfileData` | Customer profile data associated with the cart. |
@@ -216,7 +217,7 @@ The `useCartItem` hook returns an object with the following properties:
 | `item` | `CartItem[] \| undefined` | Cart item data for the current item. |
 | `itemIndex` | `number \| undefined` | Index of the current item in the cart. |
 | `changeItem` | `(data: UseCartItemChangeItemData) => Promise<void>` | Updates the item data. |
-| `changePrice` | `(price: number) => Promise<void>` | Changes the item price when manual price is enabled.<br>To check whether the manual price is active, use [Get orderForm configuration](https://developers.vtex.com/docs/api-reference/checkout-api#get-/api/checkout/pvt/configuration/orderForm). To enable it, use [Update orderForm configuration](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pvt/configuration/orderForm) and set `allowManualPrice` to `true`. |
+| `changePrice` | `(price: number) => Promise<void>` | Changes the item price when manual price is enabled.<br />To check whether the manual price is active, use [Get orderForm configuration](https://developers.vtex.com/docs/api-reference/checkout-api#get-/api/checkout/pvt/configuration/orderForm). To enable it, use [Update orderForm configuration](https://developers.vtex.com/docs/api-reference/checkout-api#post-/api/checkout/pvt/configuration/orderForm) and set `allowManualPrice` to `true`. |
 
 ##### `changeItem`
 
@@ -233,7 +234,7 @@ type UseCartItemChangeItemData = {
 
 ### `useCurrentUser`
 
-The `useCurrentUser` hook allows you to access current authenticated user's data, like name and email.
+The `useCurrentUser` hook allows you to access currently authenticated user data, like name and email.
 
 This hook is available in the following extension point:
 
@@ -302,7 +303,7 @@ The `useExtension` hook returns an object with the following structure:
 | Property         | Type                   | Description                                                            |
 | ---------------- | ---------------------- | ---------------------------------------------------------------------- |
 | `account`        | `string`               | The current account name where the extension is running.               |
-| `extensionPoint` | `ExtensionPointsType`  | The name of the extension point where your extension is hooked into.   |
+| `extensionPoint` | `ExtensionPointsType`  | The name of the extension point your extension is hooked to.   |
 
 ---
 
@@ -348,7 +349,7 @@ The `usePDP` hook returns an object with the following property:
 
 ### `CartItem`
 
-The `CartItem` type represents represents an item in the cart. Its signature and the types used follow this contract:
+The `CartItem` type represents an item in the cart. Its signature and the types used follow this contract:
 
 ```typescript
  type CartItem = {

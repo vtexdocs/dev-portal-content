@@ -1,0 +1,95 @@
+---
+title: 'Structuring Sections for native Content Types'
+excerpt: "Structure custom Sections with JSON Schema and make them available in FastStore's native Content Types."
+---
+
+Now that you have created your `cms` folder, learn how to structure custom Sections and make them available in FastStore's native Content Types.
+
+> ⚠️ FastStore v2 and v3 don't support custom Content Types. Use the native Content Types provided by `@faststore/core`. For informational or other custom pages, use **Landing Page**.
+
+## What you'll accomplish
+
+By the end of this guide, you will have:
+
+- Understood how to define Sections with JSON Schema for editor forms
+- Gained knowledge of widgets and UI schemas for rich content editing
+- Learned how to associate Sections with native Content Types
+
+This knowledge enables you to customize content editing while keeping FastStore's supported page structure.
+
+## Step 1: Automatically syncing your changes
+
+1. Before creating or editing Section definitions, go to the root of your FastStore project and run `yarn dev` to enable the FastStore CLI watch mode. Make sure to use a development workspace.
+  > ℹ️ This command will monitor any changes in the project, including the new section you have created, and automatically merge it with the default sections available in [`faststore/core`](https://developers.vtex.com/docs/guides/faststore/getting-started-4-understanding-the-project-structure).
+2. Open another terminal and run `faststore cms-sync` to automatically sync your changes in the `cms` folder with the Headless CMS (legacy) app.
+3. Open the **VTEX Admin**, access **Storefront > Headless CMS** and keep it next to your code to see your changes while editing the `cms` folder. Refreshing the Admin may be necessary to see your changes.
+
+## Step 2: Choosing a native Content Type
+
+Choose the native Content Type that matches the page you want to customize. For example, use **Product Page** for PDP content, **Product List Page** for PLP content, and **Landing Page** for informational or other custom pages.
+
+Each native Content Type provides `scopes`. In the next step, you will use these scopes to control where a custom Section is available.
+
+## Step 3: Adding Sections to the Headless CMS
+
+Now, let's make some of our frontend components available for editing at the Headless CMS by writing the content schemas that represent them.
+
+These components are referred to as **Sections**, and to create them, 
+you can follow the instructions provided in the guide [Creating a new section](https://developers.vtex.com/docs/guides/faststore/building-sections-creating-a-new-section). 
+The guide offers detailed information on the process of creating Sections and integrating them into the Headless CMS (legacy) for easy editing and management.
+
+Use the Section's `requiredScopes` property to control which native Content Types can use it. For example, the following definition makes a Section available on Landing Pages because the native **Landing Page** Content Type includes the `custom` scope:
+
+```json filename="cms/faststore/sections.json" copy
+[
+  {
+    "name": "CallToAction",
+    "requiredScopes": ["custom"],
+    "schema": {
+      "title": "Call to Action",
+      "description": "Encourage shoppers to take a specific action.",
+      "type": "object",
+      "properties": {
+        "title": {
+          "title": "Title",
+          "type": "string"
+        }
+      }
+    }
+  }
+]
+```
+
+For the complete list of supported scopes, see [Managing content with `scopes` and `requiredScopes`](https://developers.vtex.com/docs/guides/faststore/headless-cms-managing-content-with-scopes-and-requiredscopes).
+
+### The `schema` property
+
+The `schema` will always be unique for each of your Sections as they create the form that editors will use to submit data and change the content of a given React component.
+
+Notice that you must always declare the following properties inside the `schema` object:
+
+| Key           | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| :------------ | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `title`       | The name that identifies your component in the Headless CMS (legacy) app.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| `description` | A brief description that helps editors understand the behavior of your component.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| `type`        | The data type of your schema. Possible values are [`string`](https://json-schema.org/understanding-json-schema/reference/string.html), [`object`](https://json-schema.org/understanding-json-schema/reference/object.html), [`array`](https://json-schema.org/understanding-json-schema/reference/array.html), [`number`](https://json-schema.org/understanding-json-schema/reference/numeric.html#number), [`integer`](https://json-schema.org/understanding-json-schema/reference/string.html), [`boolean`](https://json-schema.org/understanding-json-schema/reference/boolean.html). |
+
+Depending on the `type` of your schema, you may need to define particular fields related to your component structure. For example, for a schema of the `object` type, you'll need to determine `properties` that map key-value pairs. For a schema of the `array` type, you'll need to define the `items` of that array.
+
+> ℹ️ For more information on each property of a `schema`, check the [`JSON Schema Reference`](https://json-schema.org/understanding-json-schema).
+
+### Using widgets
+
+When defining your Section `schema`, you can also use the [`uiSchema`](https://react-jsonschema-form.readthedocs.io/en/docs/api-reference/uiSchema/) along with [`widgets`](https://react-jsonschema-form.readthedocs.io/en/docs/usage/widgets/) to specify which UI widget should be used to render a given field of your schema. Common widgets are `draftjs-rich-text`, `image-uploader`, and `block-select`.
+Refer to the [Widgets](https://developers.vtex.com/docs/guides/faststore/headless-cms-widgets) guide for more information.
+
+{/* TODO: Check the following example of the `draftjs-rich-text` component being used. */}
+
+## Next step
+
+Once you're satisfied with your Section definitions, [promote your changes](https://developers.vtex.com/docs/guides/faststore/integration-promoting-your-headless-cms-changes) to production.
+
+## Related resources
+
+- [JSON Schema Reference](https://json-schema.org/understanding-json-schema)
+- [`react-jsonschema-form` Playground](https://rjsf-team.github.io/react-jsonschema-form/)

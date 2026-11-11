@@ -6,11 +6,11 @@ createdAt: "2020-06-03T15:19:20.934Z"
 updatedAt: "2020-06-03T15:19:20.934Z"
 ---
 
-This app setup the CyberSource Fingerprint in the store order placed page following the [official documentation](https://braspag.github.io/manual/antifraude?html).
+This app sets up the CyberSource Fingerprint on the store's order placed page following the [official documentation](https://braspag.github.io/manual/antifraude?html).
 
 ## Configuration
 
-1. [Installing the app](https://developers.vtex.com/docs/guides/vtex-io-documentation-installing-an-app) running:
+1. [Install the app](https://developers.vtex.com/docs/guides/vtex-io-documentation-installing-an-app) by running:
 
 ```sh
 vtex install vtex.cybersource-fingerprint

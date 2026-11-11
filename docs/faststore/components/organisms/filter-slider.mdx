@@ -35,6 +35,7 @@ The mobile `Filter` view that is rendered inside a `SlideOver` component.The `Fi
         const testId = "fs-filter"
         const {
           facets,
+          selected,
           dispatch,
           expanded,
         } = filter
@@ -260,5 +261,7 @@ You can target and override `FilterSlider` styles using the following data attri
 ## Props
 
 ### FilterSlider
+
+The `direction`, `size`, and `onClose` props are required.
 
 <ComponentPropsSection component="FilterSlider" />

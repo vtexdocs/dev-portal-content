@@ -114,7 +114,7 @@ vtex content generate-schema --local ./base-schema.json --out final-schema.json
 
 ### `split-components`
 
-Splits a `sections.json` file into separate component files. Use this command when migrating component definitions from the legacy [Headless CMS](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview) to the new CMS to help organize your store components by creating a separate file for each component.
+Splits a `sections.json` file into separate component files. Use this command when migrating component definitions from the legacy [Headless CMS (legacy)](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview) to the new CMS to help organize your store components by creating a separate file for each component.
 
 #### Usage
 
@@ -150,7 +150,7 @@ vtex content split-components --input ./cms/sections.json --output ./cms/compone
 
 ### `split-content-types`
 
-Splits CMS Content Type definitions from `content-types.json` into separate files, one per Content Type. Use this command when migrating custom Content Types from the legacy [Headless CMS](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview) to the new CMS to organize your Content Types into separate files for easier management.
+Splits CMS Content Type definitions from `content-types.json` into separate files, one per Content Type. Use this command when migrating custom Content Types from the legacy [Headless CMS (legacy)](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview) to the new CMS to organize your Content Types into separate files for easier management.
 
 #### Usage
 
@@ -187,7 +187,14 @@ vtex content split-content-types --input ./cms/content-types.json --output ./cms
 
 ### `upload-schema`
 
-Uploads a local schema file to the Schema Registry. This command publishes your consolidated CMS schema to the CMS, making it available for use in your store.
+Uploads a local schema file to the Schema Registry. This command publishes your consolidated CMS schema as a version, making it available for use in your store.
+
+During the upload, the CLI:
+
+1. Prompts you to select the store ID to associate with the schema.
+2. Shows the current published version and suggests the next version.
+3. Prompts you to enter a version following [semantic versioning](https://semver.org/) (`major.minor.patch`), optionally with a prerelease suffix.
+4. Asks you to confirm the upload.
 
 #### Usage
 
@@ -206,6 +213,21 @@ vtex content upload-schema [SCHEMA_PATH]
 | Option | Alias | Description |
 | --- | --- | --- |
 | `--help` | `-h` | Displays help information for the command. |
+| `-y` | - | Skips the upload confirmation prompt. |
+
+#### Schema versioning
+
+Choose the version according to the changes in your schema:
+
+| Change | Version increment | Example |
+| --- | --- | --- |
+| Breaking change, such as removing or renaming a field | Major | `1.5.0` → `2.0.0` |
+| Backward-compatible change, such as adding an optional field or component | Minor | `1.5.0` → `1.6.0` |
+| Backward-compatible fix | Patch | `1.5.0` → `1.5.1` |
+
+The Schema Registry uses the highest stable version as the latest schema. If no stable version exists, it uses the highest prerelease version. A prerelease never replaces an existing stable version as the latest. To test schema changes without replacing the stable version, publish a prerelease, such as `1.7.0-beta.0`, and associate it with a [development branch](https://developers.vtex.com/docs/guides/working-with-development-branches).
+
+> ⚠️ Each version is immutable. If you change the schema after publishing it, publish the changes under a new version. Uploading different schema content under an existing version returns a conflict.
 
 #### Examples
 

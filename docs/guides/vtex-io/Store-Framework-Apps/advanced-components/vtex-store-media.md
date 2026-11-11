@@ -29,13 +29,13 @@ Now, you are able to use all blocks exported by the `store-media` app. Check out
 
 ### `media` block
 
-The `media` block inherits all props from `image` and `video` blocks. It's highly recommended you check out the docs for [Image](https://github.com/vtex-apps/store-image) and [Video](https://github.com/vtex-apps/store-video) blocks before using this block.
+The `media` block inherits all props from `image` and `video` blocks. We highly recommend that you check out the docs for [Image](https://github.com/vtex-apps/store-image) and [Video](https://github.com/vtex-apps/store-video) blocks before using this block.
 
 You can use props from both blocks, but `media` will only consider the props from the block (`image` or `video`) that matches the current `mediaType`, or, in the case of `mediaType` being `imageOrVideo`, that matches the type of the `src`.
 
 | Prop name   | Type | Description                                                                                                                                                                                                                                                                                                                         | Default value  |
 | ----------- | ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------- |
-| `mediaType` | enum | Type of the media to be displayed. Possible values are: `image` (behaves as an image block no matter the `src`), `video` (behaves as an video block no matter the `src`), and `imageOrVideo`. Choosing `imageOrVideo` will make `media` automatically identify the type of the `src` based on its extension and behave accordingly. | `imageOrVideo` |
+| `mediaType` | enum | Type of media to be displayed. Possible values are: `image` (behaves as an image block no matter the `src`), `video` (behaves as a video block no matter the `src`), and `imageOrVideo`. Choosing `imageOrVideo` will make `media` automatically identify the type of the `src` based on its extension and behave accordingly. | `imageOrVideo` |
 
 Use the **admin's Site Editor** to manage some props declared in the `media` block. Using the Site Editor to provide the image or video `src` will force you to choose between `image` and `video`.
 
@@ -52,7 +52,7 @@ Use the **admin's Site Editor** to manage some props declared in the `media` blo
 
 ### `list-context.media-list` block
 
-The `list-context.media-list` block acts just like the `list-context.image-list` block and inherits a lot from `image` and `video` blocks, with a few key differences. It's highly recommended you check out the docs for [Image](https://github.com/vtex-apps/store-image) and [Video](https://github.com/vtex-apps/store-video) blocks before using this block.
+The `list-context.media-list` block acts just like the `list-context.image-list` block and inherits many props from `image` and `video` blocks, with a few key differences. We highly recommend that you check out the docs for [Image](https://github.com/vtex-apps/store-image) and [Video](https://github.com/vtex-apps/store-video) blocks before using this block.
 
 `list-context.media-list` accepts both images and videos, so you can mix them inside a single carousel, for example. Images can receive `image` blocks' props and videos can receive `video` blocks' props. If you pass props that don't match the media type, they will be ignored.
 
@@ -65,7 +65,7 @@ The `list-context.media-list` block acts just like the `list-context.image-list`
 
 A `MediaListElement` object has a very similar shape to the props accepted by the `media` component, that is, you can specify the `mediaType` of the asset you want to display and pass the props for `image` and `video` blocks. Read the docs for the `media` block to better understand how that works.
 
-Differently from the `media` component, it does **not** use the `src` prop to receive the assets. For images, it uses the `image` and `mobileImage` props, and, for video, it uses the `video` and `mobileVideo` props.
+Unlike the `media` component, it does **not** use the `src` prop to receive the assets. For images, it uses the `image` and `mobileImage` props, and, for video, it uses the `video` and `mobileVideo` props.
 
 | Prop name     | Type     | Description                                                                                                               | Default value |
 | ------------- | -------- | ------------------------------------------------------------------------------------------------------------------------- | ------------- |

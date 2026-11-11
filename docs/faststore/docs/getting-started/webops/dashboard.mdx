@@ -1,7 +1,7 @@
 ---
 title: 'FastStore WebOps - Dashboard'
 createdAt: "2023-08-14T17:31:00.000Z"
-updatedAt: "2026-05-15T20:19:39.310Z"
+updatedAt: "2026-10-30T00:00:00.000Z"
 ---
 
 Once you [create your FastStore project](https://developers.vtex.com/docs/guides/faststore/1-onboarding-starting-the-project#step-2-deploying-the-project), or are already working on customizing it, you can use the WebOps dashboard to view website deployments and performance.
@@ -39,7 +39,7 @@ This section also displays the status of the live deployment:
 * **In progress:** The commit is currently being deployed.
 * **Failed:** The deployment failed. You can find more details by clicking the link below the `Deploy` button.
 
-### Lighthouse scores
+### Lighthouse results
 
 When your store goes live (in production), ensuring optimal performance and a good user experience is crucial. The Lighthouse scores section offers insights into four key areas measured by Lighthouse, helping you understand their impact on store performance.
 
@@ -62,6 +62,20 @@ For a complete list of all store deployments and their details, see the [Deploys
 
 This section lists all the deploy previews created for GitHub branches in your project repository. These previews are automatically available for each pull request opened in its corresponding branch. You can [configure which branches generate preview deploys](https://developers.vtex.com/docs/guides/faststore/webops-configuring-production-and-preview-branches#configuring-preview-branch-filters) in the Integrations tab.
 
+#### Preview availability
+
+Preview URLs that aren't accessed for **12 hours** are automatically deactivated to save resources. This doesn't delete your preview or its data; it only pauses it until it's needed again. When you open a deactivated preview URL, one of the following happens:
+
+- **Waking up:** You'll see a loading screen while the preview is reactivated. This page refreshes automatically, and the storefront loads normally after a few seconds, with no action required from you.
+
+  ![environment-waking-up](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/waking-up-environment.png)
+
+- **Expired:** If the preview can no longer be reactivated, you'll see an expired page instead. In this case, redeploy the corresponding branch from the **Deploys** tab to generate a new preview.
+
+  ![deployment-expired](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/deploy-expired.png)
+
+> ⚠️ If you run automated tests against preview URLs, keep in mind that a request made right after 12 hours of inactivity may not immediately return the storefront, since the preview could still be waking up. During this state, the page returns an HTTP `202 Accepted` status code. Once the preview is fully available, it returns a `200 OK` status code. Add a retry to your test setup to account for this.
+
 ## Deploys
 
 The **Deploys** tab provides insights into store deployments, including their status (success, failed, etc.). The table below summarizes the key features of the Deploys page.
@@ -74,9 +88,38 @@ The **Deploys** tab provides insights into store deployments, including their st
 | 2 - Pagination        | Allows you to navigate through pages of deployment data.                                                                                                                                                                                                                                                                                                                                                      |
 | 3 - Environment       | Filters deployments by environment: <ol><li>Production: The live store customers can interact with.</li><li>Preview: Test environment for new features, design changes, and code modifications before releasing them to production.</li></ol>                                                                                                                                                                 |
 | 4 - Branch            | Filters deployments by GitHub branches.                                                                                                                                                                                                                                                                                                                                                                       |
-| 5 - Status            | Filters deploy status: <ol><li>Queued: The deployment is next in line to be executed.</li><li>In progress: The deployment is being executed.</li><li>Success: The deployment has completed successfully.</li><li>Failed: The deployment process encountered an error and didn't complete as expected.</li></ol>                                                                                               |
-| 6 - Sort by           | Filters deployments by **Latest first** or **Oldest First**.                                                                                                                                                                                                                                                                                                                                                  |
+| 5 - Status            | Filters deploy status: <ol><li>Queued: The deployment is next in line to be executed.</li><li>In progress: The deployment is being executed.</li><li>Success: The deployment has completed successfully.</li><li>Failed: The deployment encountered an error and didn't complete as expected.</li><li>Skipped: The deployment wasn't built because a newer commit was pushed to the same branch. See [Skipped deploys](#skipped-deploys).</li></ol>                                                                                               |
+| 6 - Sort by           | Filters deployments by **Latest First** or **Oldest First**.                                                                                                                                                                                                                                                                                                                                                  |
 | 7 - Deployments table | Lists all store deployments with the following information: <ol><li>Score: Lighthouse score for the deployment.</li><li>Source: Commit ID and branch.</li><li>Author: Deploy author and the date and time of the deployment.</li><li>Environment: The environment that was changed, Production or Preview.</li><li>Deploy ID: The ID of the specific deployment.</li><li>Status: The deploy status.</li></ol> |
+
+### Skipped deploys
+
+A build is skipped when it's no longer needed because a newer commit was pushed to the same branch. WebOps runs only one build at a time per branch. If several commits come in while a build is already running, only the most recent queued commit is built once the current one finishes. Older queued commits are marked **Skipped** and aren't built because a more recent version of the branch is already available.
+
+> ℹ️ A deploy already **In progress** is never interrupted. Only deploys still **Queued** for that branch can become **Skipped**.
+
+Consider the following deployment scenario in the same branch:
+
+1. Deploy `A` arrives while nothing is running, and it starts immediately (**In progress**).
+2. Deploy `B` arrives while `A` is still running, and it becomes **Queued**.
+3. Deploy `C` arrives while `A` is still running. `B` becomes **Skipped**, and `C` becomes **Queued** instead.
+4. `A` finishes, and `C` starts. `B` is never built, since `C` would have replaced it anyway.
+
+```mermaid
+sequenceDiagram
+    participant Branch
+    participant WebOps
+    Branch->>WebOps: Deploy A
+    Note over WebOps: A In progress
+    Branch->>WebOps: Deploy B
+    Note over WebOps: B Queued
+    Branch->>WebOps: Deploy C
+    Note over WebOps: B Skipped, C Queued
+    WebOps->>WebOps: A finishes
+    Note over WebOps: C In progress
+```
+
+> ℹ️ A skipped deploy isn't an error and doesn't require any action. It simply means a newer commit on the same branch made that build unnecessary.
 
 ### Deployment details
 
@@ -102,15 +145,20 @@ If a deploy fails due to issues unrelated to your code, such as environment vari
 
 The **Integrations** tab allows you to configure branch settings and store pages for Lighthouse tests. The tab contains the following sections:
 
-1. **[Production branch](#production-branch):** Configures which Git branch generates production builds for your account.
-2. **[Preview branches](#preview-branches):** Controls which branches generate preview deploys.
-3. **[Lighthouse scores](#lighthouse-scores):** Configures store pages for Lighthouse testing.
+1. **[Git Provider](#git-provider):** Configures the GitHub organization and repository connected to your project.
+2. **[Production branch](#production-branch):** Configures which Git branch generates production builds for your account.
+3. **[Preview branches](#preview-branches):** Controls which branches generate preview deploys.
+4. **[Lighthouse scores](#lighthouse-scores):** Configures store pages for Lighthouse testing.
 
-![integrations-webops](https://vtexhelp.vtexassets.com/assets/docs/src/customizing-branches-integrations___ae60f6b2b7c97b7200d8b8295fe7c755.gif)
+![integrations-webops](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/webops-integrations.gif)
+
+### Git Provider
+
+The **Git Provider** section allows you to configure the GitHub organization and repository associated with your FastStore project. From this section, you can move your project to a different organization or to a different repository within the same organization. For detailed instructions, see [Moving your FastStore project to a new GitHub repository](https://developers.vtex.com/docs/guides/faststore/webops-moving-your-faststore-project-to-a-new-github-repository).
 
 ### Production branch
 
-The **Production branch** section allows you to configure which Git branch generates production builds for your account.
+The **Production branch** section lets you configure which Git branch triggers production builds for your account.
 
 ### Preview branches
 

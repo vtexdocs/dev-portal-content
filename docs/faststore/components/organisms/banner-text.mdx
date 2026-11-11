@@ -1,6 +1,6 @@
 ---
 title: BannerText
-excerpt: Displays brands, products, and/or collections. They comprise an image, some text content, and a call-to-action button.
+excerpt: Displays promotional text and a call-to-action link for brands, products, or collections.
 sidebar_custom_props:
   image: https://vtexhelp.vtexassets.com/assets/docs/src/Hero___c73fdfe80ce87c2ccc4701c07e9d5398.png
 components:
@@ -10,10 +10,10 @@ components:
 
 [<i class="fa-brands fa-github"></i> Source code](https://github.com/vtex/faststore/tree/main/packages/components/src/organisms/BannerText)
 
-The `BannerText` is used for advertising brands, products, and/or collections. They comprise an image, some text content, and a call-to-action button.The final `BannerText` component is a compound of the following:
+The `BannerText` is used for advertising brands, products, and/or collections with text content and a call-to-action link. The final `BannerText` component is a compound of the following:
 
 - `BannerText`: wraps the BannerText component.
-- `BannerTextContent`: the content of the banner, including a title, caption, and Link.
+- `BannerTextContent`: the content of the banner, including a title, a caption, and a link. Although `caption` is required by the component API, it is rendered only when `BannerText` uses `variant="secondary"`.
 
 <Tabs items={["Example", "Code"]} defaultIndex="0">
   <Tab>
@@ -21,7 +21,7 @@ The `BannerText` is used for advertising brands, products, and/or collections. T
       <BannerText>
         <BannerTextContent
           title="Explore more about our amazing products"
-          caption="All the amazing products from the brands we partner with."
+          caption=""
           link="/"
           linkText="See more"
         />
@@ -33,7 +33,7 @@ The `BannerText` is used for advertising brands, products, and/or collections. T
     <BannerText>
       <BannerTextContent
         title="Explore more about our amazing products"
-        caption="All the amazing products from the brands we partner with."
+        caption=""
         link="/"
         linkText="See more"
       />
@@ -76,7 +76,7 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
       <BannerText variant="primary">
         <BannerTextContent
         title="Explore more about our amazing products"
-        caption="All the amazing products from the brands we partner with."
+        caption=""
         link="/"
         linkText="See more"
       />
@@ -89,7 +89,7 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
     <BannerText variant="primary">
       <BannerTextContent
         title="Explore more about our amazing products"
-        caption="All the amazing products from the brands we partner with."
+        caption=""
         link="/"
         linkText="See more"
       />
@@ -140,7 +140,7 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
       <BannerText colorVariant="main">
       <BannerTextContent
         title="Explore more about our amazing products"
-        caption="All the amazing products from the brands we partner with."
+        caption=""
         link="/"
         linkText="See more"
       />
@@ -152,7 +152,7 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
     <BannerText colorVariant="main">
       <BannerTextContent
         title="Explore more about our amazing products"
-        caption="All the amazing products from the brands we partner with."
+        caption=""
         link="/"
         linkText="See more"
       />
@@ -170,7 +170,7 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
       <BannerText colorVariant="light">
       <BannerTextContent
         title="Explore more about our amazing products"
-        caption="All the amazing products from the brands we partner with."
+        caption=""
         link="/"
         linkText="See more"
       />
@@ -183,7 +183,7 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
     <BannerText colorVariant="light">
       <BannerTextContent
         title="Explore more about our amazing products"
-        caption="All the amazing products from the brands we partner with."
+        caption=""
         link="/"
         linkText="See more"
       />
@@ -200,7 +200,7 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
       <BannerText colorVariant="accent">
         <BannerTextContent
           title="Explore more about our amazing products"
-          caption="All the amazing products from the brands we partner with."
+          caption=""
           link="/"
           linkText="See more"
         />
@@ -212,7 +212,7 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
     <BannerText colorVariant="accent">
       <BannerTextContent
         title="Explore more about our amazing products"
-        caption="All the amazing products from the brands we partner with."
+        caption=""
         link="/"
         linkText="See more"
       />
@@ -264,7 +264,7 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
 
 <TokenTable>
   <TokenRow
-    token="--fs-hero-primary-title-size"
+    token="--fs-banner-text-primary-title-size"
     value="var(--fs-text-size-title-page)"
   />
 </TokenTable>

@@ -14,23 +14,23 @@ Without further ado, here’s a sneak peek at key changes made in the last coupl
 
 ### New features :rocket:
 
-- [Internal URLs link in banners](internal-urls-link-in-banners.md) - Easily link internal URLs to a banner with the help of CMS’s new Storefront field.
-- [accessiBe first party app](accessibe-first-party-app.md) - Get your hands on a first-party integration with the accessiBe solution.
-- [Extension points on Order Placed page](extension-points-on-the-order-placed-page.md) - Customize a store’s Order Placed page using extension points.
+- [Internal URLs link in banners](https://developers.vtex.com/updates/release-notes/internal-urls-link-in-banners) - Easily link internal URLs to a banner with the help of CMS’s new Storefront field.
+- [accessiBe first party app](https://developers.vtex.com/updates/release-notes/accessibe-first-party-app) - Get your hands on a first-party integration with the accessiBe solution.
+- [Extension points on Order Placed page](https://developers.vtex.com/updates/release-notes/extension-points-on-the-order-placed-page) - Customize a store’s Order Placed page using extension points.
 
 ### Deprecations :x:
 
-- [Pages Settings tab](pages-settings-tab.md) - The Pages Settings tab no is longer available in the CMS section.
+- [Pages Settings tab](https://developers.vtex.com/updates/release-notes/pages-settings-tab) - The Pages Settings tab no is longer available in the CMS section.
 
 ### Improvements :heavy_plus_sign:
 
-- [Performance da plataforma](platform-performance.md) - Understand what the VTEX IO performance improvement key points were.
-- [Drawer component](drawer-component.md) - Customize your store Drawer’s behavior and appearance using the component’s 3 new props and CSS handles.
-- [Breadcrumb on mobile mode](breadcrumb-on-mobile-mode.md) - Make the Breadcrumb component available for mobile users.
-- [Image thumbnails](image-thumbnails.md) - Choose whether a product’s thumbnail images will be displayed vertically or horizontally.
-- [Custom pages URL changes](custom-pages-url.md) - New browser filter prop which allows custom pages to keep the URLs unchanged even when filters are applied.
-- [Search Result](search-result.md) - Display how many items the user is seeing and how many items are left on the search results page.
-- [Minicart component](minicart-component.md) - The new Minicart component prop enables redirecting users to any page the retailer chooses when clicking the “Finish Shopping” button.
+- [Performance da plataforma](https://developers.vtex.com/updates/release-notes/platform-performance) - Understand what the VTEX IO performance improvement key points were.
+- [Drawer component](https://developers.vtex.com/docs/apps/vtex.store-drawer) - Customize your store Drawer’s behavior and appearance using the component’s 3 new props and CSS handles.
+- [Breadcrumb on mobile mode](https://developers.vtex.com/updates/release-notes/breadcrumb-on-mobile-mode) - Make the Breadcrumb component available for mobile users.
+- [Image thumbnails](https://developers.vtex.com/updates/release-notes/image-thumbnails) - Choose whether a product’s thumbnail images will be displayed vertically or horizontally.
+- [Custom pages URL changes](https://developers.vtex.com/updates/release-notes/custom-pages-url) - New browser filter prop which allows custom pages to keep the URLs unchanged even when filters are applied.
+- [Search Result](https://developers.vtex.com/updates/release-notes/search-result) - Display how many items the user is seeing and how many items are left on the search results page.
+- [Minicart component](https://developers.vtex.com/docs/apps/vtex.minicart) - The new Minicart component prop enables redirecting users to any page the retailer chooses when clicking the “Finish Shopping” button.
 
 ### Notable bug fixes :bug:
 

@@ -27,14 +27,14 @@ If the store redirect path doesn't work and the routes are not behaving as expec
 4. Run the following query, replacing `{URL}` with the `from` path you're having trouble with:
 
 ```graphql
-  {
-    redirect {
-      get(path: "/{URL}") {
-        from
-        to
-      }
+{
+  redirect {
+    get(path: "/{URL}") {
+      from
+      to
     }
   }
+}
 ```
 
 The expected response is a JSON object containing all the redirects related to that path, as in the following example:

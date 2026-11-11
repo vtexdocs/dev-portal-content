@@ -17,6 +17,6 @@ For the integration, carriers should develop VTEX IO apps for the [Notification]
 
 ## Index
 
-<span class="api pg-type type-post">post</span> [Notify Carrier with App](ref:notifycarrierwithapp)
-<span class="api pg-type type-post">post</span> [Tracking Events with App](ref:trackingevents)
-<span class="api pg-type type-post">post</span> [Emit Label with App](ref:emitlabelwithapp)
+<span class="api pg-type type-post">post</span> [Notify Carrier with App](https://developers.vtex.com/docs/api-reference/vtex-shipping-network-api#post-/-app_name-/v-app_version-/-account-/-workspace-/notify)
+<span class="api pg-type type-post">post</span> [Tracking Events with App](https://developers.vtex.com/docs/api-reference/vtex-shipping-network-api#post-/-app_name-/v-app_version-/-account-/-workspace-/tracking)
+<span class="api pg-type type-post">post</span> [Emit Label with App](https://developers.vtex.com/docs/guides/vtex-shipping-network-labels-integration)

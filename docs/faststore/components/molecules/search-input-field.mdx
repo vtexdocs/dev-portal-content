@@ -15,11 +15,33 @@ An [InputField](https://developers.vtex.com/docs/guides/faststore/molecules-inpu
   <Tab>
     <OverviewSection>
       <SearchInputField onSubmit={() => {}} />
+      <SearchInputField
+        aria-label="Search with attachment"
+        showAttachmentButton
+        attachmentButtonAriaLabel="Attach file"
+        attachmentButtonProps={{ onClick: () => {} }}
+        onSubmit={(value) => console.log(value)}
+      />
     </OverviewSection>
   </Tab>
   <Tab>
     ```tsx
-    <SearchInputField onSubmit={() => {}} />
+    import { SearchInputField } from "@faststore/ui";
+
+    export default function SearchInputFieldExample() {
+      return (
+        <>
+          <SearchInputField onSubmit={() => {}} />
+          <SearchInputField
+            aria-label="Search with attachment"
+            showAttachmentButton
+            attachmentButtonAriaLabel="Attach file"
+            attachmentButtonProps={{ onClick: () => {} }}
+            onSubmit={(value) => console.log(value)}
+          />
+        </>
+      );
+    }
     ```
   </Tab>
 </Tabs>
@@ -104,6 +126,10 @@ You can target and override `SearchInputField` styles using the following data a
 `data-fs-search-input-field`
 
 `data-fs-search-input-field-input`
+
+`data-fs-search-input-field-attachment-button`
+
+`data-fs-search-input-field-submit-button`
 
 ---
 
