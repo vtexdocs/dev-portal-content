@@ -25,13 +25,11 @@ The following table compares the two models:
 
 Each VTEX account has its own [CMS](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts), [FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/webops-dashboard) integration, and installed app versions, so the number of accounts sets how many of each the project runs.
 
-> ℹ️ This track assumes that every account in the project uses the [CMS](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts). New FastStore projects start with it by default. If an account still uses [Headless CMS (legacy)](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview), we recommend upgrading it before you set up the multistore project, since features such as Localization are available only in the CMS. Learn more in [Upgrading from Headless CMS (legacy) to CMS](https://developers.vtex.com/docs/guides/upgrading-from-headless-cms-legacy-to-cms-overview).
-
 ### Single account with bindings
 
 The single-account model depends on the [Localization feature](https://developers.vtex.com/docs/guides/faststore/storefront-features-handling-internationalization-with-the-localization-feature). A binding connects one domain to one sales channel and one locale. The catalog is shared across the account. FastStore reads only the binding's default locale, so each language needs its own binding.
 
-> ⚠️ The Localization feature is in Closed Beta and requires FastStore v4. To request access, open a ticket with [VTEX Support](https://help.vtex.com/docs/tutorials/opening-tickets-to-vtex-support).
+> ⚠️ The Localization feature is in Closed Beta and requires FastStore v4 and the CMS. If the account still uses Headless CMS (legacy), upgrade it first, as described in [Upgrading from Headless CMS (legacy) to CMS](https://developers.vtex.com/docs/guides/upgrading-from-headless-cms-legacy-to-cms-overview). To request access to the feature, open a ticket with [VTEX Support](https://help.vtex.com/docs/tutorials/opening-tickets-to-vtex-support).
 
 The account-level parts of the implementation work as follows:
 
@@ -59,5 +57,3 @@ The account-level parts of the implementation work as follows:
 Together they keep every account on the same versions of core apps, such as Intelligent Search, backend apps, and Admin apps. If you choose to use a Sponsor Account, decide which account will be the sponsor before creating the others, because the hierarchy has one parent and can't be nested later.
 
 [VTEX Support](https://help.vtex.com/docs/tutorials/opening-tickets-to-vtex-support) enables the sponsor and installs its Edition App in the accounts you request. For more information, see [Becoming a Sponsor Account](https://developers.vtex.com/docs/guides/vtex-io-documentation-becoming-a-sponsor-account).
-
-> ℹ️ FastStore requires `vtex.edition-store@5.x` in every account of the project, including any testing accounts. Learn more in the [Before you begin](https://developers.vtex.com/docs/guides/faststore/go-live-before-you-begin) article of the Going live track.
