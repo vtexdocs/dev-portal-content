@@ -46,14 +46,6 @@ In `discovery.config.js`, an empty `api.subDomainPrefix` array now replaces the 
 
 Stores that set `subDomainPrefix` to an empty array see Checkout cookies set on `www.<domain>` instead of `<domain>`. Cookies already set on the root domain stay in the browser until they expire. If `secureSubdomain` uses a different host, FastStore prints a warning during build and development. Stores that set a non-empty prefix or don't set the option keep the current behavior.
 
-## My Account for B2B Buyer Portal
-
-### My Account CLI templates use the `isB2BBuyer` prop (PR: [#3574](https://github.com/vtex/faststore/pull/3574))
-
-The CLI templates that generate custom My Account pages passed `isRepresentative`, but `@faststore/core` renamed that prop to `isB2BBuyer`. Pages generated from FastStore `4.10.2` through `4.11.0` no longer matched the core types, so `next build` failed in stores with custom account pages.
-
-Upgrading to `v4.11.3` generates pages with `isB2BBuyer`. If your store has a custom My Account page based on those templates, update the prop from `isRepresentative` to `isB2BBuyer`.
-
 ---
 
 ## Features
@@ -63,3 +55,13 @@ Upgrading to `v4.11.3` generates pages with `isB2BBuyer`. If your store has a cu
 FastStore now supports the opt-in `api.preserveCartLines` flag in `discovery.config.js`. FastStore merges cart lines that share the same SKU into one line by default. When a store splits a line in Checkout, for example so that each unit can have its own assembly options, the flag keeps each unit as a separate cart line, and editing or removing one line affects only that line. FastStore doesn't split lines on its own.
 
 The flag is off by default, so stores that don't set it keep the current behavior. Checkout can also return several lines of the same SKU because of promotions, so enable the flag only when your store needs to keep split lines. For setup steps, see [Keeping split cart lines](https://developers.vtex.com/docs/guides/faststore/developer-tools-keeping-split-cart-lines).
+
+---
+
+## My Account for B2B Buyer Portal
+
+### My Account CLI templates use the `isB2BBuyer` prop (PR: [#3574](https://github.com/vtex/faststore/pull/3574))
+
+The CLI templates that generate custom My Account pages passed `isRepresentative`, but `@faststore/core` renamed that prop to `isB2BBuyer`. Pages generated from FastStore `4.10.2` through `4.11.0` no longer matched the core types, so `next build` failed in stores with custom account pages.
+
+Upgrading to `v4.11.3` generates pages with `isB2BBuyer`. If your store has a custom My Account page based on those templates, update the prop from `isRepresentative` to `isB2BBuyer`.
