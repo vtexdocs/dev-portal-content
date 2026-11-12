@@ -23,7 +23,7 @@ To be eligible to become a Sponsor Account, ensure you have the following:
 
   > ℹ️ You can check the Edition App installed on your account by running `vtex edition get` in your terminal. If you see the following error: `Message: Edition not set`, [open a support ticket](https://help.vtex.com/support) requesting the installation of either `vtex.edition-business@0.x` or `vtex.edition-store@5.x`. See [Edition App](https://developers.vtex.com/docs/guides/vtex-io-documentation-edition-app) for more information.
 
-- An account that isn't sponsored by another Sponsor Account. Sponsorship doesn't extend beyond the second level of the account hierarchy. For more information, see [Sponsor Account](https://developers.vtex.com/docs/guides/vtex-io-documentation-sponsor-account).
+- Your account must not already be sponsored by another Sponsor Account. Sponsorship doesn't extend beyond the second level of the account hierarchy. For more information, see [Sponsor Account](https://developers.vtex.com/docs/guides/vtex-io-documentation-sponsor-account).
 
 ## Instructions
 
