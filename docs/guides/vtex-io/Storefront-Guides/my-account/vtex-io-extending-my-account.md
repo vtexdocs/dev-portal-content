@@ -1,12 +1,13 @@
 ---
 title: "Extending My Account"
 slug: "vtex-io-extending-my-account"
+excerpt: "Learn how to add custom pages, menu links, and profile fields to My Account."
 hidden: false
 createdAt: "2026-11-12T17:00:00.000Z"
 updatedAt: "2026-11-12T17:00:00.000Z"
 ---
 
-[My Account](https://developers.vtex.com/docs/apps/vtex.my-account) is the page where customers manage their personal information, addresses, orders, and credit cards in a VTEX IO store. It provides extension points that allow you to add your own pages, menu links, and profile fields.
+[My Account](https://developers.vtex.com/docs/apps/vtex.my-account) is the page where customers manage their personal information, addresses, orders, and credit cards in a VTEX IO store. It provides extension points to add your own pages, menu links, and profile fields.
 
 This guide shows how to extend My Account by creating your own VTEX IO app. By the end, you'll have a custom page in My Account, reachable from a new link in its menu.
 
@@ -19,7 +20,7 @@ This guide shows how to extend My Account by creating your own VTEX IO app. By t
 
 ## Instructions
 
-### Step 1 - Create your extension app
+### Step 1 - Creating your extension app
 
 1. If you don't have a VTEX IO app yet, create one with the `vtex init` command.
 2. Open the `manifest.json` file of your app and add `vtex.my-account` and `vtex.my-account-commons` under the `dependencies` field:
@@ -41,7 +42,7 @@ This guide shows how to extend My Account by creating your own VTEX IO app. By t
      },
    ```
 
-### Step 2 - Define the interfaces and plugins
+### Step 2 - Defining the interfaces and plugins
 
 1. Create the file `store/interfaces.json` and define the interfaces for the page and the menu link:
 
@@ -56,7 +57,7 @@ This guide shows how to extend My Account by creating your own VTEX IO app. By t
    }
    ```
 
-   > ⚠️ You can use any names that make sense for your app instead of `my-app-link`, `my-app-page`, `MyAppLink`, and `MyAppPage`.
+   > ⚠️ You can replace `my-app-link`, `my-app-page`, `MyAppLink`, and `MyAppPage` with names that fit your app.
 
 2. Create the file `store/plugins.json` to plug the interfaces into My Account:
 
@@ -67,9 +68,9 @@ This guide shows how to extend My Account by creating your own VTEX IO app. By t
    }
    ```
 
-### Step 3 - Create the `my-account-page` component
+### Step 3 - Creating the `my-account-page` component
 
-Create a new file in the root of the `react` folder named `MyAppPage.js`, with the following content:
+Create the `MyAppPage.js` file in the root of the `react` folder with the following content:
 
 ```js
 import React, { Fragment } from 'react'
@@ -89,11 +90,11 @@ const MyAppPage = () => (
 export default MyAppPage
 ```
 
-In this example, you have two new pages, `/account/#/support` and `/account/#/points`, which render the `UserSupport` and `UserPoints` components, respectively.
+This example creates two pages, `/account/#/support` and `/account/#/points`, which render the `UserSupport` and `UserPoints` components, respectively.
 
-### Step 4 - Create the `my-account-link` component
+### Step 4 - Creating the `my-account-link` component
 
-Create a new file in the root of the `react` folder named `MyAppLink.js`. This component receives a prop called `render`. You must call it with an array of objects with the `name` and `path` properties, which creates a link for each object.
+Create the `MyAppLink.js` file in the root of the `react` folder. This component receives a prop called `render`. Call it with an array of objects containing the `name` and `path` properties. Each object creates a link.
 
 The following example shows a `MyAppLink` implementation:
 
@@ -122,7 +123,7 @@ MyAppLink.propTypes = {
 export default injectIntl(MyAppLink)
 ```
 
-### Step 5 - (Optional) Define the default page of My Account
+### Step 5 - (Optional) Defining the default page of My Account
 
 You can set your new page as the page that My Account renders when customers open the URL `/account/`. To do so, follow these steps:
 
@@ -133,18 +134,18 @@ You can set your new page as the page that My Account renders when customers ope
 
 For example, to open the `UserPoints` page from the previous steps, enter `/points`.
 
-### Step 6 - (Optional) Display personal info
+### Step 6 - (Optional) Displaying personal information
 
-Inside the Profile page, right above the `edit` button, there is another extension point. It is intended for stores that collect custom data from their customers, such as their hair color or their pet's name. This extension point allows your component to display such information without breaking the page layout.
+The Profile page has another extension point before the `edit` button. It's intended for stores that collect custom information from their customers, such as hair color or pet name. This extension point allows your component to display such information without breaking the page layout.
 
-Your component must not render anything. Call the `render` prop with the appropriate data, and My Account displays it together with the customer's default information. Pass in an array of objects containing the `label` and `value` props:
+Your component must not render anything. Call the `render` prop with the appropriate information, and My Account displays it together with the customer's default information. Pass in an array of objects containing the `label` and `value` props:
 
 - `label`: Name of the field you want to display, such as `Hair color`.
 - `value`: Value for that field, such as `brown`.
 
-You must preprocess your data before displaying it, such as masking or localizing your texts. You are also responsible for fetching the data from wherever it is.
+Preprocess the information before displaying it, for example, by masking or localizing the text. You are also responsible for fetching the information from its source.
 
-The following example shows a component that displays custom data:
+The following example shows a component that displays custom information:
 
 ```js
 const BeautyData = ({ render }) => {
@@ -161,18 +162,18 @@ const BeautyData = ({ render }) => {
 }
 ```
 
-### Step 7 - (Optional) Edit personal info
+### Step 7 - (Optional) Editing personal information
 
-If you display tailored data inside your customer's profile, you probably want to edit that information too. The `my-account/profile/input` extension point lets you do that. It places your content inside the profile editing form, right above the **Toggle business fields** button, and uses the functions you provide to validate and submit that content.
+If you display tailored information inside your customer's profile, you can also let them edit it. The `my-account/profile/input` extension point lets you do that. It places your content inside the profile editing form, before the `Toggle business fields` button, and uses the functions you provide to validate and submit that content.
 
-Your component may render form components, texts, or anything else you need. We recommend following VTEX Styleguide or your own design guidelines to avoid breaking the style of the rest of the form. Your component receives two props, `registerValidator` and `registerSubmitter`, which you use to register your validation and submission functions with the main component. Register them in `componentDidMount`.
+Your component can render form components, text, or any other content. We recommend following VTEX Styleguide or your own design guidelines to keep the form style consistent. Your component receives two props, `registerValidator` and `registerSubmitter`, which you use to add your validation and submission functions to the main component. Add them in `componentDidMount`.
 
-When customers click **Submit**, the form works as follows:
+When customers click `Submit`, the form works as follows:
 
 1. My Account calls your validation function. It must validate all of your fields and display messages to the user if necessary. If something is invalid, the function must return `false` to halt the submission process. Otherwise, it must return `true`. The function can return the boolean value directly or a `Promise` that resolves to it.
 2. After all validations pass, the form enters the submission state. It sends the default profile information to VTEX databases and calls your submission function so you can do the same.
 
-Don't place user interaction or anything related inside the submission function, besides submitting. My Account returns to the display page as soon as all the submission functions finish, and customers probably won't notice anything you display.
+Don't add user interactions to the submission function. My Account returns to the display page as soon as all the submission functions finish, so customers probably won't notice anything you display.
 
 The following example shows a component that adds a favorite color field to the form:
 
@@ -231,7 +232,7 @@ class FavColor extends Component {
 export default FavColor
 ```
 
-### Step 8 - Link your app and check the result
+### Step 8 - Linking your app and checking the result
 
 1. In a terminal, navigate to the root folder of your app.
 2. Run `vtex link` in your development workspace.
@@ -239,7 +240,7 @@ export default FavColor
 
 The My Account menu shows the new links, and the page renders the component you defined for the `/points` path.
 
-### Step 9 - Make your app available
+### Step 9 - Making your app available
 
 After validating your extension in the development workspace, make it available in your account:
 
