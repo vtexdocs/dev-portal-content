@@ -14,8 +14,8 @@ This guide shows how to extend My Account by creating your own VTEX IO app. By t
 
 ## Before you begin
 
-- [Install the VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-install)
-- [Create a development workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-development-workspace)
+- [Install the VTEX IO CLI](https://developers.vtex.com/docs/guides/vtex-io-documentation-vtex-io-cli-install) to run the commands used in this guide, such as `vtex init`, `vtex link`, and `vtex publish`.
+- [Create a development workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-development-workspace) to test your extension without affecting your live store.
 
 ## Instructions
 
