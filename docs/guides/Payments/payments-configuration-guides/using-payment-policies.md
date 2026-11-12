@@ -11,7 +11,7 @@ Payment policies allow merchants to control which payment methods are available 
 
 > ⚠️ This feature is in closed beta, meaning only specific customers can access it now. If you want to implement it in the future, contact [our Support](https://support.vtex.com/hc/en-us/).
 
-> ℹ️ VTEX is developing a Payment Policies version with support for agents or LLM models and additional purchase context variables. In the current version, use the API and the `id`, `collectionIds`, `seller`, and `shippingData.state` variables described in this guide.
+> ℹ️ VTEX is developing a Payment Policies version with support for agents or LLM models and additional purchase context variables. In the current version, use the API and the `collectionIds`, `seller`, and `shippingData.state` variables described in this guide.
 
 ## Before you begin
 
@@ -32,7 +32,6 @@ Each policy rule has a JSONLogic expression, an action, a priority, and a list o
 
 | Variable | Type | Description |
 | --- | --- | --- |
-| `id` | String | SKU ID of the item. |
 | `collectionIds` | Array of integers | Collections that the item belongs to. An empty, null, or missing list produces the same result. |
 | `seller` | String | Seller that fulfills the item. An empty or whitespace-only value is treated as not sent. |
 | `shippingData.state` | String | Delivery state code, such as `NY` or `CA`. An empty or whitespace-only value is treated as not sent. |
@@ -370,14 +369,14 @@ Expressions used in the scenarios:
 | `POST /policy-rules` returns `401` or `403`. | API credentials do not have `ManageStore`. | Review the permissions assigned to the app key and app token. |
 | `GET /policy-rules` or `POST /search` returns `401` or `403`. | API credentials do not have `ViewPayments`. | Review the permissions assigned to the app key and app token. |
 | The rule was created, but the search result did not change. | The rule is disabled, the expression doesn't match the test item, or the wrong payment system ID was used. | Check `enabled`, `collectionIds`, `seller`, `shippingData.state`, and `paymentSystems` with `GET /policy-rules/{id}`. |
-| A rule never applies, or a rule with `!` or `!=` applies to all items. | The expression uses a variable name that doesn't exist, such as `shippingState`. | Use only `id`, `collectionIds`, `seller`, and `shippingData.state`. See [Context variables](#context-variables). |
+| A rule never applies, or a rule with `!` or `!=` applies to all items. | The expression uses a variable name that doesn't exist, such as `shippingState`. | Use only `collectionIds`, `seller`, and `shippingData.state`. See [Context variables](#context-variables). |
 | The rule is rejected with `400`. | The request body is missing `expression`, `enabled`, `priority`, or `action`, or `action` has a value other than `Include` or `Exclude`. | Send all required fields and use `Include` or `Exclude` with this exact capitalization. |
 | The expression is rejected with `422`. | Invalid JSONLogic syntax, an unsupported operator, or more than 500 operators. | Validate the JSONLogic object against the [supported operators](#operators) and keep the expression within 500 operators. See [Error messages](#error-messages). |
 | The search endpoint returns the expected result, but the `orderForm` does not. | Checkout isn't using the payment policies contract for the account. | Confirm the account enablement and test with a fresh `orderForm`. |
 
 ### Error messages
 
-Policy rule endpoints return errors in the [Problem Details](https://www.rfc-editor.org/rfc/rfc7807) format, with the `type`, `title`, `status`, `detail`, and `instance` fields. The following table lists the `detail` values. Errors returned by the expression validator may include additional parameter information at the end of the message.
+Policy rule endpoints return errors in the [Problem Details](https://www.rfc-editor.org/info/rfc9457/) format, with the `type`, `title`, `status`, `detail`, and `instance` fields. The following table lists the `detail` values. Errors returned by the expression validator may include additional parameter information at the end of the message.
 
 | Status | When | `detail` |
 | --- | --- | --- |
