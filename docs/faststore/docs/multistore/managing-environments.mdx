@@ -1,0 +1,86 @@
+---
+title: "Managing environments"
+excerpt: "Give each store a testing environment that supports end-to-end validation, and map repository branches to the accounts they deploy to."
+createdAt: "2026-11-06T00:00:00.000Z"
+---
+
+A multistore project needs somewhere to validate changes before shoppers see them.
+
+A [workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-workspace) isolates app versions, which makes it suitable for validating frontend changes and app upgrades. It doesn't isolate commerce backend data. Workspaces in the same account share the catalog, prices, promotion rules, logistics configuration, and order data, so a change made through the VTEX Admin in one workspace is visible in all of them, including the live store.
+
+This has concrete consequences:
+
+- Editing the category tree in a workspace changes the production catalog immediately.
+- A promotion rule configured in a workspace is the same rule that runs in production.
+- Shipping configuration can't be tested in isolation from the live operation.
+
+> ⚠️ Any test that depends on backend data, such as catalog, promotions, logistics, payments, or integrations, requires a separate VTEX account. Workspaces only cover frontend changes and app versions. For more details, see [Best practices on workspaces management](https://developers.vtex.com/docs/guides/vtex-io-documentation-workspaces-best-practices).
+
+We recommend giving each store a dedicated testing account, with its own backend data, alongside the production account. The testing account is a separate VTEX account, not a store created within the production account, which would share its catalog, prices, and promotions. To get one, open a ticket with [VTEX Support](https://help.vtex.com/docs/tutorials/opening-tickets-to-vtex-support) to request a new QA environment. VTEX provisions the account without copying configurations or content from production, and it may incur additional costs according to your contract. For more information, see [Requesting a new environment](https://help.vtex.com/docs/tutorials/requesting-a-new-environment).
+
+> ℹ️ A testing account isn't mandatory. Stores with lower operational complexity, or in an early implementation phase, can start with only the production account and add a testing account later.
+
+This guide explains how to structure testing and production environments per store, and how repository branches map to the accounts they deploy to.
+
+## Defining environments per store
+
+The following table describes the purpose of each account:
+
+| Environment | Purpose |
+| --- | --- |
+| Production account | Serves shopper traffic. |
+| Testing account | Mirrors production for full validation, covering both the storefront and backend data. |
+
+When using a testing account, consider the following:
+
+- **Content:** Each account has its own CMS instance, so content created in the testing account is for validation only. It's not copied to production automatically and has to be recreated there. For how section schemas are synced between accounts, see [Keeping CMS schema sync manual](#keeping-cms-schema-sync-manual).
+- **Search:** Merchandising rules, synonyms, and relevance settings are configured per account, so they need to be set up again in the testing account.
+- **Apps and integrations:** Backend apps and integrations are installed per account, so they must also be installed in the testing account before development starts.
+- **WebOps:** Install the FastStore WebOps app in the master workspace of the testing account. Connecting the account to the repository requires a user with the Owner role. For more information, see [Installing the FastStore WebOps app](https://developers.vtex.com/docs/guides/faststore/getting-started-1-setting-up-your-environment#step-4-installing-the-faststore-webops-app).
+- **Edition App:** FastStore requires `vtex.edition-store@5.x` in every account, testing accounts included. For more information, see [Before you begin](https://developers.vtex.com/docs/guides/faststore/go-live-before-you-begin) in the Going live track.
+
+## Mapping branches to accounts
+
+[FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/webops-dashboard) connects a repository to a VTEX account and deploys on merge. Each account has its own integration, so one repository can serve every account in the project while each deploys independently.
+
+The following table shows an example branch model that fits this structure. WebOps doesn't require these names. You choose the production branch, and you can filter which branches generate previews, in the **Integrations** tab:
+
+| Example branch | Deploys to | Behavior |
+| --- | --- | --- |
+| `feature/*` | Preview URL | WebOps generates a shareable preview deployment automatically, with no additional infrastructure. |
+| `develop` | Testing account of each store | Deploys automatically on merge, providing an environment for full frontend and backend validation. |
+| `main` | Production account of each store | Deploys automatically on merge. Protect this branch and require pull requests. |
+
+How these examples map to WebOps:
+
+- **Previews:** With no filter, every branch except the production branch gets a preview URL. A branch doesn't need the `feature/` prefix. That pattern matters only if you enable preview filters and include it, so previews are limited to branches that match `feature/*`.
+- **Testing:** Point each store's testing-account integration at the branch you use for validation. `develop` is the name used in this example.
+- **Production:** Choose any branch. If you leave it unset, WebOps uses the default branch of the repository, usually `main`. Protect that branch and require pull requests.
+
+For detailed instructions, see [Configuring production and preview branches in WebOps](https://developers.vtex.com/docs/guides/faststore/webops-configuring-production-and-preview-branches).
+
+> ℹ️ To keep the testing account mirroring production, synchronize catalog, shipping, and promotions through the VTEX APIs, for example with scripts. Plan for that synchronization as part of your regular maintenance routine.
+
+## Validating changes before merge
+
+Because WebOps deploys when a branch is merged, the checks that run before the merge decide what reaches your accounts. How you structure your pipeline is up to your team, and you can implement it with GitHub Actions or any other continuous integration (CI) service.
+
+Group the pipeline by responsibility rather than creating one workflow per store or per check, which quickly leads to redundant files that are hard to maintain. The following table shows a suggested structure:
+
+| Responsibility | When it runs | What it includes |
+| --- | --- | --- |
+| Quality gate | Automatically on every pull request and on pushes to your integration branches. | Code and token linting, TypeScript type-checking, build of the shared package, unit tests, end-to-end tests (ideally only on pull requests), and visual regression tests of components. |
+| Release and changelog | Automatically on merge to the production branch, and manually when needed. | Semantic changelog generation and version bump of the shared package. For more information, see [Exports and versioning](https://developers.vtex.com/docs/guides/faststore/multistore-sharing-code-across-stores#exports-and-versioning). |
+| CMS schema sync | Manually only. | Propagation of section schemas between accounts, when needed. |
+
+### Keeping CMS schema sync manual
+
+Section schemas stay in your repository, and the CMS doesn't copy them from one account to another. Syncing them to an account is a high-impact operation, so trigger it deliberately for each account instead of tying it to a code push. This way, a deploy never changes the content structure of a production account as a side effect.
+
+To sync the schemas to an account:
+
+1. Log in to the account you want to update.
+2. Run [`vtex faststore cms-sync`](https://developers.vtex.com/docs/guides/faststore/developing-and-customizing-components-creating-a-new-section-cms), or generate and upload the schema with the [Content plugin](https://developers.vtex.com/docs/guides/content-plugin).
+3. Repeat for each account that needs the update.
+
+You can also run these commands from a workflow that you trigger manually. A manual trigger keeps the operation auditable, and any authorized team member can run it when needed.
