@@ -832,7 +832,9 @@ Object containing the payment information of the order: the payment methods avai
   "giftCardMessages": [],
   "availableAccounts": [],
   "availableTokens": [],
-  "availableAssociations": {},
+  "availableAssociations": {
+    "1": ["2"]
+  },
   "transactions": [
     {
       "isActive": true,
@@ -913,7 +915,7 @@ Object containing the payment information of the order: the payment methods avai
 | `giftCardMessages` | Array of strings | Messages related to the gift cards. | `[]` |
 | `availableAccounts` | Array | Saved cards available for the customer. | `[]` |
 | `availableTokens` | Array | Payment tokens available for the customer. | `[]` |
-| `availableAssociations` | Object | Available associations. | `{}` |
+| `availableAssociations` | Object | Payment systems allowed for each cart item. Each key is a cart item (SKU) ID, and each value lists the IDs of the payment systems allowed for that item. Payment system IDs are returned as strings. In accounts that use [payment policies](https://developers.vtex.com/docs/guides/using-payment-policies) or have `availableAssociations` enabled, this field is the source of truth for the payment systems available for the cart. Use it instead of `paymentSystems`, which may omit valid payment systems. This is useful when a shopper pays part of the order with a payment system accepted only by some items (for example, a meal card) and the rest with another payment system. | `{"sku-001": ["4"], "sku-002": ["2", "4"]}` |
 | `transactions` | Array of objects | Transactions related to the order. | See the following rows. |
 | `transactions[].isActive` | Boolean | Indicates whether the transaction is active. | `true` |
 | `transactions[].transactionId` | String | Transaction ID. | `"296D6D245C17437E823EB77E403FC88D"` |
