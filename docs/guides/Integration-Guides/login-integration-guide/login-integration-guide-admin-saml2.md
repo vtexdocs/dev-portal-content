@@ -1,9 +1,10 @@
 ---
-title: "Admin (SAML 2.0)"
+title: "Admin login with an external SAML 2.0 provider"
 slug: "login-integration-guide-admin-saml2"
+excerpt: "Learn how to set up an external identity provider with SAML 2.0 so users can log in to the VTEX Admin."
 hidden: false
 createdAt: "2020-06-30T20:24:49.386Z"
-updatedAt: "2022-09-01T15:21:02.265Z"
+updatedAt: "2026-11-09T17:34:37.000Z"
 ---
 
 User management is a native feature of the VTEX platform. Store administrators can not only manage the users that can log in to the admin panel, but also specify which pages they can see and the operations they are allowed to perform using [roles](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc). This granular control allows stores to adopt [best practices](https://developers.onelogin.com/saml/best-practices-and-faqs) in terms of security and compliance.
@@ -85,7 +86,7 @@ https://identity-broker.vtex.com/{accountName}/idps/{accountName}-saml
 
 > ⚠️ The `entityID` of the **EntityDescriptor** is not a URL and must not be configured as one. It is an ID.\n- The `{accountName}` is your business identification on the VTEX platform. It is the one you use inside the URL that gives access to your admin: `{accountName}.myvtex.com/admin`.
 
-The identity provider must send the authenticated user's email in the **Name Identifier** (`saml:NameID`) variable. The response will be cryptographically signed with the certificate described in the Identity Provider's [Metadata](#metadata) file.
+The identity provider must send the authenticated user's email in the **Name Identifier** (`saml:NameID`) variable. The response will be cryptographically signed with the certificate described in the Identity Provider's [Metadata](#example-metadata-file) file.
 
 ### Required information
 
@@ -154,7 +155,7 @@ Once you created your SAML configuration, you may edit it by going through the s
 
 ## Certificate renewals
 
-When the certificate used by your **Identity Provider** to sign the assertions is about to expire, it's important to update the `metadata.xml` file in VTEX to allow for a seamless transition between the old and the new certificate.
+When the certificate used by your **Identity Provider** to sign the assertions is about to expire, update the `metadata.xml` file in VTEX to allow for a seamless transition between the old and the new certificate.
 
 This is done by including two `<md:KeyDescriptor use="signing">` entries in your exported file, as seen in the example below, where the `{OLD CERTIFICATE}` and `{NEW CERTIFICATE}` placeholders should be replaced by valid **X.509** certificates.
 

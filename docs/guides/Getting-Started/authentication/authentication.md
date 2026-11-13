@@ -4,7 +4,7 @@ slug: "authentication"
 excerpt: "Learn how to choose VTEX credentials for your integration based on the API account and whether you need storefront, Admin, or machine authentication."
 hidden: false
 createdAt: "2020-01-15T18:58:34.836Z"
-updatedAt: "2022-12-13T18:43:56.137Z"
+updatedAt: "2026-11-09T17:34:37.000Z"
 seeAlso:
  - "/docs/guides/api-authentication-using-api-keys"
  - "/docs/guides/api-authentication-using-user-tokens"
@@ -15,6 +15,7 @@ Authentication is a crucial aspect of API integrations, backend, and frontend ap
 - [API authentication using application keys](https://developers.vtex.com/docs/guides/api-authentication-using-api-keys)
 - [API authentication using user tokens](https://developers.vtex.com/docs/guides/api-authentication-using-user-tokens)
 - [App authentication using auth tokens](https://developers.vtex.com/docs/guides/app-authentication-using-auth-tokens)
+- [VTEX OAuth provider](https://developers.vtex.com/docs/guides/vtex-oauth-provider)
 
 There are different contexts in which authentication is required in the regular functioning of a VTEX store. Below are some example use cases and the recommended authentication methods.
 
@@ -35,5 +36,5 @@ VTEX allows stores to integrate with external identity providers to provide sing
 
 ## Learn more
 
-- **Authorization**: [Users](https://help.vtex.com/en/subcategory/users--63DHe3VQEEE6Uuua8gIs2M), [Roles](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc) and [License Manager Resources](https://help.vtex.com/en/tutorial/license-manager-resources--3q6ztrC8YynQf6rdc6euk3)
+- **Authorization**: [Users](https://help.vtex.com/en/docs/tutorials/managing-admin-users), [Roles](https://help.vtex.com/en/tutorial/roles--7HKK5Uau2H6wxE1rH5oRbc) and [License Manager Resources](https://help.vtex.com/en/tutorial/license-manager-resources--3q6ztrC8YynQf6rdc6euk3)
 - **Auditability**: [Audit](https://help.vtex.com/en/tutorial/searching-for-events-on-audit--5RXf9WJ5YLFBcS8q8KcxTA)
