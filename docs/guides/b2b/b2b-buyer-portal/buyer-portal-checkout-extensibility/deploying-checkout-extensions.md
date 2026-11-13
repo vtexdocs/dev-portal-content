@@ -3,7 +3,7 @@ title: "Deploying Checkout extensions"
 slug: "deploying-checkout-extensions"
 hidden: false
 createdAt: "2026-06-10T00:00:00.000Z"
-updatedAt: "2026-06-10T00:00:00.000Z"
+updatedAt: "2026-11-06T00:00:00.000Z"
 excerpt: "Deploy your Checkout extensions to production, generate preview deploys, and troubleshoot build failures."
 ---
 
@@ -16,9 +16,28 @@ After creating Checkout extensions, deploy them to make the changes available in
 
 ## Requirements
 
-Before deploying, make sure you have [set up Buyer Portal Checkout](https://developers.vtex.com/docs/guides/setting-up-buyer-portal-checkout) and configured FastStore WebOps for your account.
+Before deploying, make sure that:
+
+- You have [set up Buyer Portal Checkout](https://developers.vtex.com/docs/guides/setting-up-buyer-portal-checkout) and configured [FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/webops-dashboard) for your account.
+- The `checkout` module is registered for your account in the `faststore.json` file. The `fsp create` command adds it when you create the project.
+- Your Checkout project has a `tsconfig.json` file at its root (for example, `store-a/checkout/tsconfig.json`). The build fails without it. See [Build fails with `TS5057`](#build-fails-with-ts5057).
+- Checkout builds are enabled for your account in FastStore WebOps. See [Enabling Checkout builds for your account](#enabling-checkout-builds-for-your-account).
 
 > ℹ️ Deploying Checkout extensions with WebOps does not require the `discovery` module. You can use WebOps exclusively to deploy Checkout extensions if needed.
+
+## Enabling Checkout builds for your account
+
+Checkout builds in [FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/webops-dashboard) are disabled by default and must be enabled for each account. While they are disabled, WebOps skips the Checkout build: the deployment finishes successfully, but the logs don't show a **Building checkout** step, and your extensions aren't published to the store.
+
+To enable Checkout builds, [open a ticket with VTEX Support](https://help.vtex.com/en/docs/tutorials/opening-tickets-to-vtex-support) and include your account name.
+
+> ⚠️ Enabling Checkout builds doesn't trigger a new build. After the feature is enabled, push a new commit to the `main` branch to start a production deployment.
+
+To confirm that your extensions were published, check that the extensions file returns status `200`. Remember to replace `{account-name}` with the name of your account.
+
+```bash
+curl -I https://{account-name}.vtexassets.com/faststore-extensions/checkout/checkout-extensions.js
+```
 
 ## Deploying to production
 
@@ -65,7 +84,7 @@ Date:   Fri Oct 25 16:08:38 2024 -0300
 
 If the build fails, the issue is usually in your extension code or configuration. Common causes include type-checking errors and typos.
 
-FastStore WebOps shows when a build fails, but Checkout build logs are not available there. To inspect the logs, check the GitHub Checks for the failed commit by selecting the status icon ("✔️", "❌", or "🟡") next to the commit description and opening the **Details** link for **FastStore WebOps**.
+FastStore WebOps shows when a build fails, but Checkout build logs are not available there. To inspect the logs, check the GitHub Checks for the failed commit by selecting the status icon ("✔️", "❌", or "🟡") next to the commit description and opening the **Details** link for **FastStore WebOps**. Checkout build errors appear in the **Building checkout** step. Errors in the **Building** step come from the `discovery` module.
 
 You can also run the following command. Remember to replace `{account-name}` with the name of your account.
 
@@ -78,3 +97,21 @@ npx fsp build {account-name} checkout
 ```
 
 This command builds the Checkout extension for the specified account and displays any local build errors. If the command succeeds locally, check your GitHub repository for issues in the build workflow.
+
+### Extensions work locally but not in the store
+
+In development, the FastStore CLI serves the extensions locally, so extensions that work on `localhost` aren't necessarily published. To check whether they were published, run the `curl` command from [Enabling Checkout builds for your account](#enabling-checkout-builds-for-your-account) and check the result:
+
+- **`404` (`NoSuchKey`):** No extensions were published for the account. Make sure Checkout builds are [enabled for your account](#enabling-checkout-builds-for-your-account) and that a production deployment ran after they were enabled.
+- **Only preview deploys ran:** Preview deploys aren't published to the production path. They are only loaded when you add the `__previewId` query string to the Checkout URL. See [Generating preview deploys](#generating-preview-deploys).
+- **The build failed:** Check the **Building checkout** step in the build logs, as described in [Handling build failures](#handling-build-failures).
+
+### Build fails with `TS5057`
+
+The Checkout build fails with the following error:
+
+```text
+error TS5057: Cannot find a tsconfig.json file at the specified directory: '.../checkout'
+```
+
+The Checkout build starts with a type check, which requires a `tsconfig.json` file at the root of your Checkout project. The `fsp create` command generates this file when you create the project. If the file was deleted or isn't committed to your repository, add it back to the Checkout project folder and push a new commit.
