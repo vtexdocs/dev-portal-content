@@ -3,7 +3,7 @@ title: "Becoming a Sponsor Account"
 slug: "vtex-io-documentation-becoming-a-sponsor-account"
 hidden: false
 createdAt: "2020-09-04T11:12:43.282Z"
-updatedAt: "2022-12-13T20:17:44.880Z"
+updatedAt: "2026-11-10T00:00:00.000Z"
 category: "App Development"
 excerpt: "Check all requirements to become a Sponsor Account if you want to publish Edition apps for child accounts."
 seeAlso:
@@ -19,9 +19,11 @@ If your account is qualified to become a Sponsor Account, follow the [Instructio
 To be eligible to become a Sponsor Account, ensure you have the following:
 
 - Access to three or more accounts related to the same group or holding.
-- An Edition App published by `vtex` installed on your account (`vtex.edition-business@0.x` or `vtex.edition-store@2.x`).
+- An Edition App published by `vtex` installed on your account (`vtex.edition-business@0.x` or `vtex.edition-store@5.x`).
 
-  > ℹ️ You can check the Edition App installed on your account by running `vtex edition get` in your terminal. If you see the following error: `Message: Edition not set`, [open a support ticket](https://help.vtex.com/support) requesting the installation of either `vtex.edition-business@0.x` or `vtex.edition-store@2.x`. See [Edition App](https://developers.vtex.com/docs/guides/vtex-io-documentation-edition-app) for more information.
+  > ℹ️ You can check the Edition App installed on your account by running `vtex edition get` in your terminal. If you see the following error: `Message: Edition not set`, [open a support ticket](https://help.vtex.com/support) requesting the installation of either `vtex.edition-business@0.x` or `vtex.edition-store@5.x`. See [Edition App](https://developers.vtex.com/docs/guides/vtex-io-documentation-edition-app) for more information.
+
+- Your account must not already be sponsored by another Sponsor Account. Sponsorship doesn't extend beyond the second level of the account hierarchy. For more information, see [Sponsor Account](https://developers.vtex.com/docs/guides/vtex-io-documentation-sponsor-account).
 
 ## Instructions
 
