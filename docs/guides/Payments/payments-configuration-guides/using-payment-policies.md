@@ -18,6 +18,7 @@ Payment policies allow merchants to control which payment methods are available 
 Make sure you have:
 
 - A VTEX account enabled for payment policies. Contact [VTEX Support](https://support.vtex.com/hc/en-us/) or your VTEX representative to request enablement.
+- Payment connectors configured with the Partial processing mode for [post-purchase payment operations](https://help.vtex.com/docs/tutorials/post-purchase-payment-operations). Payment policies currently work only with this mode. To learn how to request it, see [Partial mode: New flow in post-purchase payment operations](https://help.vtex.com/announcements/2026-07-14-partial-mode-new-flow-in-post-purchase-payment-operations).
 - API credentials with the required [permissions](https://help.vtex.com/docs/tutorials/license-manager-resources):
   - `ManageStore` to create, update, and delete policy rules.
   - `ViewPayments` to list policy rules and test payment system availability.
@@ -36,7 +37,7 @@ Each policy rule has a JSONLogic expression, an action, a priority, and a list o
 | `seller` | String | Seller that fulfills the item. An empty or whitespace-only value is treated as not sent. |
 | `shippingData.state` | String | Delivery state code, such as `NY` or `CA`. An empty or whitespace-only value is treated as not sent. |
 
-> ⚠️ Variable names aren't validated when you save a rule. Any other name, such as `shippingState`, is treated as a missing field. In this case, rules using `==` and `in` never apply, and rules using `!` and `!=` apply to all items. Check the variable names before saving a rule.
+> ⚠️ Variable names aren't validated when you save a rule. Any other name, such as `shippingState`, is treated as a missing field. In this case, comparisons using `==` and `in` with that field return `false`, while comparisons using `!=` return `true`. Check the variable names before saving a rule.
 
 ### Operators
 
@@ -57,10 +58,11 @@ Each expression can have up to 500 operators. The `and`, `or`, `!`, `in`, `==`, 
 
 ### Negation and missing fields
 
-When an item doesn't have a field used in the expression:
+When an item doesn't have a field used by a comparison:
 
 - `in` and `==` return `false`.
-- `!` and `!=` return `true`.
+- `!=` returns `true`.
+- `!` negates the result of its child condition. Negating a missing-field `==` or `in` comparison returns `true`, and negating a missing-field `!=` comparison returns `false`.
 
 This means negated conditions also match items without the field. For example, `{"!": {"in": [{"var": "seller"}, ["seller-a", "seller-b"]]}}` matches items with other sellers and items without a seller. To require the field, combine the condition with `and`: `{"and": [{"var": "seller"}, {"!": {...}}]}`.
 
@@ -319,7 +321,7 @@ This expression matches items whose seller isn't `seller-a` or `seller-b`. The f
 - Prefer `Exclude` rules.
 - Use `!` with the eligible collection so that items not assigned to the collection lose the payment system.
 - Require the field with `and` when a negation shouldn't apply to items without that field.
-- Check variable names. An incorrect name is accepted when saving and, with `!` or `!=`, the rule matches all items.
+- Check variable names. An incorrect name is accepted when saving and is treated as a missing field, so `!=` comparisons and negated `==` or `in` comparisons match all items.
 - Test the rule with the [search endpoint](#step-4---test-the-policy-with-the-search-endpoint) before relying on it in Checkout.
 
 ## Test scenarios
@@ -369,7 +371,7 @@ Expressions used in the scenarios:
 | `POST /policy-rules` returns `401` or `403`. | API credentials do not have `ManageStore`. | Review the permissions assigned to the app key and app token. |
 | `GET /policy-rules` or `POST /search` returns `401` or `403`. | API credentials do not have `ViewPayments`. | Review the permissions assigned to the app key and app token. |
 | The rule was created, but the search result did not change. | The rule is disabled, the expression doesn't match the test item, or the wrong payment system ID was used. | Check `enabled`, `collectionIds`, `seller`, `shippingData.state`, and `paymentSystems` with `GET /policy-rules/{id}`. |
-| A rule never applies, or a rule with `!` or `!=` applies to all items. | The expression uses a variable name that doesn't exist, such as `shippingState`. | Use only `collectionIds`, `seller`, and `shippingData.state`. See [Context variables](#context-variables). |
+| A rule never applies, or a rule applies to all items. | The expression uses a variable name that doesn't exist, such as `shippingState`. | Use only `collectionIds`, `seller`, and `shippingData.state`. See [Context variables](#context-variables). |
 | The rule is rejected with `400`. | The request body is missing `expression`, `enabled`, `priority`, or `action`, or `action` has a value other than `Include` or `Exclude`. | Send all required fields and use `Include` or `Exclude` with this exact capitalization. |
 | The expression is rejected with `422`. | Invalid JSONLogic syntax, an unsupported operator, or more than 500 operators. | Validate the JSONLogic object against the [supported operators](#operators) and keep the expression within 500 operators. See [Error messages](#error-messages). |
 | The search endpoint returns the expected result, but the `orderForm` does not. | Checkout isn't using the payment policies contract for the account. | Confirm the account enablement and test with a fresh `orderForm`. |
