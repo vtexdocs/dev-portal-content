@@ -136,7 +136,7 @@ Slots allow you to render components through props instead of declaring an array
 
 Learn more in [Passing blocks as props with slots](https://developers.vtex.com/docs/guides/vtex-io-documentation-4-declaring-a-theme-block#passing-blocks-as-props-with-slots).
 
-| ✅ Use                                                                                                                                                                                             | ❌ Do not use                                                                                                                                                                                      |
+| ✅ Use | ❌ Do not use |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | ![best-practices-for-storefront-component-development-5](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-developing-custom-storefront-components-4.png) | ![best-practices-for-storefront-component-development-4](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-developing-custom-storefront-components-3.png) |
 
