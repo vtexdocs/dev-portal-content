@@ -4,7 +4,7 @@ slug: "tracking-search-analytics-events-in-headless-web-stores"
 hidden: false
 createdAt: "2026-08-25T00:00:00.000Z"
 updatedAt: "2026-11-16T00:00:00.000Z"
-excerpt: "Learn how to add data-af-* tracking attributes to capture Intelligent Search analytics events in your headless web store using Activity Flow."
+excerpt: "Learn how to add data-af-* tracking attributes to capture Search Analytics events in your headless web store using Activity Flow."
 tags:
   - Activity Flow
   - Intelligent Search
@@ -14,7 +14,7 @@ seeAlso:
   - "/docs/guides/tracking-search-analytics-events-in-mobile-apps"
 ---
 
-In this guide, you will learn how to add tracking attributes to search screens in a headless web store so that [Activity Flow](https://developers.vtex.com/docs/guides/activity-flow) can capture [Search Analytics](https://help.vtex.com/docs/tutorials/search-analytics-beta) events: impressions and clicks on search results and autocomplete suggestions.
+In this guide, you will learn how to add tracking attributes to search screens in a headless web store so that [Activity Flow](https://developers.vtex.com/docs/guides/activity-flow) can capture [Search Analytics](https://help.vtex.com/docs/tutorials/search-analytics-beta) events: impressions and clicks on search results and autocomplete suggestions. We recommend tracking these events with Activity Flow, as it is the data source for the new Search Analytics page.
 
 The Activity Flow web script reads `data-af-*` attributes directly from the DOM. You don't need to write a listener or call any function: render the attributes on the right element, and the script takes care of the rest. The `data-af-element` attribute defines the `elementSource`, sent at the top level of the event payload, while any other `data-af-<name>` attribute becomes an extra parameter inside the `attributes` object.
 

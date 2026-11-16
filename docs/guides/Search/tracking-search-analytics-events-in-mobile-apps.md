@@ -4,7 +4,7 @@ slug: "tracking-search-analytics-events-in-mobile-apps"
 hidden: false
 createdAt: "2026-08-25T00:00:00.000Z"
 updatedAt: "2026-11-16T00:00:00.000Z"
-excerpt: "Learn how to use Activity Flow listeners and hooks to track Intelligent Search analytics events in Flutter and React Native apps."
+excerpt: "Learn how to use Activity Flow listeners and hooks to track Search Analytics events in Flutter and React Native apps."
 tags:
   - Activity Flow
   - Intelligent Search
@@ -14,7 +14,7 @@ seeAlso:
   - "/docs/guides/tracking-search-analytics-events-in-headless-web-stores"
 ---
 
-In this guide, you will learn how to add tracking to search screens in Flutter and React Native apps so that [Activity Flow](https://developers.vtex.com/docs/guides/activity-flow) can capture [Search Analytics](https://help.vtex.com/docs/tutorials/search-analytics-beta) events: impressions and clicks on search results and autocomplete suggestions.
+In this guide, you will learn how to add tracking to search screens in Flutter and React Native apps so that [Activity Flow](https://developers.vtex.com/docs/guides/activity-flow) can capture [Search Analytics](https://help.vtex.com/docs/tutorials/search-analytics-beta) events: impressions and clicks on search results and autocomplete suggestions. We recommend tracking these events with Activity Flow, as it is the data source for the new Search Analytics page.
 
 The Activity Flow click, view, and impression listeners accept a metadata map with free-form parameters. The `elementSource` key identifies the origin of the event and is sent at the top level of the payload, while the remaining keys in the map become extra parameters inside `attributes`.
 

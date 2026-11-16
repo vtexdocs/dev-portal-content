@@ -29,4 +29,4 @@ linkTitle="See more"
 
 ## Next steps
 
-To track Intelligent Search analytics events on your search screens, see [Tracking search analytics events in mobile apps](https://developers.vtex.com/docs/guides/tracking-search-analytics-events-in-mobile-apps).
+We recommend tracking search events on your search screens with Activity Flow, so they feed the new [Search Analytics](https://help.vtex.com/docs/tutorials/search-analytics-beta) page. To get started, see [Tracking search analytics events in mobile apps](https://developers.vtex.com/docs/guides/tracking-search-analytics-events-in-mobile-apps).
