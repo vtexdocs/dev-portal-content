@@ -224,11 +224,11 @@ This means that your default store homepage will comprise the components defined
 
 To build more complex components, the `home.jsonc` file includes each block’s declaration and configuration, using the block's props and, if necessary, other blocks.
 
-> ⚠️ More than simply declaring a block in the block list template, you must also define its behavior when rendered as a component. To do this, use the block's props, as shown in the [Clarifying block naming and properties](#step-3-clarifying-block-naming-and-properties) section, and include other child blocks to configure it, as detailed in [Defining blocks composition](#step-4-defining-blocks-composition).
+> ⚠️ More than simply declaring a block in the block list template, you must also define its behavior when rendered as a component. To do this, use the block's props, as shown in the [Clarifying block naming and properties](#step-3-clarifying-block-naming-and-properties) section, and include other child blocks to configure it, as detailed in [Defining block composition](#step-4-defining-blocks-composition).
 
 ### Step 3 - Clarifying block naming and properties
 
-Still in the `home.jsonc` file, use `ctrl+f` and search for the `rich-text#question` block. This block renders a component that displays markdown text to users.
+Still in the `home.jsonc` file, use `ctrl+f` and search for the `rich-text#question` block. This block renders a component that displays Markdown text to users.
 
 ```json
 "rich-text#question": {
@@ -257,9 +257,9 @@ The value of a prop can be one of the following types:
 
 > ℹ️ All the props available to configure a block can be found in the documentation of its exporting app or in the block's own documentation (if applicable).
 
-### Step 4 - Defining blocks composition
+### Step 4 - Defining block composition
 
-Still in the `home.jsonc`, search for the`shelf#home` block.
+Still in the `home.jsonc` file, search for the `shelf#home` block.
 
 ```json
 "shelf#home": {
@@ -267,7 +267,7 @@ Still in the `home.jsonc`, search for the`shelf#home` block.
 },
 ```
 
-Note that it declares another block to your `blocks` list, which in turn declares other blocks below in a list called `children`:
+Note that it declares another block in your `blocks` list, which in turn declares other blocks below in a list called `children`:
 
 ```json
 "product-summary.shelf": {

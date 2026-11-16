@@ -16,7 +16,7 @@ With the app template already copied, we will now create a new theme block. Foll
 
 An interface describes the shape of an object, including its properties and data types. This is crucial for ensuring type safety and preventing potential bugs.
 
-In VTEX Store Framework, interfaces are used to link theme blocks to their corresponding React components. This way, interfaces provide a set of rules that dictate the behavior of theme blocks when rendering their React components and the available properties and methods.
+In VTEX Store Framework, interfaces are used to link theme blocks to their corresponding React components. This way, interfaces specify how theme blocks render their React components, as well as the available properties and methods.
 
 For each theme block exported by your app, you should define a corresponding interface that defines the props available to the React component.
 
@@ -33,9 +33,9 @@ The following table shows some possible keys that could be added to the block in
 | `before`      | List of theme blocks that must be rendered in the interface before your block (above it) for it to work correctly. For example: header.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | `after`       | List of theme blocks that must be rendered in the interface after your block (below it) for it to work correctly. For example: footer.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | `preview`     | Defines the behavior of the page while the block is loading.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| `render`      | Defines the block rendering type. Possible values are `lazy` (the block is only rendered when a user interacts with it), `server` (the block is rendered from the server side), or `client` (the block is rendered from the client side.                                                                                                                                                                                                                                                                                                                                                                                    |
+| `render`      | Defines the block rendering type. Possible values are `lazy` (the block is only rendered when a user interacts with it), `server` (the block is rendered from the server side), or `client` (the block is rendered from the client side).                                                                                                                                                                                                                                                                                                                                                                                    |
 
-The only mandatory key that needs to be declared in a block interface is `component`. You have to declare the other ones based on the desired scenario for your new theme block.
+The only mandatory key in a block interface is `component`. You have to declare the other ones based on the desired scenario for your new theme block.
 
 ### Interface example for `ProductSummary`
 
@@ -75,49 +75,49 @@ When following these steps, remember to replace the values with the ones that co
 2. In the `react` folder, create a new TypeScript file with the name of the desired React component. Following our example, we would have `HelloWorld.tsx`.
 3. In the newly created file, add the sample code provided below:
 
-```jsx
-import React from 'react'
+   ```jsx
+   import React from 'react'
 
-const HelloWorld = () => <div>Hello, World!</div>
+   const HelloWorld = () => <div>Hello, World!</div>
 
-export default HelloWorld
-```
+   export default HelloWorld
+   ```
 
-> ℹ️ Read the [React documentation](https://reactjs.org/docs/getting-started.html) and [Developing custom storefront components](https://developers.vtex.com/docs/guides/vtex-io-documentation-developing-custom-storefront-components) documentation to better understand how React components work.
+   > ℹ️ Read the [React documentation](https://reactjs.org/docs/getting-started.html) and [Developing custom storefront components](https://developers.vtex.com/docs/guides/vtex-io-documentation-developing-custom-storefront-components) documentation to better understand how React components work.
 
 4. Create a new folder called `store` in the first level of your app folders.
 5. In the `store` folder, add a new file called `interfaces.json`.
 6. Declare the block interface in the `interfaces.json` file. For example:
 
-```json
-{
- "hello-world": {
-    "component": "HelloWorld"
-  }
-}
-```
+   ```json
+   {
+    "hello-world": {
+       "component": "HelloWorld"
+     }
+   }
+   ```
 
-Note that in the above structure, the first definition given by the interface is the name of your new theme block (`hello-world`). Within it, we declare an object containing the interface keys previously described.
+In the structure above, the first definition given by the interface is the name of your new theme block (`hello-world`). Within it, we declare an object containing the interface keys previously described.
 
-In our example, we only used the `component` key to link the`hello-world` block to the React component that it will render (`HelloWorld`). Note that the value of the `component` key is `HelloWorld` — the file name that was previously created for the React component (`react/HelloWorld.tsx`).
+In our example, we used only the `component` key to link the `hello-world` block to the React component it will render (`HelloWorld`). The value of the `component` key is `HelloWorld`, the filename previously created for the React component (`react/HelloWorld.tsx`).
 
-> ℹ️ To learn more about structuring the `interfaces.json` file, check the code of native Store Framework apps, such as [Search Result](https://github.com/vtex-apps/search-result/blob/master/store/interfaces.json) and [Header.](https://github.com/vtex-apps/store-header/blob/master/store/interfaces.json) Remember that how we declare an interface depends directly on the behavior we want for the new block. That is why, as we study different apps and blocks, we understand more the possibilities for interfaces.
+> ℹ️ To learn more about structuring the `interfaces.json` file, check the code of native Store Framework apps, such as [Search Result](https://github.com/vtex-apps/search-result/blob/master/store/interfaces.json) and [Header](https://github.com/vtex-apps/store-header/blob/master/store/interfaces.json). How you declare an interface depends directly on the behavior you want for the new block. That is why, as you study different apps and blocks, you understand more about the possibilities for interfaces.
 
 After saving your code changes, any user who installs your app will be ready to implement the new block.
 
-Note that, if the app under development exports more than one theme block for rendering the React component, all the interfaces of these blocks must also be declared in the `interfaces.json` file, according to the above format.
+If the app under development exports more than one theme block for rendering the React component, all interfaces for these blocks must also be declared in the `interfaces.json` file, following the above format.
 
 ### Declaring device-specific interfaces
 
 You may want your app to export different blocks for rendering different components based on the store's *breakpoint*, that is, based on the device accessing it.
 
-To do this, you have to create different blocks for each possible device and create interfaces for each one.
+To do this, you have to create separate blocks for each possible device and its interfaces.
 
-For example, you are developing the `hello-world` block and want to create mobile and desktop versions. You will have to create the `HelloWorld`,`HelloWorldMobile`, and `HelloWorldDesktop` components, and define interfaces for each, such as `hello-world`, `hello-world.mobile`, and `hello-world.desktop`.
+For example, you are developing the `hello-world` block and want to create mobile and desktop versions. You will have to create the `HelloWorld`, `HelloWorldMobile`, and `HelloWorldDesktop` components and define interfaces for each, such as `hello-world`, `hello-world.mobile`, and `hello-world.desktop`.
 
-The interface of the parent block, `hello-world`, has to contain only the `component` and `allowed` keys, with the `allowed` key declaring the `hello-world.mobile` and `hello-world.desktop` blocks.
+The interface of the parent block, `hello-world`, must contain only the `component` and `allowed` keys, with the `allowed` key declaring the `hello-world.mobile` and `hello-world.desktop` blocks.
 
-The interfaces for the mobile and desktop blocks, in turn, have to declare the desired keys (for example, `device`) to define the behavior of each block according to the device for which they were designed.
+The interfaces for the mobile and desktop blocks, in turn, must declare the desired keys (for example, `device`) to define each block's behavior for the device on which it was designed.
 
 App examples that use different React components for different devices are [Header](https://github.com/vtex-apps/store-header) and [Footer](https://github.com/vtex-apps/store-footer).
 

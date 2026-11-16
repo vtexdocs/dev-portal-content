@@ -13,23 +13,23 @@ Although **VTEX does not offer any support for custom projects**, we have put to
 
 Below you can find the best practices for tooling, features, flexibility, scalability, performance, accessibility, internationalization, and styling that you can adopt when creating your storefront component.
 
-> ⚠️ Before applying the settings below, it is highly recommended that you understand how VTEX IO, Store Framework, and React work since the guidelines assume previous knowledge. You can dive deeper in [VTEX IO learning course](https://learn.vtex.com/) and the [React official documentation](https://reactjs.org/) for help.
+> ⚠️ Before applying the settings below, it is highly recommended that you understand how VTEX IO, Store Framework, and React work since the guidelines assume previous knowledge. You can dive deeper in the [VTEX IO learning course](https://learn.vtex.com/) and the [React official documentation](https://reactjs.org/) for help.
 
 ## Tooling
 
 When creating a custom component, use tools to facilitate code development by automatically formatting and testing it.
 
-Features such as [ESLint](https://eslint.org/), [Typescript](https://www.typescriptlang.org/), and [Prettier](https://prettier.io/) are not mandatory for project deployment, but they help development, code maintenance, and testing.
+Features such as [ESLint](https://eslint.org/), [TypeScript](https://www.typescriptlang.org/), and [Prettier](https://prettier.io/) are not mandatory for project deployment, but they help development, code maintenance, and testing.
 
 The [React App repository](https://github.com/vtex-apps/react-app-template) is the go-to model template for tooling since it provides formatting features alongside the [VTEX Test Tool](https://github.com/vtex/test-tools), a native VTEX testing tool that leverages [Jest](https://jestjs.io/).
 
-Use Typescript types as an ally in your development journey since they provide autocomplete tools that can be used when developing and importing a new component. To have them handy, run the following command in your terminal:
+Use TypeScript types as an ally in your development journey since they provide autocomplete tools that can be used when developing and importing a new component. To have them handy, run the following command in your terminal:
 
 ```
 vtex setup --typings
 ```
 
-> ⚠️ The above command will install all Typescript types from the apps listed in the app `dependencies` list in your project. Whenever you add a new dependency, the command must be run again.
+> ⚠️ The above command will install all TypeScript types from the apps listed in the app `dependencies` list in your project. Whenever you add a new dependency, the command must be run again.
 
 ## Feature development
 
@@ -109,7 +109,7 @@ With that in mind, replace the boolean props with enum props. The latter has a b
 
 For example:
 
-| | Do not use        | Use                 |
+|           | Do not use        | Use                 |
 | --------- | ----------------- | ------------------- |
 | Prop name | `show`            | `visibility`        |
 | Values    | `true` or `false` | `visible` or `none` |
