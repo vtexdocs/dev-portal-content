@@ -14,7 +14,7 @@ seeAlso:
   - "/docs/guides/tracking-search-analytics-events-in-headless-web-stores"
 ---
 
-In this guide, you will learn how to add tracking to search screens in Flutter and React Native apps so that [Activity Flow](https://developers.vtex.com/docs/guides/activity-flow) can capture [Search Analytics](https://help.vtex.com/docs/tutorials/search-analytics-beta) events: impressions and clicks on search results and autocomplete suggestions. We recommend tracking these events with Activity Flow, as it is the data source for the new Search Analytics page.
+In this guide, you will learn how to add tracking to search screens in Flutter and React Native apps so that [Activity Flow](https://developers.vtex.com/docs/guides/activity-flow) can capture [Search Analytics](https://help.vtex.com/docs/tutorials/search-analytics-beta) events: impressions and clicks on search results and autocomplete suggestions. We recommend tracking these events with Activity Flow, as it is the data source for the new [Search Analytics](https://help.vtex.com/docs/tutorials/search-analytics-beta) page.
 
 The Activity Flow click, view, and impression listeners accept a metadata map with free-form parameters. The `elementSource` key identifies the origin of the event and is sent at the top level of the payload, while the remaining keys in the map become extra parameters inside `attributes`.
 
@@ -98,7 +98,7 @@ Autocomplete follows the same pattern as the results gallery, but with its own `
 
 ## Checklist
 
-- New Search Analytics page enabled for the store by VTEX Support.
+- New [Search Analytics](https://help.vtex.com/docs/tutorials/search-analytics-beta) page enabled for the store by VTEX Support.
 - Impression sent on every search, including searches that return no products.
 - `searchId` always coming from the API and present on both the impression and the click.
 - `productPosition` is 1-based and correct after pagination or infinite scroll.
