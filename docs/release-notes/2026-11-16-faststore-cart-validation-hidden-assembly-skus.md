@@ -1,9 +1,9 @@
 ---
 title: "FastStore: Fixed cart validation for assembly options hidden from search"
-slug: "2026-11-19-faststore-cart-validation-hidden-assembly-skus"
+slug: "2026-11-16-faststore-cart-validation-hidden-assembly-skus"
 type: fixed
-createdAt: "2026-11-19T00:00:00.000Z"
-updatedAt: "2026-11-19T00:00:00.000Z"
+createdAt: "2026-11-16T00:00:00.000Z"
+updatedAt: "2026-11-16T00:00:00.000Z"
 hidden: false
 excerpt: "FastStore no longer fails cart validation, or empties the Checkout cart, when an assembly option SKU is hidden from Intelligent Search."
 tags:
