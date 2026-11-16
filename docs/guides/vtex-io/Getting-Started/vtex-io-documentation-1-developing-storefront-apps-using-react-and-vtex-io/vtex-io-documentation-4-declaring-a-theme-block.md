@@ -3,7 +3,7 @@ title: "3. Declaring a theme block"
 slug: "vtex-io-documentation-4-declaring-a-theme-block"
 hidden: false
 createdAt: "2021-03-25T20:58:43.073Z"
-updatedAt: "2022-12-13T20:17:44.349Z"
+updatedAt: "2026-11-16T16:50:00.000Z"
 category: "App Development"
 excerpt: "Learn how to create a new theme block."
 seeAlso:
@@ -18,7 +18,7 @@ An interface describes the shape of an object, including its properties and data
 
 In VTEX Store Framework, interfaces are used to link theme blocks to their corresponding React components. This way, interfaces provide a set of rules that dictate the behavior of theme blocks when rendering their React components and the available properties and methods.
 
-For each theme block exported by your app, you should define a corresponding [interface](https://developers.vtex.com/docs/guides/vtex-io-documentation-interface) that defines the props available to the React component.
+For each theme block exported by your app, you should define a corresponding interface that defines the props available to the React component.
 
 The following table shows some possible keys that could be added to the block interface, as well as their respective descriptions:
 
@@ -26,7 +26,7 @@ The following table shows some possible keys that could be added to the block in
 | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `component`   | Name of the React component that the theme block will render.|
 | `allowed` | List of other theme blocks that help build the desired React component. When declared, these blocks can be included as children to the block you developed in the Store Theme app.|
-| `composition` | Defines the rendering position of the children of the block that you are developing. Remember that when defining the `composition` key, you don't control the position of the block it defines but the position of the children of that block. Possible values for this key are `blocks` (the child blocks have a specific position in the interface based on the React component on which they are based) or `children` (the position of the child blocks depends exclusively on how they are declared in the theme). If no value is defined for the `composition` key, the platform default is `blocks.` |
+| `composition` | Defines the rendering position of the children of the block that you are developing. Remember that when defining the `composition` key, you don't control the position of the block it defines but the position of the children of that block. Possible values for this key are `blocks` (the child blocks have a specific position in the interface based on the React component on which they are based), `children` (the position of the child blocks depends exclusively on how they are declared in the theme), or `slots` (the child blocks are passed to the component as props; see [Passing blocks as props with slots](#passing-blocks-as-props-with-slots)). If no value is defined for the `composition` key, the platform default is `blocks.` |
 | `device`      | Defines whether your theme block is designed for mobile or desktop devices. Possible values are `mobile` and `desktop`.                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | `required`    | List of theme blocks that must be rendered in the interface to support the block rendering you are developing.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | `around`      | List of theme blocks that must be rendered in the interface around your new block for it to work correctly.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
@@ -36,6 +36,30 @@ The following table shows some possible keys that could be added to the block in
 | `render`      | Defines the block rendering type. Possible values are `lazy` (the block is only rendered when a user interacts with it), `server` (the block is rendered from the server side), or `client` (the block is rendered from the client side.                                                                                                                                                                                                                                                                                                                                                                                    |
 
 The only mandatory key that needs to be declared in a block interface is `component`. You have to declare the other ones based on the desired scenario for your new theme block.
+
+### Interface example for `ProductSummary`
+
+For each exported block, the app specifies a corresponding React component. For example:
+
+```json
+// product-summary/store/interfaces.json
+{
+  "product-summary": {
+    "component": "ProductSummary",
+    "composition": "children",
+    "content": {
+      "$ref": "app:vtex.product-summary#/definitions/ProductSummary"
+    }
+  }
+}
+```
+
+In this example:
+
+- `product-summary`: Sets the name of the interface block being defined.
+- `component`: Specifies the name of the React component (`ProductSummary`) associated with the interface. Learn more in [Using components](https://developers.vtex.com/docs/guides/store-framework-using-components).
+- `composition`: Indicates how the child blocks of `product-summary` are positioned. Learn more in [Understand the block composition](https://developers.vtex.com/docs/guides/vtex-io-documentation-4-configuringtemplates#understand-the-block-composition).
+- `content`: Points to an external schema definition that describes the props of the `ProductSummary` component and is defined in the `vtex.product-summary` app. Learn more about props in [Clarifying block naming and properties](https://developers.vtex.com/docs/guides/vtex-io-documentation-4-configuringtemplates#step-3-clarifying-block-naming-and-properties).
 
 ## Step 1 - Declaring an interface
 
@@ -93,9 +117,85 @@ For example, you are developing the `hello-world` block and want to create mobil
 
 The interface of the parent block, `hello-world`, has to contain only the `component` and `allowed` keys, with the `allowed` key declaring the `hello-world.mobile` and `hello-world.desktop` blocks.
 
-The interfaces for the mobile and desktop blocks, in turn, have to declare the desired keys (e.g., `device`) to define the behavior of each block according to the device for which they were designed.
+The interfaces for the mobile and desktop blocks, in turn, have to declare the desired keys (for example, `device`) to define the behavior of each block according to the device for which they were designed.
 
 App examples that use different React components for different devices are [Header](https://github.com/vtex-apps/store-header) and [Footer](https://github.com/vtex-apps/store-footer).
+
+### Passing blocks as props with slots
+
+Slots are an alternative to the `blocks` and `children` compositions. Instead of listing child blocks in an array, the theme passes them to the component as regular props, which gives you more flexibility when designing the storefront.
+
+When you use slots:
+
+- You don't need to declare the `allowed` key in the interface. Any block from any app can be passed as a prop.
+- You don't need the `blocks` attribute in the Store Theme. The blocks are declared as regular `props`.
+- You can pass different blocks to the same component without conditional logic. With `blocks`, the component needs to identify the block passed by the developer and send its ID to `ExtensionPoint`.
+
+Consider a `hello-world` component that renders an icon. With slots, the React component receives the block through a prop and renders it as a component:
+
+```tsx
+// HelloWorld.tsx
+import React from 'react'
+
+const HelloWorld = ({ Icon }) => (
+  <div className="tc pv5">
+    <Icon size={32} />
+    <h1 className="t-heading-1 c-on-base">Hello, world!</h1>
+  </div>
+)
+
+export default HelloWorld
+```
+
+The interface doesn't declare `allowed`:
+
+```json
+// interfaces.json
+{
+  "hello-world": {
+    "component": "HelloWorld"
+  }
+}
+```
+
+In the Store Theme, the slot is declared as a prop whose value is the name of the block:
+
+```json
+// blocks.json
+{
+  "hello-world": {
+    "props": {
+      "Icon": "icon-caret#point-up"
+    }
+  },
+  "icon-caret#point-up": {
+    "props": {
+      "orientation": "up"
+    }
+  }
+}
+```
+
+To use slots correctly, follow these guidelines:
+
+- Slots are always exposed through `PascalCase` props. A prop named `Icon` is interpreted as a block, while a prop named `icon` is interpreted as a string by the `store` builder.
+
+  - ✅ Works: `"Icon": "icon-caret"`
+  - ❌ Doesn't work: `"icon": "icon-caret"`
+
+- Nested slots aren't supported. A slot prop can't be declared inside an object. In the following example, the `Slot` prop isn't picked up by the `store` builder:
+
+  ```json
+  {
+    "props": {
+      "somePropThatsAnObject": {
+        "Slot": "some-block"
+      }
+    }
+  }
+  ```
+
+> ℹ️ If you aren't using slots, we recommend using the `children` composition for greater control over the position of the child blocks.
 
 ## Step 2 - Using your new theme block
 
@@ -119,7 +219,7 @@ If the VTEX account you are working on has the Store Theme app for Store Framewo
 }
 ```
 
-4. Add the new theme block (`hello-world` in our example) to one of the templates. For this walkthrough, we will add the `hello-world` block to the store's home page, in the `store.home` template:
+4. Add the new theme block (`hello-world` in our example) to one of the templates. For this walkthrough, we will add the `hello-world` block to the store's homepage, in the `store.home` template:
 
 ```diff
 {
