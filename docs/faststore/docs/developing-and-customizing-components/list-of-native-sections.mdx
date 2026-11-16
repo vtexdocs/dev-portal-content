@@ -92,9 +92,9 @@ To keep rendering these attributes, set them explicitly on the suggestions conta
 </SearchProducts>
 ```
 
-After customizing the component, inspect the rendered HTML with your browser's DevTools and confirm that these `data-af-*` attributes are present on the suggestions container and on each product element whenever a search returns a `searchId`.
+After customizing the component, inspect the rendered HTML with your browser's Developer Tools and confirm that these `data-af-*` attributes are present on the suggestions container and on each product element whenever a search returns a `searchId`.
 
-> ⚠️ If any of these attributes is missing or isn't forwarded to the DOM — for example, because your custom component doesn't spread unknown props onto its root element — Activity Flow silently discards the corresponding event instead of logging it, with no error raised. If this happens, add the missing attributes back explicitly on the corresponding elements, as shown above, and check again in DevTools.
+> ⚠️ If any of these attributes is missing or isn't forwarded to the DOM, for example, because your custom component doesn't spread unknown props onto its root element, Activity Flow silently discards the corresponding event instead of logging it, with no error raised. If this happens, add the missing attributes back explicitly on the corresponding elements, as shown above, and check again in the browser's Developer Tools.
 
 For the full list of attributes, required values, and rendering examples (including the results gallery), see [Tracking search analytics events in headless web stores](https://developers.vtex.com/docs/guides/tracking-search-analytics-events-in-headless-web-stores).
 
