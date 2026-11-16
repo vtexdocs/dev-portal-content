@@ -3,7 +3,7 @@ title: "Developing custom storefront components"
 slug: "vtex-io-documentation-developing-custom-storefront-components"
 hidden: false
 createdAt: "2021-03-12t13:21:31.408Z"
-updatedAt: "2022-12-13T20:17:44.389Z"
+updatedAt: "2026-11-16T16:50:00.000Z"
 ---
 
 During the development process, it is normal to face critical questions regarding performance and internationalization, among other issues that directly affect the shopping experience.
@@ -74,7 +74,7 @@ export default Shelf
 
 Your component should have the flexibility to handle all possible scenarios once rendered.
 
-Be careful not to get hyperfocused on its appearance when fully rendered. It is important to consider all other possible statuses during the rendering process, such as:
+Be careful not to get hyperfocused on its appearance when fully rendered. Consider all other possible statuses during the rendering process, such as:
 
 - `Loading` - When the component is already visible to users but not fully rendered due to data loading.
 - `Error` - When the component cannot be rendered due to an error.
@@ -125,21 +125,21 @@ Instead of creating specific props to handle typical device scenarios, leverage 
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | ![best-practices-for-storefront-component-development-2](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-developing-custom-storefront-components-1.png) | ![best-practices-for-storefront-component-development-1](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-developing-custom-storefront-components-0.png) |
 
-> ℹ️ Combine enum props with responsive values, as shown below, and enhance code quality with highly optimized props!
+> ℹ️ Combine enum props with responsive values, as shown in the following image, and enhance code quality with highly optimized props.
 
 ![best-practices-for-storefront-component-development-3](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-developing-custom-storefront-components-2.png)
 
 ### Slots
 
-Slots allow you to render components through props instead of declaring an array of blocks in the Store Theme. Its simplicity removes the need for the `allowed` property in the [interface](https://developers.vtex.com/docs/guides/vtex-io-documentation-interface) file and lightens your code, increasing flexibility when developing a new storefront component.
+Slots allow you to render components through props instead of declaring an array of blocks in the Store Theme. Its simplicity removes the need for the `allowed` property in the [interface](https://developers.vtex.com/docs/guides/vtex-io-documentation-4-declaring-a-theme-block#understanding-interfaces) file and lightens your code, increasing flexibility when developing a new storefront component.
 
-You can learn more about Slots [here](https://developers.vtex.com/docs/guides/vtex-io-documentation-slots).
+Learn more in [Passing blocks as props with slots](https://developers.vtex.com/docs/guides/vtex-io-documentation-4-declaring-a-theme-block#passing-blocks-as-props-with-slots).
 
 | ✅ Use                                                                                                                                                                                             | ❌ Do not use                                                                                                                                                                                      |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | ![best-practices-for-storefront-component-development-5](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-developing-custom-storefront-components-4.png) | ![best-practices-for-storefront-component-development-4](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-developing-custom-storefront-components-3.png) |
 
-> ℹ️ If you are not using Slots, we recommend using the `children` [composition](https://developers.vtex.com/docs/guides/vtex-io-documentation-composition).
+> ℹ️ If you aren't using Slots, we recommend using the `children` [composition](https://developers.vtex.com/docs/guides/vtex-io-documentation-4-configuringtemplates#understand-the-block-composition).
 
 ## Performance
 
@@ -173,7 +173,7 @@ When [uploading the desired media assets to the VTEX File Server](https://develo
 
 Performance can be optimized during component rendering as well.
 
-When declaring the [interface](https://developers.vtex.com/docs/guides/vtex-io-documentation-interface) of a block, set the `Hydration` attribute and pass `on-view` as its value to only load and correctly render your component once users find it on the interface.
+When declaring the [interface](https://developers.vtex.com/docs/guides/vtex-io-documentation-4-declaring-a-theme-block#understanding-interfaces) of a block, set the `Hydration` attribute and pass `on-view` as its value to only load and correctly render your component once users find it on the interface.
 
 The [Footer](https://developers.vtex.com/docs/guides/vtex-store-footer) is a good example of a Store Framework native component that uses this attribute.
 
@@ -197,7 +197,7 @@ In terms of content internationalization, be cautious with string text translati
 
 Remember that internationalization can mean more than string text translations. Consider interpolation, pluralization, price, and percentage formatting, among other differences that may come your way when crossing borders.
 
-Read the [Translating the component](https://developers.vtex.com/docs/guides/vtex-io-documentation-8-translating-the-component) article and the [multi-language store documentation](https://developers.vtex.com/docs/guides/vtex-io-multi-language-stores) to understand how you can make these adjustments in your component!
+Read the [Translating the component](https://developers.vtex.com/docs/guides/vtex-io-documentation-8-translating-the-component) article and the [multi-language store documentation](https://developers.vtex.com/docs/guides/vtex-io-multi-language-stores) to understand how you can make these adjustments in your component.
 
 ## Styling
 
@@ -207,19 +207,10 @@ Use Tachyons instead of CSS Modules whenever possible when applying CSS to your 
 
 Get acquainted with the particularities of both tools to make the best decision for the component style without wasting development efforts.
 
-Also, do not forget to make CSS handles available to your component users if distribution at the VTEX App Store is a goal. Through CSS handles, future developers can style your storefront component based on their specific needs.
+Also, do not forget to make CSS handles available to your component users if distribution through the Extensions Hub is a goal. Through CSS handles, future developers can style your storefront component based on their specific needs.
 
 Read the documentation on [Defining styles](https://developers.vtex.com/docs/guides/vtex-io-documentation-5-defining-styles) to learn about Tachyons, CSS Modules, and CSS handles, as well as their use cases.
 
-Another good styling tip is to be careful with the breakpoints on the screen for different devices. Remember to set the component style for every possible scenario on the interface!
+Another good styling tip is to be careful with the breakpoints on the screen for different devices. Remember to set the component style for every possible scenario on the interface.
 
 > ℹ️ The [VTEX Styleguide](https://styleguide.vtex.com/) is a go-to document during style customization. Our team constantly updates the guide and provides valuable design guidelines.
-
-## Engagement
-
-Finally, the best practice you can adopt is keeping up with the VTEX IO platform! Engage with us:
-
-- Follow the [Developer Portal's release notes feed](https://developers.vtex.com/updates/release-notes).
-- Subscribe to the [VTEX Developer Newsletter](https://forms.gle/DHo3SS7ZaGCvAMow8).
-- Follow our [YouTube channel](https://www.youtube.com/@VTEXDevelopers) for developers.
-- Join the [Community](https://community.vtex.com/).

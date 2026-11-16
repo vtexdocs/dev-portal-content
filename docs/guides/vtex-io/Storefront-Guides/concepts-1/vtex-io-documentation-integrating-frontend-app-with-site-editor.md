@@ -3,7 +3,7 @@ title: "Integrating a frontend app with Site Editor"
 slug: "vtex-io-documentation-integrating-frontend-app-with-site-editor"
 hidden: false
 createdAt: "2024-08-22T15:11:18.590Z"
-updatedAt: ""
+updatedAt: "2026-11-16T16:50:00.000Z"
 excerpt: "Learn how to integrate a frontend app with Site Editor."
 seeAlso:
   - "/docs/guides/vtex-io-documentation-1-developing-storefront-apps-using-react-and-vtex-io"
@@ -49,7 +49,7 @@ Follow the steps below to update your Store Theme dependencies with the name and
 
 ### Step 2 - Using a component of your frontend app within a store page
 
-Consider your frontend app has a component named `CustomComponent`, which is declared in a block [interface](https://developers.vtex.com/docs/guides/vtex-io-documentation-interface) as `custom-component`:
+Consider your frontend app has a component named `CustomComponent`, which is declared in a block [interface](https://developers.vtex.com/docs/guides/vtex-io-documentation-4-declaring-a-theme-block#understanding-interfaces) as `custom-component`:
 
 ```js frontend-app/store/interfaces.json
 {

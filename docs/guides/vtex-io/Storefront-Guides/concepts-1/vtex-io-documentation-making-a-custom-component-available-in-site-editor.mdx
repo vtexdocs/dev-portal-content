@@ -3,7 +3,7 @@ title: "Making a custom component available in Site Editor"
 slug: "making-a-custom-component-available-in-site-editor"
 hidden: false
 createdAt: "2024-07-24T09:45:34.646Z"
-updatedAt: ""
+updatedAt: "2026-11-16T16:50:00.000Z"
 excerpt: "Learn how to allow component customization directly in Site Editor."
 seeAlso:
    - "/docs/guides/vtex-io-documentation-1-developing-storefront-apps-using-react-and-vtex-io"
@@ -143,7 +143,7 @@ export default CustomComponent;
 
 ### Step 7 - Updating the `interfaces.json` file
 
-Now, you need to reference your custom component in the [`interfaces.json` file](https://developers.vtex.com/docs/guides/vtex-io-documentation-interface) within the `/store` folder. This file establishes the relationship between a block and a React component, allowing the [store builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-store-builder) to build the store's frontend.
+Now, you need to reference your custom component in the [`interfaces.json` file](https://developers.vtex.com/docs/guides/vtex-io-documentation-4-declaring-a-theme-block#understanding-interfaces) within the `/store` folder. This file establishes the relationship between a block and a React component, allowing the [store builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-store-builder) to build the store's frontend.
 
 In the app repository where you are developing your custom component, open the `interfaces.json` file within the `/store` folder. Declare the schema definitions for your component as follows:
 

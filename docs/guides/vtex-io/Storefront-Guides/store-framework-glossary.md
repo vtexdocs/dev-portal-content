@@ -3,7 +3,7 @@ title: "Glossary"
 slug: "store-framework-glossary"
 hidden: false
 createdAt: "2025-04-17T18:11:56.877Z"
-updatedAt: ""
+updatedAt: "2026-11-16T16:50:00.000Z"
 category: "Storefront Development"
 ---
 
@@ -19,11 +19,11 @@ Tools and practices for examining data to gain insights or track performance. In
 
 ### Bindings
 
-Process of linking a website, a store name, and a [trade policy](#trade-policy) to create a unique identifier for each store, allowing multiple storefronts to operate within the same VTEX account. Learn more in [What is binding?](https://help.vtex.com/en/tutorial/what-is-binding--4NcN3NJd0IeYccgWCI8O2W).
+Process of linking a website, a store name, and a [sales channel](#sales-channel) to create a unique identifier for each store, allowing multiple storefronts to operate within the same VTEX account. Learn more in [What is binding?](https://help.vtex.com/en/tutorial/what-is-binding--4NcN3NJd0IeYccgWCI8O2W).
 
 ### Blocks
 
-Fundamental building units of a storefront’s layout used to structure and customize pages in [Store Framework](#store-framework). They are declared in the `blocks` section of the [Store Theme](#store-theme)’s app JSON files, allowing for a modular and reusable approach to storefront development. Learn more in [Blocks](https://developers.vtex.com/docs/guides/vtex-io-documentation-composition#blocks).
+Fundamental building units of a storefront’s layout used to structure and customize pages in [Store Framework](#store-framework). They are declared in the `blocks` section of the [Store Theme](#store-theme)’s app JSON files, allowing for a modular and reusable approach to storefront development. Learn more in [Blocks](https://developers.vtex.com/docs/guides/vtex-io-documentation-4-configuringtemplates#learn-about-the-json-block-concept).
 
 ### Builders
 
@@ -35,7 +35,7 @@ Modules defined in the `manifest.json` file that specify the functionality of an
 
 ### Children
 
-A [composition](#composition) type that allows flexible ordering of child [blocks](#blocks). Child blocks are listed in a `children` array, and their sequence determines their positioning on the page, enabling dynamic layout control for store themes. Learn more in [Children](https://developers.vtex.com/docs/guides/vtex-io-documentation-composition#children).
+A [composition](#composition) type that allows flexible ordering of child [blocks](#blocks). Child blocks are listed in a `children` array, and their sequence determines their positioning on the page, enabling dynamic layout control for store themes. Learn more in [Children](https://developers.vtex.com/docs/guides/vtex-io-documentation-4-configuringtemplates#understand-the-block-composition).
 
 ### Content Management System (CMS)
 
@@ -47,7 +47,7 @@ Building [blocks](#blocks) used to create storefronts and admin apps. These bloc
 
 ### Composition
 
-A property in the `interfaces.json` file that defines how [React](https://react.dev/) components are organized and structured within a parent-child hierarchy in a [Store Theme](#store-theme). There are three types of composition: [blocks](#blocks), [children](#children), and [slots](#slots). Learn more in [Composition](https://developers.vtex.com/docs/guides/vtex-io-documentation-composition).
+A property in the `interfaces.json` file that defines how [React](https://react.dev/) components are organized and structured within a parent-child hierarchy in a [Store Theme](#store-theme). There are three types of composition: [blocks](#blocks), [children](#children), and [slots](#slots). Learn more in [Composition](https://developers.vtex.com/docs/guides/vtex-io-documentation-4-configuringtemplates#understand-the-block-composition).
 
 ### CSS Handles
 
@@ -67,7 +67,7 @@ A property (#properties-props) in the `manifest.json` file that specifies other 
 
 ### Interfaces
 
-Rules defined in the `interfaces.json` file that link a [block](#blocks) to a [component](#components), enabling storefront development. These rules define the block's behavior, available [properties](#properties-props), and methods used during rendering. Learn more in [Interfaces](https://developers.vtex.com/docs/guides/vtex-io-documentation-interface).
+Rules defined in the `interfaces.json` file that link a [block](#blocks) to a [component](#components), enabling storefront development. These rules define the block's behavior, available [properties](#properties-props), and methods used during rendering. Learn more in [Interfaces](https://developers.vtex.com/docs/guides/vtex-io-documentation-4-declaring-a-theme-block#understanding-interfaces).
 
 ---
 
@@ -95,7 +95,7 @@ Declared in the `manifest.json` file under the `peerDependencies` field, these s
 
 ### Properties (props)
 
-Key-value pairs used to define the behavior and appearance of [components](#components) in the [Store Framework](#store-framework). They provide flexibility and customization, allowing developers to configure various aspects of a component, such as layout, functionality, and styling, within the storefront. Learn more in [Properties](https://developers.vtex.com/docs/guides/vtex-io-documentation-properties).
+Key-value pairs used to define the behavior and appearance of [components](#components) in the [Store Framework](#store-framework). They provide flexibility and customization, allowing developers to configure various aspects of a component, such as layout, functionality, and styling, within the storefront. Learn more in [Properties](https://developers.vtex.com/docs/guides/vtex-io-documentation-4-configuringtemplates#get-to-know-the-property-prop-concept).
 
 ---
 
@@ -108,6 +108,10 @@ Routes are configurations that map URL patterns and HTTP methods to specific act
 ---
 
 ## S
+
+### Sales channel
+
+A set of settings on the VTEX platform that define catalog, pricing, promotions, logistics, and payments for specific sales strategies. Sales channels are used to segment sales conditions across different channels (for example, B2B, marketplaces), adapting store navigation and offerings based on the user type. Learn more in [Sales channes](https://help.vtex.com/docs/tutorials/how-trade-policies-work).
 
 ### Search Engine Optimization (SEO)
 
@@ -123,7 +127,7 @@ File listing all pages of a website, typically used for [SEO](#search-engine-opt
 
 ### Slots
 
-A [composition](#composition) type that allows developers to pass [components](#components) as [props](#properties-props) directly, offering an alternative to [blocks](#blocks) composition in [Store Framework](#store-framework). Learn more in [Slots](https://developers.vtex.com/docs/guides/vtex-io-documentation-slots).
+A [composition](#composition) type that allows developers to pass [components](#components) as [props](#properties-props) directly, offering an alternative to [blocks](#blocks) composition in [Store Framework](#store-framework). Learn more in [Slots](https://developers.vtex.com/docs/guides/vtex-io-documentation-4-declaring-a-theme-block#passing-blocks-as-props-with-slots).
 
 ### Store Framework
 
@@ -132,14 +136,6 @@ VTEX framework for creating ecommerce storefronts, leveraging [React](https://re
 ### Store Theme
 
 A [VTEX IO app](#vtex-io-app) that defines a storefront’s appearance and functionality. Learn more in [Store Theme](https://developers.vtex.com/docs/guides/vtex-io-documentation-store-theme).
-
----
-
-## T
-
-### Trade policy
-
-A set of configurations on the VTEX platform that define catalog, pricing, promotions, logistics, and payments for specific sales strategies. Trade policies are used to segment sales conditions across different channels (for example, B2B, marketplaces), adapting store navigation and offerings based on the user type. Learn more in [How trade policies work](https://help.vtex.com/en/tutorial/how-trade-policies-work--6Xef8PZiFm40kg2STrMkMV).
 
 ---
 
