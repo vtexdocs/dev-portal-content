@@ -77,4 +77,4 @@ If the `af.js` file doesn't show in the Network tab, make sure that the snippet 
 
 ## Next steps
 
-We recommend tracking search events on your search screens with Activity Flow, so they feed the new [Search Analytics](https://help.vtex.com/docs/tutorials/search-analytics-beta) page. To get started, see [Tracking search analytics events in headless web stores](https://developers.vtex.com/docs/guides/tracking-search-analytics-events-in-headless-web-stores).
+We recommend tracking search events on your search screens with Activity Flow, so they feed the new [Search Analytics](https://help.vtex.com/docs/tutorials/search-analytics) page. To get started, see [Tracking search analytics events in headless web stores](https://developers.vtex.com/docs/guides/tracking-search-analytics-events-in-headless-web-stores).
