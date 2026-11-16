@@ -28,7 +28,7 @@ Stores that already annotate fields with these directives see the annotations ta
 
 Stores that sell services as assembly options often hide the service SKUs from the storefront. Before this fix, when Intelligent Search didn't return one of these SKUs, cart validation failed with `Search API didn't find the following SKUs`, and the next validation could remove the product and its service from Checkout.
 
-Cart validation now builds an assembly option child that Search doesn't return from its line in the Checkout order form. Other missing SKUs still fail the mutation, so a Search outage is not hidden. Stores with hidden assembly option SKUs get this behavior after upgrading, and no configuration change is needed. See [Keeping split cart lines](https://developers.vtex.com/docs/guides/faststore/developer-tools-keeping-split-cart-lines#step-2---test-the-cart-behavior-locally) for how to test assembly option carts.
+Cart validation now builds an assembly option child that Search doesn't return from its line in the Checkout order form. Other missing SKUs still fail the mutation, so a Search outage is not hidden. Stores with hidden assembly option SKUs exhibit this behavior after upgrading, and no configuration change is needed. See [Keeping split cart lines](https://developers.vtex.com/docs/guides/faststore/developer-tools-keeping-split-cart-lines#step-2---test-the-cart-behavior-locally) for how to test assembly option carts.
 
 ### Shipping data stops updating on every cart validation (PR: [#3554](https://github.com/vtex/faststore/pull/3554))
 
