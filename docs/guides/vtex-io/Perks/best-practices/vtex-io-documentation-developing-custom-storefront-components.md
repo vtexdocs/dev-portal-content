@@ -2,8 +2,9 @@
 title: "Developing custom storefront components"
 slug: "vtex-io-documentation-developing-custom-storefront-components"
 hidden: false
-createdAt: "2021-03-12t13:21:31.408Z"
+createdAt: "2021-03-12T13:21:31.408Z"
 updatedAt: "2026-11-16T16:50:00.000Z"
+excerpt: "Best practices for tooling, flexibility, performance, accessibility, and styling when building custom storefront components."
 ---
 
 During the development process, it is normal to face critical questions regarding performance and internationalization, among other issues that directly affect the shopping experience.

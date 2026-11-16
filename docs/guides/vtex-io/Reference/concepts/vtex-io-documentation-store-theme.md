@@ -4,6 +4,7 @@ slug: "vtex-io-documentation-store-theme"
 hidden: false
 createdAt: "2024-07-24T13:48:10.752Z"
 updatedAt: "2026-11-16T16:50:00.000Z"
+excerpt: "Learn what a Store Theme is and how its project structure and builders shape a Store Framework storefront."
 category: "Storefront development"
 seeAlso:
   - "/docs/guides/vtex-io-documentation-manifest"

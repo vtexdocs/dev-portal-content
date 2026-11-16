@@ -4,6 +4,7 @@ slug: "store-framework-glossary"
 hidden: false
 createdAt: "2025-04-17T18:11:56.877Z"
 updatedAt: "2026-11-16T16:50:00.000Z"
+excerpt: "Definitions of key Store Framework and VTEX IO terms used in storefront development."
 category: "Storefront Development"
 ---
 
