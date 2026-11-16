@@ -22,7 +22,7 @@ The Activity Flow click, view, and impression listeners accept a metadata map wi
 
 This guide assumes the Activity Flow SDK is already installed in your app. If you haven't set it up yet, see [Installing Activity Flow in Flutter apps](https://developers.vtex.com/docs/guides/installing-activity-flow-in-flutter-apps) or [Installing Activity Flow in React Native apps](https://developers.vtex.com/docs/guides/installing-activity-flow-in-react-native-apps).
 
-> ⚠️ Events tracked with Activity Flow are displayed only on the new [Search Analytics](https://help.vtex.com/docs/tutorials/search-analytics-beta) page in the VTEX Admin, which isn't enabled automatically. Implementing the tracking described in this guide doesn't activate the page, and these events don't appear on the previous version of the Intelligent Search analytics page. To enable the new page for your store, open a ticket with [VTEX Support](https://support.vtex.com/hc/en-us).
+> ⚠️ Events tracked with Activity Flow are displayed only on the new [Search Analytics](https://help.vtex.com/docs/tutorials/search-analytics-beta) page in the VTEX Admin, which isn't enabled automatically. Implementing the tracking described in this guide doesn't activate the page, and these events don't appear on the [previous version of the Intelligent Search analytics page](https://help.vtex.com/docs/tutorials/intelligent-search-analytics). To enable the new page for your store, open a ticket with [VTEX Support](https://support.vtex.com/hc/en-us).
 
 ## Understanding the tracking parameters
 

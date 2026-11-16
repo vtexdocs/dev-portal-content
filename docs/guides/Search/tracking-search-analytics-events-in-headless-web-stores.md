@@ -24,7 +24,7 @@ This guide assumes Activity Flow is already installed in your headless web store
 
 > ℹ️ Stores built with [Store Framework](https://developers.vtex.com/docs/guides/store-framework) or [FastStore](https://developers.vtex.com/docs/guides/faststore) that use native search components already send these events automatically, so you don't need to follow this guide. If your store replaces the native search results or autocomplete components with custom ones, add the tracking attributes described here to those components.
 
-> ⚠️ Events tracked with Activity Flow are displayed only on the new [Search Analytics](https://help.vtex.com/docs/tutorials/search-analytics-beta) page in the VTEX Admin, which isn't enabled automatically. Implementing the tracking described in this guide doesn't activate the page, and these events don't appear on the previous version of the Intelligent Search analytics page. To enable the new page for your store, open a ticket with [VTEX Support](https://support.vtex.com/hc/en-us).
+> ⚠️ Events tracked with Activity Flow are displayed only on the new [Search Analytics](https://help.vtex.com/docs/tutorials/search-analytics-beta) page in the VTEX Admin, which isn't enabled automatically. Implementing the tracking described in this guide doesn't activate the page, and these events don't appear on the [previous version of the Intelligent Search analytics page](https://help.vtex.com/docs/tutorials/intelligent-search-analytics). To enable the new page for your store, open a ticket with [VTEX Support](https://support.vtex.com/hc/en-us).
 
 > ℹ️ Events sent from `myvtex.com` domains aren't considered in Search Analytics metrics. Use your store's production domain to validate the data on the Search Analytics page.
 
