@@ -1,10 +1,10 @@
 ---
 title: "FastStore Release Notes — Version 4.11.3"
-slug: "2026-11-18-faststore-release-notes-4-11-3"
+slug: "2026-11-17-faststore-release-notes-4-11-3"
 type: improved
 excerpt: "FastStore 4.11.3 applies API directives to store fields, adds the preserveCartLines flag, and fixes cart validation, CMS requests, and My Account templates"
-createdAt: "2026-11-18T00:00:00.000Z"
-updatedAt: "2026-11-18T00:00:00.000Z"
+createdAt: "2026-11-17T00:00:00.000Z"
+updatedAt: "2026-11-17T00:00:00.000Z"
 hidden: true
 tags:
   - FastStore
