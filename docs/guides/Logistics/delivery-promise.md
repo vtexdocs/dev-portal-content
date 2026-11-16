@@ -22,7 +22,7 @@ The content is organized as follows:
 
 ## Available features
 
-When the customer provides their address, an initial selection of products is made, displaying only products that can be delivered to that location or picked up at pickup points within a radius of up to 50 km from the provided address — a limit determined by Checkout.
+When the customer provides their address, an initial selection of products is made, displaying only products that can be delivered to that location or picked up at pickup points within the Checkout pickup radius. This radius is configurable by the merchant up to a maximum of 50 km (default: 50 km).
 
 - Products available for the desired postal code.
 - Product delivery deadlines.
@@ -35,8 +35,8 @@ At this stage, **Delivery Promise** allows your store's customers to filter the 
 | Filter | Description | Availability |
 | ----------- | ----------- | ------------- |
 | **Deliver to** | Products available for delivery to the specified address. | Store Framework and FastStore (only on PLPs and search results) |
-| **Pickup** | Products available for pickup at locations within up to 50 km of the specified address. | Store Framework and FastStore (only on PLPs and search results) |
-| **Pickup nearby** | Products available for pickup at locations within up to 10 km of the specified address. | Store Framework and FastStore (only on PLPs and search results) |
+| **Pickup** | Products available for pickup at locations within the same Checkout pickup radius, which is configurable by the merchant up to a maximum of 50 km (default: 50 km). | Store Framework and FastStore (only on PLPs and search results) |
+| **Pickup nearby** | Products available for pickup at locations within a fixed radius of up to 10 km of the specified address. This filter does not use the Checkout pickup radius. | Store Framework and FastStore (only on PLPs and search results) |
 | **Pickup at {{name}}** | Products available for pickup at a specific pickup point. | Store Framework and FastStore (only on PLPs and search results) |
 | **Global filters** | All products available in the store’s navigation. | FastStore |
 
