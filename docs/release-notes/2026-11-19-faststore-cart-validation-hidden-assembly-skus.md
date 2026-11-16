@@ -10,13 +10,13 @@ tags:
   - FastStore
 ---
 
-FastStore now keeps the cart working when it contains an assembly option, such as installation or haul away, whose SKU is hidden from the storefront.
+FastStore now keeps the cart working when it contains an [assembly option](https://help.vtex.com/en/docs/tutorials/assembly-options), such as installation or haul away, whose SKU is hidden from the storefront.
 
 ## What has changed?
 
 Assembly option SKUs often have **Display on website** turned off, so Intelligent Search doesn't return them, even with `show-invisible-items=true`. In this scenario, the `validateCart` mutation failed with the error `Search API did not found the following skus`. On the following validation, the cart in the browser could replace the one in Checkout, removing both the product and the service.
 
-FastStore now builds the assembly option line from the Order Form data when Search doesn't return its SKU. The product and the service remain in the minicart after a reload, and removing the product also removes its service. Any other missing SKU still fails validation, so Search outages aren't hidden.
+FastStore now builds the assembly option line from the [Order Form data](https://developers.vtex.com/docs/guides/orderform-fields) when Search doesn't return its SKU. The product and the service remain in the minicart after a reload, and removing the product also removes its service. Any other missing SKU still fails validation, so Search outages aren't hidden.
 
 ## Why did we make this change?
 
