@@ -1,7 +1,7 @@
 ---
 title: "Properties"
 slug: "vtex-io-documentation-properties"
-hidden: false
+hidden: true
 createdAt: "2020-11-23T13:33:26.418Z"
 updatedAt: "2022-12-13T20:17:44.194Z"
 excerpt: "Learn what properties (props) are in VTEX IO, how they work, and the data types you can use to customize blocks in the Store Framework."
