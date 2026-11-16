@@ -172,7 +172,7 @@ When [uploading the desired media assets to the VTEX File Server](https://develo
 
 ### Rendering
 
-Performance can be optimized during component rendering as well.
+You can optimize performance during component rendering as well.
 
 When declaring the [interface](https://developers.vtex.com/docs/guides/vtex-io-documentation-4-declaring-a-theme-block#understanding-interfaces) of a block, set the `Hydration` attribute and pass `on-view` as its value to only load and correctly render your component once users find it on the interface.
 
