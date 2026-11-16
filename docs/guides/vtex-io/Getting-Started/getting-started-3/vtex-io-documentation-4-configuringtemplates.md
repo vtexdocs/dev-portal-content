@@ -224,7 +224,7 @@ This means that your default store homepage will comprise the components defined
 
 To build more complex components, the `home.jsonc` file includes each block’s declaration and configuration, using the block's props and, if necessary, other blocks.
 
-> ⚠️ More than simply declaring a block in the block list template, you must also define its behavior when rendered as a component. To do this, use the block's props, as shown in the [Clarifying block naming and properties](#step-3-clarifying-block-naming-and-properties) section, and include other child blocks to configure it, as detailed in [Defining blocks composition](#step-4-defining-blocks-composition).
+> ⚠️ More than simply declaring a block in the block list template, you must also define its behavior when rendered as a component. To do this, use the block's props, as shown in the [Clarifying block naming and properties](#step-3-clarifying-block-naming-and-properties) section, and include other child blocks to configure it, as detailed in [Defining block composition](#step-4-defining-blocks-composition).
 
 ### Step 3 - Clarifying block naming and properties
 
