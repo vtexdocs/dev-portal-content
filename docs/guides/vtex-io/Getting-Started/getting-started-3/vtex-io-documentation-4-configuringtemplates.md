@@ -228,7 +228,7 @@ To build more complex components, the `home.jsonc` file includes each block’s 
 
 ### Step 3 - Clarifying block naming and properties
 
-Still in the `home.jsonc` file, use `ctrl+f` and search for the `rich-text#question` block. This block renders a component that displays markdown text to users.
+Still in the `home.jsonc` file, use `ctrl+f` and search for the `rich-text#question` block. This block renders a component that displays Markdown text to users.
 
 ```json
 "rich-text#question": {
@@ -259,7 +259,7 @@ The value of a prop can be one of the following types:
 
 ### Step 4 - Defining blocks composition
 
-Still in the `home.jsonc`, search for the`shelf#home` block.
+Still in the `home.jsonc` file, search for the `shelf#home` block.
 
 ```json
 "shelf#home": {
@@ -267,7 +267,7 @@ Still in the `home.jsonc`, search for the`shelf#home` block.
 },
 ```
 
-Note that it declares another block to your `blocks` list, which in turn declares other blocks below in a list called `children`:
+Note that it declares another block in your `blocks` list, which in turn declares other blocks below in a list called `children`:
 
 ```json
 "product-summary.shelf": {
