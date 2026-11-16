@@ -112,7 +112,7 @@ Routes are configurations that map URL patterns and HTTP methods to specific act
 
 ### Sales channel
 
-A set of settings on the VTEX platform that define catalog, pricing, promotions, logistics, and payments for specific sales strategies. Sales channels are used to segment sales conditions across different channels (for example, B2B, marketplaces), adapting store navigation and offerings based on the user type. Learn more in [Sales channes](https://help.vtex.com/docs/tutorials/how-trade-policies-work).
+A set of settings on the VTEX platform that define catalog, pricing, promotions, logistics, and payments for specific sales strategies. Sales channels are used to segment sales conditions across different channels (for example, B2B, marketplaces), adapting store navigation and offerings based on the user type. Learn more in [Sales channels](https://help.vtex.com/docs/tutorials/how-trade-policies-work).
 
 ### Search Engine Optimization (SEO)
 
