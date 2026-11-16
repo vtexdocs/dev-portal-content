@@ -34,7 +34,7 @@ Cart validation now builds an assembly option child that Search doesn't return f
 
 When the address in the order form had no `geoCoordinates`, cart validation resent `shippingData` on every call. Each call increased the `CheckoutOrderFormOwnership` cookie, which could cause HTTP `431` errors. Address changes are still detected by postal code, so an update is sent only when the postal code changes.
 
-Stores that save addresses without coordinates, for example through a headless checkout, no longer see the cookie grow during cart updates. No action is required beyond upgrading.
+Stores that save addresses without coordinates, for example, through a headless checkout, no longer see the cookie grow during cart updates. No action is required beyond upgrading.
 
 ### Fewer CMS requests for PLP and PDP templates (PR: [#3551](https://github.com/vtex/faststore/pull/3551))
 
