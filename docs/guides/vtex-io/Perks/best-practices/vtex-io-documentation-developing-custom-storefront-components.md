@@ -132,7 +132,7 @@ Instead of creating specific props to handle typical device scenarios, leverage 
 
 ### Slots
 
-Slots allow you to render components through props instead of declaring an array of blocks in the Store Theme. Its simplicity removes the need for the `allowed` property in the [interface](https://developers.vtex.com/docs/guides/vtex-io-documentation-4-declaring-a-theme-block#understanding-interfaces) file and lightens your code, increasing flexibility when developing a new storefront component.
+Slots allow you to render components through props instead of declaring an array of blocks in the Store Theme. Their simplicity removes the need for the `allowed` property in the [interface](https://developers.vtex.com/docs/guides/vtex-io-documentation-4-declaring-a-theme-block#understanding-interfaces) file and lightens your code, increasing flexibility when developing a new storefront component.
 
 Learn more in [Passing blocks as props with slots](https://developers.vtex.com/docs/guides/vtex-io-documentation-4-declaring-a-theme-block#passing-blocks-as-props-with-slots).
 
