@@ -257,7 +257,7 @@ The value of a prop can be one of the following types:
 
 > ℹ️ All the props available to configure a block can be found in the documentation of its exporting app or in the block's own documentation (if applicable).
 
-### Step 4 - Defining blocks composition
+### Step 4 - Defining block composition
 
 Still in the `home.jsonc` file, search for the `shelf#home` block.
 
