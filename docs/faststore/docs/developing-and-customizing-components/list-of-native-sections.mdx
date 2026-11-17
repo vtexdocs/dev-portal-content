@@ -10,7 +10,7 @@ For example, the [Hero](https://developers.vtex.com/docs/guides/faststore/organi
 
 ## Considerations while customizing default components
 
-Overriding certain FastStore components can affect the store’s behavior. For example, customizing `__experimentalProductCard` and `SearchInput` can impact your store's analytics tracking. These components collect data for the [Intelligent Search Analytics](https://help.vtex.com/en/tutorial/analytics--6qRMAHDL9hvv3oE0bh8mA1), so it's crucial to maintain their tracking functionality when making modifications.
+Overriding certain FastStore components can affect the store’s behavior. For example, customizing `__experimentalProductCard` and `SearchInput` can impact your store's analytics tracking. These components collect data for the [Intelligent Search Analytics](https://developers.vtex.com/en/docs/tutorials/search-analytics), so it's crucial to maintain their tracking functionality when making modifications.
 
 See below how customizing certain components can affect your store.
 
@@ -27,7 +27,7 @@ For more information on how to use the `useProductLink_unstable` hook and how to
 
 **Impacted section:** [`Navbar`](https://developers.vtex.com/docs/guides/faststore/building-sections-list-of-native-sections#navbar)
 
-Customizing `SearchInput` (and its child `SearchDropdown`, which renders the autocomplete suggestions) can affect two independent tracking mechanisms: [Google Analytics 4 (GA4)](https://developers.google.com/analytics/devguides/collection/ga4) events and [Intelligent Search Analytics](https://help.vtex.com/en/tutorial/analytics--6qRMAHDL9hvv3oE0bh8mA1), powered by [Activity Flow](https://developers.vtex.com/docs/guides/activity-flow). Make sure to preserve both after overriding the component.
+Customizing `SearchInput` (and its child `SearchDropdown`, which renders the autocomplete suggestions) can affect two independent tracking mechanisms: [Google Analytics 4 (GA4)](https://developers.google.com/analytics/devguides/collection/ga4) events and [Intelligent Search Analytics](https://developers.vtex.com/en/docs/tutorials/search-analytics), powered by [Activity Flow](https://developers.vtex.com/docs/guides/activity-flow). Make sure to preserve both after overriding the component.
 
 #### Keeping the GA4 `search` event
 
@@ -62,6 +62,8 @@ To keep sending this event after customizing the component, follow the steps bel
   ```
 
 #### Keeping Intelligent Search Analytics tracking
+
+> ⚠️ The content below only applies if your store uses [Intelligent Search Analytics](https://developers.vtex.com/en/docs/tutorials/search-analytics) powered by Activity Flow.
 
 Intelligent Search Analytics tracking relies on Activity Flow reading `data-af-*` attributes from the rendered DOM, not on a function call. Make sure your custom component preserves the following attributes FastStore passes to the autocomplete markup:
 
