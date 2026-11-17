@@ -71,7 +71,10 @@ Example:
     - Associated sales channels and currency: Sales Channel 2, Currency: Dollar
 
     - Associated locale: en-US
-    > ⚠️ Changes to bindings only take effect after the next store build. Also, even if a binding is configured with multiple locales, FastStore only considers the default locale.
+
+A binding can have more than one URL saved for the same locale. All of them resolve correctly when accessed directly, but the locale switcher always redirects shoppers to the URL saved as **canonical** for that locale. To control which URL the switcher uses, set the desired URL as canonical when configuring bindings with VTEX Support.
+
+Changes to bindings only take effect after the next store build. Also, even if a binding is configured with multiple locales, FastStore only considers the default locale.
 
 > ⚠️ If your bindings are configured using the `myvtex.com` domain (common in test accounts), the locale switcher won't work as expected. See [Testing with myvtex.com bindings](#testing-with-myvtexcom-bindings) for more information.
 
