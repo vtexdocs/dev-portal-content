@@ -60,4 +60,4 @@ The flag is off by default, so stores that don't set it keep the current behavio
 
 The CLI templates that generate custom [My Account](https://developers.vtex.com/docs/guides/faststore/my-account-overview) pages passed `isRepresentative`, but `@faststore/core` renamed that prop to `isB2BBuyer`. Pages generated from FastStore `4.10.2` through `4.11.0` no longer matched the core types, so `next build` failed in stores with custom account pages.
 
-Upgrading to `v4.11.3` generates pages with `isB2BBuyer`. If your store has a custom My Account page based on those templates, update the prop from `isRepresentative` to `isB2BBuyer`.
+> ⚠️ Upgrading to `v4.11.3` generates pages with `isB2BBuyer`. If your store has a custom My Account page based on those templates, update the prop from `isRepresentative` to `isB2BBuyer`.
