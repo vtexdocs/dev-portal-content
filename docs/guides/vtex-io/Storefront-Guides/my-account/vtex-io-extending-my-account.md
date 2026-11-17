@@ -70,7 +70,19 @@ This guide shows how to extend My Account by creating your own VTEX IO app. By t
 
 ### Step 3 - Creating the `my-account-page` component
 
-Create the `MyAppPage.js` file in the root of the `react` folder with the following content:
+First, create the components that your pages render. For this example, create `react/components/UserPoints.js` and `react/components/UserSupport.js` with a minimal placeholder, such as:
+
+```js
+import React from 'react'
+
+const UserPoints = () => <div>Your points</div>
+
+export default UserPoints
+```
+
+Use the same structure for `UserSupport.js`, changing the component name and the text.
+
+Then, create the `MyAppPage.js` file in the root of the `react` folder with the following content:
 
 ```js
 import React, { Fragment } from 'react'
@@ -123,22 +135,35 @@ MyAppLink.propTypes = {
 export default injectIntl(MyAppLink)
 ```
 
-### Step 5 - (Optional) Defining the default page of My Account
+The component uses the `userPoints.link` and `userSupport.link` messages as link names. Add them to the files in the `messages` folder of your app, for example, in `messages/en.json`:
 
-You can set your new page as the page that My Account renders when customers open the URL `/account/`. To do so, follow these steps:
+```json
+{
+  "userPoints.link": "My points",
+  "userSupport.link": "Support"
+}
+```
 
-1. In the VTEX Admin, open the Site Editor (`/admin/cms/site-editor`).
-2. Navigate to the My Account page.
-3. Click the **My Account - Home** extension point in the Site Editor menu.
-4. In the **My Account's default path** field, enter the path of the new page.
+Add the same keys, with translated values, to the other files in the folder, such as `es.json` and `pt.json`. Otherwise, the builder warns that the keys are missing in those languages.
 
-For example, to open the `UserPoints` page from the previous steps, enter `/points`.
+### Step 5 - (Optional) Displaying personal information
 
-### Step 6 - (Optional) Displaying personal information
+The Profile page has an extension point, `profile-display-container`, before the `edit` button. It accepts `profile-display` blocks and is intended for stores that collect custom information from their customers, such as hair color or pet name. This extension point allows your component to display such information without breaking the page layout.
 
-The Profile page has another extension point before the `edit` button. It's intended for stores that collect custom information from their customers, such as hair color or pet name. This extension point allows your component to display such information without breaking the page layout.
+1. Create the `react/BeautyData.js` file with the example below, which ends with `export default BeautyData`.
+2. Add the interface to `store/interfaces.json`:
 
-Your component must not render anything. Call the `render` prop with the appropriate information, and My Account displays it together with the customer's default information. Pass in an array of objects containing the `label` and `value` props:
+   ```json
+   "profile-display.beauty-data": { "component": "BeautyData" }
+   ```
+
+3. Add the plugin to `store/plugins.json`:
+
+   ```json
+   "profile-display-container > profile-display": "profile-display.beauty-data"
+   ```
+
+Your component doesn't render its own markup. Instead, it calls the `render` prop with the appropriate information, and My Account displays it together with the customer's default information. Pass in an array of objects containing the `label` and `value` props:
 
 - `label`: Name of the field you want to display, such as `Hair color`.
 - `value`: Value for that field, such as `brown`.
@@ -160,11 +185,27 @@ const BeautyData = ({ render }) => {
     },
   ])
 }
+
+export default BeautyData
 ```
 
-### Step 7 - (Optional) Editing personal information
+### Step 6 - (Optional) Editing personal information
 
-If you display tailored information inside your customer's profile, you can also let them edit it. The `my-account/profile/input` extension point lets you do that. It places your content inside the profile editing form, before the `Toggle business fields` button, and uses the functions you provide to validate and submit that content.
+If you display tailored information inside your customer's profile, you can also let them edit it. The `profile-input-container` extension point lets you do that. It accepts `profile-input` blocks, places your content inside the profile editing form, before the `Toggle business fields` button, and uses the functions you provide to validate and submit that content.
+
+1. Add `vtex.styleguide` under the `dependencies` field of your `manifest.json` file, since the example below uses its components.
+2. Create the `react/FavColor.js` file with the example below.
+3. Add the interface to `store/interfaces.json`:
+
+   ```json
+   "profile-input.fav-color": { "component": "FavColor" }
+   ```
+
+4. Add the plugin to `store/plugins.json`:
+
+   ```json
+   "profile-input-container > profile-input": "profile-input.fav-color"
+   ```
 
 Your component can render form components, text, or any other content. We recommend following VTEX Styleguide or your own design guidelines to keep the form style consistent. Your component receives two props, `registerValidator` and `registerSubmitter`, which you use to add your validation and submission functions to the main component. Add them in `componentDidMount`.
 
@@ -232,13 +273,27 @@ class FavColor extends Component {
 export default FavColor
 ```
 
-### Step 8 - Linking your app and checking the result
+### Step 7 - Linking your app and checking the result
 
 1. In a terminal, navigate to the root folder of your app.
 2. Run `vtex link` in your development workspace.
 3. Open `https://{workspace}--{accountName}.myvtex.com/account/#/points`. Replace `{workspace}` with the name of your development workspace and `{accountName}` with your VTEX account name.
 
 The My Account menu shows the new links, and the page renders the component you defined for the `/points` path.
+
+### Step 8 - (Optional) Defining the default page of My Account
+
+You can set your new page as the page that My Account renders when customers open the URL `/account/`. This is a Site Editor setting that points to a page created by your app, so configure it only after the app is linked in Step 7.
+
+> ⚠️ The setting is specific to each workspace. Configure it in the same development workspace where you linked your app, so you can test it there. It doesn't carry over to `master`, so after you install your app in Step 9, repeat the steps below in the `master` workspace to apply it to your live store.
+
+1. In the VTEX Admin, go to **Storefront > Site Editor**.
+2. Navigate to the My Account page.
+3. Click the **My Account - Home** extension point in the Site Editor menu.
+4. In the **My Account's default path** field, enter the path of the new page.
+5. Save your changes.
+
+For example, to open the `UserPoints` page from the previous steps, enter `/points`.
 
 ### Step 9 - Making your app available
 
