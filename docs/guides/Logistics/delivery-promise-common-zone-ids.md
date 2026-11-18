@@ -1,6 +1,6 @@
 ---
 title: "Delivery Promise common zone IDs"
-slug: "delivery-promise-common-zones"
+slug: "delivery-promise-common-zone-ids"
 createdAt: "2026-11-18T00:00:00.000Z"
 updatedAt: "2026-11-18T00:00:00.000Z"
 excerpt: "Find the common zone IDs accepted by the Delivery Promise Notification API."
