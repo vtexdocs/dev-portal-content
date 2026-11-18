@@ -104,10 +104,6 @@ export default MyAppPage
 
 This example creates two pages, `/account/#/support` and `/account/#/points`, which render the `UserSupport` and `UserPoints` components, respectively.
 
-The following image shows the `/points` page rendering the `UserPoints` component:
-
-![your-points](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@EDU-2717-my-account/images/your-points.png)
-
 ### Step 4 - Creating the `my-account-link` component
 
 Create the `MyAppLink.js` file in the root of the `react` folder. This component receives a prop called `render`. Call it with an array of objects containing the `name` and `path` properties. Each object creates a link.
@@ -150,6 +146,10 @@ The component uses the `userPoints.link` and `userSupport.link` messages as link
 
 Add the same keys, with translated values, to the other files in the folder, such as `es.json` and `pt.json`. Otherwise, the builder warns that the keys are missing in those languages.
 
+The following image highlights the **My points** and **Support** links that this example adds to the My Account menu:
+
+![extension-points](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@EDU-2717-my-account/images/extension-points.png)
+
 ### Step 5 - (Optional) Displaying personal information
 
 The Profile page has an extension point, `profile-display-container`, before the `edit` button. It accepts `profile-display` blocks and is intended for stores that collect custom information from their customers, such as hair color or pet name. This extension point allows your component to display such information without breaking the page layout.
@@ -170,7 +170,7 @@ The Profile page has an extension point, `profile-display-container`, before the
 Your component doesn't render its own markup. Instead, it calls the `render` prop with the appropriate information, and My Account displays it together with the customer's default information. Pass in an array of objects containing the `label` and `value` props:
 
 - `label`: Name of the field you want to display, such as `Hair color`.
-- `value`: Value for that field, such as `brown`.
+- `value`: Value for that field, such as `Red`.
 
 The following image shows the `Hair color` and `Pet name` fields displayed on the Profile page:
 
@@ -228,8 +228,6 @@ Don't add user interactions to the submission function. My Account returns to th
 
 The following example shows a component that adds a favorite color field to the form:
 
-![fav-color](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@EDU-2717-my-account/images/favorite-color.gif)
-
 ```js
 import React, { Component } from 'react'
 import { Input } from 'vtex.styleguide'
@@ -285,6 +283,10 @@ class FavColor extends Component {
 export default FavColor
 ```
 
+The following image shows the field in the profile editing form. If customers click `Submit` with the field empty, the validation function displays an error message and halts the submission:
+
+![favorite-color](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@EDU-2717-my-account/images/favorite-color.gif)
+
 ### Step 7 - Linking your app and checking the result
 
 1. In a terminal, navigate to the root folder of your app.
@@ -293,7 +295,7 @@ export default FavColor
 
 The My Account menu shows the new links, and the page renders the component you defined for the `/points` path.
 
-![extension-points](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@EDU-2717-my-account/images/extension-points.png)
+![your-points](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@EDU-2717-my-account/images/your-points.png)
 
 ### Step 8 - (Optional) Defining the default page of My Account
 
