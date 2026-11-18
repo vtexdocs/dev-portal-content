@@ -104,6 +104,10 @@ export default MyAppPage
 
 This example creates two pages, `/account/#/support` and `/account/#/points`, which render the `UserSupport` and `UserPoints` components, respectively.
 
+The following image shows the `/points` page rendering the `UserPoints` component:
+
+![your-points](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@EDU-2717-my-account/images/your-points.png)
+
 ### Step 4 - Creating the `my-account-link` component
 
 Create the `MyAppLink.js` file in the root of the `react` folder. This component receives a prop called `render`. Call it with an array of objects containing the `name` and `path` properties. Each object creates a link.
@@ -168,6 +172,10 @@ Your component doesn't render its own markup. Instead, it calls the `render` pro
 - `label`: Name of the field you want to display, such as `Hair color`.
 - `value`: Value for that field, such as `brown`.
 
+The following image shows the `Hair color` and `Pet name` fields displayed on the Profile page:
+
+![hair-color-pet-name](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@EDU-2717-my-account/images/hair-color-pet-name.png)
+
 Preprocess the information before displaying it, for example, by masking or localizing the text. You're also responsible for fetching the information from its source, such as Master Data or your own API, before calling `render`.
 
 #### `BeautyData` component code
@@ -220,6 +228,8 @@ Don't add user interactions to the submission function. My Account returns to th
 
 The following example shows a component that adds a favorite color field to the form:
 
+![fav-color](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@EDU-2717-my-account/images/favorite-color.gif)
+
 ```js
 import React, { Component } from 'react'
 import { Input } from 'vtex.styleguide'
@@ -245,8 +255,8 @@ class FavColor extends Component {
   validate = () => {
     const { color } = this.state
     this.setState({ error: null })
-    if (color !== 'yellow') {
-      this.setState({ error: 'Your favorite color must be yellow.' })
+    if (!color.trim()) {
+      this.setState({ error: 'This field is required.' })
       return false
     }
     return true
@@ -283,6 +293,8 @@ export default FavColor
 
 The My Account menu shows the new links, and the page renders the component you defined for the `/points` path.
 
+![extension-points](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@EDU-2717-my-account/images/extension-points.png)
+
 ### Step 8 - (Optional) Defining the default page of My Account
 
 You can set your new page as the page that My Account renders when customers open the URL `/account/`. This is a Site Editor setting that points to a page created by your app, so configure it only after the app is linked in Step 7.
@@ -296,6 +308,8 @@ You can set your new page as the page that My Account renders when customers ope
 5. Save your changes.
 
 For example, to open the `UserPoints` page from the previous steps, enter `/points`.
+
+![default-path](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@EDU-2717-my-account/images/default-path.gif)
 
 ### Step 9 - Making your app available
 
