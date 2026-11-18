@@ -27,11 +27,11 @@ Before deploying, make sure that:
 
 ## Enabling Checkout builds for your account
 
-Checkout builds in [FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/webops-dashboard) are disabled by default and must be enabled for each account. While they are disabled, WebOps skips the Checkout build: the deployment finishes successfully, but the logs don't show a **Building checkout** step, and your extensions aren't published to the store.
+Checkout builds in [FastStore WebOps](https://developers.vtex.com/docs/guides/faststore/webops-dashboard) are disabled by default and must be enabled for each account. While they are disabled, WebOps skips the Checkout build: the deployment finishes successfully, but it doesn't include a **Building checkout** step, and your extensions aren't published to the store.
 
 To enable Checkout builds, [open a ticket with VTEX Support](https://help.vtex.com/en/docs/tutorials/opening-tickets-to-vtex-support) and include your account name.
 
-> ⚠️ Enabling Checkout builds doesn't trigger a new build. After the feature is enabled, push a new commit to the `main` branch to start a production deployment.
+> ⚠️ Enabling Checkout builds doesn't trigger a new build. After the feature is enabled, push a new commit to your production branch (`main` by default) to start a production deployment.
 
 To confirm that your extensions were published, check that the extensions file returns status `200`. Remember to replace `{account-name}` with the name of your account.
 
