@@ -148,7 +148,7 @@ Add the same keys, with translated values, to the other files in the folder, suc
 
 The following image highlights the **My points** and **Support** links that this example adds to the My Account menu:
 
-![extension-points](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@EDU-2717-my-account/images/extension-points.png)
+![extension-points](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/extension-points.png)
 
 ### Step 5 - (Optional) Displaying personal information
 
@@ -174,7 +174,7 @@ Your component doesn't render its own markup. Instead, it calls the `render` pro
 
 The following image shows the `Hair color` and `Pet name` fields displayed on the Profile page:
 
-![hair-color-pet-name](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@EDU-2717-my-account/images/hair-color-pet-name.png)
+![hair-color-pet-name](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/hair-color-pet-name.png)
 
 Preprocess the information before displaying it, for example, by masking or localizing the text. You're also responsible for fetching the information from its source, such as Master Data or your own API, before calling `render`.
 
@@ -285,7 +285,7 @@ export default FavColor
 
 The following image shows the field in the profile editing form. If customers click `Submit` with the field empty, the validation function displays an error message and halts the submission:
 
-![favorite-color](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@EDU-2717-my-account/images/favorite-color.gif)
+![favorite-color](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/favorite-color.gif)
 
 ### Step 7 - Linking your app and checking the result
 
@@ -295,7 +295,7 @@ The following image shows the field in the profile editing form. If customers cl
 
 The My Account menu shows the new links, and the page renders the component you defined for the `/points` path.
 
-![your-points](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@EDU-2717-my-account/images/your-points.png)
+![your-points](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/your-points.png)
 
 ### Step 8 - (Optional) Defining the default page of My Account
 
@@ -311,7 +311,7 @@ You can set your new page as the page that My Account renders when customers ope
 
 For example, to open the `UserPoints` page from the previous steps, enter `/points`.
 
-![default-path](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@EDU-2717-my-account/images/default-path.gif)
+![default-path](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/default-path.gif)
 
 ### Step 9 - Making your app available
 
