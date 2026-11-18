@@ -25,6 +25,8 @@ This reference includes:
 - [Country-level zones](#country-level-zones) for all supported countries and territories.
 - More specific zones for [Australia](#australia), [Brazil](#brazil), [Mexico](#mexico), and the [United States](#united-states).
 
+> ℹ️ If you need more granular zones for another country, open a ticket with [VTEX Support](https://support.vtex.com/hc/en-us/requests) and ask the product team to evaluate your request.
+
 ## Country-level zones
 
 | **Zone ID** | **Zone name** | **Country code** | **Postal code range** |
