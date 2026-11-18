@@ -4,12 +4,6 @@ title: "Configuring SEO for PLPs and PDPs"
 
 Configuring SEO settings for Product Listing Pages (PLPs) and Product Details Pages (PDPs) is essential for improving search engine visibility and discoverability. This guide walks you through setting up title and description templates for PLPs and PDPs and provides best practices for optimizing SEO performance.
 
-## Before you begin
-
-For FastStore to use the `metaTagDescription` field configured per product in the Catalog on PDP pages, a feature flag must be enabled for your store account in [Intelligent Search](https://help.vtex.com/docs/tracks/overview-intelligent-search). This flag allows Intelligent Search to include `metaTagDescription` in its link requests, which FastStore then uses as the page meta description.
-
-Without this flag enabled, FastStore will not receive the product-level `metaTagDescription` from Intelligent Search and will fall back to the product's long description or the template configured in `discovery.config.js`. To enable this feature flag for your account, open a ticket with [VTEX Support](https://help.vtex.com/support).
-
 ## SEO metadata
 
 FastStore follows a structured approach to generating SEO metadata for PLPs and PDPs, prioritizing available catalog data before falling back to predefined templates in the [`discovery.config.js`](https://developers.vtex.com/docs/guides/faststore/project-structure-config-options) file.
@@ -62,7 +56,7 @@ F --> H;
 G --> H;
 ```
 
-> ⚠️ For FastStore to retrieve the `metaTagDescription` from the Catalog for PDP pages, the Intelligent Search feature flag must be enabled for your account. See [Before you begin](#before-you-begin).
+On PDPs, the description from the Catalog is the `metaTagDescription` field configured per product. [Intelligent Search](https://help.vtex.com/docs/tracks/overview-intelligent-search) returns this field natively, so no additional configuration is required. Stores that migrate to FastStore v4 already have access to this API, along with other benefits v4 offers.
 
 </details>
 
