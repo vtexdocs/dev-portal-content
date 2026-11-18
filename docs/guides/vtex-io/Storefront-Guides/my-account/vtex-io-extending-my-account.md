@@ -150,7 +150,7 @@ Add the same keys, with translated values, to the other files in the folder, suc
 
 The Profile page has an extension point, `profile-display-container`, before the `edit` button. It accepts `profile-display` blocks and is intended for stores that collect custom information from their customers, such as hair color or pet name. This extension point allows your component to display such information without breaking the page layout.
 
-1. Create the `react/BeautyData.js` file with the example below, which ends with `export default BeautyData`.
+1. Create the `react/BeautyData.js` file. You can use the [example below](#beautydata-component-code) as a starting point. The file must end with `export default BeautyData`.
 2. Add the interface to `store/interfaces.json`:
 
    ```json
@@ -168,9 +168,11 @@ Your component doesn't render its own markup. Instead, it calls the `render` pro
 - `label`: Name of the field you want to display, such as `Hair color`.
 - `value`: Value for that field, such as `brown`.
 
-Preprocess the information before displaying it, for example, by masking or localizing the text. You are also responsible for fetching the information from its source.
+Preprocess the information before displaying it, for example, by masking or localizing the text. You're also responsible for fetching the information from its source, such as Master Data or your own API, before calling `render`.
 
-The following example shows a component that displays custom information:
+#### `BeautyData` component code
+
+The following example shows a component that displays custom information. The values are hardcoded for demonstration purposes only. In a real store, you can fetch them dynamically from your data source instead. For more information, see [Consuming data](https://developers.vtex.com/docs/guides/vtex-io-documentation-7-consuming-data).
 
 ```js
 const BeautyData = ({ render }) => {
@@ -180,8 +182,8 @@ const BeautyData = ({ render }) => {
       value: 'Red',
     },
     {
-      label: 'Skin color',
-      value: 'White',
+      label: 'Pet name',
+      value: 'Rex',
     },
   ])
 }
