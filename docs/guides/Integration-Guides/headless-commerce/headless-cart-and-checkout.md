@@ -110,6 +110,25 @@ Check on the right side of the screen a basic example of a cart attachment.
 
 > ℹ️ Some attachments may contain arrays of objects, where each object corresponds to an item in the [items](#cart-items) array.
 
+#### Payment systems available for each item
+
+In accounts that use [payment policies](https://developers.vtex.com/docs/guides/using-payment-policies) or have `availableAssociations` enabled, use the `paymentData.availableAssociations` field to define which payment systems your checkout displays. Each key is a cart item (SKU) ID, and each value lists the IDs of the payment systems allowed for that item. Payment system IDs are returned as strings.
+
+```json
+{
+  "paymentData": {
+    "availableAssociations": {
+      "sku-001": ["4"],
+      "sku-002": ["2", "4"]
+    }
+  }
+}
+```
+
+In this example, `sku-002` can be paid with payment systems `2` and `4`, while `sku-001` can only be paid with payment system `4`. This is essential when the shopper splits the payment across multiple payment systems, for example, paying for eligible items with a meal card and for the remaining items with a credit card.
+
+> ⚠️ In these accounts, `paymentData.availableAssociations` is the source of truth for available payment systems. The `paymentData.paymentSystems` field may omit valid payment systems, which can prevent shoppers from using them and reduce conversion.
+
 ---
 
 ## Place order

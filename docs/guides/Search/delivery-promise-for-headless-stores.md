@@ -13,8 +13,8 @@ This guide details how to use the [Delivery Promise](https://help.vtex.com/en/do
 
 Only products that can be delivered to the provided address or picked up at pickup points are displayed, following these rules:
 
-* The system displays all available pickup points within the same radius configured in Checkout, which defaults to 50 km. This applies when the customer selects pickup in the header or a specific pickup point. There’s no limit to the number of pickup points displayed. To enable this functionality, you must fetch the complete list of pickup points using the `GET` [Get pickup point availability for Delivery Promise (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/pickup-point-availability/-facets-) endpoint from Intelligent Search API v1. Retrieving this list is a mandatory dependency for the Delivery Promise feature in headless stores.
-* For the nearby pickup filter, pickup points within a 10 km radius of the buyer's location are shown.
+* The system displays all available pickup points within the same Checkout pickup radius, which is configurable by the merchant up to a maximum of 50 km (default: 50 km). This applies when the customer selects pickup in the header or a specific pickup point. There’s no limit to the number of pickup points displayed. To enable this functionality, you must fetch the complete list of pickup points using the `GET` [Get pickup point availability for Delivery Promise (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/pickup-point-availability/-facets-) endpoint from Intelligent Search API v1. Retrieving this list is a mandatory dependency for the Delivery Promise feature in headless stores.
+* For the nearby pickup filter (`pickup-nearby`), pickup points within a fixed 10 km radius of the buyer's location are shown. This filter does not use the Checkout pickup radius.
 
 ## Before you begin
 
@@ -125,7 +125,7 @@ https://{{accountName}}.vtexcommercestable.com.br/api/intelligent-search/v1/prod
 
 #### Pickup at a nearby location
 
-Filters the search for products that can be picked up at pickup points located within a radius of up to 50 km from the shopper, within the same pickup radius limit as the Checkout.
+Filters the search for products that can be picked up at pickup points located within a fixed radius of up to 10 km from the shopper. This filter does not use the Checkout pickup radius.
 
 Parameters: `/shipping/pickup-nearby`
 
