@@ -1,9 +1,9 @@
 ---
 title: "VTEX OAuth provider: Standard access for AI agents and partner apps"
-slug: "2026-11-06-vtex-oauth-provider-standard-access-for-ai-agents-and-partner-apps"
+slug: "2026-11-23-vtex-oauth-provider-standard-access-for-ai-agents-and-partner-apps"
 hidden: false
 type: "added"
-createdAt: "2026-11-06T14:00:00.000Z"
+createdAt: "2026-11-23T14:00:00.000Z"
 excerpt: "VTEX now has a standard OAuth provider that AI agents, MCP clients, and partner apps can use to act on behalf of a VTEX user."
 ---
 
