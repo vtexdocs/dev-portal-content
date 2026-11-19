@@ -70,7 +70,7 @@ sequenceDiagram
     %% Pre-Authenticated User Flow
     alt Pre-Authenticated Flow (Delegated Login)
         PU->>Proxy: Initiate Delegated Punchout Login (target username, optional returnURL)
-        Proxy->>VTEX: POST /api/authenticator/v1/punchout/authenticated/start {username} + valid auth cookie + returnURL
+        Proxy->>VTEX: POST /api/authenticator/v1/punchout/authenticated/start {username} + API key/token (CanPunchout) + returnURL
         VTEX->>VTEX: Validate API key/token and permissions
         VTEX->>VTEX: Generate one-time token (OTT) with delegated subject claim
         VTEX-->>Proxy: 200 OK with URL (including OTT)

@@ -73,7 +73,7 @@ Below you will find a list of possible namespaces that can be returned by the AP
 
 The Sessions System also creates the `vtex_segment` cookie, which contains the information of the commercial conditions to be applied to a session.
 
-It is possible to see the properties of a segment by making a `GET` request to `https://{{accountName}}.{{environment}}.com.br/api/segments/{{segmentToken}}`.
+It is possible to see the properties of a segment by making a `GET` request to [`https://{{accountName}}.{{environment}}.com.br/api/segments`](https://developers.vtex.com/docs/api-reference/session-manager-api#get-/api/segments). The segment is identified by the `vtex_segment` cookie sent with the request.
 
 Below you will find a response example with data from a segment:
 

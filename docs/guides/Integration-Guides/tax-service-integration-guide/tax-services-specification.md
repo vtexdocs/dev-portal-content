@@ -313,7 +313,7 @@ Below is an example of values that may be contained in these fields, and you can
 
 ```json
 {
-    "Id": "0",  
+    "id": "0",  
     "taxes": [  
        {  
          "name": "NY STATE TAX: NEW YORK",  
