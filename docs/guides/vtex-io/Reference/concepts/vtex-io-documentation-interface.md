@@ -1,7 +1,7 @@
 ---
 title: "Interfaces"
 slug: "vtex-io-documentation-interface"
-hidden: false
+hidden: true
 createdAt: "2021-04-07T19:00:37.442Z"
 updatedAt: "2024-09-17T14:35:35.726Z"
 ---

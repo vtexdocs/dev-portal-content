@@ -1,7 +1,7 @@
 ---
 title: "Composition"
 slug: "vtex-io-documentation-composition"
-hidden: false
+hidden: true
 createdAt: "2020-11-23T13:33:26.394Z"
 updatedAt: "2022-12-13T20:17:44.627Z"
 ---

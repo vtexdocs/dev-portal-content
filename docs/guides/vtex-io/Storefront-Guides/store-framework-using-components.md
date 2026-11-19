@@ -3,7 +3,7 @@ title: "Using components"
 slug: "store-framework-using-components"
 hidden: false
 createdAt: "2025-01-21T16:36:39.917Z"
-updatedAt: ""
+updatedAt: "2026-11-16T16:50:00.000Z"
 excerpt: "Discover how components in VTEX IO Store Framework enable you to build your storefront, from basic elements to advanced customizations." 
 ---
 
@@ -54,7 +54,7 @@ The [Product Summary](https://developers.vtex.com/docs/apps/vtex.product-summary
 
 ### Custom components
 
-When building a [store theme](https://developers.vtex.com/docs/guides/vtex-io-documentation-6-buildingyourownstoretheme), you can leverage existing VTEX IO apps or create custom apps to add new components and extend the platform features.
+When building a [store theme](https://developers.vtex.com/docs/guides/vtex-io-documentation-6-buildingyourownstoretheme), you can leverage existing VTEX IO apps or create custom apps to add new components and extend the platform features. Each block is mapped to a component through an [interface](https://developers.vtex.com/docs/guides/vtex-io-documentation-4-declaring-a-theme-block#understanding-interfaces), and you can pass blocks to components as props using [slots](https://developers.vtex.com/docs/guides/vtex-io-documentation-4-declaring-a-theme-block#passing-blocks-as-props-with-slots).
 
 See our guide about how to [develop an app](https://developers.vtex.com/docs/guides/vtex-io-documentation-developing-an-app).
 

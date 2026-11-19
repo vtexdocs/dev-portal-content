@@ -3,7 +3,8 @@ title: "Store Theme"
 slug: "vtex-io-documentation-store-theme"
 hidden: false
 createdAt: "2024-07-24T13:48:10.752Z"
-updatedAt: "2026-01-16T11:52:10.741Z"
+updatedAt: "2026-11-16T16:50:00.000Z"
+excerpt: "Learn what a Store Theme is and how its project structure and builders shape a Store Framework storefront."
 category: "Storefront development"
 seeAlso:
   - "/docs/guides/vtex-io-documentation-manifest"
@@ -46,7 +47,7 @@ Some of these files and folders are essential for the theme to function correctl
 
 >⚠ For your project to work properly, you must have at least the `store` and `styles` builders configured within the `manifest.json` file.
 
-Store Themes are [VTEX IO](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-what-is-vtex-io) apps that inherently use the [`store` builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-store-builder). This builder allows you to link routes to templates, which consist of other reusable [components](https://developers.vtex.com/docs/guides/vtex-io-documentation-components) and layout [blocks](https://developers.vtex.com/docs/guides/vtex-io-documentation-composition) organized in the `/store` folder.
+Store Themes are [VTEX IO](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-what-is-vtex-io) apps that inherently use the [`store` builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-store-builder). This builder allows you to link routes to templates, which consist of other reusable [components](https://developers.vtex.com/docs/guides/vtex-io-documentation-components) and layout [blocks](https://developers.vtex.com/docs/guides/vtex-io-documentation-4-configuringtemplates#understand-the-block-composition) organized in the `/store` folder.
 
 To export the CSS configurations in the `/styles` folder for your Store Framework blocks, Store Themes leverage the [`styles` builder](https://developers.vtex.com/docs/guides/vtex-io-documentation-styles-builder). This builder helps set a cohesive style for all components in your Store Theme app.
 

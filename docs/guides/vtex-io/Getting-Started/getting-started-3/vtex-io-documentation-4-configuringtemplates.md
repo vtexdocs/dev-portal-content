@@ -3,14 +3,14 @@ title: "4. Configuring templates"
 slug: "vtex-io-documentation-4-configuringtemplates"
 hidden: false
 createdAt: "2020-06-03T16:02:44.335Z"
-updatedAt: "2025-02-04T15:00:13.976Z"
+updatedAt: "2026-11-16T16:50:00.000Z"
 category: "Storefront Development"
 excerpt: "Learn how to manage templates and customize your Store Theme."
 ---
 
 In this guide, you'll learn how to customize your store theme by managing templates that define the structure of your website pages. Templates declare `JSON` blocks that, once rendered, determine the set of components for your website pages, such as the homepage, product page, search results page, etc.
 
-The [Store Theme](https://developers.vtex.com/docs/guides/vtex-io-documentation-store-theme) app already implements basic templates for each page of your store, defined within its `blocks.json` or `blocks.jsonc` files. These templates enable your store to display VTEX Store Framework default components, even if you haven’t made any custom configurations in the code. By managing templates, you can create a custom theme for your website by adding or removing blocks to meet your business needs.
+The [Store Theme](https://developers.vtex.com/docs/guides/vtex-io-documentation-store-theme) app already implements basic templates for each page of your store, defined within its `blocks.json` or `blocks.jsonc` files. These templates enable your store to display VTEX Store Framework default components, even if you haven’t made any custom settings in the code. By managing templates, you can create a custom theme for your website by adding or removing blocks to meet your business needs.
 
 ## Before you begin
 
@@ -22,13 +22,15 @@ Familiarize yourself with the concept of a `JSON` block - the smallest Store Fra
 
 Blocks are imbued with higher flexibility, allowing you to achieve complex scenarios and specific component behaviors by configuring their properties (*props*) or even declaring them in other blocks. In practice, when you edit your theme's code using the Store Theme app, you're directly modifying blocks that will become your store's page components when rendered.
 
-> ℹ To add a new component to a page, you simply declare a new block in the corresponding template. Similarly, removing a block from a template will exclude its associated component from the page.
+Each block is linked to a React component through an interface, declared in the `interfaces.json` file of the app that exports it. Learn more in [Understanding interfaces](https://developers.vtex.com/docs/guides/vtex-io-documentation-4-declaring-a-theme-block#understanding-interfaces).
+
+> ℹ️ To add a new component to a page, you simply declare a new block in the corresponding template. Similarly, removing a block from a template will exclude its associated component from the page.
 
 ### Get to know the property (prop) concept
 
 To manage your templates efficiently, be familiar with the concept of `properties` (*prop*), which define the performance and visual identity of the component rendered in the interface. The more props a block has, the more flexible its configuration becomes for the end user.
 
-Every JSON is defined using `{ }`, with keys and values that together specify its properties, representing its inherent characteristics. See the example below:
+Every JSON is defined using `{ }`, with keys and values that together specify its properties, representing its inherent characteristics. See the following example:
 
 ```json
 {
@@ -37,11 +39,13 @@ Every JSON is defined using `{ }`, with keys and values that together specify it
 }
 ```
 
-In the example above, `name` and `height` are the object's keys, and their respective values are `Pedro` and `1.90`.
+In the preceding example, `name` and `height` are the object's keys, and their respective values are `Pedro` and `1.90`.
 
 The `key + value` pair constitutes the property (or *prop*) of the JSON, defining its essential characteristics.
 
-> ℹ The key and value can also be called, respectively, property name and property value.
+In Store Framework, props configure the behavior and appearance of a block. The value of a prop can be a string, a number, a list, or even the name of another block. [Step 3](#step-3-clarifying-block-naming-and-properties) describes the available prop types.
+
+> ℹ️ The key and value can also be called, respectively, property name and property value.
 
 ### Understand the block composition
 
@@ -49,11 +53,11 @@ When a block is being developed, the composition definition indicates how the bl
 
 - `blocks`: Have a fixed position on the store’s page irrespective of where they were declared in the code, leading to a preordained position on the UI.
 - `children`: Do not have a fixed position on the store’s page, which means that how they’re declared in the code directly impacts the page position. The `children` block declared first will be at the top of the page, followed by the second one below it, and so on.
-- `slots`: Placeholders within a block that enable the insertion of dynamic content. It is useful for flexible component design where content can be passed into specific slots, enabling the customization or reuse of a block with different content.
+- `slots`: Blocks passed to the parent block as props, with a prop name defined by the component (for example, `Icon`). It is the most flexible option, since any block can be passed to a slot without being declared in the `allowed` key of the interface. Learn more in [Passing blocks as props with slots](https://developers.vtex.com/docs/guides/vtex-io-documentation-4-declaring-a-theme-block#passing-blocks-as-props-with-slots).
 
-According to their composition, the listed blocks will determine whether they should be declared in the parent block's `blocks` list or in its `children` list when building a single component on the UI.
+The composition defines how the child blocks of a block are positioned, not the position of the block itself. According to the composition, the listed blocks will determine whether they should be declared in the parent block's `blocks` list or in its `children` list when building a single component on the UI. See examples of both in [Step 4](#step-4-defining-blocks-composition).
 
-> ℹ You can find out which composition a block has by looking at its code in the exporting app's `interfaces.json` file.
+> ℹ️ You can find out which composition a block has by looking at its code in the exporting app's `interfaces.json` file.
 
 </Steps>
 
@@ -69,7 +73,7 @@ The `dependencies` object within the `manifest.json` file of your Store Theme ap
 
 When declaring a new block in your Store Theme app, check if the app blocking it is listed as a dependency. If not, open the `manifest.json` file and add the app name and desired version to the `dependencies` list, following this format: `"vtex.{appName}": "{majorVersion}.x"`.
 
-> ⚠ Replace the values between the curly braces based on your scenario.
+> ⚠️ Replace the values between the curly braces based on your scenario.
 
 ### Step 2 - Managing blocks in your theme
 
@@ -220,11 +224,11 @@ This means that your default store homepage will comprise the components defined
 
 To build more complex components, the `home.jsonc` file includes each block’s declaration and configuration, using the block's props and, if necessary, other blocks.
 
->⚠ More than simply declaring a block in the block list template, you must also define its behavior when rendered as a component. To do this, use the block's props, as shown in the [Clarifying block naming and properties](#step-3-clarifying-block-naming-and-properties) section, and include other child blocks to configure it, as detailed in [Defining blocks composition](#step-4-defining-blocks-composition).
+> ⚠️ More than simply declaring a block in the block list template, you must also define its behavior when rendered as a component. To do this, use the block's props, as shown in the [Clarifying block naming and properties](#step-3-clarifying-block-naming-and-properties) section, and include other child blocks to configure it, as detailed in [Defining block composition](#step-4-defining-blocks-composition).
 
 ### Step 3 - Clarifying block naming and properties
 
-Still in the `home.jsonc` file, use `ctrl+f` and search for the `rich-text#question` block. This block renders a component that displays markdown text to users.
+Still in the `home.jsonc` file, use `ctrl+f` and search for the `rich-text#question` block. This block renders a component that displays Markdown text to users.
 
 ```json
 "rich-text#question": {
@@ -239,11 +243,23 @@ The `rich-text#question` block has two props: `text` and `blockClass`. The `text
 
 To check the available props of the app behind the `rich-text` block, see the Configuration section within the [Rich Text](https://developers.vtex.com/docs/guides/vtex-rich-text) app documentation. Note that the exported block's name is simply `rich-text`, whereas Store Theme uses `rich-text#block`. This is because you can use a `#` symbol after the block's official name to easily identify it when inserting it into the theme's code and better organize the theme.
 
-> ℹ All the props available to configure a block can be found in the documentation of its exporting app or in the block's own documentation (if applicable).
+The value of a prop can be one of the following types:
 
-### Step 4 - Defining blocks composition
+| Type      | Value format                                                                       | Example                                                |
+| --------- | ---------------------------------------------------------------------------------- | ------------------------------------------------------ |
+| `string`  | Text enclosed in double quotes (`""`)                                              | `"Hello, World!"`                                      |
+| `number`  | Integer or floating-point number, without quotes                                   | `10` or `23.45`                                        |
+| `boolean` | Logical value, either `true` or `false`, without quotes                            | `true`                                                 |
+| `object`  | Collection of key-value pairs enclosed in curly braces (`{}`)                      | `{ "desktop": 5, "tablet": 3, "phone": 1 }`            |
+| `array`   | Ordered list of values of the same data type, enclosed in square brackets (`[]`)   | `["image1.jpg", "image2.jpg"]`                         |
+| `enum`    | Value from a predefined list of options, enclosed in double quotes (`""`)          | `"desktopOnly"`                                        |
+| `block`   | Name of another block to be rendered, which enables component composition          | `"icon-cart#header"` (from the [Store Icons](https://developers.vtex.com/docs/guides/vtex-store-icons) app) |
 
-Still in the `home.jsonc`, search for the`shelf#home` block.
+> ℹ️ All the props available to configure a block can be found in the documentation of its exporting app or in the block's own documentation (if applicable).
+
+### Step 4 - Defining block composition
+
+Still in the `home.jsonc` file, search for the `shelf#home` block.
 
 ```json
 "shelf#home": {
@@ -251,7 +267,7 @@ Still in the `home.jsonc`, search for the`shelf#home` block.
 },
 ```
 
-Note that it declares another block to your `blocks` list, which in turn declares other blocks below in a list called `children`:
+Note that it declares another block in your `blocks` list, which in turn declares other blocks below in a list called `children`:
 
 ```json
 "product-summary.shelf": {
@@ -266,9 +282,9 @@ Note that it declares another block to your `blocks` list, which in turn declare
 },
 ```
 
-In the example above, `product-summary.shelf` requires other blocks as children, such as `product-summary-name`, to render the component properly.
+In the preceding example, `product-summary.shelf` requires other blocks as children, such as `product-summary-name`, to render the component properly.
 
-> ℹ As previously mentioned, a component can be a crossroad for multiple blocks. Therefore, one of your theme blocks may need to list other blocks to achieve the desired rendering on the UI.
+> ℹ️ As previously mentioned, a component can be a crossroad for multiple blocks. Therefore, one of your theme blocks may need to list other blocks to achieve the desired rendering on the UI.
 
 To build a component using multiple blocks, the main block can declare a `blocks` list, such as `shelf#home`, or a `children` list, as seen in the `product-summary.shelf` block.
 
