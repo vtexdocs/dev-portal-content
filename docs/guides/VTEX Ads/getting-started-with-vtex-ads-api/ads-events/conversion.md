@@ -9,6 +9,8 @@ updatedAt: "2025-05-21T22:18:24.684Z"
 
 Conversion tracking is crucial for measuring ad campaign effectiveness in VTEX Ads. This guide explains how to properly send conversion events when users complete purchases after interacting with your advertisements.
 
+>ℹ️ Transparent integration for Banner and Video ads sends a browser beacon after the order is created. See [Implementing transparent integration for VTEX Ads](https://developers.vtex.com/docs/guides/implementing-transparent-integration-for-vtex-ads). This page documents the server-side `POST`, sent when the order is closed.
+
 ## Conversion event rules
 
 - Conversion events should be sent when an order is closed.
