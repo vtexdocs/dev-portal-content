@@ -13,4 +13,4 @@ This article is synthetic. It is not a product guide, and it is not linked from 
 
 ## Instructions
 
-1. Leave this file in place until the changed-base run records a skip.
+1. This sentence is the changed-base probe.
