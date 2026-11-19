@@ -2,7 +2,7 @@
 title: "List of template controls"
 slug: "list-of-controls-for-templates"
 hidden: false
-excerpt: "Find the controls available for Legacy CMS templates, including general, product page, search, and deprecated controls."
+excerpt: "Find the controls available for CMS Portal (Legacy) templates, including general, product page, search, and deprecated controls."
 createdAt: "2022-09-08T14:21:08.318Z"
 updatedAt: "2026-10-20T19:50:37.784Z"
 ---
