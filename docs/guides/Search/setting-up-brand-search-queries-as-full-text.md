@@ -2,14 +2,16 @@
 title: "Setting up brand search queries as full text"
 slug: "setting-up-brand-search-queries-as-full-text"
 excerpt: "Learn how to resolve brand search queries in Intelligent Search as full text."
+tags:
+  - "VTEX Intelligent Search"
 hidden: true
 createdAt: "2024-12-12T14:45:40.782Z"
-updatedAt: "2024-12-12T14:49:33.433Z"
+updatedAt: "2026-11-19T15:31:24.835Z"
 ---
 
-By default, when searching for a brand using the search bar with Intelligent Search, the results only display products that are registered in the catalog under that specific brand. A brand filter is applied to the search, meaning if the brand does not exist in the store’s catalog, the search does not return any results.
+By default, when searching for a brand using the search bar with [Intelligent Search](https://help.vtex.com/tracks/vtex-intelligent-search--19wrbB7nEQcmwzDPl1l4Cb/3qgT47zY08biLP3d5os3DG), the results only display products that are registered in the catalog under that specific brand. A brand filter is applied to the search, meaning if the brand does not exist in the store’s catalog, the search does not return any results.
 
-However, you can modify this behavior to treat brand searches as full text. This means you can show products that contain the brand name in the product title, description or any product field.
+However, you can modify this behavior to treat brand searches as full text. This means you can show products that contain the brand name in the product title, description or any product field. That behavior is the Store Indexer setting Brand Queries Map set to Full Text.
 
 This guide explains how to change the default behavior to resolve brand search queries in Intelligent Search, enabling them to be resolved as full text.
 
@@ -25,10 +27,10 @@ Follow the instructions below to enable brand search as full text when receiving
 
 1. On VTEX Admin, go to **Apps > Extensions Hub > App Management**, or access `https://{accountName}.myvtex.com/admin/apps` directly.  
 2. In the **My Apps** page, search for the `store indexer` as shown below. If it doesn’t appear at first, run `vtex install vtex.store-indexer` using VTEX IO CLI and refresh the page.
-   ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@maindocs/guides/Search/setting-up-brand-search-queries-as-full-text-1.png)
+   ![Store indexer app displayed in the My Apps page search results](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@maindocs/guides/Search/setting-up-brand-search-queries-as-full-text-1.png)
 3. In the Store Indexer card, click **Settings**.  
 4. In the **Brand Queries Map** field, select **Full Text**.  
-   ![](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@maindocs/guides/Search/setting-up-brand-search-queries-as-full-text-2.png)
+   ![Brand Queries Map field in the Store Indexer settings set to Full Text](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@maindocs/guides/Search/setting-up-brand-search-queries-as-full-text-2.png)
 5. Click `Save`.
 
 If you need to revert back to the default behavior, repeat the instructions above, changing step 4 back to **Brand**.
