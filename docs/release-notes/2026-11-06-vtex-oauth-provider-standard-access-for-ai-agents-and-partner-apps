@@ -7,7 +7,7 @@ createdAt: "2026-11-06T14:00:00.000Z"
 excerpt: "VTEX now has a standard OAuth provider that AI agents, MCP clients, and partner apps can use to act on behalf of a VTEX user."
 ---
 
-VTEX now offers a standard [OAuth provider](https://developers.vtex.com/docs/guides/vtex-oauth-provider). AI agents, MCP clients, and partner apps can ask a VTEX user for permission and get access using the OAuth libraries they already know.
+VTEX now offers a standard [OAuth provider](https://developers.vtex.com/docs/guides/vtex-oauth-provider). AI agents, MCP clients, and partner apps can ask a VTEX user for permission and get access using the OAuth libraries they already use.
 
 ## What has changed?
 
@@ -21,6 +21,6 @@ The endpoints are available in the [VTEX ID API](https://developers.vtex.com/doc
 
 ## What needs to be done?
 
-No action is required. Existing authentication methods keep working.
+No action is required. Existing authentication methods continue to work.
 
 To use the VTEX OAuth provider in your client, follow the [VTEX OAuth provider](https://developers.vtex.com/docs/guides/vtex-oauth-provider) guide.
