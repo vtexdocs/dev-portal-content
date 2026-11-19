@@ -101,12 +101,10 @@ Behavior changes worth knowing about:
 
 ## Advisories affecting `next@16.2.6`
 
-<details>
-<summary><b>Full list of advisories, by severity</b></summary>
-
 Source: [Next.js GitHub Security Advisories](https://github.com/vercel/next.js/security/advisories). The version listed is the first 16.x release that closes the advisory. 16.4.3 includes every fix below.
 
-### Critical
+<details>
+<summary><b>Critical</b></summary>
 
 - [Remote code execution in `use cache` when returning typed arrays](https://github.com/vercel/next.js/security/advisories/GHSA-673q-mjm6-r5xr) (GHSA-673q-mjm6-r5xr). Fixed in 16.4.1.
 - [Remote code execution in the Image Optimization API with SVG](https://github.com/vercel/next.js/security/advisories/GHSA-2464-fhr4-w9xw) (GHSA-2464-fhr4-w9xw, CVE-2026-96889 in `librsvg`). Fixed in 16.4.1 / `sharp` 0.35.5.
@@ -114,7 +112,10 @@ Source: [Next.js GitHub Security Advisories](https://github.com/vercel/next.js/s
 - [Remote code execution in the Image Optimization API with AVIF](https://github.com/vercel/next.js/security/advisories/GHSA-2xp9-vwfh-vxw4) (GHSA-2xp9-vwfh-vxw4). Fixed in 16.3.3.
 - [Remote code execution on Windows servers](https://github.com/vercel/next.js/security/advisories/GHSA-p293-qw3h-jr36) (CVE-2026-75604). Fixed in 16.3.3.
 
-### High
+</details>
+
+<details>
+<summary><b>High</b></summary>
 
 - [Denial of service in the App Router via Server Actions](https://github.com/vercel/next.js/security/advisories/GHSA-p3m5-59mp-jv5r) (CVE-2026-94482). Fixed in 16.4.1.
 - [SSRF in Image Optimization](https://github.com/vercel/next.js/security/advisories/GHSA-cjq9-62q9-8jv4) (CVE-2026-94483). Fixed in 16.3.8.
@@ -123,7 +124,10 @@ Source: [Next.js GitHub Security Advisories](https://github.com/vercel/next.js/s
 - [Middleware / proxy bypass in the App Router with Turbopack and a single locale](https://github.com/vercel/next.js/security/advisories/GHSA-6gpp-xcg3-4w24) (CVE-2026-64642). Fixed in 16.2.11.
 - [Denial of service in the App Router via Server Actions](https://github.com/vercel/next.js/security/advisories/GHSA-m99w-x7hq-7vfj) (CVE-2026-64641). Fixed in 16.2.11.
 
-### Medium and low
+</details>
+
+<details>
+<summary><b>Medium and low</b></summary>
 
 - [SSG and ISR page cache poisoning in self-hosted applications](https://github.com/vercel/next.js/security/advisories/GHSA-4jqv-mc3x-m676) (CVE-2026-94543). Fixed in 16.3.8.
 - [Cache poisoning in SSG/ISR with cross-user content substitution](https://github.com/vercel/next.js/security/advisories/GHSA-mcj8-r9mp-w47p) (CVE-2026-94484). Fixed in 16.3.8.
