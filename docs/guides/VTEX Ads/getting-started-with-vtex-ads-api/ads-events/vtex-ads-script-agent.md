@@ -9,6 +9,8 @@ updatedAt: "2026-06-18T00:00:00.000Z"
 
 This document details the procedure for installing the **VTEX Ads** tracking script on all site pages (except checkout pages) through Google Tag Manager (GTM). Proper implementation of this script is essential for collecting navigation data that enables optimization and targeting of Retail Media campaigns.
 
+>ℹ️ `vtexads-agent.1.0.0.js` collects navigation data for **VTEX Ads** campaigns. Transparent integration for Banner and Video ads uses `vtexads-magic-1.0.0.js`. See [Implementing transparent integration for VTEX Ads](https://developers.vtex.com/docs/guides/implementing-transparent-integration-for-vtex-ads).
+
 ## Data collection
 
 The VTEX Ads script is designed to collect exclusively non-sensitive navigation data, with the objective of personalizing user experience and optimizing campaigns.
