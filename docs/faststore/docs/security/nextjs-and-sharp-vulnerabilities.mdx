@@ -1,30 +1,26 @@
 ---
 title: "Next.js and sharp security updates for FastStore stores"
-excerpt: "Understand the Next.js and sharp vulnerabilities that affect FastStore v2, v3, and v4, their practical impact on stores, and how to update your project."
+excerpt: "Learn how to update Next.js and sharp in FastStore projects to receive the latest security fixes."
 createdAt: "2026-11-05T00:00:00.000Z"
 updatedAt: "2026-11-05T00:00:00.000Z"
 ---
 
-`@faststore/core` 4.x now depends on `next@^16.4.3` (and `@next/third-parties` in the same range). This version comes in through the core's own dependency, so your store doesn't need to declare `next` in `package.json` or use `resolutions` for it.
+In this guide, you'll learn how to update Next.js and `sharp` in your FastStore v2, v3, and v4 project to receive the latest security fixes, depending on your FastStore major version.
 
-`16.3.8` isn't enough. That version is still in the range of two critical vulnerabilities and one high-severity vulnerability, all fixed in `16.4.1`. The current patch of the 16.x line is **16.4.3**, which includes every fix described in this guide.
-
-In this guide, you'll learn what changed, whether these vulnerabilities actually expose a standard FastStore store, and what to do depending on your FastStore major version.
+VTEX recommends keeping your store on the latest patch of your FastStore line. For the complete list of fixes, see the [Next.js security advisories](https://github.com/vercel/next.js/security/advisories) and the [`sharp` security advisories](https://github.com/lovell/sharp/security/advisories).
 
 ## Instructions
 
 ### v4 stores (Next 16)
 
-Update [`@faststore/cli`](https://developers.vtex.com/docs/guides/faststore/developer-tools-faststore-cli) to the release that sets the `^16.4.3` floor for `next`, and run the install. Until that release is available, the range published today (`^16.2.6`) already accepts `16.4.3`, so you can update your lockfile without adding `resolutions`.
+`@faststore/core` 4.x depends on `next@^16.4.3` (and `@next/third-parties` in the same range). This version comes in through the core's own dependency, so your store doesn't need to declare `next` in `package.json` or use `resolutions` for it.
 
-On Yarn 1, do the following:
-
-1. Delete the `next@^16...` block from your `yarn.lock` file.
-2. Run `yarn install`.
+1. Update [`@faststore/cli`](https://developers.vtex.com/docs/guides/faststore/developer-tools-faststore-cli) to the latest release and run the install.
+2. On Yarn 1, delete the `next@^16...` block from your `yarn.lock` file and run `yarn install`.
 
 > ⚠️ `yarn upgrade next` doesn't work for this. Yarn 1 doesn't update transitive dependencies through that command.
 
-To confirm the update, run:
+3. To confirm the update, run:
 
 ```bash
 yarn why next
@@ -32,13 +28,20 @@ yarn why next
 
 The dependency tree must show a single version, `16.4.3` or newer within the 16.x line, coming from `@faststore/core`.
 
-If your store added `resolutions` or `overrides` for `next`, remove them. Otherwise, your store stays pinned to the old version and doesn't receive the new floor set by the core.
+If your store added `resolutions` or `overrides` for `next`, remove them. Otherwise, your store stays pinned to its current version and doesn't receive the version set by the core.
 
-`@faststore/core` and `@faststore/cli` now declare Node `>= 20.9.0`, the minimum required by Next 16.4. In WebOps, v4 stores already build on Node 24.
+`@faststore/core` and `@faststore/cli` declare Node `>= 20.9.0`, the minimum required by Next 16.4. In WebOps, v4 stores already build on Node 24.
 
 ### v2 (Next 12) and v3 (Next 13) stores
 
-There's no version of Next 12 or Next 13 that fixes these vulnerabilities. See [v2 and v3 stores](#v2-and-v3-stores) below.
+Security fixes for these lines ship in patches of `@faststore/core` 2.x and 3.x, which bump `sharp` to `^0.35.5`.
+
+1. Update `@faststore/cli` (or `@faststore/core`) to the latest release of your line.
+2. Trigger a new build in WebOps.
+
+`sharp 0.35.5` requires Node `>= 20.9.0`, and these core versions declare that minimum. In WebOps, v2 and v3 stores already build on Node 20 or 22, so nothing changes in production.
+
+Node 18 is out of support. If you still develop locally on it, you need to update, because `yarn install` fails on `sharp`'s own engine check. For v2 and v3, we recommend Node 22, the version used by WebOps and by the FastStore CI for these lines.
 
 ## Impact on FastStore stores
 
@@ -74,7 +77,7 @@ If your store's code imports `sharp` directly without declaring it as a dependen
 
 `@faststore/core` 2.x depends on `next ^12.3.1`, and 3.x depends on `next ^13.5.9`. Neither line received a Next fix for the SVG RCE: the advisory covers `>= 10.0.0, <= 15.5.27`. Next 12 and 13 don't bundle their own `sharp`, and load the `sharp ^0.32.6` declared by the core.
 
-In v2, the `/_next/image` route is active and, with the default `remotePatterns`, restricted to `{account}.vtexassets.com`. This is the version where the update closes a real exposure. In v3, the core configures its own loader, and the route returns 404 with the default configuration. The update protects stores that customized image handling and clears the warning in scanners. If a customization opened up broad origins in `remotePatterns`, fix that list: the update reduces the risk, but doesn't eliminate it.
+In v2, the `/_next/image` route is active by default. Updating is strongly recommended to apply the latest security fixes. In v3, the core configures its own loader, and the route returns a 404 by default. The update protects stores that customized image handling and clears the warning in scanners. If a customization opened up broad origins in `remotePatterns`, fix that list: the update reduces the risk, but doesn't eliminate it.
 
 The fix ships in patches of `@faststore/core` 2.x and 3.x, which bump `sharp` to `^0.35.5`. To receive the fix, update `@faststore/cli` (or `@faststore/core`) to the new release of your line and trigger a new build in WebOps.
 
