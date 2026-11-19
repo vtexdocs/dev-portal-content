@@ -62,6 +62,92 @@ jira_curl() {
   printf '%s\n' "$code"
 }
 
+# accountId for LOC_JIRA_USER_EMAIL (cached per shell). Same identity as UI when
+# the secret is a personal token — changelog cannot tell those apart.
+_JIRA_AUTOMATION_ACCOUNT_ID=""
+
+jira_automation_account_id() {
+  if [ -n "${_JIRA_AUTOMATION_ACCOUNT_ID}" ]; then
+    printf '%s\n' "${_JIRA_AUTOMATION_ACCOUNT_ID}"
+    return 0
+  fi
+
+  local outfile code
+  outfile="${RUNNER_TEMP:-/tmp}/jira-myself.json"
+  code=$(jira_curl "$outfile" GET "${LOC_JIRA_BASE_URL}/rest/api/2/myself")
+  if [ "$code" != "200" ]; then
+    echo "Failed to resolve automation Jira account (HTTP ${code})" >&2
+    return 1
+  fi
+
+  _JIRA_AUTOMATION_ACCOUNT_ID=$(jq -r '.accountId // empty' "$outfile")
+  if [ -z "${_JIRA_AUTOMATION_ACCOUNT_ID}" ]; then
+    echo "Jira /myself returned no accountId" >&2
+    return 1
+  fi
+  printf '%s\n' "${_JIRA_AUTOMATION_ACCOUNT_ID}"
+}
+
+# Last changelog author accountId for field (e.g. summary, priority, duedate),
+# or empty if the field never appears in changelog (still at create-time value).
+jira_field_last_editor_account_id() {
+  local issue_key="$1"
+  local field="$2"
+  local outfile start_at max_results total code page_last last=""
+  outfile="${RUNNER_TEMP:-/tmp}/jira-changelog-${issue_key}.json"
+  start_at=0
+  max_results=100
+  total=0
+
+  while true; do
+    code=$(jira_curl "$outfile" GET \
+      "${LOC_JIRA_BASE_URL}/rest/api/2/issue/${issue_key}/changelog?startAt=${start_at}&maxResults=${max_results}")
+    if [ "$code" != "200" ]; then
+      echo "Failed to fetch changelog for ${issue_key} (HTTP ${code})" >&2
+      return 1
+    fi
+
+    total=$(jq -r '.total // 0' "$outfile")
+    page_last=$(jq -r --arg f "$field" '
+      [
+        .values[]?
+        | select(any(.items[]?; .field == $f or .fieldId == $f))
+        | .author.accountId // empty
+      ]
+      | map(select(length > 0))
+      | last // empty
+    ' "$outfile")
+    if [ -n "$page_last" ]; then
+      last="$page_last"
+    fi
+
+    start_at=$((start_at + max_results))
+    if [ "$start_at" -ge "$total" ]; then
+      break
+    fi
+  done
+
+  printf '%s\n' "$last"
+}
+
+# True when automation may update the field: never edited in changelog, or the
+# last editor is the automation account (LOC_JIRA_USER_EMAIL /myself).
+jira_field_writable_by_automation() {
+  local issue_key="$1"
+  local field="$2"
+  local bot last
+
+  bot=$(jira_automation_account_id) || return 1
+  last=$(jira_field_last_editor_account_id "$issue_key" "$field") || return 1
+
+  if [ -z "$last" ] || [ "$last" = "$bot" ]; then
+    return 0
+  fi
+
+  echo "Protecting ${field} on ${issue_key}: last editor ${last} is not automation ${bot}" >&2
+  return 1
+}
+
 jira_post_comment() {
   local issue_key="$1"
   local body="$2"
