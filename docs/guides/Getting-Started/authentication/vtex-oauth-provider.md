@@ -12,9 +12,9 @@ seeAlso:
 
 The VTEX OAuth provider allows external clients, such as AI agents, MCP clients, and partner apps, to request a VTEX user's permission and act on their behalf. It follows the [OAuth 2.1](https://oauth.net/2.1/) authorization code flow with Proof Key for Code Exchange ([PKCE](https://oauth.net/2/pkce/)), so you can use the OAuth libraries you already know instead of building a custom integration.
 
-OAuth is an open standard that lets an app access a user's data on another service without receiving the user's password. In this guide, the **client** is the app that wants to access a VTEX user's data, and the VTEX OAuth provider verifies the user, asks for their permission, and issues the tokens.
+OAuth is an open standard that allows an app to access a user's data on another service without receiving the user's password. In this guide, the **client** is the app that wants to access a VTEX user's data, and the VTEX OAuth provider verifies the user, asks for their permission, and issues the tokens.
 
->ℹ️ This guide is for apps that access VTEX on behalf of a user. If you want to let store customers log in with an external identity provider, see [Webstore login with an external OAuth 2.0 provider](https://developers.vtex.com/docs/guides/login-integration-guide-webstore-oauth2).
+>ℹ️ This guide is for apps that access VTEX on behalf of a user. If you want to allow store customers to log in with an external identity provider, see [Webstore login with an external OAuth 2.0 provider](https://developers.vtex.com/docs/guides/login-integration-guide-webstore-oauth2).
 
 With the VTEX OAuth provider, clients can:
 
@@ -30,7 +30,7 @@ The VTEX OAuth provider issues VTEX ID access tokens on behalf of a user. It doe
 
 ## Discovery
 
-Clients can find the provider's endpoints automatically instead of hardcoding them:
+Clients can find the provider endpoints automatically instead of hardcoding them:
 
 | Document | Endpoint | Specification |
 | ----- | ----- | ----- |
@@ -89,8 +89,8 @@ If the user denies access, VTEX redirects to the `redirect_uri` with the `access
 
 During the flow, the user leaves your client, interacts with VTEX pages, and returns to your client:
 
-1. **Login:** If the user doesn't have an active VTEX session, they will see the VTEX Admin login screen, where the user enters their email and selects `Continue`, or signs in with Google. The user signs in on VTEX and never enters their password in your client.
-2. **Consent:** After logging in, VTEX shows a consent screen titled **Authorize Access**, which informs the user that an application is requesting access and lists the necessary actions:
+1. **Login:** If the user doesn't have an active VTEX session, they'll see the VTEX Admin login screen, where they enter their email and select `Continue`, or sign in with Google. The user signs in on VTEX and never enters their password in your client.
+2. **Consent:** After the user logs in, VTEX shows a consent screen titled **Authorize Access**, which informs the user that an application is requesting access and lists the necessary actions:
 
    - Identify the user by reading their profile and email.
    - Determine which resources the user can access by reading their roles and assigned resources.
@@ -102,7 +102,7 @@ During the flow, the user leaves your client, interacts with VTEX pages, and ret
 
    ![VTEX consent screen titled Authorize Access, listing the permissions the application requests, with Cancel and Allow buttons](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-oauth-provider-consent.png)
 
-   For users with the Super Admin role, the screen also warns that the application will act across all resources and includes a checkbox that the user must select to enable the `Allow` button.
+   For users with the Super Admin role, the screen also warns that the application will act across all resources and includes a checkbox that the user must select to activate the `Allow` button.
 
    ![VTEX consent screen for a Super Admin user, with a warning, an agreement checkbox, and the Allow button disabled](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-oauth-provider-consent-super-admin.png)
 
@@ -142,7 +142,7 @@ curl --request POST \
 | `redirect_uris` | Required. Absolute URIs where VTEX redirects the user after the authorization. |
 | `client_name` | Human-readable name of the client. |
 | `token_endpoint_auth_method` | How the client authenticates at the token endpoint: `client_secret_basic` (default), `client_secret_post`, or `none` for public clients. |
-| `grant_types` | Must include `authorization_code`. Add `refresh_token` to let the client refresh access tokens. |
+| `grant_types` | Must include `authorization_code`. Add `refresh_token` to allow the client to refresh access tokens. |
 | `response_types` | Must include `code`. |
 
 The response contains the `client_id` and, for confidential clients, the `client_secret`. Store the secret securely: never expose it in frontend code or public repositories.
@@ -215,9 +215,9 @@ curl --request POST \
 
 You can use each refresh token only once. Every successful refresh returns a new `refresh_token`, and the one you just used stops working. Presenting a refresh token a second time results in an `invalid_grant` error, so always store the latest one.
 
-The refresh token expires when your client's session ends, and refreshing doesn't extend it. The session duration comes from the account's session settings, and the default is 7 days. When the session ends, the token endpoint returns `invalid_grant` and your client must restart the [authorization flow](#authorization-flow).
+The refresh token expires when your client's session ends, and refreshing doesn't extend it. The session duration comes from the account session settings, and the default is 7 days. When the session ends, the token endpoint returns `invalid_grant` and your client must restart the [authorization flow](#authorization-flow).
 
->ℹ️ The OAuth `refresh_token` is not the same as the `vid_rt` refresh token used in [headless storefronts](https://developers.vtex.com/docs/guides/refresh-token-flow-for-headless-implementations). When you request an access token, VTEX creates a session for your client that is independent from the user's browser session. VTEX keeps the underlying VTEX ID refresh token on its servers and gives your client only an opaque `refresh_token` to use at the token endpoint. Because the sessions are independent, the user signing out of their browser doesn't end your client's session. To end it, [revoke the token](#revoking-tokens).
+>ℹ️ The OAuth `refresh_token` isn't the same as the `vid_rt` refresh token used in [headless storefronts](https://developers.vtex.com/docs/guides/refresh-token-flow-for-headless-implementations). When you request an access token, VTEX creates a session for your client that is independent of the user's browser session. VTEX keeps the underlying VTEX ID refresh token on its servers and gives your client only an opaque `refresh_token` to use at the token endpoint. Because the sessions are independent, the user signing out of their browser doesn't end your client's session. To end it, [revoke the token](#revoking-tokens).
 
 ## Revoking tokens
 
