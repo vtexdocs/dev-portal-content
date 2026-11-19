@@ -17,7 +17,7 @@ This guide explains how to detect session changes in a specific namespace and re
 To view a store's current session data and structure, open your browser and navigate to:
 
 ```
-https://{workspace}–{accountName}.myvtex.com/api/sessions?items=*
+https://{workspace}--{accountName}.myvtex.com/api/sessions?items=*
 ```
 
 > ⚠️ Only use `items=*` during development. Never use it in production, as it retrieves all session data. For production, retrieve specific session data by specifying the required namespace and properties (e.g., `items=authentication.storeUserEmail,checkout.orderFormId`).
@@ -156,7 +156,7 @@ To set up this endpoint, take the following steps:
 You can also check the session data changes by accessing the following URL:
 
 ```
-https://{workspace}–{accountName}.myvtex.com/api/sessions?items=public.demo
+https://{workspace}--{accountName}.myvtex.com/api/sessions?items=public.demo
 ```
 
 The response might look like this:
@@ -167,7 +167,7 @@ The response might look like this:
    "namespaces": {
       "public": {
          "demo": {
-            "Value": "User Authenticated"
+            "value": "User Authenticated"
          }
       }
    }
