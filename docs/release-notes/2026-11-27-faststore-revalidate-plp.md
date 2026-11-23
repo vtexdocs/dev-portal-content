@@ -10,7 +10,7 @@ tags:
   - FastStore
 ---
 
-FastStore now supports the opt-in `experimental.revalidatePLP` flag, which keeps the price, stock, and product order shown on Product Listing Pages (PLP) up to date, without requiring a new deploy.
+FastStore now supports the opt-in `experimental.revalidatePLP` flag, which keeps the price, stock, and product order shown on Product Listing Pages (PLPs) up to date, without requiring a new deploy.
 
 ## What has changed?
 
