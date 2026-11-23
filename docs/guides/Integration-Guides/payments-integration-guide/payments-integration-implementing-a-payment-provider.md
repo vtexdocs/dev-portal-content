@@ -315,7 +315,7 @@ Expected response:
 }
 ```
 
-For more details, see the [Inbound Request (Beta)](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments/-paymentId-/inbound-request/-action-) endpoint documentation.
+For more details, see the [Inbound Request (Beta)](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments/-paymentId-/inbound/-action-) endpoint documentation.
 
 ## Configuration Flow
 
