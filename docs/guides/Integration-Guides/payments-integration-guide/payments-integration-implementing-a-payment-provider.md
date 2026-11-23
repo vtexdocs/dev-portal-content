@@ -286,6 +286,8 @@ For more details, see the [Refund Payment](https://developers.vtex.com/docs/api-
 
 The Inbound Request endpoint (Beta) enables a direct connection between the VTEX Gateway and the payment provider through a URL. It handles communication with the provider's backend through the gateway, sending the transaction context securely.
 
+The gateway does not re-authorize an expired authorization.
+
 Request example:
 
 ```json
