@@ -264,6 +264,9 @@ Contains settings for experimental features.
 | [`graphqlCacheControl`](https://developers.vtex.com/docs/guides/faststore/faststore-api-configuring-graphql-cache-control) | `object` | Settings for GraphQL responses. |       |
 | &nbsp;&nbsp;├─ `maxAge`                | `number` | Maximum time (in seconds) that the response can be cached. | `300` |
 | &nbsp;&nbsp;└─ `staleWhileRevalidate`  | `number` | Time (in seconds) during which stale responses can be served while revalidating. | `60` |
+| `revalidate` | `number \| false` | ISR window (in seconds) for successfully rendered Product Detail Pages (PDP). When unset or `false` (default), the page is cached until the next deploy. | `60` |
+| `revalidate404` | `number` | ISR window (in seconds) for PDP, PLP, and slug pages that resolve as `notFound`. Transient Search or stock misses recover automatically instead of staying cached as a 404 until the next deploy. Default is `300` (5 minutes). Available in FastStore `4.6.0` and later versions. | `300` |
+| `revalidatePLP` | `number \| false` | ISR window (in seconds) for successfully rendered Product Listing Pages (PLP). Without it, the first page's products (price, stock, and order) stay fixed at the state of their first render until the next deploy. Default is `false`, which keeps that existing behavior. The minimum accepted value is `60`; lower positive values are raised to `60` and logged as a warning. Invalid values (`0`, negative, decimal, or non-numeric) are treated as `false` and also logged as a warning. Doesn't apply to CMS landing pages served by the same route. Available in FastStore `X.Y.Z` and later versions. | `120` |
 
 ---
 
