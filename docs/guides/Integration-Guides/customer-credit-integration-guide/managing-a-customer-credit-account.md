@@ -3,7 +3,8 @@ title: "Managing a Customer Credit account"
 slug: "managing-a-customer-credit-account"
 hidden: false
 createdAt: "2024-03-15T00:00:00.000Z"
-updatedAt: ""
+updatedAt: "2026-11-23T00:00:00.000Z"
+excerpt: "Learn how to create, check, update, share, and close Customer Credit accounts using the Customer Credit API."
 ---
 This guide describes how to manage a [Customer Credit account](https://help.vtex.com/en/tutorial/customer-credit-overview--1uIqTjWxIIIEW0COMg4uE0) in your store by performing the following actions through the endpoints of the [Customer Credit API](https://developers.vtex.com/docs/api-reference/customer-credit-api):
 
