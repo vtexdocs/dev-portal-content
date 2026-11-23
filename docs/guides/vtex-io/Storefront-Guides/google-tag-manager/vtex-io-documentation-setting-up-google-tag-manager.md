@@ -3,7 +3,7 @@ title: "Setting up Google Tag Manager"
 slug: "vtex-io-documentation-setting-up-google-tag-manager"
 hidden: false
 createdAt: "2020-06-03T16:02:44.272Z"
-updatedAt: "2024-12-26T16:04:22.033Z"
+updatedAt: "2026-11-23T18:44:00.000Z"
 category: "Storefront development"
 excerpt: "Explore how to track and analyze store data using Google Analytics 4."
 ---
@@ -27,7 +27,7 @@ Install and configure the VTEX IO Google Tag Manager app. For more information, 
 
 ### Create a Google Analytics 4 (GA4) Configuration tag
 
-Create a Google Analytics 4 (GA4) Configuration tag using your Measumerent ID in [Google Tag Manager (GTM)](https://tagmanager.google.com/). For more information, see the Google article [Set up the Google Analytics 4 Configuration tag](https://support.google.com/tagmanager/answer/9442095).
+Create a Google Analytics 4 (GA4) Configuration tag using your Measurement ID in [Google Tag Manager (GTM)](https://tagmanager.google.com/). For more information, see the Google article [Set up the Google Analytics 4 Configuration tag](https://support.google.com/tagmanager/answer/9442095).
 
 </Steps>
 
@@ -42,9 +42,9 @@ After creating the GA4 Configuration tag, set up GA4 events as follows:
 
     ![import-container](https://vtexhelp.vtexassets.com/assets/docs/src/new-ga4-tags-variables___b2619df57689429d97a8abd56a5f7d83.png)
 
-3. In the GTM container, go to the GA4 Configuration tag, and edit the **Measurement ID** field with your Google tag ID (G- ID).
+3. In the GTM container, go to the GA4 Configuration tag, and edit the **Measurement ID** field with your Google tag ID (G-ID).
 
-    > ℹ️ To find your Google tag ID, check the [Find your Google tag ID](https://support.google.com/analytics/answer/9539598?sjid=16676572490197811169-SA#find-G-ID) guide.
+    > ℹ️ To find your Google tag ID, see the Google article [Find your Google tag ID](https://support.google.com/analytics/answer/9539598?sjid=16676572490197811169-SA#find-G-ID).
 
 ### Step 2 - Testing tags in Google Tag Manager
 
@@ -52,7 +52,7 @@ To test if the GA4 Configuration tag is firing correctly on every page, use the 
 
 ### Step 3 - Testing events sent to Google Analytics 4
 
-To check if the events are being received and the reports are populated with data, go to the Google Analytics Admin and use the [DebugView](https://support.google.com/analytics/answer/7201382) to make sure the events are arriving and the [Reports](https://support.google.com/analytics/answer/9212670) are getting the data.
+To check if the events are being received and the reports are populated with data, go to the Google Analytics Admin and use the [DebugView](https://support.google.com/analytics/answer/7201382) to confirm that events arrive and [Reports](https://support.google.com/analytics/answer/9212670) show the data.
 
 ![gtm-debug-view](https://vtexhelp.vtexassets.com/assets/docs/src/gtm-debug-view___e2dc572dcc33e2e23e81749583226ec8.png)
 
@@ -74,24 +74,24 @@ This event is commonly attached to the promotion banner carousel displayed by th
 
 Check the available events that [Pixel Apps](https://developers.vtex.com/docs/guides/pixel-apps) can listen to, along with their corresponding names in Universal Analytics (UA) and Google Analytics 4 (GA4):
 
-| VTEX                   | UA                                                                                              | GA4                                                                                                                                      |
-|------------------------|-------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
-| vtex:promoView         | promoView    | [view_promotion](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtm#view_promotion)       |
+| VTEX                   | UA             | GA4                                                                                                                                      |
+| ---------------------- | -------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| vtex:promoView         | promoView      | [view_promotion](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtm#view_promotion)       |
 | vtex:promotionClick    | promoClick     | [select_promotion](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtm#select_promotion)   |
-| vtex:productImpression | impressions | [view_item_list](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtm#view_item_list)       |
-| vtex:productClick      | click         | [select_item](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtm#select_item)             |
-| vtex:productView       | detail           | [view_item](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtm#view_item)                 |
-| vtex:addToCart         | add               | [add_to_cart](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtm#add_to_cart)             |
-| vtex:removeFromCart    | remove            | [remove_from_cart](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtm#remove_from_cart)   |
-| vtex:viewCart          | Not applicable                                                                                  | [view_cart](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtm#view_cart)                 |
-| vtex:beginCheckout     | checkout                                                                                        | [begin_checkout](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtm#begin_checkout)               |
-| vtex:addShippingInfo   | Not applicable                                                                                  | [add_shipping_info](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtm#add_shipping_info) |
-| vtex:addPaymentInfo    | Not applicable                                                                                  | [add_payment_info](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtm#add_payment_info)   |
-| vtex:orderPlaced       | purchase          | [purchase](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtm#purchase)                   |
-| vtex:refund            | Not applicable                                                                                  | [refund](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtm#refund)                       |
-| vtex:search            | Not applicable                                                                                  | [search](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtm#search)                       |
-| vtex:share             | Not applicable                                                                                  | [share](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtm#share)                         |
-| vtex:addToWishlist     | Not applicable                                                                                  | [add_to_wishlist](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtm#add_to_wishlist)     |
+| vtex:productImpression | impressions    | [view_item_list](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtm#view_item_list)       |
+| vtex:productClick      | click          | [select_item](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtm#select_item)             |
+| vtex:productView       | detail         | [view_item](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtm#view_item)                 |
+| vtex:addToCart         | add            | [add_to_cart](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtm#add_to_cart)             |
+| vtex:removeFromCart    | remove         | [remove_from_cart](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtm#remove_from_cart)   |
+| vtex:viewCart          | Not applicable | [view_cart](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtm#view_cart)                 |
+| vtex:beginCheckout     | checkout       | [begin_checkout](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtm#begin_checkout)       |
+| vtex:addShippingInfo   | Not applicable | [add_shipping_info](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtm#add_shipping_info) |
+| vtex:addPaymentInfo    | Not applicable | [add_payment_info](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtm#add_payment_info)   |
+| vtex:orderPlaced       | purchase       | [purchase](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtm#purchase)                   |
+| vtex:refund            | Not applicable | [refund](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtm#refund)                       |
+| vtex:search            | Not applicable | [search](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtm#search)                       |
+| vtex:share             | Not applicable | [share](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtm#share)                         |
+| vtex:addToWishlist     | Not applicable | [add_to_wishlist](https://developers.google.com/analytics/devguides/collection/ga4/reference/events?client_type=gtm#add_to_wishlist)     |
 
 ### Partially supported events
 
