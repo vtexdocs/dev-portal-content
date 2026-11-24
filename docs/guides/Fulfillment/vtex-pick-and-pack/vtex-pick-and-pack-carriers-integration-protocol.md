@@ -34,7 +34,6 @@ API key available:
 2. When making each request listed below, include an `Authorization` header with the JWT generated in step 1, as shown below:
 
 ```json
-// Headers
 {
   "Authorization": "JWT"
 }
@@ -141,8 +140,8 @@ This is the information that VTEX will send to the carrier to create a service.
       ]
     }
   ]
-  type: PICKUP | DELIVERY | PICKUP_DELIVERY | RETURN!
-  carrierServiceType: NATIONAL | INTERNATIONAL | EXPRESS | SPECIALIZED | OTHERS!
+  type: PICKUP | DELIVERY | PICKUP_DELIVERY | TRANSFER | RETURN!
+  carrierServiceType: BROKER | PICKUP_IN_STORE | NATIONAL | INTERNATIONAL | EXPRESS | SPECIALIZED | OTHERS!
   comments: String
   paymentMethod: ONLINE | CASH_ON_DELIVERY | PIN_PAD!,
   settings: [
@@ -192,7 +191,7 @@ This is the information that VTEX will send to the carrier to create a service.
     "country": "Iceland",
     "neighborhood": "Billings",
     "number": "9840",
-    "reference": "65C"
+    "reference": "65C",
     "address": "63 Billings Place, Valle, Marshall Islands",
     "addressComplement": "In excepteur in Lorem id eu et id.",
     "location": {
@@ -214,7 +213,7 @@ This is the information that VTEX will send to the carrier to create a service.
       "orderId": "SLR-1221800709659-01",
       "envelope": "Grande",
       "description": "Paquete delicado",
-      "categories": ["Cellphone", "Technology"]
+      "categories": ["Cellphone", "Technology"],
       "dimensions": {
         "width": "68",
         "height": "43",
@@ -271,13 +270,19 @@ This is the information that VTEX will send to the carrier to create a service.
 
 ```json
 {
- "status": "PENDING", // PENDING | ASSIGNED | PICKED | ON_ROUTE | INCIDENT | RETURNED | DELIVERED | CANCELED | ON_HOLD
- "serviceId": "ASDF23324KDSF2", // Id devuelto por la transportadora
- "shippingPrice": 20000.09 // If not exists send `null`
- "metaData": {}, // Carrier additional information for example: {"anyKey": "anyValue", "propertyCustom": "anyValue", "anyArray": ["anyValue"], "errorKeyExample": "Show error trace exampel"}, if not exists send `null`
- "shippingEstimatedDate": "2022-05-29T22:36:37.589Z" // If not exists send `null`
+  "status": "PENDING",
+  "serviceId": "ASDF23324KDSF2",
+  "shippingPrice": 20000.09,
+  "metaData": {},
+  "shippingEstimatedDate": "2022-05-29T22:36:37.589Z"
 }
 ```
+
+- `status`: Service status. Possible values: `PENDING`, `ASSIGNED`, `PICKED`, `ON_ROUTE`, `INCIDENT`, `RETURNED`, `DELIVERED`, `CANCELED`, `ON_HOLD`.
+- `serviceId`: ID returned by the carrier.
+- `shippingPrice`: Shipping price. If it does not exist, send `null`.
+- `metaData`: Carrier additional information, for example: `{"anyKey": "anyValue", "propertyCustom": "anyValue", "anyArray": ["anyValue"], "errorKeyExample": "Show error trace example"}`. If it does not exist, send `null`.
+- `shippingEstimatedDate`: Shipping estimated date. If it does not exist, send `null`.
 
 #### Status codes
 
@@ -458,6 +463,7 @@ enum ServiceStatus {
   DELIVERED
   CANCELED
   ON_HOLD
+  TRANSFER
 }
 
 type ServiceLabel {
@@ -980,12 +986,12 @@ Service that allows the carriers to add notes/information on services.
 ```json
 [
   {
-    "type": "ERROR"
+    "type": "ERROR",
     "note": "El paquete tarda en ser despachado",
     "author": "Oscar Rojas"
   },
   {
-    "type": "COMMENT"
+    "type": "COMMENT",
     "note": "El paquete fue recogido",
     "author": "Oscar Rojas"
   }
@@ -999,12 +1005,12 @@ Service that allows the carriers to add notes/information on services.
  "message": "Notes saved successfully",
  "data": [
     {
-      "type": "ERROR"
+      "type": "ERROR",
       "note": "El paquete tarda en ser despachado",
       "author": "Oscar Rojas"
     },
     {
-      "type": "COMMENT"
+      "type": "COMMENT",
       "note": "El paquete ha fue recogido",
       "author": "Oscar Rojas"
     }
@@ -1294,7 +1300,7 @@ REST API endpoints are prefixed with the following URL:
 
 ```json
 {
-  "apiKey": "db5a3cecfef9cb0a9815af7c2eb8f7d6:c400460c165cc9beb146ad4d757e3bb1a24ff15228c424a0bd7c37f0ac356c0f6230568705d93dd6ff68190c0eafe5a74cbb14229748f20d3e53cbcc790ba372"
+  "apiKey": "{{apiKey}}"
 }
 ```
 
