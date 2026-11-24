@@ -280,6 +280,12 @@ Expected response:
 
 The provider can return a `value` smaller than the requested amount to perform a partial refund.
 
+When the acquirer processes refunds asynchronously, don't return success when it only accepts the request.
+
+> ⚠️ Return a success response (`200`) only after the refund has been fully completed. If there's any delay or the refund hasn't been finalized, return an error (`500`). This allows VTEX Payment Module to retry the request for up to 24 hours until the refund is confirmed.
+
+The refund request carries no callback URL, so VTEX doesn't get later notice of a failure.
+
 For more details, see the [Refund Payment](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments/-paymentId-/refunds) endpoint documentation.
 
 ### 6. POST Inbound Request (Beta)
