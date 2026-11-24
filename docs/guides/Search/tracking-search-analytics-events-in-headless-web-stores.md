@@ -14,15 +14,17 @@ seeAlso:
   - "/docs/guides/tracking-search-analytics-events-in-mobile-apps"
 ---
 
-In this guide, you will learn how to add tracking attributes to search screens in a headless web store so that [Activity Flow](https://developers.vtex.com/docs/guides/activity-flow) can capture [Search Analytics](https://help.vtex.com/docs/tutorials/search-analytics) events: impressions and clicks on search results and autocomplete suggestions. We recommend tracking these events with Activity Flow, as it is the data source for the new [Search Analytics](https://help.vtex.com/docs/tutorials/search-analytics) page.
+In this guide, you will learn how to add tracking attributes to search screens in a headless web store so that [Activity Flow](https://developers.vtex.com/docs/guides/activity-flow) can capture [Search Analytics](https://help.vtex.com/docs/tutorials/search-analytics) events: impressions and clicks on search results and autocomplete suggestions.
+
+We recommend tracking these events with Activity Flow, as it's the data source for the new [Search Analytics](https://help.vtex.com/docs/tutorials/search-analytics) page.
+
+> ℹ️ Stores built with [Store Framework](https://developers.vtex.com/docs/guides/store-framework) or [FastStore](https://developers.vtex.com/docs/guides/faststore) (`@faststore/core` v4.4.0 or later) that use native search components already send these events automatically, so you don't need to follow this guide. If your store replaces the native search results or autocomplete components with custom ones, add the tracking attributes described here to those components.
 
 The Activity Flow web script reads `data-af-*` attributes directly from the DOM. You don't need to write a listener or call any function: render the attributes on the right element, and the script takes care of the rest. The `data-af-element` attribute defines the `elementSource`, sent at the top level of the event payload, while any other `data-af-<name>` attribute becomes an extra parameter inside the `attributes` object.
 
 ## Before you begin
 
 This guide assumes Activity Flow is already installed in your headless web store. If you haven't set it up yet, see [Installing Activity Flow in headless stores](https://developers.vtex.com/docs/guides/installing-activity-flow-in-headless-stores).
-
-> ℹ️ Stores built with [Store Framework](https://developers.vtex.com/docs/guides/store-framework) or [FastStore](https://developers.vtex.com/docs/guides/faststore) (`@faststore/core` v4.4.0 or later) that use native search components already send these events automatically, so you don't need to follow this guide. If your store replaces the native search results or autocomplete components with custom ones, add the tracking attributes described here to those components.
 
 > ⚠️ Events tracked with Activity Flow are displayed only on the new [Search Analytics](https://help.vtex.com/docs/tutorials/search-analytics) page in the VTEX Admin, which isn't enabled automatically. Implementing the tracking described in this guide doesn't activate the page, and these events don't appear on the [previous version of the Intelligent Search analytics page](https://help.vtex.com/docs/tutorials/intelligent-search-analytics). To enable the new page for your store, open a ticket with [VTEX Support](https://support.vtex.com/hc/en-us).
 
