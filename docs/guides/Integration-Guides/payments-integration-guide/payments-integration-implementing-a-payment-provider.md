@@ -280,11 +280,19 @@ Expected response:
 
 The provider can return a `value` smaller than the requested amount to perform a partial refund.
 
+When the acquirer processes refunds asynchronously, don't return success when it only accepts the request.
+
+> ⚠️ Return a success response (`200`) only after the refund has been fully completed. If there's any delay or the refund hasn't been finalized, return an error (`500`). This allows VTEX Payment Module to retry the request for up to 24 hours until the refund is confirmed.
+
+The refund request carries no callback URL, so VTEX doesn't get later notice of a failure.
+
 For more details, see the [Refund Payment](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments/-paymentId-/refunds) endpoint documentation.
 
 ### 6. POST Inbound Request (Beta)
 
 The Inbound Request endpoint (Beta) enables a direct connection between the VTEX Gateway and the payment provider through a URL. It handles communication with the provider's backend through the gateway, sending the transaction context securely.
+
+The gateway does not re-authorize an expired authorization.
 
 Request example:
 
@@ -315,7 +323,7 @@ Expected response:
 }
 ```
 
-For more details, see the [Inbound Request (Beta)](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments/-paymentId-/inbound-request/-action-) endpoint documentation.
+For more details, see the [Inbound Request (Beta)](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments/-paymentId-/inbound/-action-) endpoint documentation.
 
 ## Configuration Flow
 
