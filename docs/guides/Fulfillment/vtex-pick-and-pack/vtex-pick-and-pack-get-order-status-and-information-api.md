@@ -3,7 +3,7 @@ title: "VTEX Pick and Pack Get Order Status and Information API"
 slug: "vtex-pick-and-pack-get-order-status-and-information-api"
 hidden: false
 createdAt: "2023-04-05T17:08:52.219Z"
-updatedAt: "2023-04-05T17:08:52.219Z"
+updatedAt: "2026-11-24T00:00:00.000Z"
 excerpt: "Learn how to create webhooks and get order status and information from VTEX Pick and Pack API"
 seeAlso:
   - "/docs/guides/vtex-pick-and-pack"
@@ -12,7 +12,7 @@ hidePaginationPrevious: false
 hidePaginationNext: false
 ---
 
-[VTEX Pick and Pack](https://help.vtex.com/en/tutorial/vtex-pick-and-pack--1OOops3WrUyz7e0bnhkfXU) is a solution to streamline stores’ fulfillment processes by optimizing orders’ picking and packing, and the last-mile delivery. The solution is composed of the [VTEX Fulfillment](https://help.vtex.com/en/tutorial/vtex-pick-and-pack-fulfillment--1zGUEItEEVsal6cuBEBNcA) and the [Last Mile](https://help.vtex.com/en/tutorial/vtex-pick-and-pack-last-mile--HN7WKV0xoq2ssVjsJlfzr) modules.
+[VTEX Pick and Pack](https://help.vtex.com/en/tutorial/vtex-pick-and-pack--1OOops3WrUyz7e0bnhkfXU) is a solution to streamline stores’ fulfillment processes by optimizing orders’ picking and packing, and the last-mile delivery. To learn about the pages and apps that compose the solution, see the [VTEX Pick and Pack overview](https://developers.vtex.com/docs/guides/vtex-pick-and-pack).
 
 This documentation explains how to make a request to the **Get order status and information** REST API to retrieve the status and details of an order in the **VTEX Pick and Pack** context. If you use this API to retrieve orders from other contexts, you will receive 404 error messages.
 
