@@ -323,7 +323,7 @@ For more information, see the [Refund Payment](https://developers.vtex.com/docs/
 
 ### Communicate with the gateway
 
-The last endpoint, `POST` [Inbound Request (BETA)](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments/-paymentId-/inbound-request/-action-), provides a URL that enables a direct connection between the VTEX gateway and the payment provider.
+The last endpoint, `POST` [Inbound Request (BETA)](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments/-paymentId-/inbound/-action-), provides a URL that enables a direct connection between the VTEX gateway and the payment provider.
 
 See an example of the Inbound Request (BETA) request:
 
@@ -355,7 +355,7 @@ As a result, the provider should send the following response:
 }
 ```
 
-> ℹ️ Inbound Request (BETA) is mandatory only for Payment Provider Protocol integrations that use an external Payment App. If you implement Pix with the VTEX Payment App, this endpoint isn't required. For more information, see the [Inbound Request (BETA)](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments/-paymentId-/inbound-request/-action-).
+> ℹ️ Inbound Request (BETA) is mandatory only for Payment Provider Protocol integrations that use an external Payment App. If you implement Pix with the VTEX Payment App, this endpoint isn't required. For more information, see the [Inbound Request (BETA)](https://developers.vtex.com/docs/api-reference/payment-provider-protocol#post-/payments/-paymentId-/inbound/-action-).
 
 For more information about Pix, see the [Pix FAQ](https://help.vtex.com/en/docs/tutorials/pix-faq).
 
