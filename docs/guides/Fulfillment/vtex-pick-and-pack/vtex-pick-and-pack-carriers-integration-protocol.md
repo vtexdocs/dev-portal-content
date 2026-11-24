@@ -286,7 +286,7 @@ This is the information that VTEX will send to the carrier to create a service.
 
 #### Status codes
 
-| HTTP Status Code | Description         |
+| HTTP Status Code | Description |
 | -------------------- | ----------------------- |
 | 200                  | Ok                      |
 | 401                  | Required authentication |
