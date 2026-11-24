@@ -5,7 +5,7 @@ type: added
 createdAt: "2026-11-27T00:00:00.000Z"
 updatedAt: "2026-11-27T00:00:00.000Z"
 hidden: true
-excerpt: "FastStore now supports the opt-in `revalidatePLP` flag, so stores can set how often Product Listing Pages automatically refresh their prices, stock, and product order, keeping that data current for shoppers even between deploys."
+excerpt: "FastStore now supports the opt-in `revalidatePLP` flag, so stores can set how long Product Listing Pages can be served from cache before they refresh their prices, stock, and product order, keeping that data current for shoppers even between deploys."
 tags:
   - FastStore
 ---
@@ -16,7 +16,7 @@ FastStore now supports the opt-in `experimental.revalidatePLP` flag, which keeps
 
 Before this change, the first page of a PLP was generated once and then cached indefinitely: the price, stock, and product order shoppers saw stayed exactly as they were at that first render until the store's next deploy, no matter how much the catalog changed in the meantime. A price drop, a restock, or an Intelligent Search re-ranking could take hours or days to reach shoppers browsing that PLP.
 
-With `experimental.revalidatePLP` set in `discovery.config.js`, you choose how often (in seconds) FastStore regenerates the PLP in the background. Shoppers keep getting the fast, cached page, but its catalog data now refreshes on the interval you define instead of only on deploy:
+With `experimental.revalidatePLP` set in `discovery.config.js`, you choose how long (in seconds) a PLP can be served from cache. After that, the next visit makes FastStore regenerate the page in the background. Shoppers keep getting the fast, cached page, but its catalog data now refreshes after the window you define instead of only on deploy:
 
 ```js discovery.config.js
 experimental: {
@@ -27,9 +27,9 @@ experimental: {
 - The value is a number of seconds. The default is `false`, which keeps the current behavior unchanged for stores that don't set it.
 - The minimum accepted value is `60`. A valid value below that is automatically raised to `60`, and FastStore logs a console warning the first time this happens.
 - Invalid values, such as `0`, negative numbers, decimals, or strings, are treated the same as `false` (no revalidation) and also log a console warning naming the key, instead of breaking the page.
-- This flag only affects catalog PLPs rendered by that route. CMS landing pages served by the same route aren't affected, since their content changes on a different cadence and for different reasons.
+- This flag only affects catalog PLPs. Landing pages created in the Headless CMS aren't affected, since their content changes on a different cadence and for different reasons.
 
-This is the same mechanism already used for Product Detail Pages (`experimental.revalidate`) and for `notFound` PDP, PLP, and slug pages (`experimental.revalidate404`).
+This is the same mechanism already used for Product Detail Pages (`experimental.revalidate`) and for `notFound` PDPs and PLPs (`experimental.revalidate404`).
 
 ## Why did we make this change?
 
