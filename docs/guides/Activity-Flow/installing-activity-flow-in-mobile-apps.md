@@ -9,6 +9,8 @@ You can install [Activity Flow SDK](https://developers.vtex.com/docs/guides/acti
 
 Follow the instructions for the technology you used to develop your app to capture real user interactions and send them to VTEX for analysis. This provides insights into performance, engagement, and customer behavior.
 
+>ℹ️ We recommend tracking search events on your search screens with Activity Flow, so they feed the new [Search Analytics](https://help.vtex.com/docs/tutorials/search-analytics) page. To get started, see [Tracking search analytics events in mobile apps](https://developers.vtex.com/docs/guides/tracking-search-analytics-events-in-mobile-apps).
+
 <Flex>
 
 <WhatsNextCard
@@ -26,7 +28,3 @@ linkTitle="See more"
 />
 
 </Flex>
-
-## Next steps
-
-We recommend tracking search events on your search screens with Activity Flow, so they feed the new [Search Analytics](https://help.vtex.com/docs/tutorials/search-analytics) page. To get started, see [Tracking search analytics events in mobile apps](https://developers.vtex.com/docs/guides/tracking-search-analytics-events-in-mobile-apps).
