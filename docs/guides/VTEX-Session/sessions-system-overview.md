@@ -93,9 +93,13 @@ Below you will find a response example with data from a segment:
 
 ## Changing information from a session
 
-It is possible to change a session’s information by making a `POST` request to the following route:
+It is possible to change a session’s information by making a `PATCH` request to the following route:
 
-`https://{{account-name}}.{{environment}}.com.br/api/sessions/{{session_token}}`
+```
+https://{{accountName}}.{{environment}}.com.br/api/sessions
+```
+
+The request must send the `vtex_session` and `vtex_segment` cookies in the header. The endpoint uses them to find the session to edit. For more information, see [Edit session](https://developers.vtex.com/docs/api-reference/session-manager-api#patch-/api/sessions).
 
 Below you can see an example of a request body used to update the information of a session:
 
