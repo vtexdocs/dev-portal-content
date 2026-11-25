@@ -11,6 +11,8 @@ VTEX Ads is a Retail Media solution that allows brands, retailers, and agencies 
 
 For developers, VTEX Ads provides the infrastructure and APIs to integrate ad placements across ecommerce storefronts, leverage campaign data, and customize ad rendering behavior.
 
+For transparent integration of Banner and Video ads, see [Implementing transparent integration for VTEX Ads](https://developers.vtex.com/docs/guides/implementing-transparent-integration-for-vtex-ads).
+
 <Flex>
 
 <WhatsNextCard
