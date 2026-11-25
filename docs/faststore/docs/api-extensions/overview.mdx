@@ -6,7 +6,7 @@ This track will teach you how to extend the FastStore API schema by adding new d
 
 While the [FastStore API](https://developers.vtex.com/docs/guides/faststore/faststore-api-overview) provides a [GraphQL schema](https://developers.vtex.com/docs/guides/faststore/schema-queries) that caters to common use cases, some stores may require access to additional and more specific data. If you need to retrieve data not natively provided by the FastStore API, you can achieve this by extending the FastStore API schema and incorporating new data into the existing [queries](https://developers.vtex.com/docs/guides/faststore/schema-queries).
 
-  ⚠️ Please be aware that introducing additional API endpoints to your storefront may affect site performance, as already covered in the [Main concepts](#main-concepts) section. 
+>  ⚠️ Please be aware that introducing additional API endpoints to your storefront may affect site performance, as already covered in the [Best practices for fetching data](#best-practices-for-fetching-data) section. 
 
 ## Main concepts
 
@@ -32,6 +32,10 @@ Extendable queries in FastStore's GraphQL API are predefined GraphQL queries tha
 These queries allow you to add or change fields within the query to tailor the data retrieval process to the store-specific needs.
 
 </details>
+
+## Best practices for fetching data
+
+Fetching data efficiently is one of the most important factors in keeping your store fast and reliable. The practices in this section explain how to request only the data you need, how to call VTEX APIs through your store's domain, and how to avoid requests that can slow down or break your storefront, such as direct calls to external APIs and custom API Routes.
 
 ### Fetch only the data you need
 
