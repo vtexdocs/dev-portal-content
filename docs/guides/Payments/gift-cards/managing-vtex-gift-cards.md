@@ -217,6 +217,8 @@ To remove balance from a gift card, you must also use the [Create GiftCard Trans
 
 To remove 120 USD from the balance, send `Debit` in the `operation` field and `120` in the `value` field.
 
+> ⚠️ A `Debit` with a `value` above the current balance is rejected in full and no amount is debited. The request returns the status code `400` with the message `Sorry, insuficient balance for this transaction`. Cap the `value` to the current balance before sending the request.
+
 Request body
 
 ```json
