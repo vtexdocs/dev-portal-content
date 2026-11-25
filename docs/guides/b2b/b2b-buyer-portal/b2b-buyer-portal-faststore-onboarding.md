@@ -1,12 +1,11 @@
 ---
-
-## title: "Onboarding FastStore for B2B Buyer Portal"
-
+title: "Onboarding FastStore for B2B Buyer Portal"
 slug: "b2b-buyer-portal-faststore-onboarding"
 hidden: false
 createdAt: "2026-11-23T00:00:00.000Z"
 updatedAt: "2026-11-23T00:00:00.000Z"
 excerpt: "Learn how to set up a FastStore store for B2B Buyer Portal, from WebOps and domains to the shopper entity, plugin, and optional internationalization."
+---
 
 > ⚠️ This guide applies only to stores using [B2B Buyer Portal](https://help.vtex.com/en/docs/tutorials/b2b-buyer-portal), which is currently available to selected accounts.
 
@@ -25,10 +24,10 @@ These are the implementation steps that are detailed below:
 | [1. Set up the FastStore store](#1-set-up-the-faststore-store)                                               | Create the **WebOps** project, connect GitHub, and configure `discovery.config.js`. | You                                      | Yes      |
 | [2. Configure domains](#2-configure-domains)                               | Move the store to your final domain.                   | You, with VTEX Support for some requests | Yes      |
 | [3. Configure FastCheckout](#3-configure-fastcheckout) | Request the **FastCheckout** enablement. | You, with VTEX Support | Yes |
-| [4. Configure the shopper entity, plugin, and](#4-configure-the-shopper-entity-plugin-and-nohoist) `nohoist` | Install the plugin and give the store access to shopper data.                       | You                                      | Yes      |
+| [4. Configure the shopper entity, plugin, and `nohoist`](#4-configure-the-shopper-entity-plugin-and-nohoist) | Install the plugin and give the store access to shopper data.                       | You                                      | Yes      |
 | [5. Request the customer experience configuration](#5-request-the-customer-experience-configuration)         | Ask VTEX to configure the checkout experience for B2B.                              | VTEX, at your request                    | Yes      |
-| [6. (Optional) Configure internationalization](#6-optional-configure-internationalization)                   | Offer more than one language, region, or currency.                                  | You, with VTEX Support                   | No       |
-| [7. Request the FastCheckout UI configuration](#7-request-the-fastcheckout-ui-configuration)                 | Ask VTEX to apply your logo and primary color to **FastCheckout**.                  | VTEX, at your request                    | Yes      |
+| [6. Request the FastCheckout UI configuration](#6-request-the-fastcheckout-ui-configuration)                 | Ask VTEX to apply your logo and primary color to **FastCheckout**.                  | VTEX, at your request                    | Yes      |
+| [7. (Optional) Configure internationalization](#7-optional-configure-internationalization)                   | Offer more than one language, region, or currency.                                  | You, with VTEX Support                   | No       |
 
 ## Before you begin
 
@@ -109,18 +108,18 @@ Commit and push the change to the `main` branch. **WebOps** starts a new deploym
 2. Confirm that the store is accessible over HTTPS.
 3. Sign in and go to `/pvt/account`. The page must redirect to `/pvt/account/profile`. If it redirects elsewhere, `enableFaststoreMyAccount` isn't active in the deployed version.
 
-### Troubleshooting
+### 1.4 Troubleshooting
 
 - **The deploy doesn't start after a push.** **WebOps** runs only when it receives the GitHub push event. In GitHub, open the **FastStore WebOps** app, click `Configure`, choose the organization, and confirm that the store repository is listed under **Repository access**.
 - **You can't complete the WebOps onboarding.** If you already installed the app in the organization, open a ticket with [VTEX Support](https://help.vtex.com/en/support) and include the account name, the repository link, the app `installationId`, and the repository ID.
-- **The** `Start Project` **button doesn't work.** Confirm that you have the **Owner (Admin Super)** role on the account and administrator access in the GitHub organization.
-- **WebOps is installed in an environment other than** `master`**.** **WebOps** works only in production. Install the app in the `master` environment of the account.
+- **The `Start Project` button doesn't work.** Confirm that you have the **Owner (Admin Super)** role on the account and administrator access in the GitHub organization.
+- **WebOps is installed in an environment other than `master`.** **WebOps** works only in production. Install the app in the `master` environment of the account.
 
 ## 2. Configure domains
 
 In this step, you move the store from the provisional domain to your final domain. By the end, the store is accessible over HTTPS on the final domain, with login and checkout on the same domain.
 
-### Use a single domain
+### 2.1 Use a single domain
 
 The store must use one domain for the storefront, login, customer account, and checkout. A separate `secure` host is no longer needed. For more information, see [FastStore: Simplified domain configuration](https://developers.vtex.com/docs/release-notes/2025-11-14-faststore-single-domain-configuration).
 
@@ -130,21 +129,24 @@ The store must use one domain for the storefront, login, customer account, and c
 - Don't leave `secureSubdomain` pointing to another domain in `discovery.config.js`.
 - Use the same domain in all production addresses.
 
-### Move the store to the final domain
+### 2.2 Move the store to the final domain
 
 Complete the following steps in order:
 
 1. **Point your domain to FastStore.** In your DNS provider, create the `CNAME` record for the `www` host and redirect the root domain to `www`. Follow [Configuring external DNS](https://developers.vtex.com/docs/guides/faststore/go-live-1-configuring-external-dns). DNS propagation can take up to 48 hours.
 2. **Activate the account in production.** In the VTEX Admin, click your profile avatar, open **Account Settings** > **Account**, click `Activate in production`, and confirm. VTEX serves the store on a custom domain only after the account is active in production. For more information, see [Account settings](https://help.vtex.com/en/docs/tracks/settings).
 3. **Add the domain to the store hosts.** The store hosts are registered in the **License Manager** module. In **Account Settings** > **Account**, open the **Stores** tab. In the **Hosts** table, edit the host list and add both `www.{yourdomain}` and `{yourdomain}`. If a host is missing, checkout doesn't work. For more information, see [Configuring the store domain](https://help.vtex.com/en/docs/tutorials/configuring-the-store-domain).
-4. **Update** `discovery.config.js`**.** Replace the production addresses with the final domain, commit, and deploy to `main`:
+4. **Update `discovery.config.js`.** Replace the production addresses with the final domain, commit, and deploy to `main`:
+
    ```js discovery.config.js
-        storeUrl: "https://www.{yourdomain}",
-        secureSubdomain: "https://www.{yourdomain}",
-        checkoutUrl: "https://www.{yourdomain}/checkout",
-        loginUrl: "https://www.{yourdomain}/api/io/login",
-        accountUrl: "https://www.{yourdomain}/api/io/account",
+   storeUrl: "https://www.{yourdomain}",
+   secureSubdomain: "https://www.{yourdomain}",
+   checkoutUrl: "https://www.{yourdomain}/checkout",
+   loginUrl: "https://www.{yourdomain}/api/io/login",
+   accountUrl: "https://www.{yourdomain}/api/io/account",
    ```
+
+   Login and checkout on the provisional `{accountName}.vtex.app` domain may not work after this deployment because these URLs point to the final domain. Continue with the remaining steps to complete the migration.
 5. **Add the domain in WebOps.** In **Storefront** > **FastStore WebOps**, open the **Settings** tab, choose the domain in the **Host** field, click `Add`, and confirm it appears under **Current Domains**. Do this before the domain migration, which makes the final domain the main address of the store instead of `{accountName}.vtex.app` and applies the CDN configuration. Otherwise, the migration fails. For more information, see [FastStore WebOps self-service domain setup](https://developers.vtex.com/docs/release-notes/2025-04-08-faststore-webops-self-service-domain-setup-now-available).
 6. **Request the domain migration.** Before you request it, return to **Account Settings** > **Account** and click `Save` in the **Hosts** table. Then open a ticket with [VTEX Support](https://help.vtex.com/en/support), include the account name and the final domain, and state that the store uses **FastStore** with **FastCheckout**.
 7. **Set the auth cookie root domain.** Follow Step 2 of [Integrating the VTEX Login](https://developers.vtex.com/docs/guides/faststore/go-live-2-integrating-the-vtex-login) to request the auth cookie root domain for your store domain through VTEX Support.
@@ -152,9 +154,9 @@ Complete the following steps in order:
 Request the domain migration again in these cases:
 
 - The store previously used a `secure` domain. After you adjust `discovery.config.js`, request the migration again.
-- The store starts using multiple languages (see [step 6](#6-optional-configure-internationalization)). Without a new migration, language-prefixed routes such as `/pt-BR` can return a `404` error or redirect to the home page.
+- The store starts using multiple languages (see [step 7](#7-optional-configure-internationalization)). Without a new migration, language-prefixed routes such as `/pt-BR` can return a `404` error or redirect to the home page.
 
-### Verify that the store is live
+### 2.3 Verify that the store is live
 
 The store is live when all of the following are true:
 
@@ -168,7 +170,7 @@ The store is live when all of the following are true:
 
 This onboarding requires **FastCheckout**. B2B checkout requires a signed-in buyer, because the checkout needs the buyer's contract and organizational unit. Guest checkout isn't available to B2B buyers.
 
-**FastCheckout** enablement isn't self-service. Request it through [VTEX Support](https://help.vtex.com/en/support) and include the account name, the final store domain, and the store repository. Then complete [step 5](#5-request-the-customer-experience-configuration) and [step 7](#7-request-the-fastcheckout-ui-configuration). For instructions on setting up the **FastCheckout** project, see [Setting up Buyer Portal Checkout](https://developers.vtex.com/docs/guides/setting-up-buyer-portal-checkout).
+**FastCheckout** enablement isn't self-service. Request it through [VTEX Support](https://help.vtex.com/en/support) and include the account name, the final store domain, and the store repository. Then complete [step 5](#5-request-the-customer-experience-configuration) and [step 6](#6-request-the-fastcheckout-ui-configuration). For instructions on setting up the **FastCheckout** project, see [Setting up Buyer Portal Checkout](https://developers.vtex.com/docs/guides/setting-up-buyer-portal-checkout).
 
 ## 4. Configure the shopper entity, plugin, and `nohoist`
 
@@ -179,7 +181,8 @@ In this step, you install the plugin and give **FastStore** read access to the s
 To proceed with this step, make sure that these requirements are satisfied:
 
 - The store from [step 1](#1-set-up-the-faststore-store) is deployed and `enableFaststoreMyAccount` is set to `true` inside the `experimental` object.
-- In the VTEX Admin, you have the **User Administrator - RESTRICTED** role, which lets you create roles and API keys. To add **Dynamic Storage**, the product whose permissions control access to the shopper entity, to a new role, you also need another role that includes that product.
+- In the VTEX Admin, you have the **User Administrator - RESTRICTED** role, which lets you create roles and API keys.
+- You also have a role that includes the **Dynamic Storage** product, which controls access to the shopper entity. You need it to add **Dynamic Storage** to the new role.
 - In **WebOps**, you have the **View Secrets** and **Edit Secrets** permissions (**FastStore** product, **Secrets** category).
 
 ### 4.1 Install the plugin
@@ -187,32 +190,29 @@ To proceed with this step, make sure that these requirements are satisfied:
 The plugin package is `@vtex/faststore-plugin-buyer-portal`. Declare it in two places.
 
 1. In `discovery.config.js`, add the package to the `plugins` list:
+
    ```js discovery.config.js
-        module.exports = {
-          // ...
-          platform: "vtex",
-          plugins: [
-            "@vtex/faststore-plugin-buyer-portal",
-          ],
-          // ...
-        };
+   module.exports = {
+     // ...
+     platform: "vtex",
+     plugins: [
+       "@vtex/faststore-plugin-buyer-portal",
+     ],
+     // ...
+   };
    ```
+
 2. In `package.json`, add the package to `dependencies`. In a monorepo, use `packages/discovery/package.json`.
+
    ```json package.json
-        {
-          "dependencies": {
-            "@vtex/faststore-plugin-buyer-portal": "{version}"
-          }
-        }
+   {
+     "dependencies": {
+       "@vtex/faststore-plugin-buyer-portal": "{version}"
+     }
+   }
    ```
+
 3. Install the dependencies with `yarn install`.
-
-To confirm that the plugin loaded, complete the following checks:
-
-1. Check that the package exists in `node_modules/@vtex/faststore-plugin-buyer-portal`. In a monorepo, check `packages/discovery/node_modules/@vtex/faststore-plugin-buyer-portal`.
-2. Run `yarn dev` and confirm the project starts without plugin or module errors.
-3. Sign in with a user that belongs to an organizational unit and go to `/pvt/organization-account`. If the page loads, the plugin is active. A `404` error means the plugin didn't load.
-4. After deploying, confirm that the **WebOps** build succeeds.
 
 ### 4.2 Declare `nohoist` (monorepos only)
 
@@ -229,23 +229,34 @@ If your project has a single package, skip this step.
 The **FastStore** CLI looks for plugins only in the `node_modules` folder of the `discovery` package. In a monorepo, the package manager often moves dependencies to the root `node_modules`, where the CLI can't find the plugin. The `nohoist` option keeps the plugin inside `packages/discovery/node_modules`.
 
 1. In the root `package.json`, declare `nohoist`. For the base `workspaces` setup, see [Setting up Buyer Portal Checkout](https://developers.vtex.com/docs/guides/setting-up-buyer-portal-checkout).
+
    ```json package.json
-        "workspaces": {
-          "packages": [
-            "packages/*"
-          ],
-          "nohoist": [
-            "**/@vtex/faststore-plugin-buyer-portal",
-            "**/@vtex/faststore-plugin-buyer-portal/**"
-          ]
-        }
+   "workspaces": {
+     "packages": [
+       "packages/*"
+     ],
+     "nohoist": [
+       "**/@vtex/faststore-plugin-buyer-portal",
+       "**/@vtex/faststore-plugin-buyer-portal/**"
+     ]
+   }
    ```
+
 2. In `packages/discovery/package.json`, declare the plugin as a dependency of the package, as in [4.1](#41-install-the-plugin).
 3. Run `yarn install` and deploy.
 
 If you forget `nohoist`, the local build passes but the **WebOps** deploy fails, and the build log shows `Cannot find module` with few details.
 
-### 4.3 Configure shopper entity credentials
+### 4.3 Verify the plugin
+
+To confirm that the plugin loaded, complete the following checks:
+
+1. Check that the package exists in `node_modules/@vtex/faststore-plugin-buyer-portal`. In a monorepo, check `packages/discovery/node_modules/@vtex/faststore-plugin-buyer-portal`.
+2. Run `yarn dev` and confirm the project starts without plugin or module errors.
+3. Sign in with a user that belongs to an organizational unit and go to `/pvt/organization-account`. If the page loads, the plugin is active. A `404` error means the plugin didn't load.
+4. After deploying, confirm that the **WebOps** build succeeds.
+
+### 4.4 Configure shopper entity credentials
 
 **FastStore** reads the shopper entity to display who placed an order, who created each quote, and the name and phone of the signed-in user. For that, the project needs an API key with read permission on **Dynamic Storage**. Without it, those queries fail with `No authentication AppKey and AppToken passed.`
 
@@ -258,7 +269,7 @@ Follow [Configuring Shopper entity access](https://developers.vtex.com/docs/guid
 
 > ⚠️ Never commit the App Key or App Token to the repository. Keep them only in **WebOps** secrets and, for local tests, in terminal variables or an untracked `vtex.env` file listed in `.gitignore`.
 
-> ℹ️ These key names are fixed in **FastStore**, so a store has only one key pair. If you also configure [internationalization](#6-optional-configure-internationalization), use a single API key for both and give its role the permissions that both guides require.
+> ℹ️ These key names are fixed in **FastStore**, so a store has only one key pair. If you also configure [internationalization](#7-optional-configure-internationalization), use a single API key for both and give its role the permissions that both guides require.
 
 To validate the key before go-live, run the same query that **FastStore** makes, with the credentials exported in your terminal:
 
@@ -285,7 +296,18 @@ VTEX configures the checkout experience settings that **B2B Buyer Portal** needs
 
 The configuration enables the B2B checkout behavior: required sign-in (see [Configure FastCheckout](#3-configure-fastcheckout)), custom fields, multiple deliveries, and, when your project needs it, **Quotes**.
 
-## 6. (Optional) Configure internationalization
+## 6. Request the FastCheckout UI configuration
+
+VTEX applies the **FastCheckout** UI configuration for your account. This is a required step, and it isn't self-service. Without it, **FastCheckout** can show an error screen instead of the cart. Request it through support after the customer experience configuration from [step 5](#5-request-the-customer-experience-configuration) is active.
+
+1. Prepare the following inputs:
+   - Your logo as a PNG file published at a public URL on `vtexassets.com`.
+   - The primary color as a hexadecimal code that contrasts with a white background. `#fff` doesn't work, because the **FastCheckout** background is already white.
+2. Open a ticket with [VTEX Support](https://help.vtex.com/en/support).
+3. State that the request is the **FastCheckout** UI configuration for your account and provide the account name, the logo URL, and the primary color.
+4. Wait for VTEX to confirm that the configuration is applied.
+
+## 7. (Optional) Configure internationalization
 
 Complete this step only if your project needs more than one language, region, or currency.
 
@@ -299,20 +321,9 @@ Before you start, make sure that:
 
 The procedure is the same as in [Handling internationalization with the Localization feature](https://developers.vtex.com/docs/guides/faststore/localization-feature-handling-internationalization-with-the-localization-feature). Keep the following **B2B Buyer Portal** points in mind:
 
-- The feature uses the same `FS_DISCOVERY_APP_KEY` and `FS_DISCOVERY_APP_TOKEN` secrets that you created in [step 4](#43-configure-shopper-entity-credentials). Don't create a second key pair. Make sure the role of that key includes the permissions of both features.
+- The feature uses the same `FS_DISCOVERY_APP_KEY` and `FS_DISCOVERY_APP_TOKEN` secrets that you created in [step 4.4](#44-configure-shopper-entity-credentials). Don't create a second key pair. Make sure the role of that key includes the permissions of both features.
 - [Bindings](https://help.vtex.com/en/docs/tutorials/what-is-binding), which associate each domain with a locale and currency, are requested through VTEX Support. In the ticket, include the account name, the URL of each domain, the sales channel and currency of each domain, and the locale of each domain.
-- After the store starts using multiple languages, request the domain migration again, as described in [step 2](#move-the-store-to-the-final-domain).
-
-## 7. Request the FastCheckout UI configuration
-
-VTEX applies the **FastCheckout** UI configuration for your account. This is a required step, and it isn't self-service. Without it, **FastCheckout** can show an error screen instead of the cart. Request it through support after the customer experience configuration from [step 5](#5-request-the-customer-experience-configuration) is active.
-
-1. Prepare the following inputs:
-   - Your logo as a PNG file published at a public URL on `vtexassets.com`.
-   - The primary color as a hexadecimal code that contrasts with a white background. `#fff` doesn't work, because the **FastCheckout** background is already white.
-2. Open a ticket with [VTEX Support](https://help.vtex.com/en/support).
-3. State that the request is the **FastCheckout** UI configuration for your account and provide the account name, the logo URL, and the primary color.
-4. Wait for VTEX to confirm that the configuration is applied.
+- After the store starts using multiple languages, request the domain migration again, as described in [step 2.2](#22-move-the-store-to-the-final-domain).
 
 ## Next steps
 
