@@ -11,7 +11,7 @@ To keep your store secure and avoid vulnerability flags in scanners and audits, 
 
 ## What has changed?
 
-FastStore v2, v3, and v4 now updates the Next.js and `sharp` dependencies to versions with the latest security fixes. The changes vary depending on your FastStore version:
+FastStore v2, v3, and v4 now update the Next.js and `sharp` dependencies to versions with the latest security fixes. The changes vary depending on your FastStore version:
 
 - **FastStore v4:** `@faststore/core` 4.x now depends on `next@^16.4.3`, which includes `sharp` 0.35.5.
 - **FastStore v2 and v3:** patches of `@faststore/core` 2.x and 3.x update `sharp` to `^0.35.5` and require Node `>= 20.9.0`.
