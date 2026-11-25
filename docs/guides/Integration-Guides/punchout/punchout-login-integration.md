@@ -164,6 +164,8 @@ The finish endpoint:
   * Returns VTEX session cookies in response headers.  
   * These cookies are required for subsequent authenticated requests.
 
+>ℹ️ Punchout login creates a VTEX ID session. In the pre-authenticated flow, it also creates the user in VTEX ID if one doesn't exist yet. It doesn't create or update the customer record (`CL`) or the addresses (`AD`) in Master Data, nor the B2B `shopper` entity in Master Data v2. A first-time user reaches checkout without profile and address data, so your integration must sync them separately. In B2B stores, sync them to the `shopper` entity.
+
 >ℹ️ Find more details about this endpoint in `GET` [Finish punchout login flow](https://developers.vtex.com/docs/api-reference/punchout-api#get-/api/authenticator/v1/punchout/finish).
 
 ### Request example
