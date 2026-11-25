@@ -42,3 +42,14 @@ HTTP status codes in the 5xx range indicate server errors, revealing issues on t
 | `502 Bad Gateway`            | <ul><li>Retry the request after some time, as the error might be temporary.</li><li>Check the [VTEX status page](https://status.vtex.com/) for real-time outages and incident reports.</li><li>If the issue persists, reach out to [VTEX Support](https://help.vtex.com/support).</li></ul> |
 | `503 Service Unavailable`    | <ul><li>Retry the request after some time, as the error might be temporary.</li><li>Check the [VTEX status page](https://status.vtex.com/) for real-time outages and incident reports.</li><li>If the issue persists, reach out to [VTEX Support](https://help.vtex.com/support).</li></ul> |
 | `504 Gateway Timeout`        | <ul><li>Check for potential network connectivity problems on your end.</li><li>Investigate if the request payload size or complexity might be causing the timeout.</li><li>Check the [VTEX status page](https://status.vtex.com/) for real-time outages and incident reports. If the issue persists, reach out to [VTEX Support](https://help.vtex.com/support).</li><li>Consider [implementing retry mechanisms or backoff strategies](https://en.wikipedia.org/wiki/Exponential_backoff) to manage timeouts effectively.</li></ul> |
+
+## Handle errors in GraphQL responses
+
+GraphQL APIs can return an HTTP `200 OK` status code even when an operation encounters errors. In this case, error details are provided in the `errors` array of the response body. This can happen, for example, when a downstream service call fails while resolving a query or mutation.
+
+When you call a GraphQL API, follow these best practices:
+
+- Check both the HTTP status code and the `errors` array, if present in the response body, before treating the operation as successful.
+- Inspect the `message` field and, when available, the `extensions` and `path` fields of each error to identify its cause and the affected fields.
+- If the error indicates a transient failure, such as rate limiting or temporary service unavailability, apply the retry strategies described for the [`429 Too Many Requests`](#handle-4xx-errors) and [5xx](#handle-5xx-errors) status codes, such as exponential backoff. Only retry operations when it is safe to do so, particularly for mutations.
+- Note that the response can contain both `data` and `errors`. In this case, the operation may have returned partial data or no usable data at all (`data: null`). Validate the fields your application relies on before using the returned data.
