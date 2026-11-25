@@ -103,6 +103,8 @@ This optimization can be enabled for the following pages:
 
 This action concatenates the CSS of a page into a single file for faster download, reducing the number of HTTP requests required to load each CSS file separately.
 
+>⚠️ The effect of CSS concatenation depends on your store's CSS. A store with a few large CSS files can load slower with concatenation, because one large blocking file replaces parallel downloads. Before promoting, measure your Lighthouse scores with this setting on and off in a production workspace.
+
 ![concatenation](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-best-practices-for-optimizing-performance-2.png)
 
 #### Enable prefetch

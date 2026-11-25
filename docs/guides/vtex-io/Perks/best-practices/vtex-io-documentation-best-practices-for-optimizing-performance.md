@@ -70,7 +70,9 @@ VTEX IO can avoid various download requests by concatenating multiple CSS files 
 
 ![concatenation](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-best-practices-for-optimizing-performance-2.png)
 
-Note that by combining CSS in a single file, the browser makes fewer requests and loads web pages faster, improving the performance of your ecommerce website.
+Note that by combining CSS in a single file, the browser makes fewer requests, which usually makes pages load faster, improving the performance of your ecommerce website.
+
+> ⚠️ The effect of CSS concatenation depends on your store's CSS. A store with a few large CSS files can load slower with concatenation, because one large blocking file replaces parallel downloads. Before promoting, measure your Lighthouse scores with this setting on and off in a production workspace.
 
 ### Lazy loading page metadata
 
