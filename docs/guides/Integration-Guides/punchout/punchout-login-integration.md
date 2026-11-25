@@ -11,9 +11,9 @@ The Punchout login integration enables external procurement systems to authentic
 
 The flow supports two integration types:
 
-* **[VTEX user flow](#vtex-user-flow):** For procurement users who exist on the VTEX platform. In this flow, the username and password are sent as part of the request body, and VTEX authorizes them.
+* **[VTEX user flow](#start-vtex-user-flow):** For procurement users who exist on the VTEX platform. In this flow, the username and password are sent as part of the request body, and VTEX authorizes them.
 
-* **[Pre-authenticated user flow](#pre-authenticated-user-flow):** For procurement users who don't exist on VTEX. In these cases, VTEX trusts the integrator to authorize these users and receive their username for login.
+* **[Pre-authenticated user flow](#start-pre-authenticated-user-flow):** For procurement users who don't exist on VTEX. In these cases, VTEX trusts the integrator to authorize these users and receive their username for login.
 
 ## How it works
 
@@ -149,18 +149,18 @@ For headless operations where no browser is involved, integrators must explicitl
 The finish endpoint:
 
 * **Validates the OTT**  
-    
+
   * Checks if the token exists and hasn't expired.  
   * Ensures the token hasn't been used before.
 
 * **Creates a VTEX session**  
-    
+
   * For VTEX user flow: Creates session based on the validated VTEX user.  
   * For pre-authenticated flow: Creates session using the username from the token's sub claim.  
   * Adds `authMethod: "Punchout"` to the session token for tracking login source.
 
 * **Sets authentication cookies**  
-    
+
   * Returns VTEX session cookies in response headers.  
   * These cookies are required for subsequent authenticated requests.
 
