@@ -15,7 +15,7 @@ The B2B Buyer Portal permission model is built on [predefined storefront roles a
 
 Custom storefront roles and resources follow the same model as native ones, but are fully owned and managed by your account via the [Storefront Roles API](https://developers.vtex.com/docs/api-reference/storefront-roles-api#overview).
 
-> ℹ️ You can also create and manage custom storefront roles and resources in the VTEX Admin, without using the API. In the Admin, custom storefront resources are called **permissions**. To learn more, see [Custom storefront roles and permissions](https://help.vtex.com/en/docs/tutorials/custom-storefront-roles-and-permissions-overview) and [Managing custom storefront roles and permissions](https://help.vtex.com/en/docs/tutorials/manage-custom-storefront-roles-and-permissions).
+> ℹ️ You can also create and manage custom storefront roles and resources in the VTEX Admin without using the API. In the Admin, custom storefront resources are called **permissions**. To learn more, see [Custom storefront roles and permissions](https://help.vtex.com/en/docs/tutorials/custom-storefront-roles-and-permissions-overview) and [Managing custom storefront roles and permissions](https://help.vtex.com/en/docs/tutorials/manage-custom-storefront-roles-and-permissions).
 
 ## Key concepts
 
