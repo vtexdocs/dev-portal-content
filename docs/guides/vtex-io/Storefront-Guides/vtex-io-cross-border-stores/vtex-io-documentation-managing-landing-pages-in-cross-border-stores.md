@@ -65,6 +65,8 @@ vtex install vtex.admin-graphql-ide@3.x
 }
 ```
 
+>ℹ️ If the query returns `null` for a page that exists, pass the `locator` argument with the page path and the ID of the binding where the page was created (usually the default binding). For example: `get(path: "/{URL}", locator: { from: "/{URL}", binding: "{bindingId}" })`. As an alternative, find the route with `listInternals`, which returns each route with its `binding`. For more information, see [`QueryInternal`](https://developers.vtex.com/docs/guides/rewriter#queryinternal) and [`RouteLocator`](https://developers.vtex.com/docs/guides/rewriter#routelocator) in the Rewriter reference.
+
 5. Copy and save the returned data.
 6. Erase the previous query and fill in the main text box with the following mutation command.
 
