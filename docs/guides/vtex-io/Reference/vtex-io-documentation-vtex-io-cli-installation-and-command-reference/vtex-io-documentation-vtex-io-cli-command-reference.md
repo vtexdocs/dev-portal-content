@@ -27,7 +27,7 @@ Below is a brief description of the default commands available in VTEX IO CLI. F
 | [`deps list`](#deps-list)                             | Displays the complete dependency tree of the current workspace.                                                                 |
 | [`deps update`](#deps-update)                         | Updates a dependency of the current workspace. If not specified which one, it updates all dependencies.                         |
 | [`edition get`](#edition-get)                         | Displays the Edition App version installed on the current account.                                                              |
-| [`edition set`](#edition-set)                         | Displays the version of the Edition App for the current account.                                                                    |
+| [`edition set`](#edition-set)                         | Sets the Edition App version for the current account.                                                                               |
 | [`help`](#help)                                       | Displays help for VTEX CLI commands.                                                                                            |
 | [`init`](#init)                                       | Copies starting files and folders from VTEX boilerplates to your local directories.                                             |
 | [`install`](#install)                                 | Installs an app on the current workspace. If no app is specified, it defaults to the app in the current directory.              |

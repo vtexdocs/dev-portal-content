@@ -12,7 +12,7 @@ seeAlso:
 
 The VTEX AI Developer Toolkit provides tools that AI agents and coding assistants can use when working with the VTEX platform. The toolkit includes two tools:
 
-- [VTEX Developer MCP](https://developers.vtex.com/docs/guides/vtex-ai-developer-toolkit-overview): Provides access to VTEX documentation, including the [Help Center](https://help.vtex.com/) and [Developer Portal](https://developers.vtex.com/), and the [VTEX API Reference](https://developers.vtex.com/docs/api-reference). The assistant retrieves this content on demand during a task.
+- [VTEX Developer MCP](https://developers.vtex.com/docs/guides/vtex-developer-mcp): Provides access to VTEX documentation, including the [Help Center](https://help.vtex.com/) and [Developer Portal](https://developers.vtex.com/), and the [VTEX API Reference](https://developers.vtex.com/docs/api-reference). The assistant retrieves this content on demand during a task.
 - [VTEX Skills](https://developers.vtex.com/docs/guides/vtex-skills): Loads persistent context about VTEX-specific architecture patterns, platform constraints, and implementation guidance.
 
 The two tools serve different purposes and can be used independently or together. Use VTEX Developer MCP when an assistant needs to search documentation, inspect API references, or retrieve information during a task. Use VTEX Skills when an assistant needs persistent context about recommended patterns, known constraints, and platform-specific implementation guidance. Using both tools provides access to reference material and reusable VTEX-specific context within the same workflow.
@@ -26,7 +26,7 @@ The `@vtex/developer-mcp` package is a [Model Context Protocol (MCP)](https://mo
 - `search_endpoints`: Finds API endpoints based on a query.
 - `get_endpoint_details`: Retrieves the full OpenAPI specification of an endpoint.
 
-To use the server, add it to the MCP configuration of an AI assistant. The assistant then starts the server and calls its tools as needed during a task. VTEX Developer MCP works with Cursor, VS Code with GitHub Copilot, Claude Code, and Claude Desktop. For setup instructions per assistant, see [VTEX Developer MCP](https://developers.vtex.com/docs/guides/vtex-developer-mcp).
+To use the server, add it to the MCP configuration of an AI assistant. The assistant then starts the server and calls its tools as needed during a task. VTEX Developer MCP works with Cursor, VS Code with GitHub Copilot, Claude Code, Claude Desktop, and Gemini CLI. For setup instructions per assistant, see [VTEX Developer MCP](https://developers.vtex.com/docs/guides/vtex-developer-mcp).
 
 ## VTEX Skills
 

@@ -21,9 +21,9 @@ To learn more about VTEX's platform capabilities, see the [VTEX Platform Overvie
 
 VTEX REST APIs provide the foundation for custom integrations, enabling third-party connections and unifying data for a simplified commerce experience.
 
-- [List of REST APIs](https://developers.vtex.com/vtex-rest-api/docs/getting-started-list-of-rest-apis)
-- [Authentication](https://developers.vtex.com/vtex-rest-api/docs/getting-started-authentication)
-- [Making your first request](https://developers.vtex.com/vtex-rest-api/docs/getting-started-making-your-first-request)
+- [List of REST APIs](https://developers.vtex.com/docs/guides/getting-started-list-of-rest-apis)
+- [Authentication](https://developers.vtex.com/docs/guides/authentication)
+- [Making your first request](https://developers.vtex.com/docs/guides/making-your-first-request)
 
 At the core of VTEX are microservices, each designed to provide specific ecommerce functionalities and targeted capabilities. The following image offers an overview of VTEX Core Services covered in our API Guides and Reference:
 
