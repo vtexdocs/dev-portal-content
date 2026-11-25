@@ -7,7 +7,7 @@ updatedAt: "2026-03-02T11:20:00.813Z"
 excerpt: "Understand the differences between Headless CMS (legacy) and the CMS, including content modeling, editing workflows, localization, media management, and technical infrastructure."
 ---
 
-The CMS is a VTEX content management system for defining, storing, and delivering storefront content. It currently supports FastStore storefronts, with planned support for headless storefronts. It provides a structured approach to content modeling, collaborative editing, and reliable distribution, supporting both editorial teams and developers working on large-scale commerce experiences.
+The CMS is a VTEX content management system for defining, storing, and delivering storefront content. It currently supports FastStore and headless storefronts. It provides a structured approach to content modeling, collaborative editing, and reliable distribution, supporting both editorial teams and developers working on large-scale commerce experiences.
 
 Before diving into the technical details, it's important to understand the high-level differences between the CMS and [Headless CMS (legacy)](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview):
 

@@ -19,3 +19,5 @@ Currently, VTEX Ads supports two ad formats:
 
 - **Sponsored Products (Product Ads)**: Ads that highlight individual SKUs, typically shown in search or category pages.
 - **Banner Display (Banner Ads)**: Visual ads that promote brands or campaigns in designated areas of your site.
+
+For a simplified Banner and Video ads setup, see [Implementing transparent integration for VTEX Ads](https://developers.vtex.com/docs/guides/implementing-transparent-integration-for-vtex-ads).
