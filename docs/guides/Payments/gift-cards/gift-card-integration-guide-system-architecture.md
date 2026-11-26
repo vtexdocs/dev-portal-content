@@ -20,7 +20,7 @@ This is the system that provides a layer of interaction between gift card provid
 
 ## Gift Card Provider Protocol
 
-This is the protocol defining the communication standards gift card providers must follow in their integration with Gift Card Hub. The [Gift Card Provider Protocol](https://developers.vtex.com/docs/api-reference/giftcard-provider-protocol#overview) section of our API Reference provides details on the eleven endpoints that should be exposed by the middleware connecting the external gift card provider to VTEX.
+This is the protocol defining the communication standards gift card providers must follow in their integration with Gift Card Hub. The [Gift Card Provider Protocol](https://developers.vtex.com/docs/api-reference/giftcard-provider-protocol#overview) section of our API Reference documents eleven endpoints, and VTEX calls eight of them. For the list of endpoints VTEX calls and the flow each one belongs to, see [Configuring an external gift card provider](https://developers.vtex.com/docs/guides/configuring-an-external-gift-card-provider).
 
 ## VTEX Gift Card Provider
 

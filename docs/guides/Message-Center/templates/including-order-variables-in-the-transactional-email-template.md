@@ -42,29 +42,13 @@ As you see, the sample value ("Transportadora Teste Courier S.A.") was inserted 
 
 Among the properties of order JSONs that can be used as variables in transactional email templates are:
 
-```json
-{
-  "data": {
-    "h-0": "Properties",
-    "h-1": "Definition",
-    "0-0": "`courier`",
-    "0-1": "Courier",
-    "1-0": "`invoiceNumber`",
-    "1-1": "Invoice number",
-    "2-0": "`invoiceValue`",
-    "2-1": "Invoice value",
-    "3-0": "`invoiceUrl`",
-    "3-1": "Invoice URL",
-    "4-0": "`issuanceDate`",
-    "4-1": "Date of issue",
-    "5-0": "`trackingNumber`",
-    "5-1": "Order tracking number",
-    "6-0": "`invoiceKey`",
-    "6-1": "Invoice access key",
-    "7-0": "`trackingUrl`",
-    "7-1": "Order tracking URL (informed by the carrier)"
-  },
-  "cols": 2,
-  "rows": 8
-}
-```
+| Property | Definition |
+| --- | --- |
+| `courier` | Courier |
+| `invoiceNumber` | Invoice number |
+| `invoiceValue` | Invoice value |
+| `invoiceUrl` | Invoice URL |
+| `issuanceDate` | Date of issue |
+| `trackingNumber` | Order tracking number |
+| `invoiceKey` | Invoice access key |
+| `trackingUrl` | Order tracking URL (informed by the carrier) |
