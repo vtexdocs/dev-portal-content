@@ -4,7 +4,7 @@ slug: "vtex-io-documentation-store-builder"
 excerpt: "Learn how to use the VTEX IO Store builder."
 hidden: false
 createdAt: "2024-05-02T09:33:00.000Z"
-updatedAt: "2024-05-06T17:15:00.000Z"
+updatedAt: "2026-11-16T16:50:00.000Z"
 category: "App Development"
 ---
 
@@ -15,7 +15,7 @@ The `store` builder enables the development of [Store Framework](https://develop
 
 >ℹ️ Note that if your store uses a different [storefront solution](https://developers.vtex.com/docs/storefront-development), the `store` builder is not necessary, as this builder is specifically designed for developing apps for Store Framework.
 
-This builder interprets and validates the [blocks](https://developers.vtex.com/docs/guides/vtex-io-documentation-composition#blocks), [interfaces](https://developers.vtex.com/docs/guides/vtex-io-documentation-interface), and [routes](https://developers.vtex.com/docs/guides/vtex-io-documentation-routes) within the `/store` folder.
+This builder interprets and validates the [blocks](https://developers.vtex.com/docs/guides/vtex-io-documentation-4-configuringtemplates#learn-about-the-json-block-concept), [interfaces](https://developers.vtex.com/docs/guides/vtex-io-documentation-4-declaring-a-theme-block#understanding-interfaces), and [routes](https://developers.vtex.com/docs/guides/vtex-io-documentation-routes) within the `/store` folder.
 
 With the `store` builder, you can use VTEX IO capabilities to quickly build store components and themes that can be reused across ecommerce stores and interact seamlessly with VTEX APIs and existing components.
 
@@ -35,7 +35,7 @@ store
 
 - `blocks.json`: Declares all blocks that exist in your project. Note that blocks can be defined both in the `store/blocks.json` file or in any number of `.json` files organized within the `store/blocks` directory, using an arbitrary directory structure.
 - `contentSchemas.json`: Follows the [JSON Schema](https://json-schema.org/) format.
-- `interfaces.json`: Establishes a relationship between blocks and React components. Learn more in [Interfaces](https://developers.vtex.com/docs/guides/vtex-io-documentation-interface).
+- `interfaces.json`: Establishes a relationship between blocks and React components. Learn more in [Understanding interfaces](https://developers.vtex.com/docs/guides/vtex-io-documentation-4-declaring-a-theme-block#understanding-interfaces).
 - `routes.json`: Creates custom routes in your app, mapping page templates to the path they will respond to. When developing store themes, see [Creating a custom page](https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-new-custom-page) for more information.
 
 ## Usage

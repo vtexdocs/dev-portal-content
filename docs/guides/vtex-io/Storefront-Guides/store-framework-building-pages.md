@@ -3,7 +3,7 @@ title: "Building pages"
 slug: "store-framework-building-pages"
 hidden: false
 createdAt: "2024-09-11T13:08:11.350Z"
-updatedAt: "2024-11-11T14:25:13.298Z"
+updatedAt: "2026-11-16T16:50:00.000Z"
 excerpt: "Discover how to leverage Store Framework to build various types of pages tailored to your business needs."
 ---
 
@@ -41,7 +41,7 @@ Learn more in the [Components](https://developers.vtex.com/docs/guides/store-fra
 
 A template refers to the structural layout of your site pages. Templates define the components for various pages, such as the home, product, and search results pages, by declaring `json` blocks that render these components.
 
-Learn more in the [Configuring templates](https://developers.vtex.com/docs/guides/vtex-io-documentation-4-configuringtemplates) guide.
+Learn more in the [Configuring templates](https://developers.vtex.com/docs/guides/vtex-io-documentation-4-configuringtemplates) guide, which also explains the concepts of [blocks](https://developers.vtex.com/docs/guides/vtex-io-documentation-4-configuringtemplates#learn-about-the-json-block-concept), [props](https://developers.vtex.com/docs/guides/vtex-io-documentation-4-configuringtemplates#get-to-know-the-property-prop-concept), and [composition](https://developers.vtex.com/docs/guides/vtex-io-documentation-4-configuringtemplates#understand-the-block-composition).
 
 ## Guides in this section
 
