@@ -1,0 +1,72 @@
+---
+title: "Migrating from FastStore v1 to v4"
+excerpt: "Migrate your store from FastStore v1 to v4 in the same VTEX account using traffic split."
+hidden: true
+createAt: "2026-11-04T00:00:00.000Z"
+---
+
+FastStore v4 is the latest version of the framework and is recommended for storefront development. If your store still runs on FastStore v1, you can migrate to v4 gradually, in the same VTEX account, using **traffic split**. Traffic split sends a percentage of your visitors to v4 while the rest keep seeing v1, until v4 takes over 100% of the traffic.
+
+> ℹ️ FastStore v3 and v4 run on [WebOps](https://developers.vtex.com/docs/guides/faststore/getting-started-2-starting-the-project) and follow the same process. The guides in this section also apply to migrations from v1 to v3.
+
+> ⚠️ Traffic split is only available between FastStore v1 and v4 in the **same account and the same domain**. You can't split traffic between different accounts or subaccounts, or between two versions that already run on WebOps.
+
+## Before you begin
+
+<Steps>
+
+### Check your FastStore version
+
+Check that your project runs on FastStore v1:
+
+* In your project root, look for one of these files:
+  * `store.config.js`: Used by FastStore v1
+  * `discovery.config.js`: Used by FastStore v2 and later, including v4
+
+* Open the `package.json` file and review the dependencies:
+
+  | Package name | FastStore v1 | FastStore v2+ |
+  | --- | :---: | :---: |
+  | `@faststore/core` | ❌ | ✅ |
+  | `@faststore/styles` | ✅ | ❌ |
+
+  If `@faststore/styles` is present and `@faststore/core` is missing, your project runs on FastStore v1.
+
+> ℹ️ To learn about the differences between versions, see [FastStore versions and support levels](https://developers.vtex.com/docs/guides/faststore/getting-started-faststore-versions-and-support-levels#key-differences-between-faststore-versions).
+
+### Get a GitHub account
+
+You'll need a GitHub account to host the FastStore v4 repository and connect it to WebOps. You can use either a [personal account](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github) or a [GitHub organization](https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/about-organizations). If you choose to use a GitHub organization, make sure you have admin access to it.
+
+</Steps>
+
+## Choose your migration scenario
+
+The migration steps depend on which Content Management System (CMS) your v4 store will use. Choose the guide that matches your scenario:
+
+| Scenario | Guide |
+| --- | --- |
+| Your v1 store uses Headless CMS (Legacy) with production content, and you want to **keep using the same Headless CMS** on v4. | [Migrating from FastStore v1 to v4 keeping Headless CMS (Legacy)](https://developers.vtex.com/docs/guides/faststore/getting-started-faststore-v1-to-v4-with-hcms-legacy) |
+| You want to use the **[CMS for FastStore storefronts](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts)** on v4. | [Migrating from FastStore v1 to v4 with CMS](https://developers.vtex.com/docs/guides/faststore/getting-started-faststore-v1-to-v4-with-cms) |
+
+> ℹ️ Headless CMS (Legacy) stores are being gradually upgraded to the new VTEX CMS. See the announcement [Headless CMS (Legacy): Stores will be upgraded to the new VTEX CMS](https://help.vtex.com/announcements/2026-03-30-headless-cms-stores-will-be-upgraded-to-the-new-vtex-cms). If you don't need to keep Headless CMS (Legacy) on v4, we recommend the CMS guide.
+
+The main differences between the two scenarios are:
+
+| | Headless CMS (Legacy) | CMS |
+| --- | --- | --- |
+| **WebOps setup** | You install the WebOps GitHub App, and VTEX configures WebOps through a support ticket. | You complete the WebOps onboarding in the VTEX Admin. |
+| **Content** | v1 and v4 share the same Headless CMS (Legacy) project. Content must work on both versions. | v1 stays on Headless CMS (Legacy) and v4 uses the CMS. Each version has its own content. |
+| **Content updates during the split** | Publishing in the Headless CMS (Legacy) builds only v1, so you must keep v4 updated through your own automation. | Publishing in one CMS doesn't affect the other, so changes that apply to both versions must be published twice. |
+| **Cutover** | You point the Headless CMS (Legacy) build URL to v4, and VTEX switches an internal configuration so the Headless CMS (Legacy) builds v4 by default. | No extra configuration is needed. |
+
+Both guides follow the same four phases:
+
+| Phase | Description |
+| --- | --- |
+| **1. Preparation** | Prepare the v4 repository, content, domains, and checkout in the weeks before the migration. |
+| **2. Configuration** | Open a ticket at least one day before the migration to activate traffic split with 0% of the traffic on v4, and set up WebOps. |
+| **3. Gradual rollout** | Validate v4 in production using `?ab_test=v2` and increase its share of the traffic in steps until it reaches 100%. |
+| **4. Post-migration** | VTEX ends the split, and you retire the v1 repository. |
+
+Both guides also describe how to roll back to v1 if you find issues during or after the migration.
