@@ -3,7 +3,7 @@ title: "VTEX Pick and Pack Get Order Status and Information API"
 slug: "vtex-pick-and-pack-get-order-status-and-information-api"
 hidden: false
 createdAt: "2023-04-05T17:08:52.219Z"
-updatedAt: "2023-04-05T17:08:52.219Z"
+updatedAt: "2026-11-26T00:00:00.000Z"
 excerpt: "Learn how to create webhooks and get order status and information from VTEX Pick and Pack API"
 seeAlso:
   - "/docs/guides/vtex-pick-and-pack"
@@ -12,7 +12,7 @@ hidePaginationPrevious: false
 hidePaginationNext: false
 ---
 
-[VTEX Pick and Pack](https://help.vtex.com/en/tutorial/vtex-pick-and-pack--1OOops3WrUyz7e0bnhkfXU) is a solution to streamline stores’ fulfillment processes by optimizing orders’ picking and packing, and the last-mile delivery. The solution is composed of the [VTEX Fulfillment](https://help.vtex.com/en/tutorial/vtex-pick-and-pack-fulfillment--1zGUEItEEVsal6cuBEBNcA) and the [Last Mile](https://help.vtex.com/en/tutorial/vtex-pick-and-pack-last-mile--HN7WKV0xoq2ssVjsJlfzr) modules.
+[VTEX Pick and Pack](https://help.vtex.com/en/tutorial/vtex-pick-and-pack--1OOops3WrUyz7e0bnhkfXU) is a solution to streamline stores’ fulfillment processes by optimizing orders’ picking and packing, and the last-mile delivery. To learn about the pages and apps that compose the solution, see the [VTEX Pick and Pack overview](https://developers.vtex.com/docs/guides/vtex-pick-and-pack).
 
 This documentation explains how to make a request to the **Get order status and information** REST API to retrieve the status and details of an order in the **VTEX Pick and Pack** context. If you use this API to retrieve orders from other contexts, you will receive 404 error messages.
 
@@ -130,18 +130,18 @@ Use the authorization retrieved from the steps listed in [Before you begin](#bef
             ]
             }
         ]
-        "shipping"?: {
+        "shipping": {
             "trackingId": "string",
             "trackingStatus": "string",
-            "services"?: [
+            "services": [
                 {
                     "serviceId": "string",
-                    "agent"?: "string",
-                    "vehicle"?: "string",
+                    "agent": "string",
+                    "vehicle": "string",
                     "courier": "string",
-                    "trackingUrl"?: "string",
+                    "trackingUrl": "string",
                     "serviceStatus": "string",
-                    "evidences"?: "string",
+                    "evidences": "string",
                     "createdAt": "string"
                 }
             ]
@@ -162,18 +162,25 @@ Use the authorization retrieved from the steps listed in [Before you begin](#bef
 
 ## Webhook
 
-You will need to create a webhook to receive the response of the request, used for receiving notifications for invoicing purposes, for example.
+VTEX Pick and Pack sends status change notifications through two webhooks. Each webhook is triggered by its own [automation](https://help.vtex.com/en/docs/tutorials/vtex-pick-and-pack-settings#automation):
+
+| Webhook | Automation tab | Notification content |
+| ------- | -------------- | -------------------- |
+| `ORDER_STATUS` | **Automation > Orders** | Order status in VTEX Pick and Pack. See [Order status in Pick and Pack](#order-status-in-pick-and-pack). |
+| `SHIPPING_SERVICE_STATUS` | **Automation > Shipping services** | Shipping service status. See [Service status](https://help.vtex.com/en/docs/tutorials/vtex-pick-and-pack-last-mile#service-status). |
+
+In each automation rule, you select which statuses trigger the webhook. You only receive notifications for the statuses selected in the rule, not for every status change.
 
 Your webhook may have your desired setting for URL, path, method, and authentication, it is flexible.
 
-The order’s information and status change notifications received will be an object like the following example:
+The `ORDER_STATUS` notifications received will be an object like the following example:
 
 ### Example
 
 ```json
 {
   "orderId": "XDE-1253881550433-01",
-  "oldStatus": "PENDING",
+  "oldStatus": "READY_FOR_HANDLING",
   "newStatus": "READY_FOR_PICKING",
   "hostname": "picknpackstore"
 }
@@ -181,26 +188,23 @@ The order’s information and status change notifications received will be an ob
 
 ## Order status in Pick and Pack
 
-In the table below, you will find the possible order statuses in the **VTEX Pick and Pack** context:
+The `ORDER_STATUS` webhook and the [Get order by ID](https://developers.vtex.com/docs/api-reference/pick-and-pack-api#get-/orders/-orderId-) endpoint of the Pick and Pack API return the same order status field. In the table below, you will find the possible order statuses in the **VTEX Pick and Pack** context:
 
 | Status                 | Description                                                                                                     |
 |------------------------|-----------------------------------------------------------------------------------------------------------------|
-| READY_FOR_HANDLING     | An order imported from the Order Management System (OMS) that is ready to be fulfilled.                         |
-| IDLE (Inactive)        | The order was an external fulfillment, and *VTEX Pick and Pack* will not be able to process it. If the order is invoiced in OMS in a status different from `Ready for invoicing`, the system will also consider it an external fulfillment and change the order status to `Idle`. |
-| READY_FOR_PICKING      | The order was assigned to a picker and is depending on the picker’s confirmation to move to the next status.     |
-| PICKING                | The picker is collecting the order items.                                                                       |
-| READY_FOR_PACKING      | The picker has finished the picking process and the order is ready to be packed.                              |
-| PACKING                | The order’s items are being packed.                                                                             |
-| READY_FOR_INVOICING    | The order can be invoiced. *VTEX Pick and Pack* solution does not invoice orders.                              |
-| INVOICING              | The invoice is being processed.                                                                                 |
-| INVOICED               | The order was invoiced.                                                                                         |
-| PREPARING_SHIPPING     | Shipping services are being created for the order.                                                              |
-| READY_FOR_SHIPPING     | Once Shipping Services are created, service is awaiting carrier pickup.                                        |
-| WAITING_FOR_DELIVERY_COMPANY | The order is packed and the shipping service was successfully created.                                    |
-| ON_ROUTE               | The courier (driver) has collected the package in the physical store or warehouse, for example.               |
-| DELIVERED              | The order was delivered to the customer.                                                                        |
-| RETURNED               | The customer couldn’t be reached or refused to receive the package, so the order was returned.                |
-| WAITING_FOR_PICKUP     | The package is ready to be picked up by the customer at the physical store or at another pickup point.        |
+| READY_FOR_HANDLING     | The order was imported from the Order Management System (OMS) and is awaiting picking. The order also returns to this status if any item becomes pending. |
+| READY_FOR_PICKING      | The order was assigned to a worksheet or picker, and no units have been picked yet.                             |
+| PICKING                | Picking is in progress, and some of the units have been picked.                                                 |
+| COLLECTED              | All units were handled, either collected or rejected.                                                           |
+| READY_FOR_PACKING      | All items are ready to be packed. Rejected items also count as completed.                                       |
+| PACKING                | At least one item has been packed.                                                                              |
+| PREPARING_SHIPPING     | Picking and packing are complete, and the packages were created. The changes are sent to the OMS, and the shipping service can be created. |
+| READY_FOR_SHIPPING     | All packages are ready to be shipped and are awaiting carrier pickup.                                           |
+| SHIPPING               | All packages were dispatched.                                                                                   |
+| DELIVERED              | The order was delivered. This is a final status.                                                                |
+| REJECTED               | All order items were rejected during picking.                                                                   |
 | CANCELED               | The order was canceled.                                                                                         |
+
+Shipping services have their own statuses, which are sent by the `SHIPPING_SERVICE_STATUS` webhook. To learn about them, see [Service status](https://help.vtex.com/en/docs/tutorials/vtex-pick-and-pack-last-mile#service-status).
 
 >⚠️ The statuses above are related to VTEX Pick and Pack only, and do not correspond to the order flow and status of the Order Management System (OMS).

@@ -42,7 +42,7 @@ After installing the app, you must create an account in [Cookie Script](https://
 ## Cookie Script Configuration
 Once you have installed the app, you need to create an account in [Cookie Script](https://cookie-script.com/create-an-account.html) to be able to configure the app.
 
->⚠️ *You must follow the steps described in this section to guarantee the cookies will work. Otherwise, they will break the purchases flow from your store.*
+>⚠️ You must follow the steps described in this section to guarantee the cookies will work. Otherwise, they will break the purchases flow from your store.
 
 1. Go to the [Cookie Script](https://cookie-script.com/create-an-account.html) page and create your account.
 2. After creating your account, go to the **Dashboard** tab and click on `Add website`.

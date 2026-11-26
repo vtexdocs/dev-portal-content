@@ -15,12 +15,14 @@ The `QuantitySelector` component allows customers to select the quantity of a gi
   <Tab>
     <OverviewSection>
       <QuantitySelector min={1} max={10} initial={5} />
+      <QuantitySelector min={1} max={10} initial={1} unitMultiplier={6} useUnitMultiplier />
       <QuantitySelector min={1} max={10} initial={5} disabled />
     </OverviewSection>
   </Tab>
   <Tab>
     ```tsx
     <QuantitySelector min={1} max={10} initial={5} />
+    <QuantitySelector min={1} max={10} initial={1} unitMultiplier={6} useUnitMultiplier />
     <QuantitySelector min={1} max={10} initial={5} disabled />
     ```
   </Tab>
@@ -39,13 +41,28 @@ import { QuantitySelector } from "@faststore/ui";
 
 To apply styles, include the following in your stylesheet:
 
-```tsx
-import "@faststore/ui/src/components/molecules/QuantitySelector/styles.scss";
+```scss
+@import "@faststore/ui/src/components/molecules/QuantitySelector/styles.scss";
 ```
 
 ---
 
 ## Examples
+
+### Unit multiplier
+
+Set `unitMultiplier` to the number of units in a pack and enable `useUnitMultiplier`. The selector displays multiples of that value while `onChange` receives the pack quantity.
+
+```tsx
+<QuantitySelector
+  min={1}
+  max={10}
+  initial={1}
+  unitMultiplier={6}
+  useUnitMultiplier
+  onChange={(packs) => console.log(packs)}
+/>
+```
 
 ### Disabled
 

@@ -15,7 +15,7 @@ updatedAt: "2022-10-04T21:56:43.466Z"
 
 ## Set up
 
-Auto increment fields can be set up in data entities' [JSON schemas](/docs/guides/working-with-json-schemas-in-master-data-v2).
+Auto increment fields can be set up in data entities' [JSON schemas](https://developers.vtex.com/docs/guides/working-with-json-schemas-in-master-data-v2).
 
 Create an `integer` field and add its name to the `v-auto-increment` property, like in the example below:
 

@@ -25,31 +25,46 @@ The `ProductShelf` component Displays a list of products to be used as a section
   </Tab>
   <Tab>
     ```tsx
-    <ProductShelf>
-      <ProductShelfItems>
-        {products.map(({ product }, idx) => (
-          <ProductShelfItem key={idx}>
-            <ProductCard>
-              <ProductCardImage>
-                <img
-                  data-fs-image
-                  src={product.image[0].url}
-                  alt={product.image[0].alternateName}
-                />
-              </ProductCardImage>
-              <ProductCardContent
-                title={product.isVariantOf.name}
-                price={{
-                  value: product.offers.offers[0].price,
-                  listPrice: product.offers.offers[0].listPrice,
-                  formatter: useFormattedPrice,
-                }}
-              />
-            </ProductCard>
-          </ProductShelfItem>
-        ))}
-      </ProductShelfItems>
-    </ProductShelf>
+    import {
+      ProductCard, ProductCardContent, ProductCardImage,
+      ProductShelf, ProductShelfItem, ProductShelfItems,
+    } from '@faststore/ui'
+
+    const products = [{
+      product: {
+        image: [{ url: 'https://storeframework.vtexassets.com/arquivos/ids/190902/unsplash-magic-mouse.jpg', alternateName: 'Apple Magic Mouse' }],
+        isVariantOf: { name: 'Apple Magic Mouse' },
+        offers: { offers: [{ price: 950, listPrice: 999 }] },
+      },
+    }]
+    const useFormattedPrice = (price: number) =>
+      new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(price)
+
+    export default function ProductShelfExample() {
+      return (
+        <ProductShelf>
+          <ProductShelfItems>
+            {products.map(({ product }) => (
+              <ProductShelfItem key={product.image[0].url}>
+                <ProductCard>
+                  <ProductCardImage>
+                    <img data-fs-image src={product.image[0].url} alt={product.image[0].alternateName} />
+                  </ProductCardImage>
+                  <ProductCardContent
+                    title={product.isVariantOf.name}
+                    price={{
+                      value: product.offers.offers[0].price,
+                      listPrice: product.offers.offers[0].listPrice,
+                      formatter: useFormattedPrice,
+                    }}
+                  />
+                </ProductCard>
+              </ProductShelfItem>
+            ))}
+          </ProductShelfItems>
+        </ProductShelf>
+      )
+    }
     ```
   </Tab>
 </Tabs>
@@ -105,32 +120,47 @@ You can use [ProductCard variants](https://developers.vtex.com/docs/guides/fasts
   </Tab>
   <Tab>
     ```tsx
-      <ProductShelf>
-        <ProductShelfItems>
-          {products.map(({ product }, idx) => (
-            <ProductShelfItem key={idx}>
-              <ProductCard>
-                <ProductCardImage>
-                  <img
-                    data-fs-image
-                    src={product.image[0].url}
-                    alt={product.image[0].alternateName}
+    import {
+      ProductCard, ProductCardContent, ProductCardImage,
+      ProductShelf, ProductShelfItem, ProductShelfItems,
+    } from '@faststore/ui'
+
+    const products = [{
+      product: {
+        image: [{ url: 'https://storeframework.vtexassets.com/arquivos/ids/190902/unsplash-magic-mouse.jpg', alternateName: 'Apple Magic Mouse' }],
+        isVariantOf: { name: 'Apple Magic Mouse' },
+        offers: { offers: [{ price: 950, listPrice: 999 }] },
+      },
+    }]
+    const useFormattedPrice = (price: number) =>
+      new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(price)
+
+    export default function ProductShelfWithButton() {
+      return (
+        <ProductShelf>
+          <ProductShelfItems>
+            {products.map(({ product }) => (
+              <ProductShelfItem key={product.image[0].url}>
+                <ProductCard>
+                  <ProductCardImage>
+                    <img data-fs-image src={product.image[0].url} alt={product.image[0].alternateName} />
+                  </ProductCardImage>
+                  <ProductCardContent
+                    title={product.isVariantOf.name}
+                    price={{
+                      value: product.offers.offers[0].price,
+                      listPrice: product.offers.offers[0].listPrice,
+                      formatter: useFormattedPrice,
+                    }}
+                    onButtonClick={() => {}}
                   />
-                </ProductCardImage>
-                <ProductCardContent
-                  title={product.isVariantOf.name}
-                  price={{
-                    value: product.offers.offers[0].price,
-                    listPrice: product.offers.offers[0].listPrice,
-                    formatter: useFormattedPrice,
-                  }}
-                  onButtonClick={() => {}}
-                />
-              </ProductCard>
-            </ProductShelfItem>
-          ))}
-        </ProductShelfItems>
-      </ProductShelf>
+                </ProductCard>
+              </ProductShelfItem>
+            ))}
+          </ProductShelfItems>
+        </ProductShelf>
+      )
+    }
     ```
 
   </Tab>
@@ -147,31 +177,46 @@ You can use [ProductCard variants](https://developers.vtex.com/docs/guides/fasts
   </Tab>
   <Tab>
     ```tsx
-      <ProductShelf>
-        <ProductShelfItems>
-          {products.map(({ product }, idx) => (
-            <ProductShelfItem>
-              <ProductCard bordered key={idx}>
-                <ProductCardImage>
-                  <img
-                    data-fs-image
-                    src={product.image[0].url}
-                    alt={product.image[0].alternateName}
+    import {
+      ProductCard, ProductCardContent, ProductCardImage,
+      ProductShelf, ProductShelfItem, ProductShelfItems,
+    } from '@faststore/ui'
+
+    const products = [{
+      product: {
+        image: [{ url: 'https://storeframework.vtexassets.com/arquivos/ids/190902/unsplash-magic-mouse.jpg', alternateName: 'Apple Magic Mouse' }],
+        isVariantOf: { name: 'Apple Magic Mouse' },
+        offers: { offers: [{ price: 950, listPrice: 999 }] },
+      },
+    }]
+    const useFormattedPrice = (price: number) =>
+      new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(price)
+
+    export default function BorderedProductShelf() {
+      return (
+        <ProductShelf>
+          <ProductShelfItems>
+            {products.map(({ product }) => (
+              <ProductShelfItem key={product.image[0].url}>
+                <ProductCard bordered>
+                  <ProductCardImage>
+                    <img data-fs-image src={product.image[0].url} alt={product.image[0].alternateName} />
+                  </ProductCardImage>
+                  <ProductCardContent
+                    title={product.isVariantOf.name}
+                    price={{
+                      value: product.offers.offers[0].price,
+                      listPrice: product.offers.offers[0].listPrice,
+                      formatter: useFormattedPrice,
+                    }}
                   />
-                </ProductCardImage>
-                <ProductCardContent
-                  title={product.isVariantOf.name}
-                  price={{
-                    value: product.offers.offers[0].price,
-                    listPrice: product.offers.offers[0].listPrice,
-                    formatter: useFormattedPrice,
-                  }}
-                />
-              </ProductCard>
-            </ProductShelfItem>
-          ))}
-        </ProductShelfItems>
-      </ProductShelf>
+                </ProductCard>
+              </ProductShelfItem>
+            ))}
+          </ProductShelfItems>
+        </ProductShelf>
+      )
+    }
     ```
 
   </Tab>
@@ -188,31 +233,46 @@ You can use [ProductCard variants](https://developers.vtex.com/docs/guides/fasts
   </Tab>
   <Tab>
     ```tsx
-      <ProductShelf>
-        <ProductShelfItems>
-          {products.map(({ product }, idx) => (
-            <ProductShelfItem key={idx}>
-              <ProductCard>
-                <ProductCardImage aspectRatio={3 / 4}>
-                  <img
-                    data-fs-image
-                    src={product.image[0].url}
-                    alt={product.image[0].alternateName}
+    import {
+      ProductCard, ProductCardContent, ProductCardImage,
+      ProductShelf, ProductShelfItem, ProductShelfItems,
+    } from '@faststore/ui'
+
+    const products = [{
+      product: {
+        image: [{ url: 'https://storeframework.vtexassets.com/arquivos/ids/190902/unsplash-magic-mouse.jpg', alternateName: 'Apple Magic Mouse' }],
+        isVariantOf: { name: 'Apple Magic Mouse' },
+        offers: { offers: [{ price: 950, listPrice: 999 }] },
+      },
+    }]
+    const useFormattedPrice = (price: number) =>
+      new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(price)
+
+    export default function ProductShelfAspectRatio() {
+      return (
+        <ProductShelf>
+          <ProductShelfItems>
+            {products.map(({ product }) => (
+              <ProductShelfItem key={product.image[0].url}>
+                <ProductCard>
+                  <ProductCardImage aspectRatio={3 / 4}>
+                    <img data-fs-image src={product.image[0].url} alt={product.image[0].alternateName} />
+                  </ProductCardImage>
+                  <ProductCardContent
+                    title={product.isVariantOf.name}
+                    price={{
+                      value: product.offers.offers[0].price,
+                      listPrice: product.offers.offers[0].listPrice,
+                      formatter: useFormattedPrice,
+                    }}
                   />
-                </ProductCardImage>
-                <ProductCardContent
-                  title={product.isVariantOf.name}
-                  price={{
-                    value: product.offers.offers[0].price,
-                    listPrice: product.offers.offers[0].listPrice,
-                    formatter: useFormattedPrice,
-                  }}
-                />
-              </ProductCard>
-            </ProductShelfItem>
-          ))}
-        </ProductShelfItems>
-      </ProductShelf>
+                </ProductCard>
+              </ProductShelfItem>
+            ))}
+          </ProductShelfItems>
+        </ProductShelf>
+      )
+    }
     ```
 
   </Tab>
@@ -229,36 +289,53 @@ You can use [ProductCard variants](https://developers.vtex.com/docs/guides/fasts
   </Tab>
   <Tab>
     ```tsx
-     const isMobile = window.innerWidth <= 768
+    import {
+      Carousel, ProductCard, ProductCardContent,
+      ProductCardImage, ProductShelf,
+    } from '@faststore/ui'
 
-      <ProductShelf>
-          {/* Avoid using `ProductShelfItem` component here since the `Carousel` component already wraps its children as <li />` */}
+    const products = [{
+      product: {
+        image: [{ url: 'https://storeframework.vtexassets.com/arquivos/ids/190902/unsplash-magic-mouse.jpg', alternateName: 'Apple Magic Mouse' }],
+        isVariantOf: { name: 'Apple Magic Mouse' },
+        offers: { offers: [{ price: 950, listPrice: 999 }] },
+      },
+    }]
+    const useFormattedPrice = (price: number) =>
+      new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(price)
+
+    export default function ProductShelfCarousel() {
+      return (
+        <ProductShelf>
+          {/* Carousel already wraps its children in list items. */}
           <Carousel
-            itemsPerPage={isMobile ? 1 : 3}
+            itemsPerPage={3}
             variant="scroll"
             infiniteMode={false}
-          >
-          {products.map(({ product }, idx) => (
-            <ProductCard key={idx}>
-              <ProductCardImage aspectRatio={3 / 4}>
-                <img
-                  data-fs-image
-                  src={product.image[0].url}
-                  alt={product.image[0].alternateName}
+            >
+            {products.map(({ product }) => (
+              <ProductCard key={product.image[0].url}>
+                <ProductCardImage aspectRatio={3 / 4}>
+                  <img
+                    data-fs-image
+                    src={product.image[0].url}
+                    alt={product.image[0].alternateName}
+                  />
+                </ProductCardImage>
+                <ProductCardContent
+                  title={product.isVariantOf.name}
+                  price={{
+                    value: product.offers.offers[0].price,
+                    listPrice: product.offers.offers[0].listPrice,
+                    formatter: useFormattedPrice,
+                  }}
                 />
-              </ProductCardImage>
-              <ProductCardContent
-                title={product.isVariantOf.name}
-                price={{
-                  value: product.offers.offers[0].price,
-                  listPrice: product.offers.offers[0].listPrice,
-                  formatter: useFormattedPrice,
-                }}
-              />
-            </ProductCard>
-          ))}
+              </ProductCard>
+            ))}
           </Carousel>
-      </ProductShelf>
+        </ProductShelf>
+      )
+    }
     ```
 
   </Tab>

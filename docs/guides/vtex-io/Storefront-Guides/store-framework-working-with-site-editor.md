@@ -52,7 +52,7 @@ Set up your components following the [Using components](https://developers.vtex.
 
 It is important to understand the concept of a Content Management System (CMS) to learn how to work with Site Editor.
 
-A Content Management System (CMS) is a tool for creating, managing, and modifying website content. VTEX offers different CMS options based on the storefront technology used to develop your site. Store Framework uses Site Editor, Legacy CMS Portal uses [Layout](https://help.vtex.com/en/tracks/cms--2YcpgIljVaLVQYMzxQbc3z/1oN446gRGcR2s70RvBCAmj), and FastStore leverages [VTEX Headless CMS](https://developers.vtex.com/docs/guides/faststore/headless-cms-overview).
+A Content Management System (CMS) is a tool for creating, managing, and modifying website content. VTEX offers different CMS options based on the storefront technology used to develop your site. Store Framework uses Site Editor, Legacy CMS Portal uses [Layout](https://help.vtex.com/en/tracks/cms--2YcpgIljVaLVQYMzxQbc3z/1oN446gRGcR2s70RvBCAmj), and FastStore leverages [CMS](https://developers.vtex.com/docs/guides/cms-for-faststore-storefronts).
 
 On VTEX, these tools allow you to manage the pages that make up your store website with the autonomy to create, organize, edit, and define the entire structure of folders, files, and components to create the storefront you want.
 

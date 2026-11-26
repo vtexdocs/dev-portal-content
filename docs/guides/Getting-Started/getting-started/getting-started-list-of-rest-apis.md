@@ -19,7 +19,8 @@ updatedAt: "2022-09-09t17:59:09.868z"
 | [GiftCard Provider Protocol API](https://developers.vtex.com/docs/api-reference/giftcard-provider-protocol) | Defines the requirements to become a gift card provider on VTEX. |
 | [GiftCard Hub API](https://developers.vtex.com/docs/api-reference/giftcard-hub-api) | Interacts with all gift card providers in a store from a single place. |
 | [Headless CMS API](https://developers.vtex.com/docs/api-reference/headless-cms-api) | Structures a no-code management system for storefront content. |
-| [Intelligent Search API](https://developers.vtex.com/docs/api-reference/intelligent-search-api) | Helps customers in their buying journey through search results. |
+| [Intelligent Search API v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1) | Helps customers in their buying journey through search results. Use for all new headless integrations. |
+| [Intelligent Search API (Legacy)](https://developers.vtex.com/docs/api-reference/intelligent-search-api) | Legacy version of the Intelligent Search API. Use [Intelligent Search API v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1) for new integrations. |
 | [Intelligent Search Events API - Headless](https://developers.vtex.com/docs/api-reference/intelligent-search-events-api-headless) | Collects search events to improve your search results, such as page interactions and conversion, in a headless implementation. |
 | [License Manager API](https://developers.vtex.com/docs/api-reference/license-manager-api#overview) | Manages users, roles, hosts, AppKeys, and AppTokens from a VTEX store. |
 | [Logistics API](https://developers.vtex.com/docs/api-reference/logistics-api) | Manages all store logistics data by allowing access to warehouses, docks, pickup points, carriers, and shipping rates. Gets or updates the inventory of each SKU. |
@@ -41,6 +42,5 @@ updatedAt: "2022-09-09t17:59:09.868z"
 | [Session Manager API](https://developers.vtex.com/docs/api-reference/session-manager-api) | Tracks relevant information about the customer's current browsing session and integrates with several VTEX systems using a single call. |
 | [Subscriptions API v3](https://developers.vtex.com/vtex-rest-api/reference/subscriptions-api-v3) | Manages store subscription rules to maximize revenue and reduce bounce and churn rates. |
 | [VTEX Shipping Network API](https://developers.vtex.com/docs/api-reference/vtex-shipping-network-api) | Sets up your app to integrate with VTEX Shipping Network. |
-| [VTEX Tracking API](https://developers.vtex.com/docs/api-reference/tracking) | Manages all delivery solutions powered by a VTEX Tracking service. |
 | [VTEX Do API](https://developers.vtex.com/docs/api-reference/vtex-do-api) | Manages and retrieves notes or tasks from VTEX Do. |
 | [VTEX ID API](https://developers.vtex.com/docs/api-reference/vtex-id-api) | Manages tokens from a given app key and app token pair. |

@@ -10,4 +10,4 @@ type: "improved"
 
 Now, you can configure the Badges app to filter search results. This feature allows you to search only the parameters you wish to use in your business context since, before, it was mandatory to search for all the parameters concatenated. These long search results led to several cases of the Badges app crashing because of the URL size.
 
-For more information on how to use this new feature, please refer to the [Filtering badges](/docs/guides/vtex-badges#filtering-badges) guide.
+For more information on how to use this new feature, please refer to the [Filtering badges](https://developers.vtex.com/docs/apps/vtex.badges#filtering-badges) guide.

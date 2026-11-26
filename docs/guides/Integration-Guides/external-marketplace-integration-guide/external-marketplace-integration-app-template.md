@@ -2,7 +2,7 @@
 title: "Creating an integration app from a Template"
 slug: "external-marketplace-integration-app-template"
 excerpt: "Create an app to integrate with external marketplaces."
-hidden: false
+hidden: true
 createdAt: "2021-09-27T16:02:23.338Z"
 updatedAt: "2022-06-23T20:26:15.880Z"
 ---
@@ -13,7 +13,7 @@ The integration Template App is a pre-built app developed by VTEX for our partne
 
 An integration app created from our App Template already includes:
 
-- **Standard set up page** containing:
+- Standard set up page containing:
   - Activate/deactivate the integration button
   - Field identifying the affiliate ID
   - Field to inform the email that will receive notifications about changes in the affiliate
@@ -21,10 +21,24 @@ An integration app created from our App Template already includes:
   - Field for the [sales channel](https://help.vtex.com/en/tutorial/how-trade-policies-work--6Xef8PZiFm40kg2STrMkMV) ID
   - Fields included in the [sales channel form](https://help.vtex.com/en/tutorial/creating-a-trade-policy--563tbcL0TYKEKeOY4IAgAE#filling-in-the-fields)
   - Save Settings button
-- **Custom settings page** containing:
+- Custom settings page containing:
   - Button to activate/deactivate [franchise accounts](https://help.vtex.com/en/tutorial/what-is-a-franchise-account--kWQC6RkFSCUFGgY5gSjdl)
 - Complete **search endpoint** to retrieve seller configurations using [AppKey and AppToken](https://help.vtex.com/en/tutorial/api-keys--4bFEmcHXgpNksoePchZyy6) generated in the seller’s account, defined by the appVendor.
-- **Link to [VTEX Mapper Registration](https://developers.vtex.com/docs/api-reference/marketplace-protocol-external-marketplace-mapper#post-/api/mkp-category-mapper/connector/register)**, allowing sellers to map their catalog according to the marketplace’s definitions.
+- Link to [VTEX Mapper Registration](https://developers.vtex.com/docs/api-reference/marketplace-protocol-external-marketplace-mapper#post-/api/mkp-category-mapper/connector/register), allowing sellers to map their catalog according to the marketplace’s definitions.
+
+## Actions and permissions granted to the app
+
+Apps created from the Template App come with a predefined set of policies declared in their `manifest.json`. These policies grant the app the permissions required to integrate orders and catalog data with an external marketplace. Apps derived from the template are granted permission to perform the following actions:
+
+- Read and write data in VBase (`vbase-read-write`), used to persist the app's configuration data.
+- View orders through the [Order Management System (OMS)](https://developers.vtex.com/docs/guides/orders-overview).
+- Change the status of orders in the order workflow.
+- Cancel orders.
+- Update invoices and tracking information for orders.
+- Receive inbound invoice notifications.
+- Access the Portal API.
+
+> ⚠️ Removing or altering these policies may break the integration. Only change them if you are sure your app does not require the corresponding permission.
 
 ## Before you begin
 
@@ -39,12 +53,13 @@ The Template App runs in [VTEX IO](https://developers.vtex.com/docs/guides/vtex-
 ## Step 1 - Creating your repository from the template
 
 1. Access the [Template App’s repository](https://github.com/vtex/mkp-app-template).
-2. Don't forget to request the use of the builders necessary for the development of the app. Read the article [Filling the Application form for development](https://developers.vtex.com/docs/guides/vtex-io-documentation-filling-the-application-form-for-development) and request the builders: admin, docs, graphql, messages, node and react.
-3. Click on `Use this template`.
-4. Add a **name** to your repository.
-5. Select the `Private` option.
-6. Do not check the **Include all branches** option.
-7. Click on `Create repository from template`.
+2. Click `Use this template`.
+3. Add a name to your repository.
+4. Select the `Private` option.
+5. Do not check the `Include all branches` option.
+6. Click `Create repository from template`.
+
+> ℹ️ The Template App already declares the builders it needs (`admin`, `docs`, `graphql`, `messages`, `node`, and `react`) in its `manifest.json`. All VTEX IO builders are publicly available, so no Application form or approval is required to use them. For more information, see the [Builders](https://developers.vtex.com/docs/guides/vtex-io-documentation-builders) documentation.
 
 ## Step 2 - App configurations
 
@@ -80,7 +95,7 @@ To receive notifications from VTEX, the seller needs to implement specific API r
 
 ##### Catalog notification
 
-To receive product update notifications and product variations (including stock, price and trade policy), you must implement the POST `{{connectorEndpoint}}/catalog/notification` route.
+To receive product update notifications and product variations (including stock, price and sales channel), you must implement the POST `{{connectorEndpoint}}/catalog/notification` route.
 
 This notification follows the format of our VTEX [Broadcaster Adapter](https://developers.vtex.com/docs/guides/vtex-broadcaster#sku-data).
 
@@ -95,7 +110,7 @@ The store configuration notification format will vary according to the configura
 | `accountName` | Name of the seller’s account in VTEX. | string |
 | `active` | Flag that indicates if the seller wants to be active in the marketplace. If false, the connector should deactivate the seller’s products on the marketplace. | boolean |
 | `affiliateId` | Unique affiliate ID configured in the seller that identifies its connection with the marketplace. | string |
-| `salesChannel` | Sales channel/trade policy ID configured in the seller and being used for this marketplace. | string |
+| `salesChannel` | Sales channel ID configured in the seller and being used for this marketplace. | string |
 | `email` | Email that’ll be notified about changes related to the affiliate. | string |
 | `cookie` | App’s auth cookie. This token can be used when making requests to VTEX APIs with the seller’s account. | string |
 | `allowFranchiseAccounts` | Flag indicates if the seller also wants to synchronize their franchise accounts catalog/orders with the marketplace, through the Multilevel Omnichannel Inventory feature. | boolean |

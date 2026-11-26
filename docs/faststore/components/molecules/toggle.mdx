@@ -54,17 +54,21 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
 
 ### Variants
 
-#### Checked
+#### Direction
+
+Use `variant="horizontal"` (the default) or `variant="vertical"` to control the switch direction.
 
 <Tabs items={["Example", "Code"]} defaultIndex="0">
   <Tab>
     <OverviewSection>
-      <Toggle id="toggle-checked" label="Checked" checked readOnly />
+      <Toggle id="toggle-checked" variant="horizontal" checked readOnly />
+      <Toggle id="toggle-vertical" variant="vertical" />
     </OverviewSection>
   </Tab>
   <Tab>
     ```tsx
-    <Toggle id="toggle-checked" label="Checked" checked readOnly />
+    <Toggle id="toggle-checked" variant="horizontal" checked readOnly />
+    <Toggle id="toggle-vertical" variant="vertical" />
     ```
   </Tab>
 </Tabs>
@@ -74,10 +78,9 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
 <Tabs items={["Example", "Code"]} defaultIndex="0">
   <Tab>
     <OverviewSection>
-      <Toggle id="toggle-disabled" label="Disabled" disabled />
+      <Toggle id="toggle-disabled" disabled />
       <Toggle
         id="toggle-disabled-checked"
-        label="Disabled Checked"
         disabled
         checked
         readOnly
@@ -86,10 +89,9 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
   </Tab>
   <Tab>
     ```tsx
-    <Toggle id="toggle-disabled" label="Disabled" disabled />
+    <Toggle id="toggle-disabled" disabled />
     <Toggle
       id="toggle-disabled-checked"
-      label="Disabled Checked"
       disabled
       checked
       readOnly

@@ -6,7 +6,7 @@ createdAt: "2020-06-03T15:20:19.857Z"
 updatedAt: "2022-03-17T19:52:52.367Z"
 ---
 
-Category Menu app is a store component that shows a department list of the store on an customizable menu, and this app is used by store theme.
+Category Menu app is a store component that shows a department list of the store on a customizable menu, and this app is used by store theme.
 
 ## Configuration
 

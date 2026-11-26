@@ -10,7 +10,7 @@ Blueknow first party app
 
 ## Configuration
 
-It is possible to install in your store either by using App Store or the VTEX IO CLI.
+It is possible to install it in your store either by using App Store or the VTEX IO CLI.
 
 ### Using VTEX App Store
 

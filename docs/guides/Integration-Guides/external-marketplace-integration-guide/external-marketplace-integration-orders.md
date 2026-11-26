@@ -9,7 +9,7 @@ Learn how to integrate Orders in VTEX with external marketplaces. Before you sta
 | **Included** | **Not included** |
 |---|---|
 | All valid orders made in the external marketplace, will be integrated in the main account.| Orders made in the external marketplace, integrated in third party sellers or franchise accounts.|
-| SKUs in the order must be associated to the trade policy configured in the integration| SKUs not included in the chose trade policy|
+| SKUs in the order must be associated to the sales channel configured in the integration| SKUs not included in the chose sales channel|
 | SKUs with stock valid level| SKUs without stock|
 | SKUs with prices defined within the rules defined by the VTEX store| SKUs without prices set|
 | Carriers configured to attend the order’s address| Carriers not configured in the main account|
@@ -20,7 +20,7 @@ Learn how to integrate Orders in VTEX with external marketplaces. Before you sta
 - **Seller:** Owns the product, responsible for the fulfillment, or SKU delivery.
 - **Marketplace/affiliate:** Owns the storefront, responsible for selling the SKU.
 - **SKU:** item to be exchanged and sold between seller and marketplace
-- **Sales channel/Trade policy:** product assortment, prices, and logistics configurations attached to a sales channel.
-- **Connector:** party responsible for the integration, being either the marketplace itself, or an integration hub. Know more about [how to configure a marketplace trade policy](https://help.vtex.com/en/tutorial/configuring-a-marketplace-trade-policy--tutorials_404).
+- **Sales channel:** product assortment, prices, and logistics configurations attached to a channel.
+- **Connector:** party responsible for the integration, being either the marketplace itself, or an integration hub. Know more about [how to configure a marketplace sales channel](https://help.vtex.com/en/tutorial/configuring-a-marketplace-trade-policy--tutorials_404).
 - **Order Authorization:** order authorization rules are defined by the seller to deal with scenarios of price divergence.
 - **MarketplaceServicesEndpoint:** Endpoint sent by the marketplace to the seller, that will be used to send the invoice and tracking data back to it.

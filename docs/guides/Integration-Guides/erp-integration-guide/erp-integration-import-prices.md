@@ -44,17 +44,17 @@ So if you decide not to use price rules to compute your prices in VTEX, the way 
 
 ## Set base price
 
-To set the base price for an SKU, you should use the [Create/Edit Price](https://developers.vtex.com/docs/api-reference/pricing-api#put-/prices/-itemId-) endpoint in the Pricing API.
+To set the base price for an SKU, you should use the [Create/Edit Price](https://developers.vtex.com/docs/api-reference/pricing-api#put-/pricing/prices/-itemId-) endpoint in the Pricing API.
 
-You should set a base price for each SKU. In between steps, you can use the [Get Price](https://developers.vtex.com/docs/api-reference/pricing-api#get-/prices/-itemId-) endpoint or visit the *Products > Prices > Price list* section of your Admin panel to check on your progress.
+You should set a base price for each SKU. In between steps, you can use the [Get Price](https://developers.vtex.com/docs/api-reference/pricing-api#get-/pricing/prices/-itemId-) endpoint or visit the *Products > Prices > Price list* section of your Admin panel to check on your progress.
 
-> ℹ️ In the same [Create/Edit Price](https://developers.vtex.com/docs/api-reference/pricing-api#put-/prices/-itemId-) request, you may optionally set a list price. Additionally, you may set either a cost price or a markup value. By defining either one of them, the other will be calculated to conform to the formula `basePrice = costPrice * (1 + markup)`.
+> ℹ️ In the same [Create/Edit Price](https://developers.vtex.com/docs/api-reference/pricing-api#put-/pricing/prices/-itemId-) request, you may optionally set a list price. Additionally, you may set either a cost price or a markup value. By defining either one of them, the other will be calculated to conform to the formula `basePrice = costPrice * (1 + markup)`.
 
 ## Set fixed prices for specific contexts
 
-To set a fixed price for a specific context, you should use the [Create / Edit Fixed Prices](https://developers.vtex.com/docs/api-reference/pricing-api#post-/prices/-itemId-/fixed/-priceTableId-) endpoint in the Pricing API. This context is represented by either a Trade Policy or a custom Price Table, which can be associated to a campaign or a customer cluster.
+To set a fixed price for a specific context, you should use the [Create / Edit Fixed Prices](https://developers.vtex.com/docs/api-reference/pricing-api#post-/pricing/prices/-itemId-/fixed/-priceTableId-) endpoint in the Pricing API. This context is represented by either a Trade Policy or a custom Price Table, which can be associated to a campaign or a customer cluster.
 
-You should set a fixed price for each price table / SKU combination that needs to be priced differently from the base price. In between steps, you can use the [Get Fixed Prices](https://developers.vtex.com/docs/api-reference/pricing-api#get-/prices/-itemId-/fixed) endpoint or visit the *Products > Prices > Price list* section of your Admin panel to check on your progress.
+You should set a fixed price for each price table / SKU combination that needs to be priced differently from the base price. In between steps, you can use the [Get Fixed Prices](https://developers.vtex.com/docs/api-reference/pricing-api#get-/pricing/prices/-itemId-/fixed) endpoint or visit the *Products > Prices > Price list* section of your Admin panel to check on your progress.
 
 >⚠️ The `tradePolicyId` parameter should be filled in with the Price Table name if you want to set fixed prices for a custom Price Table that is not associated with a specific Trade Policy.
 

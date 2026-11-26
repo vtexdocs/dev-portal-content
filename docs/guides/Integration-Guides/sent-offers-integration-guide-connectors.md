@@ -96,7 +96,7 @@ The seller’s goal is to send and sync all their offers on a channel. In this p
 - **Synced:**  when offers are successfully sent to a channel and are currently being synced between both entities.
 - **Sending:** intermediate state, when offers are still in the process of being sent to a channel. This status involves offers that are either sent for the first time to the marketplace, migrated to a new marketplace, or resent offers that were once deleted from a channel.
 - **Error:** when Offer Management finds an error that prevents sending or updating an offer to a channel. Therefore this status requires manual correction.
-- **Disabled:** when the offer is discarded by the connector, by being inactive or not included in the trade policy.
+- **Disabled:** when the offer is discarded by the connector, by being inactive or not included in the sales channel.
 
 ### Result Status
 
@@ -115,9 +115,9 @@ This result is what allows Offer Management to infer an offer’s status. The ty
 | Interaction result | Status | Description |
 |--------|-------------|----------------------|
 | **Success** | **Synced** | When closing a `success` interaction, Offer Management updates the offer’s status to `Synced`, if there aren't any active errors in this offer. |
-| **Success** | **Unavailable** | When the offer already exists and the seller removes it from the trade policy, Offer Management doesn’t infer an offer’s status. |
+| **Success** | **Unavailable** | When the offer already exists and the seller removes it from the sales channel, Offer Management doesn’t infer an offer’s status. |
 | **Failure** | **Error** | When an offer has at least one failure interaction, the offer’s status becomes `error`. |
-| **Notification** | **Unavailable** | When the offer is discarded by the connector - by being inactive or not included in the trade policy, Offer Management doesn’t infer an offer’s status, and the connector indicates it. In that case, the connector will send the `"status":"unavailable"` data in an interaction. |
+| **Notification** | **Unavailable** | When the offer is discarded by the connector - by being inactive or not included in the sales channel, Offer Management doesn’t infer an offer’s status, and the connector indicates it. In that case, the connector will send the `"status":"unavailable"` data in an interaction. |
 | **Processing** | **Sending** | When the interaction is being processed, the offer’s status becomes `sending` when the interaction has the attribute `“context”=”setup”`. |
 
 ## 4. Logs: registering steps
@@ -152,8 +152,8 @@ Connectors are the agents responsible for sending the seller’s products to the
 3. Create **Log**.
    *In that log, connectors indicate the series of actions that took place for the offers to be created.*
 4. Call **Catalog** API.
-   *One of the logs shows that connectors called the Catalog API to identify the SKUs that were present in the Mercado Livre trade policy, and try to send their offers to that channel. As long as that analysis happens, the offer’s status is `sending`.*
-   *SKUs that are identified as being a part of Mercado Livre’s trade policy are sent to the channel. - All SKUs that don’t belong to that trade policy are discarded, and kept in the Discarded Offers page, in the UI.*
+   *One of the logs shows that connectors called the Catalog API to identify the SKUs that were present in the Mercado Livre sales channel, and try to send their offers to that channel. As long as that analysis happens, the offer’s status is `sending`.*
+   *SKUs that are identified as being a part of Mercado Livre’s sales channel are sent to the channel. - All SKUs that don’t belong to that sales channel are discarded, and kept in the Discarded Offers page, in the UI.*
 5. Create **Log.**
    *Once this analysis process is over, and the connector has identified which SKUs belong to the channel, and which can be discarded, the connector can create the last log of that event, indicating success or failure.*
    *It is important to point out that whenever a Catalog log is created, Offer Management evaluates if that offer already exists in its base. If it’s the first load of products, or if a new product is added, the `context` field’s value is `setup`.*
@@ -212,7 +212,7 @@ It is expected that errors that haven’t been mapped by Offer Management, and a
 
 > **API Reference:** [Update Feed](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management#put-/api/sent-offers/feeds/-feedId-), [Deactivate Feed](https://developers.vtex.com/docs/api-reference/marketplace-apis-offer-management#delete-/api/sent-offers/feeds/-feedId-)
 
-Updating a feed’s information is only possible through API calls. Only the trade policy and affiliate ID can be changed. When a channel integration is uninstalled by the seller, the connector must delete the feed in Offer Management as well. That way, that channel won’t appear in the UI. This action is done by the Delete Feed endpoint.
+Updating a feed’s information is only possible through API calls. Only the sales channel and affiliate ID can be changed. When a channel integration is uninstalled by the seller, the connector must delete the feed in Offer Management as well. That way, that channel won’t appear in the UI. This action is done by the Delete Feed endpoint.
 
 Note that once the feed is deleted, all offers’ data, errors and their logs will also be deleted from the UI. However, the source of truth around the products sent to the channel will still remain in the catalog, and log’s history will be preserved. If the channel integration is reinstalled, the whole process described in this guide must begin again, done from scratch. This means the connector will have to send all offers from the catalog to the channel again anyways.
 

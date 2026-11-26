@@ -146,6 +146,23 @@ For details, see [Importing FastStore UI component styles](https://developers.vt
   </Tab>
 </Tabs>
 
+### Polymorphic link
+
+The `as` prop accepts an HTML element or React component. For example, render the FastStore `Link` styles and variants through a framework link component:
+
+```tsx
+import NextLink from 'next/link'
+import { Link } from '@faststore/ui'
+
+export default function ProductsLink() {
+  return (
+    <Link as={NextLink} href="/products" variant="display">
+      Browse products
+    </Link>
+  )
+}
+```
+
 ---
 
 ## Design tokens

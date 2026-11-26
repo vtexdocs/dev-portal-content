@@ -17,7 +17,7 @@ This guide explains how to detect session changes in a specific namespace and re
 To view a store's current session data and structure, open your browser and navigate to:
 
 ```
-https://{workspace}–{accountName}.myvtex.com/api/sessions?items=*
+https://{workspace}--{accountName}.myvtex.com/api/sessions?items=*
 ```
 
 > ⚠️ Only use `items=*` during development. Never use it in production, as it retrieves all session data. For production, retrieve specific session data by specifying the required namespace and properties (e.g., `items=authentication.storeUserEmail,checkout.orderFormId`).
@@ -86,6 +86,8 @@ In the following example, the app listens for changes in the `authentication` na
 ### Step 2 - Setting up the `transform` handler
 
 The `vtex.session` builder detects changes in the `input` values of the `configuration.json` file and sends a `POST` request to the public endpoint (`/_v/APP-NAME/session/transform`) whenever a change occurs. All values listed under `input` are sent in the request, even if not all values have changed.
+
+> ⚠️ Only fields declared under `input` in `configuration.json` reach the `transform` handler. A field that the handler reads but did not declare is always `undefined` in the request body.
 
 To set up this endpoint, take the following steps:
 
@@ -156,7 +158,7 @@ To set up this endpoint, take the following steps:
 You can also check the session data changes by accessing the following URL:
 
 ```
-https://{workspace}–{accountName}.myvtex.com/api/sessions?items=public.demo
+https://{workspace}--{accountName}.myvtex.com/api/sessions?items=public.demo
 ```
 
 The response might look like this:
@@ -167,7 +169,7 @@ The response might look like this:
    "namespaces": {
       "public": {
          "demo": {
-            "Value": "User Authenticated"
+            "value": "User Authenticated"
          }
       }
    }

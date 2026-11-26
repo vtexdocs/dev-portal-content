@@ -58,7 +58,7 @@ linkTitle="See more"
 />
 
 <WhatsNextCard
-title="Part 7.  Making your theme content public"
+title="Part 7. Making your theme content public"
 description="Find out how to make your Store Framework theme accessible to end users."
 linkTo="https://developers.vtex.com/docs/guides/vtex-io-documentation-making-your-theme-content-public"
 linkTitle="See more"

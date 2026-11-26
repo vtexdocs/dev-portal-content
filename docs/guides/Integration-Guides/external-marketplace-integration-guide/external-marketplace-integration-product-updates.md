@@ -37,7 +37,7 @@ Fields sent in the notification:
 | StockModified | Identifies that the inventory level has been altered. Connectors should send an [Fulfillment Simulation](https://developers.vtex.com/docs/api-reference/marketplace-protocol#post-/-fulfillmentEndpoint-/pvt/orderForms/simulation) request to collect updated information. |
 | PriceModified | Identifies that the price has been altered. Connectors should send an [Fulfillment Simulation](https://developers.vtex.com/docs/api-reference/marketplace-protocol#post-/-fulfillmentEndpoint-/pvt/orderForms/simulation) request to collect updated information. |
 | HasStockKeepingUnitModified | Identifies that the product/SKU registration data has changed, like name, description, weight, etc |
-| HasStockKeepingUnitRemovedFromAffiliate | Identifies that the product is no longer associated with the trade policy. In case the marketplace doesn’t allow it to be deactivated, the product should be excluded, along with any existing correspondences in the connector. |
+| HasStockKeepingUnitRemovedFromAffiliate | Identifies that the product is no longer associated with the sales channel. In case the marketplace doesn’t allow it to be deactivated, the product should be excluded, along with any existing correspondences in the connector. |
 
 ![](https://user-images.githubusercontent.com/77292838/211638123-d396bfe9-cf54-45eb-a366-ba5c8f547203.png)
 
@@ -49,11 +49,11 @@ Fields sent in the notification:
    b. If the HasStockKeepingUnitModified is defined as true, the product should be registered or updated in the marketplace.
    c. Collect details from every SKU using the [Get details of an SKU associated with a sales channel](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog/pvt/stockkeepingunit/-skuId-) endpoint.
    d. Validate if the product is active through the [Get Product by ID](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog/pvt/product/-productId-) endpoint, through the `isActive` property.
-   e. Validate if the product is associated with the trade policy used in the marketplace integration through the `salesChannel` property.
+   e. Validate if the product is associated with the sales channel used in the marketplace integration through the `salesChannel` property.
    f. Identify whether the SKU conforms to the marketplace’s product registration rules.
    g. Validate if the product’s category is mapped in the marketplace.\
    In case it is not mapped, the marketplace should put the SKU in the approvement’s queue, until the [mapping](https://developers.vtex.com/docs/api-reference/marketplace-protocol-external-marketplace-mapper#post-/api/mkp-category-mapper/categories/marketplace/-id-) is complete.
-   h. Use [Fulfillment Simulation](https://developers.vtex.com/docs/api-reference/marketplace-protocol#post-/-fulfillmentEndpoint-/pvt/orderForms/simulation) (without postalCode) to check if price and inventory are configured in the selected trade policy.
+   h. Use [Fulfillment Simulation](https://developers.vtex.com/docs/api-reference/marketplace-protocol#post-/-fulfillmentEndpoint-/pvt/orderForms/simulation) (without postalCode) to check if price and inventory are configured in the selected sales channel.
 
 If all validations pass, the product or SKU is sent to the marketplace and the operation is logged according to information described in the [Logs made available for users](https://developers.vtex.com/docs/guides/external-marketplace-integration-logs) section.
 
@@ -97,7 +97,7 @@ After receiving the VTEX Catalog notification of product or SKU updates, connect
 3. Evaluate if the notification message has the `HasStockKeepingUnitModified` property set as `true`. If otherwise, validate the other JSON properties and execute the following scenarios, if needed.
 4. Use [Get product details](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog_system/pvt/products/productget/-productId-) API.
 5. Use [Get details of an SKU](https://developers.vtex.com/docs/api-reference/catalog-api#get-/api/catalog_system/pvt/sku/stockkeepingunitbyid/-skuId-)API.  
-6. Use [Fulfillment Simulation](https://developers.vtex.com/docs/api-reference/marketplace-protocol#post-/-fulfillmentEndpoint-/pvt/orderForms/simulation) (without postalCode) to check if price and inventory are configured in the selected trade policy.
+6. Use [Fulfillment Simulation](https://developers.vtex.com/docs/api-reference/marketplace-protocol#post-/-fulfillmentEndpoint-/pvt/orderForms/simulation) (without postalCode) to check if price and inventory are configured in the selected sales channel.
 7. Perform category mapping routines through VTEX Mapper. In case the mapping does not exist, log an error, and direct the message to the contingency queue, while logging and alerting the user about the error.
 8. Make the necessary data transformations and [Log](https://developers.vtex.com/docs/guides/external-marketplace-integration-logs#log-messages) errors if needed.
 9. Send data to the marketplace.

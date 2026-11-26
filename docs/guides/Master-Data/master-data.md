@@ -14,6 +14,6 @@ The table below shows each subsection with a small description of their respecti
 
 | Subsection | Description |
 | - | - |
-| [How it works](/docs/guides/master-data-how-it-works)  | Fundamentals of Master Data. |
-| [Guides](/docs/guides/master-data-v2-guides)  | Master Data tutorials for different purposes. |
-| [Getting started](/docs/guides/getting-started-1)   | Basic how-to guides to get you started with Master Data. |
+| [How it works](https://developers.vtex.com/docs/guides/understanding-master-data) | Fundamentals of Master Data. |
+| [Guides](https://developers.vtex.com/docs/guides/master-data-v2) | Master Data tutorials for different purposes. |
+| [Getting started](https://developers.vtex.com/docs/guides/master-data-best-practices) | Basic how-to guides to get you started with Master Data. |

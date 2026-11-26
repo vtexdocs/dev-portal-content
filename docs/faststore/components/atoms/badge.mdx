@@ -128,6 +128,36 @@ The `Badge` component can be displayed in two sizes: [`small` (default)](#small)
   </Tab>
 </Tabs>
 
+### Counter
+
+Set `counter` to display a compact numeric badge. Provide an `aria-label` that explains what the number represents.
+
+When `counter` is `true`, the component does not add `data-fs-badge-variant`, so the `variant` prop does not select a visual variant.
+
+Counter badges still include `data-fs-badge-size`, but their counter-specific styles override the size dimensions and padding. Customize them with the base Badge tokens and the [Counter tokens](#design-tokens-counter).
+
+<Tabs items={['Example', 'Code']} defaultIndex="0">
+  <Tab>
+    <OverviewSection>
+      <Badge counter aria-label="3 items in the cart">3</Badge>
+    </OverviewSection>
+  </Tab>
+  <Tab>
+    ```tsx
+    import React from "react";
+    import { Badge } from "@faststore/ui";
+
+    export default function BadgeCounter() {
+      return (
+        <Badge counter aria-label="3 items in the cart">
+          3
+        </Badge>
+      );
+    }
+    ```
+  </Tab>
+</Tabs>
+
 ### Variants
 
 #### Neutral
@@ -457,9 +487,13 @@ You can target and override `Badge` styles using the following data attributes:
 
 `data-fs-badge`
 
+`data-fs-badge-wrapper`
+
 `data-fs-badge-size="small" | "big"`
 
 `data-fs-badge-variant="info" | "highlighted" | "success" | "neutral" | "warning" | "danger"`
+
+`data-fs-badge-counter="true" | "false"`
 
 ---
 

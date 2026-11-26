@@ -34,9 +34,9 @@ The Product Availability app displays text messages regarding the in-stock quant
 
 | Prop name           | Type      | Description                                                 | Default value | 
 | ------------------- | --------- | ----------------------------------------------------------- | ------------- |
-| `threshold`     | `number` | Minimum product quantity that makes the low stock message to be displayed (if any message is set in the `lowStockMessage` prop).   | `0` | 
-| `lowStockMessage` | `string` | Message text to be displayed when the in-stock quantity is lower than the quantity defined in the `threshold` prop. This prop value must have `{quantity}` inside the string text in order to properly display the stock quantity according to the threshold. For example: `"Only {quantity} left!`. Notice: if this prop's value is left empty, no message will be shown. | `""` | 
-| `highStockMessage`  | `string` | Message text to be displayed when the in-stock quantity is higher or equal than the quantity defined in the `threshold` prop. Notice: if this prop's value is left empty, no message will be shown. | `""` | 
+| `threshold`     | `number` | Minimum product quantity that causes the low stock message to be displayed (if any message is set in the `lowStockMessage` prop).   | `0` |
+| `lowStockMessage` | `string` | Message text to be displayed when the in-stock quantity is lower than the quantity defined in the `threshold` prop. This prop value must include `{quantity}` in the string in order to properly display the stock quantity according to the threshold. For example: `"Only {quantity} left!"`. Notice: if this prop's value is left empty, no message will be shown. | `""` |
+| `highStockMessage`  | `string` | Message text to be displayed when the in-stock quantity is greater than or equal to the quantity defined in the `threshold` prop. Notice: if this prop's value is left empty, no message will be shown. | `""` |
 
 ## Customization
 

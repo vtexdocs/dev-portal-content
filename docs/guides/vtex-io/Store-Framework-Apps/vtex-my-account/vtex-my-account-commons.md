@@ -8,7 +8,7 @@ updatedAt: "2020-09-10T20:04:22.179Z"
 
 My Account Commons is a bundle of canonical components that can be used to create new tabs to be inserted on the `vtex.my-account` app.
 
-DISCLAIMER: In order to this components work, they need to be children of `vtex.my-account` app.
+DISCLAIMER: In order for these components to work, they need to be children of the `vtex.my-account` app.
 
 To import it into your code:
 

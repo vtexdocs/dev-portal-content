@@ -28,7 +28,7 @@ Use the `appKey` and `appToken` credential pair to authenticate API requests by 
 | `X-VTEX-API-AppKey` | `{appKey}` |
 | `X-VTEX-API-AppToken` | `{appToken}` |
 
-See an example [Get order](https://developers.vtex.com/vtex-rest-api/reference/getorder) request:
+See an example [Get order](https://developers.vtex.com/docs/api-reference/orders-api#get-/api/oms/pvt/orders/-orderId-) request:
 
 ```bash
 curl --location --request GET 'https://apiexamples.vtexcommercebeta.com.br/api/oms/pvt/orders/:orderId' \

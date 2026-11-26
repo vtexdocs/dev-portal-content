@@ -3,14 +3,16 @@ title: "Improving product discovery with autocomplete suggestions and search ins
 slug: "consult-store-search-terms-information"
 hidden: false
 createdAt: "2022-10-14T21:11:36.747Z"
-updatedAt: "2022-11-02T14:39:45.843Z"
+updatedAt: "2026-06-22T00:00:00.000Z"
 ---
 
-To deliver relevant search results to your store's shoppers, it's essential to understand how they search for products in your store. The [Intelligent Search API](https://developers.vtex.com/docs/api-reference/intelligent-search-api#overview) offers powerful insights into [popular search terms](#get-the-most-searched-terms) and [autocomplete suggestions](#get-autocomplete-suggested-terms-and-similar-attributes). The sections below outline how to use these tools to optimize your store's search experience.
+> ℹ️ This guide uses [Intelligent Search API v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1). If you are migrating from [Intelligent Search API (Legacy)](https://developers.vtex.com/docs/api-reference/intelligent-search-api), see [Migrating to Intelligent Search API v1](https://developers.vtex.com/docs/guides/migrating-to-intelligent-search-api-v1).
+
+To deliver relevant search results to your store's shoppers, it's essential to understand how they search for products in your store. The [Intelligent Search API v1](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1) offers powerful insights into [popular search terms](#retrieving-the-most-searched-terms) and [autocomplete suggestions](#retrieving-autocomplete-suggested-terms-and-similar-attributes). The sections below outline how to use these tools to optimize your store's search experience.
 
 ## Retrieving the most searched terms
 
-To get your customers' most searched terms, use the [Get list of the 10 most searched terms](https://developers.vtex.com/vtex-rest-api/reference/get_top-searches) endpoint. This endpoint allows you to filter results by specifying a `locale` in the query parameters.
+To get your customers' most searched terms, use the `GET` [Get list of the 10 most searched terms (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/top-searches) endpoint. This endpoint allows you to filter results by specifying a `locale` in the query parameters.
 
 The response will return the most searched terms in order of popularity along with the number of searches:
 
@@ -67,7 +69,7 @@ The response will return the most searched terms in order of popularity along wi
 
 ## Retrieving autocomplete suggested terms and similar attributes
 
-To gather data on [autocomplete suggestions](https://developers.vtex.com/docs/guides/vtex-search-autocomplete) and similar attributes, use the [Get list of suggested terms and attributes similar to the search term](https://developers.vtex.com/vtex-rest-api/reference/get_autocomplete-suggestions) endpoint. You can refine the response by defining the `locale` and `query` parameters.
+To gather data on [autocomplete suggestions](https://developers.vtex.com/docs/apps/vtex.search/autocomplete) and similar attributes, use the `GET` [Get list of suggested terms and attributes similar to the search term (v1)](https://developers.vtex.com/docs/api-reference/intelligent-search-api-v1#get-/autocomplete-suggestions) endpoint. You can refine the response by defining the `locale` and `query` parameters.
 
 The response will return the searched terms by popularity order and the corresponding autocomplete suggestions for each term.
 

@@ -56,4 +56,4 @@ The Product Summary Shelf is the main block exported by the [Product Summary app
 
 The Product Summary Shelf merely establishes the block structure to render the Product Summary component. Therefore, this block doesn't have CSS Handles for its specific customization.
 
-Instead, you should use its child block's Handles.
+Instead, you should use its child blocks' CSS Handles.

@@ -7,7 +7,7 @@ updatedAt: "2022-09-13T15:25:41.097Z"
 ---
 ## What is the canonical tag
 
-When using the meta tags control, explained in the article [How to use the meta tags control](how-to-use-the-meta-tags-control), one of the tags inserted in the head of the page is the __canonical tag__:
+When using the meta tags control, explained in the article [How to use the meta tags control](https://help.vtex.com/docs/tutorials/how-to-use-the-meta-tags-control), one of the tags inserted in the head of the page is the __canonical tag__:
 
 `<link rel="canonical" href="http://{AccountName}.com.br/{page}">`
 

@@ -74,3 +74,17 @@ The `useSearch` hook returns an object with the following properties and functio
 | `toggleFacets` | `(facets: Facet[]) => void` | Toggles multiple facets in the search state. |
 | `addPrevPage` | `() => void` | Prepends a page of results to the current list (used in infinite scroll). |
 | `addNextPage` | `() => void` | Appends a page of results to the current list (used in infinite scroll). |
+
+## Custom sort values
+
+`parseSearchState` accepts only the built-in sort keys until the storefront adds more with `registerCustomSortKeys`. Call it once, before the search page reads the URL. Use the same key in the GraphQL `StoreSort` extension and in `api.customSortMap`.
+
+```tsx
+import { registerCustomSortKeys } from '@faststore/sdk'
+
+registerCustomSortKeys(['rating_desc'])
+```
+
+After this call, a URL such as `/?sort=rating_desc` keeps that sort on refresh and on a deep link. A key that was not added still throws when the URL is parsed.
+
+Add the same key to the sort control `keyMap` when the option should appear in the UI. The full procedure is in [Adding a custom search sort](https://developers.vtex.com/docs/guides/faststore/api-extensions-extending-api-schema#adding-a-custom-search-sort).

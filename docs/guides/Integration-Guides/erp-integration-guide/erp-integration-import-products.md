@@ -27,13 +27,13 @@ Again, it is all about offering a great navigation experience to buyers, with fa
 
 VTEX provides three different ways to register products in the catalog:
 
-1. API Integration: Read our [Catalog getting started guide](https://developers.vtex.com/docs/guides/catalog-overview) for an overview of the integration flow. Find the collection with all available methods on [Catalog API Overview](https://developers.vtex.com/docs/guides/catalog-api-overview).
+1. API Integration: Read our [Catalog getting started guide](https://developers.vtex.com/docs/guides/catalog-overview) for an overview of the integration flow. Find the collection with all available methods on [Catalog API Overview](https://developers.vtex.com/docs/api-reference/catalog-api).
 2. Spreadsheet:
    - Google Drive Import: Import the catalog from a single Google Drive file. See the [Google Drive Import app details](https://developers.vtex.com/docs/apps/vtex.google-drive-import@0.x).
    - Classic Method: Import the catalog using multiple files (Product, SKU, Specification, Image).
 3. Manual input: Load Catalog data manually on VTEX Admin, as described in our [Catalog 101 track](https://help.vtex.com/en/tracks/catalog-101--5AF0XfnjfWeopIFBgs3LIQ/1ROhz3Y7mfSMmCO1I1GxEL).
 
-In order to import your products, it is possible that you have to use more than one method, depending on how the data is structured and what types of software are used in your operation. Usually, a combination of [API integration](https://developers.vtex.com/docs/guides/catalog-api-overview) and [Google Drive Import app](https://developers.vtex.com/docs/apps/vtex.google-drive-import@0.x) works best. Below you can see some of the use cases and choose the processes that best fit your needs.
+In order to import your products, it is possible that you have to use more than one method, depending on how the data is structured and what types of software are used in your operation. Usually, a combination of [API integration](https://developers.vtex.com/docs/api-reference/catalog-api) and [Google Drive Import app](https://developers.vtex.com/docs/apps/vtex.google-drive-import@0.x) works best. Below you can see some of the use cases and choose the processes that best fit your needs.
 
 >⚠️ It is worth noting that product information in ERPs is often not suitable to be used and displayed in an ecommerce. Because of that it needs to go through an enrichment process, which may include restructuring categories and creating more descriptive and appealing description texts, for example.
 

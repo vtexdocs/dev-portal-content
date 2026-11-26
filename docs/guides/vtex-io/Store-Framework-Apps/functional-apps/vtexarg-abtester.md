@@ -13,7 +13,7 @@ The A/B Tester app allows you to list, start and finish A/B tests via the VTEX A
 
 ![A/B Tester Settings](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtexarg-abtester-0.png)
 
-In the following, you'll learn how to install and use the A/B Tester app.
+The following sections explain how to install and use the A/B Tester app.
 
 ---
 

@@ -33,7 +33,7 @@ The Locale Switcher app provides a component capable of changing the current lan
 },
 ```
 
-3. Open a ticket to our support team in order to adjust your store's binding with the desired languages.
+3. Open a ticket with our support team in order to adjust your store's binding with the desired languages.
 
 > ⚠️ **\*Caution:** The third step is mandatory. If no ticket is opened requiring the desired languages, the selection list may not appear on the Locale Switcher component.\*
 

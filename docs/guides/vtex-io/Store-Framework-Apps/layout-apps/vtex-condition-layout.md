@@ -62,7 +62,7 @@ Or the `condition-layout.category` block, for example:
 }
 ```
 
-> ⚠️ _Never use `condition-layout` directly. Make sure to always use it with the context variant, such as `condition-layout.product`._
+> ⚠️ Never use `condition-layout` directly. Make sure to always use it with the context variant, such as `condition-layout.product`.
 
 ### Step 3 - Defining the desired conditions
 
@@ -169,7 +169,7 @@ Or for `condition-layout.telemarketing`:
 + }
 ```
 
-> ℹ️ *According to the example above, whenever users interact with a product whose ID is equal to 12, the block `flex-layout.row#custom-pdp-layout-12` is rendered. If users interact with a product whose ID is not equal to 12, the rendered block is the `flex-layout.row#default`.*
+> ℹ️ According to the example above, whenever users interact with a product whose ID is equal to 12, the block `flex-layout.row#custom-pdp-layout-12` is rendered. If users interact with a product whose ID is not equal to 12, the rendered block is the `flex-layout.row#default`.
 
 | Prop name    | Type     | Description  | Default value |
 | ------------ | -------- | ------------ | ------------- |
@@ -201,7 +201,7 @@ Possible values for the `condition-layout.product`'s `subject` prop:
 | `isProductAvailable`                  | Whether the product is available (`true`) or not (`false`).  | No arguments are expected. |
 | `hasMoreSellersThan`                  | Whether the quantity of sellers for the product is more than argument passed.  | `{ quantity: number }`|
 
-Possible values for the`condition-layout.binding`'s `subject` prop:
+Possible values for the `condition-layout.binding`'s `subject` prop:
 
 | Subject | Description | Arguments |
 | -------- | ------------ | ---------- |
@@ -214,13 +214,13 @@ Possible values for the `condition-layout.category`'s `subject` prop:
 | `category`               | Category's IDs currently displayed on the UI.    | `{ ids: string[] }` |
 | `department`             | Department's IDs currently displayed on the UI.  | `{ ids: string[] }` |
 
-Possible values for the`condition-layout.telemarketing`'s `subject` prop:
+Possible values for the `condition-layout.telemarketing`'s `subject` prop:
 
 | Subject | Description | Arguments |
 | -------- | ------------ | ---------- |
 | `impersonable` | Value of the impersonable setting.  | `{ value: boolean }` |
 
-## Modus Operandi
+## Behavior
 
 The `condition-layout.product` mainly uses the `matchType` and `conditions` props to set, respectively, the criteria and the conditions that blocks must meet to be rendered or not.
 

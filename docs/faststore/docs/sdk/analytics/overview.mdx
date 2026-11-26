@@ -41,9 +41,29 @@ The Analytics module comes with native types based on [ecommerce events](https:/
 |`view_item_list`|`item_list_id`, `item_list_name`, and `items`|
 |`view_promotion`|`items`|
 
+> ℹ️ For details on the fields sent inside the `items` parameter, see [Fields sent in `items`](#fields-sent-in-items).
+
 Each event exports at least two types: one for the event parameters and one for the event type itself. For example, the `add_to_cart` event has two exported types: `AddToCartParams<T extends Item = Item>` and `AddToCartEvent<T extends Item = Item>`.
 
 Some types are [common](https://github.com/vtex/faststore/blob/main/packages/sdk/src/analytics/events/common.ts) to all events, such as the `Item` type. These types are particularly useful when overriding `Item` properties or a whole `Item` itself.
+
+### Fields sent in `items`
+
+The `items` parameter is an array of objects that follows the [GA4 `items` data model](https://developers.google.com/analytics/devguides/collection/ga4/reference/events#view_item_list_item). GA4 accepts more fields than FastStore sends by default. The FastStore Core package natively sends the following fields in `items` for the `add_to_cart`, `remove_from_cart`, `view_cart`, `view_item`, `view_item_list`, and `select_item` events:
+
+| Field | Description | Sent in |
+|-------|-------------|---------|
+|`item_id`|Product ID (`isVariantOf.productGroupID`).|All events|
+|`item_name`|Product name (`isVariantOf.name`).|All events|
+|`item_brand`|Product brand name (`brand.name`).|All events|
+|`item_variant`|SKU ID of the selected variant (`sku`).|All events|
+|`item_variant_name`|Name of the selected variant (`name`).|All events|
+|`product_reference_id`|Product reference ID, based on the GTIN (`gtin`).|All events|
+|`price`|Selling price of the item.|All events|
+|`discount`|Difference between the list price and the selling price.|All events|
+|`currency`|Currency code of the session.|All events|
+|`quantity`|Quantity of the item.|`add_to_cart`, `remove_from_cart`, and `view_cart`|
+|`index`|Position of the item in the list.|`view_item_list` and `select_item`|
 
 ## Google Analytics 4
 

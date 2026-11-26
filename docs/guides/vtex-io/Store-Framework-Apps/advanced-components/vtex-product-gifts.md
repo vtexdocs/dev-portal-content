@@ -108,7 +108,7 @@ For the rendering, it uses the following block implementation behind the scenes:
 
 ### Advanced configuration
 
-If desired, you can change the Product Gifts default implementation by explicitly declaring the code showed above in your `store.product` template.
+If desired, you can change the Product Gifts default implementation by explicitly declaring the code shown above in your `store.product` template.
 
 As a result, you will be able to configure the Product Gifts behavior by using all available props for each block:
 

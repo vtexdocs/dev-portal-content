@@ -23,9 +23,12 @@ jobs:
             **.mdx
       - name: Fetch navigation.json
         run: curl -o ./navigation.json https://developers.vtex.com/navigation.json
-      - name: Map slugs to paths
-        id: map-slugs-to-paths
+      - name: Get preview links
+        id: get-preview-links
         uses: actions/github-script@v6
+        env:
+          BRANCH: ${{ steps.get-branch-name.outputs.head_ref_branch }}
+          FILES: ${{ steps.get-changed-markdown-files.outputs.all_changed_files }}
         with:
           script: |
             const navigation = require('./navigation.json')
@@ -44,18 +47,8 @@ jobs:
             }
 
             navigation.navbar.forEach(({ slugPrefix, categories }) => slugsToPaths(slugPrefix.endsWith('/') ? slugPrefix : `${slugPrefix}/`, categories))
-            core.setOutput('slugs-to-paths', JSON.stringify(paths))
-      - name: Get preview links
-        id: get-preview-links
-        uses: actions/github-script@v6
-        env:
-          BRANCH: ${{ steps.get-branch-name.outputs.head_ref_branch }}
-          FILES: ${{ steps.get-changed-markdown-files.outputs.all_changed_files }}
-          PATHS: ${{ steps.map-slugs-to-paths.outputs.slugs-to-paths }}
-        with:
-          script: |
+
             const branch = process.env.BRANCH
-            const paths = JSON.parse(process.env.PATHS)
             const files = process.env.FILES.split(' ')
               .map(file => file.trim())
               .filter(file => file !== '')

@@ -34,7 +34,7 @@ Fields sent in the notification:
 | StockModified                           | Identifies that the inventory level has been altered. Connectors should send an [Fulfillment Simulation](https://developers.vtex.com/vtex-rest-api/reference/fulfillment-simulation) request to collect updated information.                                                                                                                                                                                         |
 | PriceModified                           | Identifies that the price  has been altered. Connectors should send an [Fulfillment Simulation](https://developers.vtex.com/vtex-rest-api/reference/fulfillment-simulation) request to collect updated information.                                                                                                                                                                                                  |
 | HasStockKeepingUnitModified             | Identifies that the product/SKU registration data has changed, like name, description, weight, etc                                                                                                                                                                                                                                                                                                                   |
-| HasStockKeepingUnitRemovedFromAffiliate | Identifies that the product is no longer associated with the trade policy. In case the marketplace doesn’t allow it to be deactivated, the product should be excluded, along with any existing correspondences in the connector.                                                                                                                                                                                     |
+| HasStockKeepingUnitRemovedFromAffiliate | Identifies that the product is no longer associated with the sales channel. In case the marketplace doesn’t allow it to be deactivated, the product should be excluded, along with any existing correspondences in the connector.                                                                                                                                                                                     |
 
 ## Integration flow after notification
 
@@ -46,11 +46,11 @@ Follow the steps below, to send the initial load of products in the integration�
    b. If the `HasStockKeepingUnitModified` is defined as true, the product should be registered or updated in the marketplace.
    c. Collect details from every SKU using the [Get details of an SKU associated with a sales channel. ](https://developers.vtex.com/vtex-rest-api/reference/catalog-api-get-sku)
    d. Validate if the product is active through the [Get Product by ID](https://developers.vtex.com/vtex-rest-api/reference/catalog-api-get-product) endpoint, through the `isActive` property.
-   e. Validate if the product is associated with the trade policy used in the marketplace integration through the `salesChannel` property.
+   e. Validate if the product is associated with the sales channel used in the marketplace integration through the `salesChannel` property.
    f. Identify whether the SKU conforms to the marketplace’s product registration rules.
    g. Validate if the product’s category is mapped in the marketplace.
    In case it is not mapped, the marketplace should put the SKU in the approvement’s queue, until the [mapping](https://developers.vtex.com/docs/api-reference/marketplace-protocol-external-marketplace-mapper#post-/api/mkp-category-mapper/categories/marketplace/-id-) is complete.
-   h. Use [Fulfillment Simulation](https://developers.vtex.com/vtex-rest-api/reference/fulfillment-simulation) (without postalCode) to check if price and inventory are configured in the selected trade policy.
+   h. Use [Fulfillment Simulation](https://developers.vtex.com/vtex-rest-api/reference/fulfillment-simulation) (without postalCode) to check if price and inventory are configured in the selected sales channel.
 
 If all validations pass, the product or SKU is sent to the marketplace and the operation is logged according to information described in the [Logs made available for users](https://developers.vtex.com/vtex-rest-api/docs/external-marketplace-integration-logs#log-messages) section.
 
