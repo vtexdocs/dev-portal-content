@@ -7,7 +7,7 @@ createdAt: "2026-12-01T00:00:00.000Z"
 updatedAt: "2026-12-01T00:00:00.000Z"
 ---
 
-To keep your store secure and avoid vulnerability flags in scanners and audits, update your FastStore project to the latest patch release of your version (v2, v3, or v4). These releases include updated Next.js and `sharp` dependencies with the latest security fixes.
+To keep your store secure and avoid vulnerability flags in scanners and audits, update your FastStore project to the latest patch release for your version (v2, v3, or v4). These releases include updated [Next.js](https://nextjs.org) and [`sharp`](https://sharp.pixelplumbing.com) dependencies with the latest security fixes.
 
 ## What has changed?
 
