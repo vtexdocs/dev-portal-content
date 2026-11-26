@@ -118,7 +118,7 @@ To configure the test environment, follow these instructions:
 | `requestId` | Transaction ID sent in each test. Leave it empty, because the collection generates it automatically before each request. |
 | `webhookUrl` | URL received in the `hook` field of the provider response. Leave it empty, because the collection fills it in automatically during the webhook tests. |
 
-> ⚠️ All communication must use HTTPS on port 443 with TLS 1.2 support. Your provider must accept two headers — **X-PROVIDER-API-AppKey** and **X-PROVIDER-API-AppToken** — which identify the merchant. All merchant-specific settings must persist on your side. VTEX only stores the AppKey/AppToken credential pair.
+> ⚠️ All communication must use HTTPS with TLS 1.2 support. Your provider must accept two headers — **X-PROVIDER-API-AppKey** and **X-PROVIDER-API-AppToken** — which identify the merchant. All merchant-specific settings must persist on your side. VTEX only stores the AppKey/AppToken credential pair.
 
 ### 3. Running the tests
 
