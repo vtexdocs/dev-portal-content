@@ -84,7 +84,7 @@ Date:   Fri Oct 25 16:08:38 2024 -0300
 
 If the build fails, the issue is usually in your extension code or configuration. Common causes include type-checking errors and typos.
 
-FastStore WebOps shows when a build fails, but Checkout build logs are not available there. To inspect the logs, check the GitHub Checks for the failed commit by selecting the status icon ("✔️", "❌", or "🟡") next to the commit description and opening the **Details** link for **FastStore WebOps**. Checkout build errors appear in the **Building checkout** step. Errors in the **Building** step come from the `discovery` module.
+FastStore WebOps shows when a build fails, but Checkout build logs aren't available there. To inspect the logs, check the GitHub Checks for the failed commit by selecting the status icon ("✔️", "❌", or "🟡") next to the commit description and opening the **Details** link for **FastStore WebOps**. Checkout build errors appear in the **Building checkout** step. Errors in the **Building** step come from the `discovery` module.
 
 You can also run the following command. Remember to replace `{account-name}` with the name of your account.
 
