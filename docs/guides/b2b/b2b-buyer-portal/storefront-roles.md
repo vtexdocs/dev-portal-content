@@ -98,7 +98,7 @@ The system comes with these predefined storefront roles, each with specific perm
 
 > ℹ️ Roles marked as "API only" can only be assigned to users via the `POST` [Assign storefront roles](https://developers.vtex.com/docs/api-reference/storefront-roles-api#post-/api/license-manager/storefront/user/roles) or `POST` [Assign one storefront role](https://developers.vtex.com/docs/api-reference/storefront-roles-api#post-/api/license-manager/storefront/roles/assign) endpoints.
 
-> ℹ️ As of September 21, 2026, the native **Address Manager** role (storefront role ID `9`) has been removed. Permissions for managing B2B customer addresses (`ManageAddresses` and `ViewAddresses`) are now available only through a [custom storefront role](https://developers.vtex.com/docs/guides/custom-storefront-roles-and-resources) with these resources. Accounts that already had this role were migrated to an equivalent custom role and keep their access; accounts that need this permission going forward must create their own custom role, either via API or in the VTEX Admin.
+> ℹ️ As of September 21, 2026, the native **Address Manager** role (storefront role ID `9`) has been removed. Permissions for managing B2B customer addresses (`ManageAddresses` and `ViewAddresses`) are now available only through a [custom storefront role](https://developers.vtex.com/docs/guides/custom-storefront-roles-and-resources) with these resources. Accounts that had this role were migrated to an equivalent custom role and keep their access; accounts that need this permission going forward must create their own custom role, either via API or in the VTEX Admin.
 
 ## Extending the permission model
 
