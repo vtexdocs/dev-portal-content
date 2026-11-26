@@ -132,7 +132,7 @@ Use the [Storefront Roles API](https://developers.vtex.com/docs/api-reference/st
 
 > ℹ️ For the full list of available roles, resources, and required permissions, see [Storefront Roles](https://developers.vtex.com/docs/guides/storefront-roles).
 
-If the predefined roles and resources don't cover your scenarios, you can create custom ones scoped to your account via API. See [Custom storefront roles and resources](https://developers.vtex.com/docs/guides/custom-storefront-roles-and-resources). Merchants can also manage them in the VTEX Admin. Learn more in [Custom storefront roles and permissions](https://help.vtex.com/en/docs/tutorials/custom-storefront-roles-and-permissions-overview).
+If the predefined roles and resources don't cover your scenarios, you can create custom ones for your account via API. See [Custom storefront roles and resources](https://developers.vtex.com/docs/guides/custom-storefront-roles-and-resources). Merchants can also manage them in the VTEX Admin. Learn more in [Custom storefront roles and permissions](https://help.vtex.com/en/docs/tutorials/custom-storefront-roles-and-permissions-overview).
 
 ### Buyer data
 
