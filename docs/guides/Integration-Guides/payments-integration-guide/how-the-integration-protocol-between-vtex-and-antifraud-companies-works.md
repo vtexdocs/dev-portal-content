@@ -198,7 +198,7 @@ Some anti-fraud providers may not use the cardholder's personal identification d
 
 To configure the cardholder document field, follow these instructions:
 
-1. In the VTEX Admin, go to __Store Settings > Payment > Providers__, or type __Providers__ in the search bar at the top of the page.
+1. In the VTEX Admin, go to **Store Settings > Payment > Providers**, or type **Providers** in the search bar at the top of the page.
 2. On the providers screen, click the `New Provider` button.
 3. Search for the anti-fraud provider name and select it.
 4. Complete the required fields.
