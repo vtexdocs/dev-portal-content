@@ -4,7 +4,7 @@ slug: "how-the-integration-protocol-between-vtex-and-antifraud-companies-works"
 excerpt: "Learn how to integrate an anti-fraud service with VTEX using the Anti-fraud Provider Protocol, from implementation to homologation."
 hidden: false
 createdAt: "2022-12-07T17:09:28.603Z"
-updatedAt: "2026-09-22T00:00:00.000Z"
+updatedAt: "2026-11-26T00:00:00.000Z"
 ---
 The Anti-fraud Provider Protocol is the integration standard between VTEX and companies that provide anti-fraud services. It's a public contract available to all providers that want to offer risk analysis on the VTEX platform.
 
@@ -12,6 +12,7 @@ The protocol supports:
 
 - Synchronous and asynchronous risk analysis
 - Webhook for status notification
+- Optional pre-analysis before payment authorization
 
 > ⚠️ The Anti-fraud Provider Protocol only applies to payment transactions with credit, [debit](https://developers.vtex.com/docs/guides/implementing-a-pre-analysis-antifraud-flow-for-debit-card-transactions), and gift cards.
 
@@ -21,6 +22,13 @@ The following diagram shows how VTEX and the anti-fraud provider exchange data d
 sequenceDiagram
     participant VTEX as VTEX Gateway
     participant AFP as Anti-fraud provider
+
+    opt Pre-analysis
+        VTEX->>AFP: POST /pre-analysis<br/>(Send Anti-fraud Pre-analysis Data)
+        AFP-->>VTEX: status: approved or denied
+    end
+
+    Note over VTEX: Payment authorization
 
     VTEX->>AFP: POST /transactions<br/>(Send Anti-fraud Data)
     AFP-->>VTEX: status: received
@@ -37,11 +45,13 @@ sequenceDiagram
     else Webhook
         VTEX->>AFP: GET /transactions/{id}
         AFP-->>VTEX: status: undefined
-        AFP->>VTEX: POST callbackUrl (hook)
+        AFP->>VTEX: POST hook URL
         VTEX->>AFP: GET /transactions/{id}
         AFP-->>VTEX: status: approved or denied
     end
 ```
+
+The pre-analysis step is optional and runs before payment authorization. If the provider denies the transaction, it's canceled before reaching the acquirer. The pre-analysis doesn't replace the full risk analysis after authorization. To use it, your connector must have the pre-analysis function configured in VTEX. For more information, see [Send anti-fraud pre-analysis data](https://developers.vtex.com/docs/api-reference/antifraud-provider-protocol#post-/pre-analysis) and [Implementing a pre-analysis anti-fraud flow for debit card transactions](https://developers.vtex.com/docs/guides/implementing-a-pre-analysis-antifraud-flow-for-debit-card-transactions).
 
 ## Key concepts
 
@@ -105,8 +115,10 @@ To configure the test environment, follow these instructions:
 | `appToken` | Value of the `X-PROVIDER-API-AppToken` header used to authenticate with your provider. |
 | `accountName` | VTEX account name that will process payments with this anti-fraud provider. |
 | `mockServerAddress` | Mock server URL copied when you configured the webhook mock. |
+| `requestId` | Transaction ID sent in each test. Leave it empty, because the collection generates it automatically before each request. |
+| `webhookUrl` | URL received in the `hook` field of the provider response. Leave it empty, because the collection fills it in automatically during the webhook tests. |
 
-> ⚠️ All communication must use HTTPS with TLS 1.2 exclusively. Your provider must accept two headers — **X-PROVIDER-API-AppKey** and **X-PROVIDER-API-AppToken** — which identify the merchant. All merchant-specific settings must persist on your side. VTEX only stores the AppKey/AppToken credential pair.
+> ⚠️ All communication must use HTTPS on port 443 with TLS 1.2 support. Your provider must accept two headers — **X-PROVIDER-API-AppKey** and **X-PROVIDER-API-AppToken** — which identify the merchant. All merchant-specific settings must persist on your side. VTEX only stores the AppKey/AppToken credential pair.
 
 ### 3. Running the tests
 
@@ -157,10 +169,8 @@ When all tests pass, [open a ticket with VTEX Support](https://help.vtex.com/en/
 - **Partner contact**: Email address used for protocol updates and change notifications
 - **Production service provider endpoint**: The base path used for API calls to the provider, for example `https://vtex.pagseguro.com`. It must respond to the `{{serviceUrl}}/manifest` route and be publicly available.
 - **Sandbox service provider endpoint**: The base path used in test mode for API calls to the provider.
-- **Owner account**: The VTEX account name used in callback requests. This account must be available at `{accountName}.myvtex.com`.
+- **Owner account**: The VTEX account name used in requests to the `hook` URL. This account must be available at `{accountName}.myvtex.com`.
 - **Allowed accounts**: Which VTEX accounts can use this provider, either all accounts or specific accounts.
-- **New payment method**: Whether this connector supports a payment method that isn't yet available in the VTEX Admin.
-- **New payment method purchase flow**: If the connector supports a new payment method, whether it uses Redirect or Payment App. For more information, see [Purchase Flows](https://developers.vtex.com/docs/guides/payments-integration-purchase-flows).
 
 The VTEX payments team Service Level Agreement (SLA) for homologation is 30 days.
 
@@ -168,7 +178,7 @@ The VTEX payments team Service Level Agreement (SLA) for homologation is 30 days
 
 ## VTEX credentials
 
-When calling the `callbackUrl`, include the **X-VTEX-API-AppKey** and **X-VTEX-API-AppToken** authentication headers. These credentials are available in VTEX License Manager and are used only by the anti-fraud provider.
+When calling the URL received in the `hook` field, include the **X-VTEX-API-AppKey** and **X-VTEX-API-AppToken** authentication headers. These credentials are available in VTEX License Manager and are used only by the anti-fraud provider.
 
 Open License Manager at `https://{accountName}.myvtex.com/admin/license-manager/#/home`. Then follow [API authentication using API keys](https://developers.vtex.com/docs/guides/api-authentication-using-api-keys) to create the keys and tokens.
 
