@@ -3,7 +3,8 @@ title: "Managing a Customer Credit account"
 slug: "managing-a-customer-credit-account"
 hidden: false
 createdAt: "2024-03-15T00:00:00.000Z"
-updatedAt: ""
+updatedAt: "2026-11-23T00:00:00.000Z"
+excerpt: "Learn how to create, check, update, share, and close Customer Credit accounts using the Customer Credit API."
 ---
 This guide describes how to manage a [Customer Credit account](https://help.vtex.com/en/tutorial/customer-credit-overview--1uIqTjWxIIIEW0COMg4uE0) in your store by performing the following actions through the endpoints of the [Customer Credit API](https://developers.vtex.com/docs/api-reference/customer-credit-api):
 
@@ -527,6 +528,9 @@ You can also share the credit available in a customer account with other custome
 ### Adding a new account holder
 
 To add the new account holder to the customer credit account, use the VTEX Admin or the [Add an account holder](https://developers.vtex.com/docs/api-reference/customer-credit-api#post-/api/creditcontrol/accounts/-creditAccountId-/holders) endpoint. In this request, you must send the account identification (`id`) as a path parameter.
+
+> ⚠️ In the same store, an email can be linked to only one open Customer Credit account, either as the account's main email or as a holder. If you try to add a holder with an email that is already in use by another open account, the API returns the status code `400` with the error code `6003` and the message `Email already in use for another account`. The email comparison is case-insensitive. Closed accounts are not considered, so after an account's closed, its emails can be used in another account. The same email can have Customer Credit accounts in different stores.
+
 
 See an example below using the account `fe60ff40-d1cb-11ee-a0ed-87f4fcc03446`:
 
