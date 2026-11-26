@@ -24,7 +24,7 @@ experimental: {
 }
 ```
 
-- The value is a number of seconds. The default is `false`, which keeps the current behavior unchanged for stores that don't set it.
+- The value is a number in seconds. The default is `false`, which keeps the current behavior unchanged for stores that don't set it.
 - The minimum accepted value is `60`. A valid value below that is automatically raised to `60`, and FastStore logs a console warning the first time this happens.
 - Invalid values, such as `0`, negative numbers, decimals, or strings, are treated the same as `false` (no revalidation) and also log a console warning naming the key, instead of breaking the page.
 - This flag only affects catalog PLPs. Landing pages created in the Headless CMS aren't affected, since their content changes on a different cadence and for different reasons.
