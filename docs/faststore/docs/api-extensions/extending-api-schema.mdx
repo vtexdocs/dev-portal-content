@@ -120,7 +120,7 @@ Now, you'll create a resolver to define how the new `customData` field should be
     export default productResolver;
     ```
 
-Note that you can leverage the use of TypeScript by typing the root param as [StoreProductRoot](https://v1.faststore.dev/reference/api/root-object-fields#root-product):
+You can leverage the use of TypeScript by typing the root param as [StoreProductRoot](https://developers.vtex.com/docs/guides/faststore/schema-objects):
 
 	![using-root-field-type](https://vtexhelp.vtexassets.com/assets/docs/src/root-field-ts___3a10ec8a1aeba9770c7ee982995d55bc.gif)
 
@@ -298,7 +298,7 @@ This means your FastStore website may need to consume new data from third-party 
    mkdir resolvers typeDefs
    ```
 
-   > ⚠️ The `src/graphql/vtex/resolvers` and `src/graphql/vtex/typeDefs` paths are mandatory, but you can organize the files inside those directories as you wish.
+   > ⚠️ The `src/graphql/thirdParty/resolvers` and `src/graphql/thirdParty/typeDefs` paths are mandatory, but you can organize the files inside those directories as you wish.
 
 4. Create a `index.ts` file inside the `resolvers` folder.
 
