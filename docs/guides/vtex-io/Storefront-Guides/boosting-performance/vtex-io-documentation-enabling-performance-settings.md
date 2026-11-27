@@ -4,7 +4,7 @@ slug: "vtex-io-documentation-enabling-performance-settings"
 excerpt: "Enable VTEX Admin performance settings and apply manual optimizations to improve your store's page load times and SEO scores."
 hidden: false
 createdAt: "2024-11-18T15:26:22.439Z"
-updatedAt: "2026-11-27T19:23:00.000Z"
+updatedAt: "2026-11-27T00:00:00.000Z"
 ---
 
 For ecommerce businesses, appealing offers, high-quality products, or brand recognition might not be enough to convert leads if the user experience falls short. Store website performance is essential to the user experience, directly impacting sales conversion rate, user session time, and other metrics. Every millisecond counts and affects both consumer decision-making and search engine rankings.
@@ -112,7 +112,7 @@ This action concatenates the CSS of a page into a single file for faster downloa
 
 This action prefetches pages when a user hovers over a link.
 
-When enabled, the page content is proactively downloaded in the background when you hover over a link. This means that the page is already loaded or partially loaded when you click the link.
+When you enable this option, the browser proactively downloads the page content in the background as you hover over a link. The page is already loaded, or at least partially loaded, when you click it.
 
 #### Enable lazy runtime
 
