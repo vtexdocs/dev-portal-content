@@ -4,10 +4,10 @@ slug: "vtex-ads-javascript-sdk"
 excerpt: "JavaScript libraries designed to integrate VTEX's advertising platform into your storefront with tools to request, fetch, and display sponsored products."
 hidden: false
 createdAt: "2025-12-02T00:00:00.000Z"
-updatedAt: "2025-12-02T00:00:00.000Z"
+updatedAt: "2026-11-27T18:14:00.000Z"
 ---
 
-The VTEX Ads SDK is a set of JavaScript libraries designed to integrate VTEX's advertising platform into your storefront. It provides tools to request, fetch, and display sponsored products and banners with minimal effort.
+The VTEX Ads SDK is a set of JavaScript libraries designed to integrate VTEX's advertising platform into your storefront. It provides tools to request, fetch, and display sponsored products with minimal effort.
 
 The VTEX Ads SDK consists of two main packages:
 
@@ -23,6 +23,8 @@ The SDK supports different types of advertisements:
 - **Sponsored Products** - Product listings with sponsored placement
 - **Banners** - Display advertisements (coming soon)
 - **Sponsored Brands** - Brand-focused advertisements (coming soon)
+
+Banners and sponsored brands are already available through the VTEX Ads API. To request them, see [Retrieving ads](https://developers.vtex.com/docs/guides/retrieving-ads) and [Getting started with VTEX Ads API](https://developers.vtex.com/docs/guides/getting-started-with-vtex-ads-api).
 
 ### Placements
 
