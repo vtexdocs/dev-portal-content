@@ -87,6 +87,8 @@ In the following example, the app listens for changes in the `authentication` na
 
 The `vtex.session` builder detects changes in the `input` values of the `configuration.json` file and sends a `POST` request to the public endpoint (`/_v/APP-NAME/session/transform`) whenever a change occurs. All values listed under `input` are sent in the request, even if not all values have changed.
 
+> ⚠️ Only fields declared under `input` in `configuration.json` reach the `transform` handler. A field that the handler reads but did not declare is always `undefined` in the request body.
+
 To set up this endpoint, take the following steps:
 
 1. Open the `./node/services.json` file and add a route containing `path` and `public` under the `routes` property. For example:
