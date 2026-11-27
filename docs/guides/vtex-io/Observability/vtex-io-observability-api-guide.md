@@ -2,78 +2,76 @@
 title: "VTEX IO Observability API guide"
 slug: "vtex-io-observability-api-guide"
 hidden: false
-createdAt: "2026-02-26T00:00:00.000Z"
-updatedAt: "2026-02-26T00:00:00.000Z"
+createdAt: "2026-12-07T12:00:00.000Z"
+updatedAt: "2026-12-07T12:00:00.000Z"
 ---
 
-> ⚠️ VTEX IO Observability is currently in beta, which means that VTEX is working to improve it. If you have any questions, contact [VTEX Support](https://supporticket.vtex.com/support).
+> ⚠️ VTEX IO Observability is currently in beta, which means that VTEX is working to
+improve it. If you have any questions, contact [VTEX Support](https://supporticket.vtex.com/support).
 
-The VTEX IO Observability API provides programmatic access to logs and metrics data from your VTEX IO apps. With this API you can:
+The VTEX IO Observability API provides programmatic access to logs and metrics data from your VTEX IO apps. With this API, you can:
 
-- **Query logs** — Retrieve app logs with flexible filtering and pagination (query endpoint).
-- **Query metrics** — Access time-series metrics with filtering, aggregation, and pagination (query endpoint).
-- **List apps** — Discover which apps have sent logs or metrics in a time range ([Get apps](#get-apps)).
-- **Get available fields** — Discover queryable columns for logs ([Get logs fields](#get-logs-fields)) and metrics ([Get metrics fields](#get-metrics-fields)).
-- **Get metric names** — List metric names for a specific app in a time range ([Get metric names](#get-metric-names)).
-- **Get capabilities** — Retrieve API capabilities, supported operators, aggregations, and limits ([Get capabilities](#get-capabilities)).
+- **Query logs:** Retrieve app logs with flexible filtering and pagination (query endpoint).
+- **Query metrics:** Access time-series metrics with filtering, aggregation, and pagination (query endpoint).
+- **List apps:** Discover which apps have sent logs or metrics in a time range ([Get apps](#get-apps)).
+- **Get available fields:** Discover queryable columns for logs ([Get logs fields](#get-logs-fields)) and metrics ([Get metrics fields](#get-metrics-fields)).
+- **Get metric names:** List metric names for a specific app in a time range ([Get metric names](#get-metric-names)).
+- **Get capabilities:** Retrieve API capabilities, supported operators, aggregations, and limits ([Get capabilities](#get-capabilities)).
 
 All data is isolated per tenant (VTEX account), ensuring complete data security and separation.
 
-This guide describes all API endpoints, with a focus on the **query endpoints** for logs and metrics: how to use filters, aggregations, ordering, and pagination, with individual examples for each use case.
+This guide describes all API endpoints, with a focus on the query endpoints for logs and metrics: how to use filters, aggregations, ordering, and pagination, with individual examples for each use case.
 
 ## Before you begin
 
 Before querying logs and metrics, make sure you have:
 
-- A valid [VTEX application key and token](https://help.vtex.com/en/tutorial/application-keys--2onstR7H68Y6meYKaMECGY) pair with the `colossus-read-logs` permission.
-- Your VTEX account name, which will be used as the `tenant` path parameter.
+- A valid [VTEX API key and token](https://help.vtex.com/en/docs/tutorials/generated-keys) pair with a [role](https://help.vtex.com/docs/tutorials/roles) that includes the **Log Access - Read-only** [License Manager resource](https://help.vtex.com/docs/tutorials/license-manager-resources). For detailed instructions, see [Generating keys](https://help.vtex.com/docs/tutorials/generated-keys#generating-keys) and [Creating roles](https://help.vtex.com/docs/tutorials/creating-roles).
+- Your [VTEX account name](https://help.vtex.com/en/docs/tutorials/what-is-an-account-name), which endpoints use as the `tenant` path parameter.
 
 All requests must include the following authentication headers:
 
-| Header | Description |
-| - | - |
-| `X-VTEX-API-AppKey` | Your application key (format: `vtexappkey-{accountName}-{suffix}`). |
-| `X-VTEX-API-AppToken` | Your application token. |
-
->⚠️ The `{accountName}` in your application key **must match** the `tenant` used in the request URL path. Cross-tenant access is blocked for security.
+- `X-VTEX-API-AppKey`: Your API key (format: `vtexappkey-{accountName}-{suffix}`)
+- `X-VTEX-API-AppToken`: Your API token
 
 ## Base URL
 
 All endpoints use the following base URL:
 
-`https://{accountName}.vtexcommercebeta.com.br/api/extensions/observability`
+```text
+https://{accountName}.vtexcommercebeta.com.br/api/extensions/observability
+```
 
 Replace `{accountName}` with your VTEX account name.
 
 ## Endpoints overview
 
-The Observability API provides the following endpoints. The **query endpoints** (POST `/metrics/{tenant}/query` and POST `/logs/{tenant}/query`) are the main ones for retrieving logs and metrics; the others support discovery and building queries.
+The query endpoints (POST `/metrics/{tenant}/query` and POST `/logs/{tenant}/query`) are the main ones for retrieving logs and metrics, while the others support discovery and building queries. The VTEX IO Observability API provides the following endpoints:
 
->ℹ️ Except for `/capabilities`, all endpoints accept the `tenant` path parameter
-(your VTEX account name).
+| Endpoint name | Path | Method | Description |
+| :---- | :---- | :---- | :---- |
+| Query metrics | `/metrics/{tenant}/query` | POST | Filter, aggregate, and paginate metrics data. |
+| Query logs | `/logs/{tenant}/query` | POST | Filter and paginate the log data. |
+| Get metrics fields | `/metrics/{tenant}/fields` | GET | Get available fields (columns) for metrics queries. |
+| Get metric names | `/metrics/{tenant}/{app}/names` | GET | List metric names for a specific app within a time range. |
+| Get logs fields | `/logs/{tenant}/fields` | GET | Get available fields (columns) for log queries. |
+| Get apps | `/{tenant}/apps` | GET | List apps that have sent logs or metrics within a time range. |
+| Get capabilities | `/capabilities` | GET | Get API capabilities (operators, aggregations, limits, etc.). |
 
-| Endpoint | Method | Description |
-| - | - | - |
-| `/metrics/{tenant}/query` | POST | **Query metrics** — Filter, aggregate, and paginate metrics data. |
-| `/logs/{tenant}/query` | POST | **Query logs** — Filter and paginate logs data. |
-| `/metrics/{tenant}/fields` | GET | Get available fields (columns) for metrics queries. |
-| `/metrics/{tenant}/{app}/names` | GET | List metric names for a specific app within a time range. |
-| `/logs/{tenant}/fields` | GET | Get available fields (columns) for logs queries. |
-| `/{tenant}/apps` | GET | List apps that have sent logs or metrics within a time range. |
-| `/capabilities` | GET | Get API capabilities (operators, aggregations, limits, etc.). |
+> ℹ️ Except for `/capabilities`, all endpoints accept the `tenant` path parameter (your VTEX account name).
 
 ### Query endpoints request body
 
-The **query endpoints** accept a JSON request body with the following fields:
+The query endpoints accept a JSON request body with the following fields:
 
 | Field | Type | Required | Default | Description |
-| - | - | :-: | - | - |
+| :---- | :---- | :-: | :---- | :---- |
 | `columns` | array of strings | ❌ | All columns | Columns to include in the response. |
 | `page` | integer | ❌ | `1` | Page number (1-indexed). |
 | `pageSize` | integer | ❌ | `50` | Number of results per page (maximum: `1000`). |
 | `filters` | array of objects | ❌ | `[]` | Filter conditions to narrow results. |
-| `orders` | array of objects | ❌ | `[]` | Sorting criteria. |
-| `group_by` | object | ❌ | `null` | Grouping configuration for aggregations. |
+| `orders` | array of objects | ❌ | `[]` | Sorting criteria. Each object in the array defines the sort direction for the specified column. |
+| `group_by` | object | ❌ | `null` | Grouping configuration for aggregations (metrics only). |
 | `aggregations` | array of objects | ❌ | `[]` | Aggregation functions (metrics only). |
 | `distinct` | boolean | ❌ | `false` | Whether to return only distinct values. |
 
@@ -83,76 +81,87 @@ The **query endpoints** accept a JSON request body with the following fields:
 
 ### Get metric names
 
-`GET /metrics/{tenant}/{app}/names?fromTime={unix}&toTime={unix}` — Returns the list of metric names for the given app within the specified time range (Unix timestamps in seconds). Use these values for the `MetricName` filter in metrics queries. The `app` path parameter can be obtained from the [Get apps](#get-apps) endpoint.
+`GET /metrics/{tenant}/{app}/names?fromTime={unix}&toTime={unix}` — Returns the list of metric names for the given app within the specified time range ([Unix timestamps](https://en.wikipedia.org/wiki/Unix_time) in seconds). Use these values for the `MetricName` filter in metrics queries. You can obtain the `app` path parameter from the [Get apps](#get-apps) endpoint.
 
 ### Get logs fields
 
-`GET /logs/{tenant}/fields` — Returns available fields (columns) for logs queries. Use this list when building the `columns` and `filters` for the [Query logs](#query-endpoints-request-body) request body.
+`GET /logs/{tenant}/fields` — Returns available fields (columns) for log queries. Use this list when building the `columns` and `filters` for the [Query logs](#query-endpoints-request-body) request body.
 
 ### Get apps
 
-`GET /{tenant}/apps?fromTime={unix}&toTime={unix}` — Returns `logs_apps` and `metrics_apps` arrays of app IDs that have sent telemetry in the given time range (Unix timestamps in seconds). Use these IDs as the `app` filter value in logs and metrics queries.
+`GET /{tenant}/apps?fromTime={unix}&toTime={unix}` — Returns `LogsApps` and `MetricsApps` arrays of app IDs that have sent telemetry in the given time range (Unix timestamps in seconds). Use these IDs as the `app` filter value in logs and metrics queries.
 
 ### Get capabilities
 
-`GET /capabilities` — Returns API capabilities: supported operators, aggregation functions, maximum page size, default page size, and query timeout. Use this to discover valid values for filters and aggregations.
+`GET /capabilities` — Returns API capabilities: available operations, available fields, supported operators, aggregation functions, maximum page size, default page size, and query timeout. Use this to discover valid values for filters and aggregations.
 
 ## Available columns
 
-The columns you can use in `columns` and `filters` for query requests are listed below. You can also retrieve them at runtime: use the [Get metrics fields](#get-metrics-fields) endpoint for metrics and the [Get logs fields](#get-logs-fields) endpoint for logs.
+The columns you can use in `columns` and `filters` for query requests are listed in the following sections. You can also retrieve them at runtime: use the [Get metrics fields](#get-metrics-fields) endpoint for metrics and the [Get logs fields](#get-logs-fields) endpoint for logs.
 
 ### Metrics columns
 
-| Column | Type | Description | Filterable | Aggregatable |
-| - | - | - | :-: | :-: |
-| `TimestampTime` | DateTime | Timestamp rounded to the minute. | ✅ | ❌ |
-| `MetricName` | String | Name of the metric. | ✅ | ❌ |
-| `MetricType` | String | Metric type: `gauge`, `sum`, or `histogram`. | ✅ | ❌ |
-| `Value` | Float64 | Aggregated average value (for gauge). | ✅ | ✅ |
-| `Sum` | Float64 | Aggregated sum value. | ✅ | ✅ |
-| `Count` | UInt64 | Aggregated count. | ✅ | ✅ |
-| `app` | String | Application ID. | ✅ | ❌ |
-| `account` | String | VTEX account name. | ✅ | ❌ |
-| `workspace` | String | Workspace name. | ✅ | ❌ |
-| `production` | String | `"true"` or `"false"`. | ✅ | ❌ |
-| `ServiceName` | String | Service name. | ✅ | ❌ |
-| `Attributes` | Map | Custom attributes map. | ✅ | ❌ |
-| `tenant` | String | Tenant identifier. | ✅ | ❌ |
+The following table shows the available columns for metrics queries:
 
-Metrics can have custom attributes stored in the `Attributes` map. Access them using bracket notation, such as `Attributes['status_code']`. To filter by a specific metric name, you can obtain the list of names from [Get metric names](#get-metric-names) endpoint. For the `app` filter, use app IDs from the [Get apps](#get-apps) endpoint.
+| Column | Type | Description | Filterable |
+| :---- | :---- | :---- | :-: |
+| `TimestampTime` | DateTime | Timestamp of the metric entry rounded to the minute in [RFC 3339 format](https://www.rfc-editor.org/info/rfc3339). | ✅ |
+| `MetricName` | String | Name of the metric. | ✅ |
+| `MetricType` | String | Metric type: `gauge`, `sum`, or `histogram`. | ✅ |
+| `Value` | Float64 | Aggregated average value (for gauge). | ❌ |
+| `Sum` | Float64 | Aggregated sum value. | ❌ |
+| `Count` | UInt64 | Aggregated count. | ❌ |
+| `app` | String | App ID (e.g., myvendor.myapp@1.0.0). | ✅ |
+| `account` | String | VTEX account name. | ✅ |
+| `workspace` | String | [Workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-workspace) name. | ✅ |
+| `production` | String | Indicates if the app is installed in a production workspace. Possible values: `"true"` or `"false"`. | ✅ |
+| `ServiceName` | String | Service name. | ✅ |
+| `Attributes` | Map | Custom attributes map. | ❌ |
+| `tenant` | String | Tenant identifier. | ✅ |
+| `tenant_level` | String | Tenant level. | ✅ |
+| `BucketCounts` | AggregateFunction(sumForEach, Array(UInt64)) | List with the amount of items in each [bucket](https://signoz.io/guides/what-is-a-bucket-in-prometheus/#what-is-a-bucket-in-prometheus). Valid only for `histogram` type metrics. | ❌ |
+| `ExplicitBounds` | AggregateFunction(any, Array(Float64)) | List with the bound values of [buckets](https://signoz.io/guides/what-is-a-bucket-in-prometheus/#what-is-a-bucket-in-prometheus). Valid only for `histogram` type metrics. | ❌ |
+
+Metrics can have custom attributes stored in the `Attributes` map. Access them using bracket notation, such as `Attributes['status_code']`. To filter by a specific metric name, you can obtain the list of names from the [Get metric names](#get-metric-names) endpoint. For the `app` filter, use app IDs from the [Get apps](#get-apps) endpoint.
 
 ### Logs columns
 
+The following table shows the available columns for log queries:
+
 | Column | Type | Description | Filterable |
-| - | - | - | :-: |
-| `TimestampTime` | DateTime | Timestamp of the log entry. | ✅ |
+| :---- | :---- | :---- | :-: |
+| `TimestampTime` | DateTime | Timestamp of the log entry in [RFC 3339 format](https://www.rfc-editor.org/info/rfc3339). | ✅ |
+| `Timestamp` | DateTime64(9) | Timestamp of the log entry stored as a 64-bit integer with 9-digit precision. | ❌ |
 | `level` | String | Log level: `debug`, `info`, `warn`, `error`. | ✅ |
-| `app` | String | Application ID. | ✅ |
+| `app` | String | App ID. | ✅ |
 | `account` | String | VTEX account name. | ✅ |
-| `workspace` | String | Workspace name. | ✅ |
-| `production` | String | `"true"` or `"false"`. | ✅ |
-| `data` | String | Log message body (JSON or text). | ✅ |
+| `workspace` | String | [Workspace](https://developers.vtex.com/docs/guides/vtex-io-documentation-workspace) name. | ✅ |
+| `production` | String | Indicates if the app is installed in a production workspace. Possible values: `"true"` or `"false"`. | ✅ |
+| `data` | String | Log message body (escaped JSON or text). | ✅ |
 | `operationId` | String | Operation identifier. | ✅ |
 | `requestId` | String | Request identifier. | ✅ |
 | `ServiceName` | String | Service name. | ✅ |
 | `TraceId` | String | Distributed trace ID. | ✅ |
 | `tenant` | String | Tenant identifier. | ✅ |
+| `tenant_level` | String | Tenant level. | ✅ |
 
 ## Filters
 
-Filters allow you to narrow down query results. Each filter is an object with the available fields defined in the table below.
+Filters let you narrow query results. Each filter is an object with the available fields defined in the following table:
 
 | Field | Type | Required | Description |
-| - | - | :-: | - |
+| :---- | :---- | :-: | :---- |
 | `column` | string | ✅ | Column name to filter on. |
-| `operator` | string | ✅ | Comparison operator. The full set of supported operators is listed in [Available operators](#available-operators). You can also retrieve them from the [Get capabilities](#get-capabilities) endpoint. |
-| `type` | string | ✅ | Value type: `string`, `number`, `timestamp`, or `boolean`. |
-| `value` | any | ✅* | Value to compare.<br/>*Not required for `is_null` and `is_not_null` operators. |
+| `operator` | string | ✅ | Comparison operator. See the full set of supported operators in the [Available operators](#available-operators) section. You can also retrieve them from the [Get capabilities](#get-capabilities) endpoint. |
+| `type` | string | ✅ | Value type: `string`, `number`, `timestamp`, or `boolean`. `timestamp` values can be provided in [RFC 3339 format](https://www.rfc-editor.org/info/rfc3339) as strings (e.g., `"2024-01-01T00:00:00Z"`) or [Unix timestamps](https://en.wikipedia.org/wiki/Unix_time) as integers (e.g., `1714857600000`). |
+| `value` | any | ✅* | Value to compare.<br/>**Not required for `is_null` and `is_not_null` operators.* |
 
 ### Available operators
 
+The following table shows the operators available to use with filters:
+
 | Operator | Alias | Description |
-| - | - | - |
+| :---- | :---- | :---- |
 | `=` | `eq` | Equal to. |
 | `>` | `gt` | Greater than. |
 | `<` | `lt` | Less than. |
@@ -160,7 +169,7 @@ Filters allow you to narrow down query results. Each filter is an object with th
 | `<=` | `lte` | Less than or equal. |
 | `!=` | `ne` | Not equal. |
 | `LIKE` | `like` | Contains pattern (substring match). |
-| `NOT LIKE` | `not_like` | Does not contain pattern. |
+| `NOT LIKE` | `not_like` | Does not contain the pattern. |
 | `IN` | `in` | Value is in a given list. |
 | `NOT IN` | `not_in` | Value is not in a given list. |
 | `BETWEEN` | `between` | Value is between two bounds. |
@@ -169,23 +178,50 @@ Filters allow you to narrow down query results. Each filter is an object with th
 
 ## Aggregations
 
-Aggregations are available for **metrics queries only**. When using aggregations, you should specify `group_by` columns to define how results are grouped. Supported aggregation functions are listed below; you can also retrieve them from the [Get capabilities](#get-capabilities) endpoint.
+Aggregations are available only for metrics queries. Use the `aggregations` array to specify how to aggregate each metric using a function (e.g., average, sum). When using aggregations, specify the `group_by` columns to define how to group results. See the following request example:
+
+```json
+{
+  ...
+  "aggregations": [
+    {
+      "function": "avg",
+      "column": "Value",
+      "alias": "avg_duration"
+    },
+    {
+      "function": "sum",
+      "column": "Value",
+      "alias": "duration_sum"
+    }
+  ],
+  "group_by": {
+    "columns": [
+      "TimestampTime",
+      "app",
+      "MetricName",
+      "MetricType",
+      "ServiceName"
+    ]
+  }
+}
+```
 
 ### Aggregation functions
 
+You can retrieve the supported aggregation functions from the [Get capabilities](#get-capabilities) endpoint. The following table lists these functions:
+
 | Function | Description | Typical use case |
-| - | - | - |
+| :---- | :---- | :---- |
 | `sum` | Sum of values. | Total requests, byte counts. |
 | `avg` | Average of values. | Average response time. |
 | `count` | Count of records. | Number of events. |
-| `min` | Minimum value. | Fastest response. |
-| `max` | Maximum value. | Slowest response. |
 
 Each aggregation object has the following fields:
 
 | Field | Type | Required | Description |
-| - | - | :-: | - |
-| `function` | string | ✅ | Aggregation function name (`sum`, `avg`, `count`, `min`, `max`). |
+| :---- | :---- | :-: | :---- |
+| `function` | string | ✅ | Aggregation function name (`sum`, `avg`, `count`). |
 | `column` | string | ✅ | Column to aggregate. Use `Sum` for counter/histogram metrics and `Value` for gauge metrics. |
 | `alias` | string | ❌ | Alias for the result column. |
 
@@ -194,9 +230,29 @@ Each aggregation object has the following fields:
 Sort results using the `orders` array. Each order object has the following fields:
 
 | Field | Type | Values | Description |
-| - | - | - | - |
+| :---- | :---- | :---- | :---- |
 | `column` | string | Any column name | Column to sort by. |
 | `dir` | string | `asc`, `desc` | Sort direction. |
+
+If there is more than one object in the array, the ordering will follow the precedence of the items in the array. See the following request example:
+
+```json
+{
+  ...
+  "orders": [
+    {
+      "column": "TimestampTime",
+      "dir": "desc"
+    },
+    {
+      "column": "MetricName",
+      "dir": "asc"
+    }
+  ]
+}
+```
+
+In this example, the response will be sorted first by the column `TimestampTime` in descending order. Then, the metrics with the same `TimestampTime` will be sorted by the column `MetricName` in ascending order.
 
 ## Response format
 
@@ -210,31 +266,46 @@ All query responses follow the same structure:
     {
       "name": "TimestampTime",
       "type": "time",
-      "values": ["2025-01-01T10:00:00Z", "2025-01-01T10:01:00Z"]
+      "values": [
+        "2026-11-26T23:49:00Z",
+        "2026-11-26T23:49:00Z",
+        "2026-11-26T23:49:00Z",
+        "2026-11-26T23:49:00Z"
+      ]
     },
     {
       "name": "MetricName",
       "type": "string",
-      "values": ["http_requests_total", "http_requests_total"]
+      "values": [
+        "http_handler_requests_total",
+        "http_handler_requests_total",
+        "http_server_requests_closed_total",
+        "http_server_requests_closed_total"
+      ]
     }
   ],
   "meta": {
-    "executedQueryString": "metrics query"
+    "executedQueryString": "metrics query",
+    "pagination": {
+      "hasMore": true,
+      "page": 1,
+      "pageSize": 4,
+      "total": 196908
+    },
+    "truncated": true
   }
 }
 ```
 
 Each item in the `fields` array corresponds to a column, with all row values for that column in the `values` array. The possible field types are:
 
-| Type | Description |
-| - | - |
-| `time` | Timestamp values. |
-| `string` | Text values. |
-| `number` | Numeric values. |
-| `boolean` | Boolean values. |
-| `other` | Complex types (maps, arrays). |
+- `time`: Timestamp values
+- `string`: Text values
+- `number`: Numeric values
+- `boolean`: Boolean values
+- `other`: Complex types (maps, arrays)
 
-## Examples
+## Request examples
 
 ### Filtering logs by level and app
 
@@ -308,7 +379,10 @@ Retrieve error logs from a specific app within a time range. This example uses t
     {
       "name": "level",
       "type": "string",
-      "values": ["error", "error"]
+      "values": [
+        "error",
+        "error"
+      ]
     },
     {
       "name": "app",
@@ -330,20 +404,98 @@ Retrieve error logs from a specific app within a time range. This example uses t
       "name": "requestId",
       "type": "string",
       "values": [
-        "abc12345-6789-def0-1234-56789abcdef0",
-        "fed09876-5432-1abc-def0-123456789abc"
+        "abc123456789def0123456789abcdef0",
+        "fed0987654321abcdef0123456789abc"
       ]
     }
   ],
   "meta": {
     "executedQueryString": "logs query"
+  },
+  "pagination": {
+    "hasMore": true,
+    "page": 1,
+    "pageSize": 50,
+    "total": 1739544
   }
 }
 ```
 
+### Filtering apps with the LIKE operator
+
+Use the `LIKE` operator in `filters` to search for a substring of the app ID. Instead of using the `=` operator in `filters` for an app with a specific vendor, name, and version, retrieve data from multiple apps that share a portion of the app ID. Due to the app ID structure (`{vendor}.{app-name}@{major}.{minor}.{patch}-{beta-name}`), you can filter by a specific app ID segment, changing only the `value` field.
+
+Examples:
+
+#### Filtering by apps from the same vendor
+
+```json
+{
+  ...
+  "filters": [
+    {
+      "column": "app",
+      "operator": "LIKE",
+      "type": "string",
+      "value": "vtexventures."
+    }
+  ]
+}
+```
+
+#### Filtering by all the versions of a specific app
+
+```json
+{
+  ...
+  "filters": [
+    {
+      "column": "app",
+      "operator": "LIKE",
+      "type": "string",
+      "value": "vtex.broadcaster@"
+    }
+  ]
+}
+```
+
+#### Filtering by all the versions of a specific app major
+
+```json
+{
+  ...
+  "filters": [
+    {
+      "column": "app",
+      "operator": "LIKE",
+      "type": "string",
+      "value": "vtex.store-newsletter@1."
+    }
+  ]
+}
+```
+
+#### Filtering by apps with beta versions
+
+```json
+{
+  ...
+  "filters": [
+    {
+      "column": "app",
+      "operator": "LIKE",
+      "type": "string",
+      "value": "-beta"
+    }
+  ]
+}
+```
+
+> ℹ️ For details about beta app versions, see [Understanding app versioning](https://developers.vtex.com/docs/guides/vtex-io-documentation-releasing-a-new-app-version#understanding-app-versioning).
+
 ### Searching logs by pattern with the LIKE operator
 
-Find logs containing a specific substring in the `data` field. This is useful for locating error messages, stack traces, or any text pattern across your logs.
+Find logs containing a specific substring in the `data` field. This search pattern is useful for locating error messages, stack traces, or any text pattern across your logs.
 
 **Endpoint:** `POST` `https://{accountName}.vtexcommercebeta.com.br/api/extensions/observability/logs/{accountName}/query`
 
@@ -402,9 +554,7 @@ Find logs containing a specific substring in the `data` field. This is useful fo
     {
       "name": "data",
       "type": "string",
-      "values": [
-        "{\"message\":\"Redis connection timeout after 5000ms\",\"retries\":3}"
-      ]
+      "values": ["{\"message\":\"Redis connection timeout after 5000ms\",\"retries\":3}"]
     }
   ],
   "meta": {
@@ -415,7 +565,7 @@ Find logs containing a specific substring in the `data` field. This is useful fo
 
 ### Filtering logs with the IN operator
 
-Retrieve logs matching multiple log levels at once. The `IN` operator lets you match a column value against a list.
+Retrieve logs matching multiple log levels at once. The `IN` operator lets you match a column value against a list of values. This example filters by logs of types `"warn"` and `"error"`.
 
 **Endpoint:** `POST` `https://{accountName}.vtexcommercebeta.com.br/api/extensions/observability/logs/{accountName}/query`
 
@@ -443,7 +593,10 @@ Retrieve logs matching multiple log levels at once. The `IN` operator lets you m
       "column": "level",
       "operator": "IN",
       "type": "string",
-      "value": ["warn", "error"]
+      "value": [
+        "warn",
+        "error"
+      ]
     },
     {
       "column": "app",
@@ -480,7 +633,11 @@ Retrieve logs matching multiple log levels at once. The `IN` operator lets you m
     {
       "name": "level",
       "type": "string",
-      "values": ["error", "warn", "warn"]
+      "values": [
+        "error",
+        "warn",
+        "warn"
+      ]
     },
     {
       "name": "app",
@@ -503,96 +660,6 @@ Retrieve logs matching multiple log levels at once. The `IN` operator lets you m
   ],
   "meta": {
     "executedQueryString": "logs query"
-  }
-}
-```
-
-### Filtering metrics with the BETWEEN operator
-
-Query metric counts that fall within a specific numeric range. The `BETWEEN` operator takes a two-element array `[min, max]`.
-
-**Endpoint:** `POST` `https://{accountName}.vtexcommercebeta.com.br/api/extensions/observability/metrics/{accountName}/query`
-
-**Request body:**
-
-```json
-{
-  "columns": [
-    "TimestampTime",
-    "MetricName",
-    "app",
-    "Count"
-  ],
-  "page": 1,
-  "pageSize": 50,
-  "filters": [
-    {
-      "column": "TimestampTime",
-      "operator": ">=",
-      "type": "timestamp",
-      "value": "2025-01-15T00:00:00.000Z"
-    },
-    {
-      "column": "TimestampTime",
-      "operator": "<=",
-      "type": "timestamp",
-      "value": "2025-01-15T23:59:59.000Z"
-    },
-    {
-      "column": "MetricName",
-      "operator": "=",
-      "type": "string",
-      "value": "http_client_requests_total"
-    },
-    {
-      "column": "Count",
-      "operator": "BETWEEN",
-      "type": "number",
-      "value": [100, 500]
-    }
-  ]
-}
-```
-
-**Response body:**
-
-```json
-{
-  "refId": "A",
-  "name": "Metrics",
-  "fields": [
-    {
-      "name": "TimestampTime",
-      "type": "time",
-      "values": [
-        "2025-01-15T10:00:00Z",
-        "2025-01-15T10:01:00Z"
-      ]
-    },
-    {
-      "name": "MetricName",
-      "type": "string",
-      "values": [
-        "http_client_requests_total",
-        "http_client_requests_total"
-      ]
-    },
-    {
-      "name": "app",
-      "type": "string",
-      "values": [
-        "myvendor.myapp@1.0.0",
-        "myvendor.myapp@1.0.0"
-      ]
-    },
-    {
-      "name": "Count",
-      "type": "number",
-      "values": [245, 312]
-    }
-  ],
-  "meta": {
-    "executedQueryString": "metrics query"
   }
 }
 ```
@@ -677,19 +744,31 @@ Access custom attributes stored in the `Attributes` map using bracket notation. 
       ]
     },
     {
-      "name": "Attributes['status_code']",
+      "name": "arrayElement(Attributes, 'status_code')",
       "type": "string",
-      "values": ["200", "500", "200"]
+      "values": [
+        "200",
+        "500",
+        "200"
+      ]
     },
     {
-      "name": "Attributes['method']",
+      "name": "arrayElement(Attributes, 'method')",
       "type": "string",
-      "values": ["GET", "POST", "GET"]
+      "values": [
+        "GET",
+        "POST",
+        "GET"
+      ]
     },
     {
       "name": "Sum",
       "type": "number",
-      "values": [1520, 3, 1489]
+      "values": [
+        1520,
+        3,
+        1489
+      ]
     }
   ],
   "meta": {
@@ -700,7 +779,7 @@ Access custom attributes stored in the `Attributes` map using bracket notation. 
 
 ### Aggregating metrics with group by
 
-Calculate aggregated statistics over time. This example computes the average and maximum response duration grouped by minute and app using the `aggregations` and `group_by` fields.
+Calculate aggregated statistics over time. This example computes the average response duration grouped by minute and app using the `aggregations` and `group_by` fields.
 
 **Endpoint:** `POST` `https://{accountName}.vtexcommercebeta.com.br/api/extensions/observability/metrics/{accountName}/query`
 
@@ -709,7 +788,7 @@ Calculate aggregated statistics over time. This example computes the average and
 ```json
 {
   "page": 1,
-  "pageSize": 100,
+  "pageSize": 3,
   "filters": [
     {
       "column": "TimestampTime",
@@ -741,15 +820,16 @@ Calculate aggregated statistics over time. This example computes the average and
       "function": "avg",
       "column": "Value",
       "alias": "avg_duration"
-    },
-    {
-      "function": "max",
-      "column": "Value",
-      "alias": "max_duration"
     }
   ],
   "group_by": {
-    "columns": ["TimestampTime", "app"]
+    "columns": [
+      "TimestampTime",
+      "app",
+      "MetricName",
+      "MetricType",
+      "ServiceName"
+    ]
   },
   "orders": [
     {
@@ -786,14 +866,31 @@ Calculate aggregated statistics over time. This example computes the average and
       ]
     },
     {
-      "name": "avg_duration",
-      "type": "number",
-      "values": [0.245, 0.312, 0.198]
+        "name": "MetricName",
+        "type": "string",
+        "values": [
+          "runtime_http_requests_duration_milliseconds",
+          "runtime_http_requests_duration_milliseconds",
+          "runtime_http_requests_duration_milliseconds"
+        ]
     },
     {
-      "name": "max_duration",
+        "name": "MetricType",
+        "type": "string",
+        "values": [
+          "histogram",
+          "histogram",
+          "histogram"
+        ]
+    },
+    {
+      "name": "avg_duration",
       "type": "number",
-      "values": [1.876, 2.541, 0.943]
+      "values": [
+        245,
+        312,
+        198
+      ]
     }
   ],
   "meta": {
@@ -804,7 +901,7 @@ Calculate aggregated statistics over time. This example computes the average and
 
 ### Summing counter metrics with group by
 
-Calculate total request counts grouped by metric name using the `sum` aggregation. This is suitable for counter-type (`sum`) metrics such as request totals.
+Calculate the total request counts, grouped by metric name, using the `sum` aggregation. This operation is suitable for counter-type (`sum`) metrics such as request totals.
 
 **Endpoint:** `POST` `https://{accountName}.vtexcommercebeta.com.br/api/extensions/observability/metrics/{accountName}/query`
 
@@ -813,7 +910,7 @@ Calculate total request counts grouped by metric name using the `sum` aggregatio
 ```json
 {
   "page": 1,
-  "pageSize": 100,
+  "pageSize": 3,
   "filters": [
     {
       "column": "TimestampTime",
@@ -883,12 +980,20 @@ Calculate total request counts grouped by metric name using the `sum` aggregatio
     {
       "name": "total_requests",
       "type": "number",
-      "values": [58320, 42150, 15780]
+      "values": [
+        58320,
+        42150,
+        15780
+      ]
     },
     {
       "name": "total_count",
       "type": "number",
-      "values": [58320, 42150, 15780]
+      "values": [
+        58320,
+        42150,
+        15780
+      ]
     }
   ],
   "meta": {
@@ -899,7 +1004,7 @@ Calculate total request counts grouped by metric name using the `sum` aggregatio
 
 ### Using direct merge functions in columns
 
-For advanced use cases, you can use ClickHouse merge functions directly in the `columns` array instead of the `aggregations` field. This gives you more explicit control over how pre-aggregated metric data is merged.
+For advanced use cases, you can use merge functions directly in the `columns` array instead of the `aggregations` field. This operation gives you more explicit control over how to merge pre-aggregated metric data.
 
 **Endpoint:** `POST` `https://{accountName}.vtexcommercebeta.com.br/api/extensions/observability/metrics/{accountName}/query`
 
@@ -915,7 +1020,7 @@ For advanced use cases, you can use ClickHouse merge functions directly in the `
     "avgMerge(Value) as average"
   ],
   "page": 1,
-  "pageSize": 100,
+  "pageSize": 3,
   "filters": [
     {
       "column": "TimestampTime",
@@ -988,12 +1093,20 @@ For advanced use cases, you can use ClickHouse merge functions directly in the `
     {
       "name": "total",
       "type": "number",
-      "values": [892, 1045, 763]
+      "values": [
+        892,
+        1045,
+        763
+      ]
     },
     {
       "name": "average",
       "type": "number",
-      "values": [0.342, 0.401, 0.289]
+      "values": [
+        0.342,
+        0.401,
+        0.289
+      ]
     }
   ],
   "meta": {
@@ -1020,7 +1133,7 @@ Query only a specific metric type (e.g., `histogram`) using the `MetricType` col
     "Count"
   ],
   "page": 1,
-  "pageSize": 50,
+  "pageSize": 2,
   "filters": [
     {
       "column": "TimestampTime",
@@ -1082,7 +1195,10 @@ Query only a specific metric type (e.g., `histogram`) using the `MetricType` col
     {
       "name": "MetricType",
       "type": "string",
-      "values": ["histogram", "histogram"]
+      "values": [
+        "histogram",
+        "histogram"
+      ]
     },
     {
       "name": "app",
@@ -1095,7 +1211,10 @@ Query only a specific metric type (e.g., `histogram`) using the `MetricType` col
     {
       "name": "Count",
       "type": "number",
-      "values": [1523, 1487]
+      "values": [
+        1523,
+        1487
+      ]
     }
   ],
   "meta": {
@@ -1201,7 +1320,7 @@ Filter logs to show only entries from production or non-production workspaces us
     "data"
   ],
   "page": 1,
-  "pageSize": 50,
+  "pageSize": 1,
   "filters": [
     {
       "column": "TimestampTime",
@@ -1218,8 +1337,8 @@ Filter logs to show only entries from production or non-production workspaces us
     {
       "column": "production",
       "operator": "=",
-      "type": "boolean",
-      "value": true
+      "type": "string",
+      "value": "true"
     },
     {
       "column": "level",
@@ -1272,9 +1391,7 @@ Filter logs to show only entries from production or non-production workspaces us
     {
       "name": "data",
       "type": "string",
-      "values": [
-        "{\"message\":\"Payment gateway returned HTTP 503\",\"gateway\":\"braintree\"}"
-      ]
+      "values": ["{\"message\":\"Payment gateway returned HTTP 503\",\"gateway\":\"braintree\"}"]
     }
   ],
   "meta": {
@@ -1295,7 +1412,7 @@ Exclude specific apps or patterns from your query results. This example excludes
 {
   "columns": ["TimestampTime", "level", "app", "data"],
   "page": 1,
-  "pageSize": 50,
+  "pageSize": 2,
   "filters": [
     {
       "column": "TimestampTime",
@@ -1358,7 +1475,10 @@ Exclude specific apps or patterns from your query results. This example excludes
     {
       "name": "level",
       "type": "string",
-      "values": ["error", "error"]
+      "values": [
+        "error",
+        "error"
+      ]
     },
     {
       "name": "app",
@@ -1385,7 +1505,9 @@ Exclude specific apps or patterns from your query results. This example excludes
 
 ## Best practices
 
-- **Always filter by time:** Include `TimestampTime` filters to limit the amount of data scanned in every query.
+Use the following best practices to avoid errors and improve request usability:
+
+- **Always filter by time:** Use `TimestampTime` filters to limit the amount of data scanned per query.
 - **Be specific with filters:** Filter by `app` and `MetricName` whenever possible to narrow results efficiently.
 - **Request only needed columns:** Specify only the columns you need in the `columns` array instead of returning all columns.
 - **Paginate large results:** Use `page` and `pageSize` to fetch results in manageable chunks instead of requesting large datasets at once.
@@ -1393,23 +1515,25 @@ Exclude specific apps or patterns from your query results. This example excludes
 
 ## Data retention
 
-Logs and metrics are retained for three days. To request higher limits for your account, contact [VTEX Support](https://help.vtex.com/en/support).
+The data retention period is three days by default.
 
->ℹ️ Metrics are pre-aggregated to 1-minute intervals for efficient storage and querying.
+> ℹ️ Metrics are pre-aggregated to 1-minute intervals for efficient storage and querying.
 
 ## Error codes
 
-The following errors may appear as a message in the response body.
+The following errors may appear in the response body as a message.
 
 ### 400 - Bad Request
+
+Example responses for bad requests:
 
 - **Message error example**: `"invalid request body"`. The JSON in the request body is malformed or contains invalid fields.
 
     ```json
     {
       "error": {
-        "message": "invalid request body",
-        "code": 400
+        "code": "400",
+        "message": "invalid request body"
       },
       "timestamp": "2025-01-15T10:00:00Z"
     }
@@ -1420,8 +1544,8 @@ The following errors may appear as a message in the response body.
     ```json
     {
       "error": {
-        "message": "column 'invalidColumn' is not allowed",
-        "code": 400
+        "code": "400",
+        "message": "invalid request: column 'invalidColumn' is not allowed"
       },
       "timestamp": "2025-01-15T10:00:00Z"
     }
@@ -1429,41 +1553,31 @@ The following errors may appear as a message in the response body.
 
 ### 401 - Unauthorized
 
+Example responses for unauthorized requests:
+
 - **Message error example**: `"Missing app key or token"`. The authentication headers are missing from the request.
 
     ```json
     {
-      "error": {
-        "message": "Missing app key or token",
-        "code": 401
-      },
-      "timestamp": "2025-01-15T10:00:00Z"
+      "message": "Missing app key or token"
     }
     ```
 
-- **Message error example**: `"Invalid token"`. The provided application key or token is incorrect.
+- **Message error example**: `"Invalid token"`. The provided API key or token is incorrect.
 
     ```json
     {
-      "error": {
-        "message": "Invalid token",
-        "code": 401
-      },
-      "timestamp": "2025-01-15T10:00:00Z"
+      "message": "Invalid token"
     }
     ```
 
 ### 403 - Forbidden
 
-**Message error example**: `"Tenant in URL path does not match authenticated tenant"`. The `{accountName}` in the application key does not match the `tenant` in the request URL.
+**Message error example**: `"Forbidden"`. The `{accountName}` in the API key does not match the `tenant` in the request URL.
 
 ```json
 {
-  "error": {
-    "message": "Tenant in URL path does not match authenticated tenant",
-    "code": 403
-  },
-  "timestamp": "2025-01-15T10:00:00Z"
+  "message": "Forbidden"
 }
 ```
 
@@ -1473,24 +1587,16 @@ The following errors may appear as a message in the response body.
 
 ```json
 {
-  "error": {
-    "message": "Query timeout",
-    "code": 408
-  },
-  "timestamp": "2025-01-15T10:00:00Z"
+  "message": "Query timeout"
 }
 ```
 
 ### 429 - Too Many Requests
 
-**Message error example**: `"quota exceeded"`. You have exceeded the rate limit for your account. Wait before retrying or contact VTEX support to upgrade your plan.
+**Message error example**: `"Quota exceeded"`. You have exceeded your account's rate limit. Wait before retrying.
 
 ```json
 {
-  "error": {
-    "message": "quota exceeded",
-    "code": 429
-  },
-  "timestamp": "2025-01-15T10:00:00Z"
+  "message": "Quota exceeded"
 }
 ```

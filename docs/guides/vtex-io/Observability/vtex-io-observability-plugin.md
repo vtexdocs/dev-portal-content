@@ -2,8 +2,8 @@
 title: "VTEX IO Observability plugin for Grafana"
 slug: "vtex-io-observability-plugin"
 hidden: false
-createdAt: "2026-10-29T00:00:00.000Z"
-updatedAt: "2026-10-29T00:00:00.000Z"
+createdAt: "2026-12-07T12:00:00.000Z"
+updatedAt: "2026-12-07T12:00:00.000Z"
 excerpt: "Learn how to install the VTEX IO Observability plugin for Grafana manually or with Docker, connect it to your VTEX account, and query app logs and metrics."
 ---
 

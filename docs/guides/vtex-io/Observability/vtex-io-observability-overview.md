@@ -2,8 +2,8 @@
 title: "VTEX IO Observability overview"
 slug: "vtex-io-observability-overview"
 hidden: false
-createdAt: "2026-11-09T00:00:00.000Z"
-updatedAt: "2026-11-09T00:00:00.000Z"
+createdAt: "2026-12-07T12:00:00.000Z"
+updatedAt: "2026-12-07T12:00:00.000Z"
 excerpt: "Learn how VTEX IO Observability gives you access to logs and metrics from your VTEX IO apps through the Observability API and the Grafana plugin."
 ---
 
@@ -130,5 +130,3 @@ Logs and metrics are retained for three days. Queries for time ranges older than
 - **Default page size**: 50 rows
 
 Requests that exceed the rate limit for your account return the `429 - Too Many Requests` status code. To avoid timeouts and reduce the amount of data scanned, always filter queries by time and request only the columns you need. For more recommendations, see [Best practices](https://developers.vtex.com/docs/guides/vtex-io-observability-api-guide#best-practices).
-
->ℹ️ To request higher limits for your account, contact [VTEX Support](https://help.vtex.com/en/support).
