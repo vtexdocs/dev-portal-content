@@ -4,7 +4,7 @@ slug: "getting-started-with-vtex-ads-api"
 hidden: false
 excerpt: "Learn how to integrate VTEX Ads into your store."
 createdAt: "2025-05-21T22:18:24.684Z"
-updatedAt: "2025-05-21T22:18:24.684Z"
+updatedAt: "2026-11-27T18:14:00.000Z"
 ---
 
 The **VTEX Ads API** serves as the central point of integration between VTEX Ads and the retailer's platform, enabling the display of advertisements to consumers.
@@ -15,9 +15,12 @@ Built using REST architecture, this API allows your platform to:
 - Request ads to be displayed on your ecommerce, marketplace, or app.
 - Send event notifications such as impressions, views, clicks, and conversions to help track ad performance and attribute results.
 
-Currently, VTEX Ads supports two ad formats:
+The VTEX Ads API supports three ad formats:
 
 - **Sponsored Products (Product Ads)**: Ads that highlight individual SKUs, typically shown in search or category pages.
-- **Banner Display (Banner Ads)**: Visual ads that promote brands or campaigns in designated areas of your site.
+- **Sponsored Brands**: Ads that promote a brand together with a selection of its products.
+- **Banner / Display (Banner Ads)**: Visual ads that promote brands or campaigns in designated areas of your site.
+
+For details on requesting each format, see [Retrieving ads](https://developers.vtex.com/docs/guides/retrieving-ads). The [VTEX Ads JavaScript SDK](https://developers.vtex.com/docs/guides/vtex-ads-javascript-sdk) does not yet support banners or sponsored brands, so request these formats directly through the API.
 
 For a simplified Banner and Video ads setup, see [Implementing transparent integration for VTEX Ads](https://developers.vtex.com/docs/guides/implementing-transparent-integration-for-vtex-ads).
