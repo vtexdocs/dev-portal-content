@@ -3,8 +3,8 @@ title: "Tracking search analytics events in mobile apps"
 slug: "tracking-search-analytics-events-in-mobile-apps"
 hidden: false
 createdAt: "2026-08-25T00:00:00.000Z"
-updatedAt: "2026-08-25T00:00:00.000Z"
-excerpt: "Learn how to use Activity Flow listeners and hooks to track Intelligent Search analytics events in Flutter and React Native apps."
+updatedAt: "2026-11-16T00:00:00.000Z"
+excerpt: "Learn how to use Activity Flow listeners and hooks to track Search Analytics events in Flutter and React Native apps."
 tags:
   - Activity Flow
   - Intelligent Search
@@ -14,13 +14,17 @@ seeAlso:
   - "/docs/guides/tracking-search-analytics-events-in-headless-web-stores"
 ---
 
-In this guide, you will learn how to add tracking to search screens in Flutter and React Native apps so that [Activity Flow](https://developers.vtex.com/docs/guides/activity-flow) can capture [Intelligent Search analytics](https://help.vtex.com/docs/tutorials/intelligent-search-analytics) events: impressions and clicks on search results and autocomplete suggestions.
+In this guide, you will learn how to add tracking to search screens in Flutter and React Native apps so that [Activity Flow](https://developers.vtex.com/docs/guides/activity-flow) can capture [Search Analytics](https://help.vtex.com/docs/tutorials/search-analytics) events: impressions and clicks on search results and autocomplete suggestions.
+
+We recommend tracking these events with Activity Flow, as it's the data source for the new [Search Analytics](https://help.vtex.com/docs/tutorials/search-analytics) page.
 
 The Activity Flow click, view, and impression listeners accept a metadata map with free-form parameters. The `elementSource` key identifies the origin of the event and is sent at the top level of the payload, while the remaining keys in the map become extra parameters inside `attributes`.
 
 ## Before you begin
 
 This guide assumes the Activity Flow SDK is already installed in your app. If you haven't set it up yet, see [Installing Activity Flow in Flutter apps](https://developers.vtex.com/docs/guides/installing-activity-flow-in-flutter-apps) or [Installing Activity Flow in React Native apps](https://developers.vtex.com/docs/guides/installing-activity-flow-in-react-native-apps).
+
+> ⚠️ Events tracked with Activity Flow are displayed only on the new [Search Analytics](https://help.vtex.com/docs/tutorials/search-analytics) page in the VTEX Admin, which isn't enabled automatically. Implementing the tracking described in this guide doesn't activate the page, and these events don't appear on the [previous version of the Intelligent Search analytics page](https://help.vtex.com/docs/tutorials/intelligent-search-analytics). To enable the new page for your store, open a ticket with [VTEX Support](https://support.vtex.com/hc/en-us).
 
 ## Understanding the tracking parameters
 
@@ -96,6 +100,7 @@ Autocomplete follows the same pattern as the results gallery, but with its own `
 
 ## Checklist
 
+- New [Search Analytics](https://help.vtex.com/docs/tutorials/search-analytics) page enabled for the store by VTEX Support.
 - Impression sent on every search, including searches that return no products.
 - `searchId` always coming from the API and present on both the impression and the click.
 - `productPosition` is 1-based and correct after pagination or infinite scroll.
