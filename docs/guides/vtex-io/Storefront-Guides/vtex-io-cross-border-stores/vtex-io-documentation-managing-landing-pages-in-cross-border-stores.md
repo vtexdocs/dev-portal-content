@@ -31,7 +31,7 @@ It's also worth noting that this technique only works if the custom pages were c
 
 ### Linking a landing page to a binding
 
-After creating a new page, the page's route becomes available only in the store associated with your account's default binding. The following shows how to associate your page with the desired binding.
+After you create a new page, its route becomes available only in the store associated with your account's default binding. The following shows how to associate your page with the desired binding.
 
 1. Open the terminal and install the `vtex.admin-graphql-ide@3.x` app:
 
