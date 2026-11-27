@@ -1,7 +1,7 @@
 ---
 title: "My Account - StoreV2 version"
 slug: "vtex-my-account"
-hidden: false
+hidden: true
 createdAt: "2020-06-03T15:19:19.057Z"
 updatedAt: "2022-05-05T12:32:35.766Z"
 ---
