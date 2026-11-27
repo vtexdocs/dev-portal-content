@@ -1,6 +1,7 @@
 ---
 title: "Enabling performance settings"
 slug: "vtex-io-documentation-enabling-performance-settings"
+excerpt: "Enable VTEX Admin performance settings and apply manual optimizations to improve your store's page load times and SEO scores."
 hidden: false
 createdAt: "2024-11-18T15:26:22.439Z"
 updatedAt: "2026-11-27T19:23:00.000Z"
