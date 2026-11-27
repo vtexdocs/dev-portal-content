@@ -111,7 +111,7 @@ This action concatenates the CSS of a page into a single file for faster downloa
 
 This action prefetches pages when a user hovers over a link.
 
-When enabled, the page content is proactively downloaded in the background when you hover over a link. This means that the page is already loaded or partially loaded when you click the link.
+When you enable this option, the browser proactively downloads the page content in the background as you hover over a link. The page is already loaded, or at least partially loaded, when you click it.
 
 #### Enable lazy runtime
 
