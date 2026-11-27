@@ -806,7 +806,7 @@ Calculate aggregated statistics over time. This example computes the average res
       "column": "MetricName",
       "operator": "=",
       "type": "string",
-      "value": "http_server_request_duration"
+      "value": "runtime_http_requests_duration_milliseconds"
     },
     {
       "column": "app",
@@ -1188,8 +1188,8 @@ Query only a specific metric type (e.g., `histogram`) using the `MetricType` col
       "name": "MetricName",
       "type": "string",
       "values": [
-        "http_server_request_duration",
-        "http_server_request_duration"
+        "runtime_http_requests_duration_milliseconds",
+        "runtime_http_requests_duration_milliseconds"
       ]
     },
     {
