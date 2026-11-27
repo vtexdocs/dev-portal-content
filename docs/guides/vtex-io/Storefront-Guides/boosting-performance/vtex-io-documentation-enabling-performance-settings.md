@@ -3,7 +3,7 @@ title: "Enabling performance settings"
 slug: "vtex-io-documentation-enabling-performance-settings"
 hidden: false
 createdAt: "2024-11-18T15:26:22.439Z"
-updatedAt: "2026-07-21T17:20:42.530Z"
+updatedAt: "2026-11-27T19:23:00.000Z"
 ---
 
 For ecommerce businesses, appealing offers, high-quality products, or brand recognition might not be enough to convert leads if the user experience falls short. Store website performance is essential to the user experience, directly impacting sales conversion rate, user session time, and other metrics. Every millisecond counts and affects both consumer decision-making and search engine rankings.
@@ -103,7 +103,7 @@ This optimization can be enabled for the following pages:
 
 This action concatenates the CSS of a page into a single file for faster download, reducing the number of HTTP requests required to load each CSS file separately.
 
->⚠️ The effect of CSS concatenation depends on your store's CSS. A store with a few large CSS files can load slower with concatenation, because one large blocking file replaces parallel downloads. Before promoting, measure your Lighthouse scores with this setting on and off in a production workspace.
+>⚠️ The effect of CSS concatenation depends on your store's CSS. A store with a few large CSS files can load slower with concatenation, because one large blocking file replaces parallel downloads. Before promoting your workspace, measure your Lighthouse scores with this setting on and off in a production workspace.
 
 ![concatenation](https://cdn.jsdelivr.net/gh/vtexdocs/dev-portal-content@main/images/vtex-io-documentation-best-practices-for-optimizing-performance-2.png)
 
@@ -196,7 +196,7 @@ This action uses the `Currency Symbol` field defined in the sales channel. This 
 
 This action enables stores in the Retail Media Network (RMN) pilot to place advertiser-sponsored products alongside organic search results.
 
->ℹ️ This action is available only for stores that have joined the RMN pilot. For more information, email **rmn@vtex.com**.
+>ℹ️ This action is available only for stores that have joined the RMN pilot. For more information, email [rmn@vtex.com](mailto:rmn@vtex.com).
 
 #### Enable default browser navigation
 
@@ -216,7 +216,7 @@ You can also use the `__fold__.experimentalLazyAssets` block to define which the
 
 Learn more about fold blocks in the guide [Lazy loading components](https://developers.vtex.com/docs/guides/vtex-io-documentation-using-the-fold-blocks).
 
->⚠️ If you notice any side effects, [open a ticket with VTEX Support](https://help.vtex.com/en/support).
+>⚠️ If you notice any side effects, [open a ticket with VTEX Support](https://help.vtex.com/en/docs/tutorials/opening-tickets-to-vtex-support).
 
 #### Reducing the number of menu blocks
 
