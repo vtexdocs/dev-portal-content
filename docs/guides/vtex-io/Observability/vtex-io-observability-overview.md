@@ -119,7 +119,7 @@ The **VTEX IO Observability plugin for Grafana** is a data source plugin that le
 - **Predefined metrics**: Visualize request rate, error rate, and latency percentiles (p50, p90, p95, and p99) without building queries.
 - **Dashboards and Explore**: Save and share visualizations in dashboards, or investigate data in **Explore**.
 
->ℹ️ To use the plugin, install it in your Grafana environment, connect it to your VTEX account and query logs and metrics. For more details, see the [VTEX IO Observability plugin for Grafana](https://developers.vtex.com/docs/guides/vtex-io-observability-plugin) guide.
+>ℹ️ To use the plugin, install it in your Grafana environment, connect it to your VTEX account, and query logs and metrics. For more details, see the [VTEX IO Observability plugin for Grafana](https://developers.vtex.com/docs/guides/vtex-io-observability-plugin) guide.
 
 ## Data retention and limits
 

@@ -228,7 +228,7 @@ If the connection works, Grafana displays the message "Successfully connected to
 
 ## Querying logs and metrics
 
-You can use the **VTEX IO** data source in [dashboard panels](https://grafana.com/docs/grafana/latest/visualizations/dashboards/), and in [**Explore**](https://grafana.com/docs/grafana/latest/visualizations/explore/get-started-with-explore/). Use dashboards to save and share visualizations of your app data, and use **Explore** to investigate logs and metrics without creating a dashboard.
+You can use the **VTEX IO** data source in [dashboard panels](https://grafana.com/docs/grafana/latest/visualizations/dashboards/) and in [**Explore**](https://grafana.com/docs/grafana/latest/visualizations/explore/get-started-with-explore/). Use dashboards to save and share visualizations of your app data, and use **Explore** to investigate logs and metrics without creating a dashboard.
 
 Like other Grafana data sources, the plugin provides its own [query editor](https://grafana.com/docs/grafana/latest/visualizations/explore/query-editor/) with the following fields:
 
@@ -237,7 +237,7 @@ Like other Grafana data sources, the plugin provides its own [query editor](http
 | **Query Type** | Type of data to query: `Logs` or `Metrics`. |
 | **App name** | VTEX IO app to query, in the format `{vendor}.{app-name}@{version}`. |
 | **Metric Type** | Predefined metric to visualize. Only available for `Metrics` queries, after you select an app. |
-| **Page Size** | Number of records to retrieve. The default value is `100` and the maximum value is `1000`. |
+| **Page Size** | Number of records to retrieve. The default value is `100`, and the maximum value is `1000`. |
 
 The **App name** list only shows apps that meet the requirements described in [Before you begin](#before-you-begin) and that sent logs or metrics within the selected time range, with the most recent versions first. If an app is missing from the list, expand the [dashboard time range](https://grafana.com/docs/grafana/latest/visualizations/dashboards/use-dashboards/#set-dashboard-time-range).
 

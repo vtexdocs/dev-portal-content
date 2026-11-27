@@ -120,7 +120,7 @@ The following table shows the available columns for metrics queries:
 | `Attributes` | Map | Custom attributes map. | ❌ |
 | `tenant` | String | Tenant identifier. | ✅ |
 | `tenant_level` | String | Tenant level. | ✅ |
-| `BucketCounts` | AggregateFunction(sumForEach, Array(UInt64)) | List with the amount of items in each [bucket](https://signoz.io/guides/what-is-a-bucket-in-prometheus/#what-is-a-bucket-in-prometheus). Valid only for `histogram` type metrics. | ❌ |
+| `BucketCounts` | AggregateFunction(sumForEach, Array(UInt64)) | List with the number of items in each [bucket](https://signoz.io/guides/what-is-a-bucket-in-prometheus/#what-is-a-bucket-in-prometheus). Valid only for `histogram` type metrics. | ❌ |
 | `ExplicitBounds` | AggregateFunction(any, Array(Float64)) | List with the bound values of [buckets](https://signoz.io/guides/what-is-a-bucket-in-prometheus/#what-is-a-bucket-in-prometheus). Valid only for `histogram` type metrics. | ❌ |
 
 Metrics can have custom attributes stored in the `Attributes` map. Access them using bracket notation, such as `Attributes['status_code']`. To filter by a specific metric name, you can obtain the list of names from the [Get metric names](#get-metric-names) endpoint. For the `app` filter, use app IDs from the [Get apps](#get-apps) endpoint.
