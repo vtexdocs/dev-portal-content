@@ -107,9 +107,9 @@ After creating a new page, the page's route becomes available only in the store 
    ```
 
    - Replace the `args` values with the information obtained in Step 4.
-   - Update the `binding` value with the binding `id` of the store you want to have your new custom landing page live.
+   - Update the `binding` value with the binding `id` of the store where you want to have your new custom landing page live.
 
-Your landing page will now be accessible in both the default and the desired binding.
+Your landing page will now be accessible in both the default and the desired bindings.
 
 > ℹ️ If you want to link the same landing page to other stores, repeat this process considering their respective binding `id`s.
 
