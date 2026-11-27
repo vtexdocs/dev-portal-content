@@ -4,6 +4,7 @@ slug: "vtex-io-observability-api-guide"
 hidden: false
 createdAt: "2026-12-07T12:00:00.000Z"
 updatedAt: "2026-12-07T12:00:00.000Z"
+excerpt: "Learn how to use the VTEX IO Observability API to query logs and metrics from your VTEX IO apps, with filters, aggregations, and pagination."
 ---
 
 > ⚠️ VTEX IO Observability is currently in beta, which means that VTEX is working to
