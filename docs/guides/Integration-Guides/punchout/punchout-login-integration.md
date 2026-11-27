@@ -11,9 +11,9 @@ The Punchout login integration enables external procurement systems to authentic
 
 The flow supports two integration types:
 
-* **[VTEX user flow](#vtex-user-flow):** For procurement users who exist on the VTEX platform. In this flow, the username and password are sent as part of the request body, and VTEX authorizes them.
+* **[VTEX user flow](#start-vtex-user-flow):** For procurement users who exist on the VTEX platform. In this flow, the username and password are sent as part of the request body, and VTEX authorizes them.
 
-* **[Pre-authenticated user flow](#pre-authenticated-user-flow):** For procurement users who don't exist on VTEX. In these cases, VTEX trusts the integrator to authorize these users and receive their username for login.
+* **[Pre-authenticated user flow](#start-pre-authenticated-user-flow):** For procurement users who don't exist on VTEX. In these cases, VTEX trusts the integrator to authorize these users and receive their username for login.
 
 ## How it works
 
@@ -149,20 +149,22 @@ For headless operations where no browser is involved, integrators must explicitl
 The finish endpoint:
 
 * **Validates the OTT**  
-    
+
   * Checks if the token exists and hasn't expired.  
   * Ensures the token hasn't been used before.
 
 * **Creates a VTEX session**  
-    
+
   * For VTEX user flow: Creates session based on the validated VTEX user.  
   * For pre-authenticated flow: Creates session using the username from the token's sub claim.  
   * Adds `authMethod: "Punchout"` to the session token for tracking login source.
 
 * **Sets authentication cookies**  
-    
+
   * Returns VTEX session cookies in response headers.  
   * These cookies are required for subsequent authenticated requests.
+
+>ℹ️ Punchout login creates a VTEX ID session. In the pre-authenticated flow, it also creates the user in VTEX ID if one doesn't exist yet. It doesn't create or update the customer record (`CL`) or the addresses (`AD`) in [Master Data](https://developers.vtex.com/docs/guides/master-data), nor the B2B `shopper` entity. A first-time user reaches checkout without profile and address data, so your integration must sync them separately. In B2B stores, sync them to the `shopper` entity, as described in [B2B Buyer Portal Master Data architecture](https://developers.vtex.com/docs/guides/b2b-buyer-portal-master-data-architecture).
 
 >ℹ️ Find more details about this endpoint in `GET` [Finish punchout login flow](https://developers.vtex.com/docs/api-reference/punchout-api#get-/api/authenticator/v1/punchout/finish).
 
